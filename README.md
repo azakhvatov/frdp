@@ -1,3 +1,3 @@
 #
-# The FreBSD Russian Documentation Project
+# The FreeBSD Russian Documentation Project
 #
