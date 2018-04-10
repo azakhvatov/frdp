@@ -24,7 +24,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r47276
+     Original revision: r47371
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -1140,8 +1140,10 @@
 	    нужно перенести на дискеты с помощью таких утилит, как
 	    &man.dd.1;.</para>
 
-	  <para>Полные инструкции по этой процедуре и об установке вообще можно
-	    найти в <link xlink:href="&url.books.handbook;/install.html">
+	  <para>Полные инструкции по этой процедуре, а также более
+            подробную информацию по общим вопросам, возникающим при
+            установке, можно найти
+            в <link xlink:href="&url.books.handbook;/bsdinstall.html">
 	    разделе</link> Руководства, посвящённом установке &os;.</para>
 	</answer>
       </qandaentry>
@@ -1178,19 +1180,15 @@
 	</question>
 
 	<answer>
-	  <para>Инструкции по установке &os;&nbsp;9.0
-	    и более поздних версий могут быть найдены в <link
-	      xlink:href="&url.books.handbook;/bsdinstall.html">главе</link>
-	    Руководства, посвящённой установке &os;.
-	    Также имеются инструкции по установке <link
-	      xlink:href="&url.books.handbook;/install.html">предыдущих</link>
-	    версий &os;.</para>
+	  <para>Инструкции по установке можно найти в <link
+	    xlink:href="&url.books.handbook;/bsdinstall.html">главе</link>
+	    Руководства, посвящённой установке &os;.</para>
 	</answer>
       </qandaentry>
 
       <qandaentry>
 	<question xml:id="need-to-run">
-	  <para>Какие минимальные требования для запуска &os;?</para>
+	  <para>Каковы минимальные требования для запуска &os;?</para>
 	</question>
 
 	<answer>
