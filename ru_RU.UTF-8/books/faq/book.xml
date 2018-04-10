@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r47470
+     Original revision: r47476
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -2625,20 +2625,22 @@ kern.timecounter.hardware: TSC -&gt; i8254</screen>
 	</question>
 
 	<answer>
-	  <para>Конфигурация ядра <literal>GENERIC</literal>, которая
-	    содержится в дистрибутиве &os;, компилируется в
-	    <emphasis>отладочном режиме</emphasis>.  В таком режиме
-	    ядра содержат много символьной информации в разных файлах,
-	    которая используется для отладки и сильно увеличивает размер
-	    <filename class="directory">/boot/kernel/</filename>.
-	    Заметьте, что уменьшения
-	    производительности при использовании отладочного ядра нет или
-	    оно незначительно, однако отладочное ядро полезно иметь под
+ 	  <para>Ядра <literal>GENERIC</literal>, поставляемые в составе &os;,
+       	    компилируется в <emphasis>режиме отладки</emphasis>. Ядра,
+            построенные в таком режиме, содержат отладочную информацию, которая
+            хранится в отдельных файлах, используемых для отладки. В релизах
+            &os; версий до 11.0 эти файлы находятся в том же самом каталоге,
+            что и ядро, <filename>/boot/kernel/</filename>.  Во &os; 11.0 и
+            более поздних версиях отладочные файлы размещаются в
+            <filename>/usr/lib/debug/boot/kernel/</filename>.  Заметьте, что
+            снижения производительности при использовании отладочного ядра нет
+            или оно незначительно, однако отладочное ядро полезно иметь под
 	    рукой на случай аварийного завершения работы системы.</para>
 
-	  <para>Однако при нехватке дискового пространства существует
+	  <para>При нехватке дискового пространства существует
 	    несколько вариантов уменьшения размера <filename
-	      class="directory">>/boot/kernel/</filename>.</para>
+	    class="directory">>/boot/kernel/</filename> и
+            <filename>/usr/lib/debug/</filename>.</para>
 
 	  <para>Чтобы не устанавливать файлы с символьной
 	    информацией, убедитесь в наличии следующей строки в
@@ -2649,8 +2651,8 @@ kern.timecounter.hardware: TSC -&gt; i8254</screen>
 	  <para>Для получения дополнительной информации смотрите страницу
 	    Справочника &man.src.conf.5;.</para>
 
-	  <para>Если вы не хотите компилировать отладочное ядро,
-	    убедитесь в выполнении следующих условий:</para>
+	  <para>Если вы хотите совсем избежать создания файлов для отладки,
+	    убедитесь в выполнении следующих двух условий:</para>
 
 	  <itemizedlist>
 	    <listitem>
@@ -2689,8 +2691,9 @@ kern.timecounter.hardware: TSC -&gt; i8254</screen>
 	      xlink:href="&url.books.handbook;/kernelconfig-building.html">сборке
 	      и установке</link> нового ядра.</para>
 
-	  <para>Большинство ядер (<filename>/boot/kernel/kernel</filename>),
-	    как правило, занимают от 12 до 16&nbsp;Мбайт.</para>
+          <para>К вашему сведению, примерный размер ядра &os; 11 &arch.amd64;
+            (<filename>/boot/kernel/kernel</filename>) составляет
+            25&nbsp;MB.</para>
 	</answer>
       </qandaentry>
 
