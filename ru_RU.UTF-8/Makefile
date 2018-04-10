@@ -4,7 +4,7 @@
 # $FreeBSD: head/ru_RU.KOI8-R/Makefile 38886 2012-05-25 14:40:55Z taras $
 # $FreeBSDru: frdp/doc/ru_RU.KOI8-R/Makefile,v 1.3 2004/02/21 15:25:00 andy Exp $
 #
-# Original revision: r5542
+# Original revision: r38886
 #
 
 SUBDIR = articles
