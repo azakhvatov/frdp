@@ -4,7 +4,7 @@
 # $FreeBSD: head/ru_RU.KOI8-R/books/faq/Makefile 39665 2012-10-06 17:52:37Z issyl0 $
 # $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/Makefile,v 1.11 2005/04/12 17:25:03 andy Exp $
 #
-# Original revision: r21373
+# Original revision: r39665
 #
 # Build the FreeBSD FAQ
 #
