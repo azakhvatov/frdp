@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r47484
+     Original revision: r47521
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -2283,7 +2283,7 @@ kern.timecounter.hardware: TSC -&gt; i8254</screen>
 	  <note>
 	    <para>Плохие <acronym>LOR</acronym> обычно быстро
 	      исправляют, поэтому перед написанием сообщения в списки
-	      рассылки следует проверить архивы &a.current.url;.</para>
+	      рассылки следует проверить архивы &a.current;.</para>
 	  </note>
 	</answer>
       </qandaentry>
@@ -3470,7 +3470,7 @@ kernel /boot/loader</programlisting>
 	</question>
 
 	<answer>
-	  <para><acronym>ZIL</acronym> ((<acronym>ZFS</acronym>
+	  <para><acronym>ZIL</acronym> (<acronym>ZFS</acronym>
 	    intent log) &mdash; это журнал записи, используемый для
 	    фиксации операций записи.  Обычно операции собираются
 	    в группу транзакций и при заполнении группы пишутся на
