@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r50131
+     Original revision: r50964
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -84,12 +84,12 @@
 	информативным; если у вас есть идеи по его усовершенствованию,
 	присылайте их на адрес &a.doc;.</para>
 
-      <para>Последняя редакция этого документа всегда доступна с <link
-	  xlink:href="http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/faq/index.html">
-	Web-сервера &os;</link>.  Его также
-	можно получить в виде одного большого <link xlink:href="book.html">
+      <para>Последняя редакция этого документа всегда доступна на <link
+        xlink:href="https://www.FreeBSD.org/doc/en_US.ISO8859-1/books/faq/index.html">
+	Web-сайте &os;</link>.  Его также
+	можно сгрузить в виде одного большого <link xlink:href="book.html">
 	HTML-файла</link> по HTTP или в ряде других форматов с <link
-	  xlink:href="ftp://ftp.FreeBSD.org/pub/FreeBSD/doc/">FTP-сервера</link>.</para>
+        xlink:href="ftp://ftp.FreeBSD.org/pub/FreeBSD/doc/">FTP-сервера</link>.</para>
     </abstract>
   </info>
 
@@ -106,7 +106,7 @@
 	  <para>&os; - это современная операционная система для настольных
 	    компьютеров, ноутбуков, серверов и встраиваемых систем
 	    с поддержкой большого количества <link
-	      xlink:href="http://www.FreeBSD.org/ru/platforms/">платформ</link>.</para>
+	      xlink:href="https://www.FreeBSD.org/ru/platforms/">платформ</link>.</para>
 
 	  <para>В основе &os; лежит операционная система
 	    <quote>4.4BSD-Lite</quote> Калифорнийского Университета (Беркли)
@@ -148,7 +148,7 @@
 	  <para>Да.  Эти ограничения не касаются аспектов использования
 	    кода, но главным образом описывают отношение к Проекту &os;.
 	    Текст лицензионного соглашения доступен <link
-	      xlink:href="http://www.FreeBSD.org/ru/copyright/freebsd-license.html">здесь</link>,
+	      xlink:href="https://www.FreeBSD.org/ru/copyright/freebsd-license.html">здесь</link>,
 	    и вкратце он может быть изложен следующим образом:</para>
 
 	  <itemizedlist>
@@ -175,15 +175,17 @@
 	    энтузиазмом поддерживаем.</para>
 
 	  <para>Часть исходного кода нашей системы, подпадающая под действие
-	    <link xlink:href="http://www.FreeBSD.org/copyright/COPYING">GNU General
-	    Public License (GPL)</link> или <link xlink:href="http://www.FreeBSD.org/copyright/COPYING.LIB">GNU Library
-	    General Public License (LGPL)</link>, имеет несколько
+	    <link xlink:href="https://www.FreeBSD.org/copyright/COPYING">GNU
+            General Public License (GPL)</link> или <link
+            xlink:href="https://www.FreeBSD.org/copyright/COPYING.LIB">GNU
+            Library General Public License (LGPL)</link>, имеет несколько
 	    больше ограничений, хотя и представляет собой навязывание доступа к
 	    исходным текстам, а не наоборот, как обычно.  Из-за дополнительных
 	    сложностей, которые могут возникнуть в случае коммерческого
 	    использования программного обеспечения GPL, мы стараемся, где
 	    только это возможно, заменить подобное программное обеспечение
-	    аналогичным, но подпадающим под менее строгую <link xlink:href="http://www.FreeBSD.org/copyright/freebsd-license.html">
+	    аналогичным, но подпадающим под менее строгую <link
+            xlink:href="https://www.FreeBSD.org/copyright/freebsd-license.html">
 	    лицензию &os;</link>.</para>
 	</answer>
       </qandaentry>
@@ -205,8 +207,8 @@
 	    окружение для приложений.  Она поддерживает широкий спектр
 	    Web-браузеров, офисных пакетов, программ для работы с электронной
 	    почтой, графических пакетов, программных сред, сетевых серверов и
-	    многое другое.  Большинство этих
-	    приложений могут быть получено из <link xlink:href="http://www.FreeBSD.org/ports/">Коллекции
+	    многое другое.  Большинство этих приложений могут быть получено
+            из <link xlink:href="https://www.FreeBSD.org/ports/">Коллекции
 	    Портов</link>.</para>
 
 	  <para>Если приложение доступно только для одной операционной
@@ -358,7 +360,7 @@
 
 	  <para>Более полную информацию о релизах &os; можно получить
 	    на странице <link
-	      xlink:href="http://www.FreeBSD.org/ru/releng/index.html">Информации
+	      xlink:href="https://www.FreeBSD.org/ru/releng/index.html">Информации
 	      о подготовке релизов</link> и на странице Справочника
 	    &man.release.7;.</para>
 	</answer>
@@ -464,7 +466,7 @@
 	    Подготовка релизов &os;: Создание ветки
 	    релиза</link></quote>.  Статус веток и расписание
 	    предстоящих релизов можно получить на странице <link
-            xlink:href="http://www.FreeBSD.org/releng">Информация о подготовке
+            xlink:href="https://www.FreeBSD.org/releng">Информация о подготовке
 	    релизов</link>.</para>
 
 	  <para>Активно разрабатываемой веткой <emphasis>-STABLE</emphasis>
@@ -501,7 +503,7 @@
 
 	  <para>Дополнительная информация о процессе подготовки релиза (в том
 	    числе планы выпуска последующих релизов) может быть найдена на
-	    страницах Web-сайта &os;, посвящённых <link xlink:href="http://www.FreeBSD.org/releng/index.html">выпуску
+	    страницах Web-сайта &os;, посвящённых <link xlink:href="https://www.FreeBSD.org/releng/index.html">выпуску
 	    релизов</link>.</para>
 
 	  <para>Для тех, кому нужно или хочется, еженедельно выпускаются
@@ -607,7 +609,7 @@
 	<answer>
 	  <para>В рамках проекта создан широкий спектр документации,
 	    которая доступна on-line по следующей ссылке: <uri
-	      xlink:href="http://www.FreeBSD.org/docs.html">http://www.FreeBSD.org/docs.html</uri>.
+	      xlink:href="https://www.FreeBSD.org/docs.html">https://www.FreeBSD.org/docs.html</uri>.
 	    Кроме того, в <link
 	      linkend="bibliography">Библиографии</link> в конце этого
 	    <acronym>FAQ</acronym> и в <link
@@ -1081,8 +1083,8 @@
 
 	<answer>
 	  <para>На странице <link
-	      xlink:href="http://www.freebsd.org/ru/where.html">Получение
-	      &os;</link> выберите <literal>[iso]</literal> с
+	    xlink:href="https://www.freebsd.org/ru/where.html">Получение
+	    &os;</link> выберите <literal>[iso]</literal> с
 	    соответствующей оборудованию архитектурой.</para>
 
 	  <para>Можно использовать любой из:</para>
@@ -1413,7 +1415,7 @@
 	      или <link
 		xlink:href="&rel2.current.hardware;">&rel2.current;</link>,
 	      а также <link
-		xlink:href="http://www.FreeBSD.org/search/#mailinglists">архивам</link>
+		xlink:href="https://www.FreeBSD.org/search/#mailinglists">архивам</link>
 	      списков рассылки перед тем, как задавать вопросы о самом
 	      последнем и лучшем оборудовании.  Весьма вероятно, что
 	      обсуждение касаемо этого типа оборудования велось как
@@ -1532,7 +1534,7 @@
 
 	    <para>Полный список поддерживаемых архитектур находится
 	      на <link
-		xlink:href="http://www.FreeBSD.org/ru/platforms/">странице</link>,
+		xlink:href="https://www.FreeBSD.org/ru/platforms/">странице</link>,
 	      посвящённой платформам.</para>
 	  </answer>
 	</qandaentry>
@@ -2413,7 +2415,7 @@ kern.timecounter.hardware: TSC -&gt; i8254</screen>
 	<answer>
 	  <para>Да.  Для получения дополнительной информации посетите
 	    страницу <link
-	      xlink:href="&url.base;/java/index.html">http://www.FreeBSD.org/java/</link>.</para>
+	      xlink:href="&url.base;/java/index.html">https://www.FreeBSD.org/java/</link>.</para>
 	</answer>
       </qandaentry>
 
