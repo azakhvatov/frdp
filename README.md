@@ -17,4 +17,10 @@ $ tar -czvf share.tar.gz share
 $ git clone http://github.com/frdp
 $ cd frdp
 $ tar -zxvf ../share.tar.gz
+$ cd ru_RU.UTF-8
+$ mkdir share
+$ cd share
+$ mkdir xml
+$ cp ~/tmp/doc/ru_RU.KOI8-R/share/xml/* xml
+$ cd ..
 $ make
