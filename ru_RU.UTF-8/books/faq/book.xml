@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r48201
+     Original revision: r48207
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -77,11 +77,10 @@
       <para>Этот документ является так называемым
 	<acronym>FAQ</acronym> (Frequently Asked Questions),
 	то есть списком Часто Задаваемых Вопросов по &os; версий
-	&rel2.relx; и &rel.relx;.
-	Мы прилагаем все усилия, чтобы сделать этот
+	&rel2.relx; и &rel.relx;.  Мы прилагаем все усилия, чтобы сделать этот
 	<acronym>FAQ</acronym> максимально
 	информативным; если у вас есть идеи по его усовершенствованию,
-	шлите их на адрес &a.doc;.</para>
+	присылайте их на адрес &a.doc;.</para>
 
       <para>Последняя редакция этого документа всегда доступна с <link
 	  xlink:href="http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/faq/index.html">
