@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r48211
+     Original revision: r48288
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -4781,7 +4781,7 @@ ttyvb   "/usr/libexec/getty Pc"	 xterm  on secure</programlisting>
 
 	<answer>
 	  <para>Подробный ответ находится в разделе <link
-	      xlink:href="&url.books.handbook;/boot-blocks.html#boot-splash">Загрузочные
+	    xlink:href="&url.books.handbook;/boot-splash.html">Загрузочные
 	    экранные заставки</link> Руководства &os;.</para>
 	</answer>
       </qandaentry>
