@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r47989
+     Original revision: r48201
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -1023,7 +1023,7 @@
 	<answer>
 	  <para><link xlink:href="http://www.ixsystems.com">iXsystems, Inc.</link>,
 	    дочерней компанией которой является <link xlink:href="http://www.freebsdmall.com/">&os; Mall</link>,
-	    предоставляет <link xlink:href="http://www.ixsystems.com/bsdsupport">поддержку</link>
+	    оказывает <link xlink:href="http://www.ixsystems.com/support">услуги поддержки</link>
 	    &os; и программного обеспечения PC-BSD на коммерческой
 	    основе, в дополнение к разработке &os; и решениям, требующим
 	    тонкой настройки.</para>
