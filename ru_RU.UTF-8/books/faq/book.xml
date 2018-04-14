@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r50964
+     Original revision: r51016
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -87,9 +87,10 @@
       <para>Последняя редакция этого документа всегда доступна на <link
         xlink:href="https://www.FreeBSD.org/doc/en_US.ISO8859-1/books/faq/index.html">
 	Web-сайте &os;</link>.  Его также
-	можно сгрузить в виде одного большого <link xlink:href="book.html">
-	HTML-файла</link> по HTTP или в ряде других форматов с <link
-        xlink:href="ftp://ftp.FreeBSD.org/pub/FreeBSD/doc/">FTP-сервера</link>.</para>
+	можно сгрузить в виде одного большого файла в формате <link
+        xlink:href="book.html">HTML</link> по HTTP или в других форматах с <link
+        xlink:href="https://download.freebsd.org/ftp/doc/">FTP-сервера
+        &os;</link>.</para>
     </abstract>
   </info>
 
@@ -626,10 +627,10 @@
 	</question>
 
 	<answer>
-	  <para>Да.  Документация имеется в нескольких различных форматах и
+	  <para>Да.  Документация доступна в нескольких различных форматах и
 	    упакованная разными способами на FTP-сервере &os;, и находится
-	    она в каталоге <link xlink:href="ftp://ftp.FreeBSD.org/pub/FreeBSD/doc/">
-	    /pub/FreeBSD/doc/</link>.</para>
+	    она в каталоге <link
+            xlink:href="https://download.freebsd.org/ftp/doc/">/pub/FreeBSD/doc/</link>.</para>
 
 	  <para>Документация подразделяется на категории различными способами.
 	    Это включает:</para>
@@ -905,7 +906,7 @@
 	    <filename>doc/ru_RU.KOI8-R/books/faq/book.html-split.tar.bz2</filename>.
 	    Для сгрузки и распаковки этого файла наберите:</para>
 
-	  <screen>&prompt.root; <userinput>fetch ftp://ftp.FreeBSD.org/pub/FreeBSD/doc/en_US.ISO8859-1/books/faq/book.html-split.tar.bz2</userinput>
+            <screen>&prompt.root; <userinput>fetch https://download.freebsd.org/ftp/doc/en_US.ISO8859-1/books/faq/book.html-split.tar.bz2</userinput>
 &prompt.root; <userinput>tar xvf book.html-split.tar.bz2</userinput></screen>
 
 	  <para>Если файл сжат, <application>tar</application>
