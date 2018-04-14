@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="koi8-r"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//FreeBSD//DTD DocBook XML V5.0-Based Extension//EN"
 	"http://www.FreeBSD.org/XML/share/xml/freebsd50.dtd" [
 <!ENTITY bibliography SYSTEM "../../../share/xml/bibliography.xml">
