@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r50125
+     Original revision: r50126
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -5317,7 +5317,7 @@ Key F15	A	A	Menu Workplace Nop</programlisting>
 		всей системы в результате взлома этого конкретного
 		процесса.</para>
 
-	      <para>Процесс может работать в границах этих стен.
+	      <para>Процесс может работать только в границах этих стен.
 		Поскольку, что бы этот процесс ни делал, он эти стены
 		разрушить не может, особый аудит его кода не нужен для
 		того, чтобы с уверенностью сказать, насколько его
