@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r48209
+     Original revision: r48211
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -6872,8 +6872,9 @@ hint.sio.7.irq="12"</programlisting>
 	  <para>Более пространный и полный ответ заключается в том, что после очень
 	    долгого обсуждения того, должна ли утилита &man.sleep.1; обрабатывать
 	    дробное число, заданное в качестве второго аргумента, &a.phk.email;
-	    опубликовал большое сообщение, озаглавленное <quote><link xlink:href="http://www.FreeBSD.org/cgi/getmsg.cgi?fetch=506636+517178+/usr/local/www/db/text/1999/freebsd-hackers/19991003.freebsd-hackers">
-	    Велосипедный навес (подставьте здесь цвет) на зелёной траве...</link></quote>.
+	    опубликовал большое сообщение, озаглавленное <quote><link
+            xlink:href="http://www.bikeshed.com">Велосипедный навес (любой цвет
+            подойдёт) на зелёной траве...</link></quote>.
 	    Соответствующие части этого сообщения цитируются ниже.</para>
 
 	    <blockquote>
