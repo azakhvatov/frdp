@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r51022
+     Original revision: r51150
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -3728,7 +3728,7 @@ kernel /boot/loader</programlisting>
 
 	  <para>Чтобы использовать полноэкранный редактор, такой как
 	    &man.vi.1; или &man.emacs.1;, выполните команду
-	    <command>export TERM=xterm</command> во &os; 9.0+, чтобы
+	    <command>export TERM=xterm</command>, чтобы
 	    такие редакторы смогли получить корректную информацию из базы
 	    данных &man.termcap.5;.</para>
 
@@ -4588,13 +4588,6 @@ ttyvb   "/usr/libexec/getty Pc"	 xterm  on secure</programlisting>
 	    с 8&nbsp;Мбайт ОЗУ или меньше.  Подумайте о смене статуса
 	    консолей с <literal>secure</literal> на
 	    <literal>insecure</literal>.</para>
-
-	  <note>
-	    <para>Во &os; до версии 9.0 использовался тип терминала
-	      <quote>cons25</quote> вместо <quote>xterm</quote>.
-	      При добавлении в <filename>/etc/ttys</filename> новых
-	      записей используйте существующий формат.</para> 
-	  </note>
 
 	  <important>
 	    <para>Чтобы запустить сервер X, нужно зарезервировать под
