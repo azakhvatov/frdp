@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r51297
+     Original revision: r51298
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -3383,27 +3383,6 @@ kernel /boot/loader</programlisting>
 
 	  <para>Для получения более подробной информации обратитесь к описанию
 	    опции <option>-m</option> в справке по &man.tunefs.8;.</para>
-	</answer>
-      </qandaentry>
-
-      <qandaentry>
-	<question xml:id="slow-boot-memtest">
-	  <para>Почему загрузка &os; задерживается на длительное время
-	    на системах с большим объёмом ОЗУ?</para>
-	</question>
-
-	<answer>
-	  <para>&os; 10.1 и её более ранние версии выполняют тестирование
-            оперативной памяти на раннем этапе загрузки.  Эта проверка занимает
-	    несколько секунд, когда объём установленной памяти невелик.  На
-            компьютерах с десятками или сотнями гигабайт установленной
-            оперативной памяти на завершение этого процесса может уйти
-            несколько минут.  Проверку оперативной памяти можно отключить,
-            добавив строку <literal>hw.memtest.tests=0</literal> в файл
-	    <filename>/boot/loader.conf</filename>.</para>
-
-	  <para>Для получения дополнительной информации смотрите
-	    страницу Справочника &man.loader.conf.5;.</para>
 	</answer>
       </qandaentry>
     </qandaset>
