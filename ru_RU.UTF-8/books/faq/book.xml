@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r51344
+     Original revision: r51348
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -1000,12 +1000,12 @@
 	  </itemizedlist>
 
 	  <para>На &os; wiki имеется <link
-	      xlink:href="http://wiki.freebsd.org/IrcChannels">хороший список</link>
-	    каналов IRC.</para>
+	    xlink:href="https://wiki.freebsd.org/IrcChannels">хороший
+            список</link> каналов IRC.</para>
 
 	  <para>Все каналы разные и не имеют отношения друг к другу.
 	    Поскольку их стили общения отличаются, попробуйте каждый,
-	    пока не найдёте подходящий вашему стилю общения.</para>
+	    пока не найдёте соответствующий вашему стилю общения.</para>
 	</answer>
       </qandaentry>
 
