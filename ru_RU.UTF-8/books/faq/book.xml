@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r51150
+     Original revision: r51157
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -1126,14 +1126,6 @@
 	      </tbody>
 	    </tgroup>
 	  </informaltable>
-
-	  <para>Пользователям &arch.pc98; нужны образы дискет:
-	    <filename>floppies/boot.flp</filename>,
-	    <filename>floppies/kern1.flp</filename>,
-	    <filename>floppies/kern2.flp</filename> и
-	    <filename>floppies/mfsroot1.flp</filename>.  Эти образы
-	    нужно перенести на дискеты с помощью таких утилит, как
-	    &man.dd.1;.</para>
 
 	  <para>Полные инструкции по этой процедуре, а также более
             подробную информацию по общим вопросам, возникающим при
