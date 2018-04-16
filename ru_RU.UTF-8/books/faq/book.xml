@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r51349
+     Original revision: r51390
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -5415,8 +5415,9 @@ Key F15	A	A	Menu Workplace Nop</programlisting>
 
       <qandaentry>
 	<question xml:id="extra-named-port">
-	  <para>BIND (<command>named</command>) работает на
-	    одном из портов с большим номером.  Что происходит?</para>
+	  <para><application>BIND9</application> (<command>named</command>)
+            работает на одном из портов с большим номером.  Что
+            происходит?</para>
 	</question>
 
 	<answer>
@@ -5433,8 +5434,8 @@ Key F15	A	A	Menu Workplace Nop</programlisting>
 	    диапазоном.</para>
 
 	  <warning>
-	    <para>Если в <filename>/etc/namedb/named.conf</filename>
-	      указан номер порта (такой как 53) в параметре
+	    <para>Если в <filename>/usr/local/etc/namedb/named.conf</filename>
+	      указан номер порта (например, 53) в параметре
 	      <literal>query-source</literal> или
 	      <literal>query-source-v6</literal>, то случайный
 	      выбор порта использоваться не будет.  Настоятельно
