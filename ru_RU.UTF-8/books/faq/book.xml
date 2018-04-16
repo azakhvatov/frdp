@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r51495
+     Original revision: r51497
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -284,9 +284,9 @@
 	  <para>Джеймс Ховард (James Howard) создал хорошее описание
 	    истории и различий между различными проектами под
 	    названием <link
-	      xlink:href="http://www.freebsdworld.gr/freebsd/bsd-family-tree.html">Семейное
-	      древо BSD</link>, в котором даётся подробный ответ на
-	    этот вопрос.  Некоторая информация там устарела, но
+            xlink:href="https://jameshoward.us/archive/the-bsd-family-tree/">Семейное
+	    древо BSD</link>, в котором даётся подробный ответ на
+	    этот вопрос.  Часть информации там устарела, но
 	    историческая часть остаётся точной.</para>
 
 	  <para>Многие из проектов семейства BSD обмениваются
