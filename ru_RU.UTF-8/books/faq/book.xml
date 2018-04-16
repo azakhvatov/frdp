@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r51497
+     Original revision: r51499
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -2427,11 +2427,10 @@ kern.timecounter.hardware: TSC -&gt; i8254</screen>
 
 	  <para>В редких случаях <filename>INDEX</filename> не перестраивается
 	    из-за странных комбинаций значений переменных
-	    <varname>WITH_<replaceable>*</replaceable></varname> или
-	    <varname>WITHOUT_<replaceable>*</replaceable></varname>, заданных в
-	    файле <filename>make.conf</filename>.  Если вы думаете, что это ваш
-	    случай, прежде чем сообщать об этом в &a.ports;, попытайтесь
-	    сформировать <filename>INDEX</filename> с
+	    <varname>OPTIONS_SET</varname>, заданных в
+	    файле <filename>make.conf</filename>.  Если вы подозреваете, что
+            дело именно в этом, то, прежде чем сообщать об этом в &a.ports;,
+            попытайтесь сформировать <filename>INDEX</filename> с
 	    отключенными значениями этих переменных.</para>
 	</answer>
       </qandaentry>
