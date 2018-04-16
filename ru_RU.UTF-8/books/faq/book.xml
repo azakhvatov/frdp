@@ -2597,8 +2597,8 @@ kern.timecounter.hardware: TSC -&gt; i8254</screen>
 	    рукой на случай аварийного завершения работы системы.</para>
 
 	  <para>При нехватке дискового пространства существует
-	    несколько вариантов уменьшения размера <filename
-	    class="directory">>/boot/kernel/</filename> и
+	    несколько вариантов уменьшения размера
+            <filename>/boot/kernel/</filename> и
             <filename>/usr/lib/debug/</filename>.</para>
 
 	  <para>Чтобы не устанавливать файлы с символьной
