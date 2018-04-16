@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r51552
+     Original revision: r51553
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -4420,9 +4420,9 @@ options    SYSVMSG	  # enable for messaging</programlisting>
    Option	  "ZAxisMapping" "4 5"
 EndSection</programlisting>
 
-	  <para>Для использования мыши в
-	    <application>Emacs</application> также добавьте в
-	    <filename>~/.emacs</filename> следующие строки:</para>
+	  <para>Использование мыши может быть активировано в
+	    <application>Emacs</application> путём добавления в
+	    <filename>~/.emacs</filename> следующих строк:</para>
 
 	  <programlisting>;; wheel mouse
 (global-set-key [mouse-4] 'scroll-down)
