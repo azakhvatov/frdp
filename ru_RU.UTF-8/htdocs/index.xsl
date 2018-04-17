@@ -10,7 +10,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/htdocs/index.xsl 45817 2014-10-13 22:12:57Z taras $
      $FreeBSDru: frdp/www/ru/index.xsl,v 1.47 2006/01/16 21:27:51 gad Exp $
 
-     Original revision: 47151
+     Original revision: 47280
 -->
 
 <xsl:stylesheet version="1.0"
@@ -111,9 +111,10 @@
 			  <h2><a href="&base;/releases/">ПОСЛЕДНИЕ РЕЛИЗЫ</a></h2>
 			  <ul id="frontreleaseslist">
 			    <li>Продуктивные:&nbsp;<a
-			      href="&u.rel.announce;">&rel.current;</a>,<br />
-			      <a href="&u.rel2.announce;">&rel2.current;</a></li>
-			      <xsl:if test="'&beta.upcoming;' != 'IGNORE'">
+			      href="&u.rel.announce;">&rel.current;</a>, <a
+                              href="&u.rel2.announce;">&rel2.current;</a></li>
+
+		            <xsl:if test="'&beta.upcoming;' != 'IGNORE'">
 
 			    <li>Предстоящий: <a
 				href="&u.betarel.schedule;">&betarel.current;</a></li>
