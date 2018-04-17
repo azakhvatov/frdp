@@ -10,7 +10,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/htdocs/index.xsl 45817 2014-10-13 22:12:57Z taras $
      $FreeBSDru: frdp/www/ru/index.xsl,v 1.47 2006/01/16 21:27:51 gad Exp $
 
-     Original revision: 45569
+     Original revision: 47151
 -->
 
 <xsl:stylesheet version="1.0"
@@ -77,10 +77,22 @@
                                     <span
                                      id="txtfrontjournallink">
                                       Получить <a
-                                       href="http://www.freebsdjournal.com/"
-                                       title="&os;&nbsp;Journal">Ведомости &os;&nbsp;</a>
+                                      href="http://www.freebsdjournal.com/"
+                                      title="&os;&nbsp;Journal">Ведомости &os;&nbsp;</a>
                                     </span> <!-- TXTFRONTJOURNALLINK -->
                                   </div> <!-- TXTFRONTJOURNALBLOCK -->
+
+                                 <!-- IMPORTANT NOTICES -->
+                                 <!--
+                                 <div
+                                   style="width:640px; margin: 16px 16px 16px 32px; auto">
+
+                                   <h2>ВНИМАНИЕ: [заголовок]</h2>
+
+                                   <p align="justify">[text]</p>
+                                 </div>
+                                 -->
+                                 <!-- END IMPORTANT NOTICES -->
 
 			  </div> <!-- FRONTFEATURECONTENT -->
 		  </div> <!-- FRONTFEATURELEFT -->
@@ -96,16 +108,14 @@
 
 			<div id="frontreleases">
 			  <div id="frontreleasescontent" class="txtshortcuts">
-				  <h2><a href="&base;/releases/">ПОСЛЕДНИЕ РЕЛИЗЫ</a></h2>
-				  <ul id="frontreleaseslist">
-					<li>Продуктивный:&nbsp;<a
-				href="&u.rel.announce;">&rel.current;</a>,<br />
-					<a
-				href="&u.rel2.announce;">&rel2.current;</a>,
-					<a
-				href="&u.rel3.announce;">&rel3.current;</a></li>
-			    <xsl:if test="'&beta.upcoming;' != 'IGNORE'">
-					<li>Предстоящий: <a
+			  <h2><a href="&base;/releases/">ПОСЛЕДНИЕ РЕЛИЗЫ</a></h2>
+			  <ul id="frontreleaseslist">
+			    <li>Продуктивные:&nbsp;<a
+			      href="&u.rel.announce;">&rel.current;</a>,<br />
+			      <a href="&u.rel2.announce;">&rel2.current;</a></li>
+			      <xsl:if test="'&beta.upcoming;' != 'IGNORE'">
+
+			    <li>Предстоящий: <a
 				href="&u.betarel.schedule;">&betarel.current;</a></li>
 			    </xsl:if>
 			    <xsl:if test="'&beta2.upcoming;' != 'IGNORE'">
