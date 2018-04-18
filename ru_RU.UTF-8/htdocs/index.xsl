@@ -10,7 +10,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/htdocs/index.xsl 45817 2014-10-13 22:12:57Z taras $
      $FreeBSDru: frdp/www/ru/index.xsl,v 1.47 2006/01/16 21:27:51 gad Exp $
 
-     Original revision: 49784
+     Original revision: 49931
 -->
 
 <xsl:stylesheet version="1.0"
@@ -139,33 +139,9 @@
 				  <li>
 					<a href="&enbase;/" title="Английский">en</a>
 				  </li>
-				  <li>
-					<a href="&enbase;/es/" title="Испанский">es</a>
-				  </li>
-				  <li>
-					<a href="&enbase;/fr/" title="Французский">fr</a>
-				  </li>
-				  <li>
-					<a href="&enbase;/hu/" title="Венгерский">hu</a>
-				  </li>
-				  <li>
-					<a href="&enbase;/it/" title="Итальянский">it</a>
-				  </li>
-				  <li>
+                                  <li class="last-child">
 					<a href="&enbase;/ja/" title="Японский">ja</a>
 				  </li>
-				  <li>
-					<a href="&enbase;/nl/" title="Голландский">nl</a>
-				  </li>
-				  <li>
-					<a href="&base;/" title="Русский">ru</a>
-				  </li>
-				  <li>
-				    <a href="&enbase;/zh_CN/" title="Китайский (упрощённый)">zh_CN</a>
-				  </li>
-                                  <li class="last-child">
-                                    <a href="&enbase;/zh_TW/" title="Китайский (Традиционный)">zh_TW</a>
-                                  </li>
 				</ul>
 			</div> <!-- LANGUAGENAV -->
 
