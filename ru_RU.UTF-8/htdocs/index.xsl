@@ -10,7 +10,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/htdocs/index.xsl 45817 2014-10-13 22:12:57Z taras $
      $FreeBSDru: frdp/www/ru/index.xsl,v 1.47 2006/01/16 21:27:51 gad Exp $
 
-     Original revision: 48130
+     Original revision: 48320
 -->
 
 <xsl:stylesheet version="1.0"
@@ -189,7 +189,7 @@
 					  <a href="&base;/community/mailinglists.html" title="Списки рассылки">Списки рассылки</a>
 					</li>
 					<li>
-					  <a href="&base;/support/bugreports.html" title="Сообщить об ошибке">Сообщить об ошибке</a>
+					  <a href="&base;/support/bugreports.html" title="Сообщить о проблеме">Сообщить о проблеме</a>
 					</li>
 					<li>
 					  <a href="&enbase;/doc/&url.doc.langcode;/books/faq/index.html" title="Часто задаваемые вопросы">Часто задаваемые вопросы</a>
