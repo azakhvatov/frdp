@@ -10,7 +10,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/htdocs/index.xsl 45817 2014-10-13 22:12:57Z taras $
      $FreeBSDru: frdp/www/ru/index.xsl,v 1.47 2006/01/16 21:27:51 gad Exp $
 
-     Original revision: 49931
+     Original revision: 49932
 -->
 
 <xsl:stylesheet version="1.0"
@@ -144,20 +144,6 @@
 				  </li>
 				</ul>
 			</div> <!-- LANGUAGENAV -->
-
-			<div id="mirror">
-			  <form action="&cgibase;/mirror.cgi" method="get">
-				<div>
-				  <h2 class="blockhide"><label for="mirrorsel">Зеркало</label></h2>
-				  <select id="mirrorsel" name="goto">
-					  <xsl:call-template name="html-index-mirrors-options-list">
-					    <xsl:with-param name="mirrors.xml" select="$mirrors.xml" />
-					  </xsl:call-template>
-				  </select>
-				</div> <!-- unnamed -->
-				<input type="submit" value="Go" />
-			  </form>
-			</div> <!-- MIRROR -->
 
 			<div id="frontshortcuts">
 			  <div id="frontshortcutscontent" class="txtshortcuts">
