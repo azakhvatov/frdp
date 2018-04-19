@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r35056
+     Original revision: r35062
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -940,22 +940,12 @@ EndSection</programlisting>
 	<secondary>антиалиасинг</secondary>
       </indexterm>
 
-      <para>Антиалиасинг присутствует в X11 начиная с
-	<application>&xfree86;</application>,
-	версии 4.0.2.  Однако настройка шрифтов была довольно
-	громоздка вплоть до появления <application>&xfree86;</application>
-	4.3.0.  Начиная с версии <application>&xfree86;</application> 4.3.0,
-	все шрифты, расположенные в каталогах
+      <para>Все шрифты, расположенные в каталогах
 	<filename>/usr/local/lib/X11/fonts/</filename> и
 	<filename>~/.fonts/</filename>, автоматически становятся доступными для
-	применения антиалиасинга в приложениях, использующих Xft.  Не все
-	приложения могут использовать Xft, но во многих его поддержка
-	присутствует.  Примерами приложений, использующих Xft, является Qt
-	версий 2.3 и более поздних (это инструментальный пакет для оболочки
-	<application>KDE</application>), GTK+ версий 2.0 и более поздних (это
-	инструментальный пакет для оболочки <application>GNOME</application>),
-	а также <application>Mozilla</application> версий 1.2 и более
-	поздних.</para>
+	применения антиалиасинга в приложениях, использующих Xft.
+        Большинство современных приложений умеет работать с Xft, в том числе
+	KDE, GNOME и Firefox.</para>
 
       <para>Для применения к шрифтам антиалиасинга, а также
 	для настройки параметров антиалиасинга, создайте (или отредактируйте,
@@ -1064,8 +1054,7 @@ EndSection</programlisting>
       <para>С некоторыми шрифтами, такими, как Helvetica, при антиалиасинге
 	могут возникнуть проблемы .  Обычно это проявляется в виде шрифта,
 	который наполовину вертикально обрезан.  Хуже того, это может
-	привести к сбоям таких приложений, как
-	<application>Mozilla</application>.  Во избежание этого следует
+	привести к сбоям подобных приложений.  Во избежание этого можно
 	добавить следующее в файл <filename>local.conf</filename>:</para>
 
       <programlisting>         &lt;match target="pattern" name="family"&gt;
@@ -1081,12 +1070,6 @@ EndSection</programlisting>
 	<filename>local.conf</filename>, удостоверьтесь, что файл завершен
 	тэгом <literal>&lt;/fontconfig&gt;</literal>.  Если этого не сделать,
 	ваши изменения будут проигнорированы.</para>
-
-      <para>Набор шрифтов по умолчанию, поставляемый с
-	X11, не очень подходит, если
-	включается антиалиасинг.  Гораздо лучший набор шрифтов, используемых
-	по умолчанию, можно найти в порте
-	<package>x11-fonts/bitstream-vera</package>.</para>
 
       <para>Наконец, пользователи могут добавлять собственные наборы
 	посредством персональных файлов <filename>.fonts.conf</filename>.
@@ -1123,25 +1106,6 @@ EndSection</programlisting>
 	  <literal>vrgb</literal> или <literal>vbgr</literal>: пробуйте и
 	  смотрите, что работает лучше.</para>
       </note>
-
-      <indexterm>
-	<primary>Mozilla</primary>
-	<secondary>отключение шрифтов с антиалиасингом</secondary>
-      </indexterm>
-
-      <para>Антиалиасинг должен быть включен при следующем запуске X-сервера.
-	Однако программы должны знать, как использовать его преимущества.
-	В настоящее время инструментальный пакет Qt умеет ими пользоваться,
-	так что вся оболочка <application>KDE</application> может
-	использовать шрифты с антиалиасингом.
-	GTK+ и <application>GNOME</application>
-	также можно заставить использовать антиалиасинг посредством капплета
-	<quote>Font</quote> (обратитесь к <xref linkend="x11-wm-gnome-antialias"/> для выяснения всех подробностей).
-	По умолчанию <application>Mozilla</application> версий 1.2 и выше
-	будет автоматически использовать антиалиасинг.  Для отмены
-	использования антиалиасинга
-	перестройте <application>Mozilla</application> с флагом
-	<varname>-DWITHOUT_XFT</varname>.</para>
     </sect2>
   </sect1>
 
