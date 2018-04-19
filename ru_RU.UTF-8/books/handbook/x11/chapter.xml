@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r34917
+     Original revision: r35056
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -1086,16 +1086,7 @@ EndSection</programlisting>
 	X11, не очень подходит, если
 	включается антиалиасинг.  Гораздо лучший набор шрифтов, используемых
 	по умолчанию, можно найти в порте
-	<package>x11-fonts/bitstream-vera</package>.  Этот
-	порт установит файл
-	<filename>/usr/local/etc/fonts/local.conf</filename>, если такого ещё
-	не существует.  Если файл существует, то порт создаст файл
-	<filename>/usr/local/etc/fonts/local.conf-vera</filename>.  Перенесите
-	содержимое этого файла в
-	<filename>/usr/local/etc/fonts/local.conf</filename>, и шрифты
-	Bitstream автоматически заменят используемые по умолчанию в
-	X11 шрифты Serif, Sans Serif и
-	Monospaced.</para>
+	<package>x11-fonts/bitstream-vera</package>.</para>
 
       <para>Наконец, пользователи могут добавлять собственные наборы
 	посредством персональных файлов <filename>.fonts.conf</filename>.
