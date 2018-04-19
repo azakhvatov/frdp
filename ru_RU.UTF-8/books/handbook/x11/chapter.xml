@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r35062
+     Original revision: r35063
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -1487,33 +1487,6 @@ DisplayManager.requestPort:     0</screen>
 	  подробностях</link> описывается, как сделать это для
 	  <application>kdm</application>, менеджера дисплеев из
 	  <application>KDE</application>.</para>
-      </sect3>
-
-      <sect3 xml:id="x11-wm-gnome-antialias">
-	<title>Шрифты с антиалиасингом и GNOME</title>
-
-	<indexterm><primary>GNOME</primary>
-	  <secondary>антиалиасинг шрифтов</secondary></indexterm>
-	<para>X11 поддерживает антиалиасинг посредством своего расширения
-	  <quote>RENDER</quote>.  GTK+ 2.0 и более поздние версии (это
-	  инструментальный пакет, используемый
-	  <application>GNOME</application>) могут использовать такую
-	  функциональность.  Настройка антиалиасинга описана в
-	  <xref linkend="antialias"/>.  Таким образом, при наличии современного
-	  <application>GNOME</application>, возможно использование
-	  антиалиасинга.  Просто перейдите в
-	  <menuchoice>
-	    <guimenu>Applications</guimenu>
-	    <guisubmenu>Desktop Preferences</guisubmenu>
-	    <guimenuitem>Font</guimenuitem></menuchoice>
-	  и выберите либо
-	  <guibutton>Best shapes</guibutton>,
-	  <guibutton>Best contrast</guibutton>, либо
-	  <guibutton>Subpixel smoothing (LCDs)</guibutton>.  Для приложений
-	  GTK+, которые не являются частью оболочки
-	  <application>GNOME</application>, задайте в качестве значения
-	  переменной окружения <varname>GDK_USE_XFT</varname>
-	  <literal>1</literal> перед запуском программы.</para>
       </sect3>
     </sect2>
 
