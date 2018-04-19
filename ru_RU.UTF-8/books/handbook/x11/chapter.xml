@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r34863
+     Original revision: r34917
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -484,24 +484,36 @@ dbus_enable="YES"</programlisting>
 
       <screen>&prompt.root; <userinput>Xorg -config xorg.conf.new -retro</userinput></screen>
 
-      <para>Если появилась чёрно-белая сетка и курсор мыши в виде
-	X, то настройка была выполнена успешно.  Для завершения тестирования
-	просто нажмите одновременно
+      <para>Если появилась чёрно-белая сетка и курсор мыши в виде X, то
+        настройка была выполнена успешно.  Для выхода из режима тестирования
+	переключитесь в виртуальную консоль, которая использовалась для
+        запуска, нажав
 	<keycombo action="simul">
 	  <keycap>Ctrl</keycap>
 	  <keycap>Alt</keycap>
-	  <keycap>Backspace</keycap>
-	</keycombo>.</para>
+          <keycap>F<replaceable>n</replaceable></keycap>
+        </keycombo> (<keycap>F1</keycap> соответствует первой виртуальной
+        консоли), а затем нажмите
+        <keycombo action="simul">
+          <keycap>Ctrl</keycap>
+          <keycap>C</keycap>
+        </keycombo>.</para>
 
-     <note>
-	<para>Данная комбинация включена по-умолчанию до
-	  <application>&xorg;</application> версии 7.3.  Для включения этого в
-	  версии 7.4 и выше, вы должны ввести следующую
+      <note>
+        <para>Во <application>&xorg;</application> версий по 7.3 комбинация
+          клавиш 
+          <keycombo action="simul">
+            <keycap>Ctrl</keycap>
+            <keycap>Alt</keycap>
+            <keycap>Backspace</keycap>
+          </keycombo> могла быть использована для выхода из
+          <application>&xorg;</application>.  Для включения такой
+          возможности в версии 7.4 и выше, вы должны либо ввести следующую
 	  команду в любом эмуляторе X терминала:</para>
 
 	<screen>&prompt.user; <userinput>setxkbmap -option terminate:ctrl_alt_bksp</userinput></screen>
 
-	<para>или создать конфигурационный файл клавиатуры для
+	<para>либо создать конфигурационный файл клавиатуры для
 	  <application>hald</application> называемый
 	  <filename>x11-input.fdi</filename> и сохранить его в
 	  <filename>/usr/local/etc/hal/fdi/policy</filename>
@@ -517,8 +529,15 @@ dbus_enable="YES"</programlisting>
   &lt;/device&gt;
 &lt;/deviceinfo&gt;</programlisting>
 
-	<para>Вам может потребоваться перезагрузка системы для вступления параметров
-	  <application>hald</application> в силу.</para>
+	<para>Вам необходимо будет перезагрузить систему для вступления
+          параметров <application>hald</application> в силу.</para>
+
+        <para>В раздел <literal>ServerLayout</literal> или
+          <literal>ServerFlags</literal> файла
+          <filename>xorg.conf.new</filename> необходимо будет также добавить
+          следующую строку:</para>
+
+        <programlisting>Option  "DontZap"       "off"</programlisting>
       </note>
 
 
