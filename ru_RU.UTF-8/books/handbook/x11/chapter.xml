@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r35137
+     Original revision: r35988
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -350,6 +350,10 @@
 	X11, включая серверы, клиенты, шрифты
 	и так далее.  Также доступны и отдельные пакеты и порты для
 	различных частей X11.</para>
+
+      <para>Для работы с минимальным пакетов X11 в качестве альтернативы
+        вы можете установить
+        <filename role="package">x11/xorg-minimal</filename>.</para>
     </note>
 
     <para>В оставшейся части главы будет рассказано о том, как сконфигурировать
