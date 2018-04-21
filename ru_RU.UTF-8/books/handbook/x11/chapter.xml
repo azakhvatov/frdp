@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r36898
+     Original revision: r36930
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -1431,7 +1431,7 @@ DisplayManager.requestPort:     0</screen>
         <programlisting>proc           /proc       procfs  rw  0   0</programlisting>
 
         <para>в <filename>/etc/fstab</filename> для автоматического
-          монтирования <filename>procfs</filename> при запуске системы.</para>
+          монтирования &man.procfs.5; при запуске системы.</para>
 
 	<para>После установки <application>GNOME</application> нужно указать
 	  X-серверу на запуск <application>GNOME</application> вместо
