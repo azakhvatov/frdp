@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r38463
+     Original revision: r38472
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -532,11 +532,11 @@ dbus_enable="YES"</programlisting>
           добавьте следующие строчки в секции <literal>ServerLayout</literal>
           или <literal>ServerFlags</literal>:</para>
 
-	  <programlisting>Option "AutoAddDevices" "false"</programlisting>
+        <programlisting>Option "AutoAddDevices" "false"</programlisting>
 
-	  <para>Устройства ввода могут конфигурированы затем как в предыдущих версиях,
-             вместе с другими необходимыми опциями (такими, как переключение раскладок клавиатуры
-	    например).</para>
+        <para>После этого устройства ввода могут быть настроены так же, как в
+          предыдущих версиях, вместе с другими необходимыми параметрами
+         (например, определяющими переключение раскладок клавиатуры).</para>
 
       <note>
 	<para>Как было объяснено выше, по-умолчанию даемон
