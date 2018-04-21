@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r36930
+     Original revision: r37879
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -407,14 +407,8 @@
     <sect2>
       <title>Конфигурирование X11</title>
 
-      <para>Начиная с версии 7.3, <application>&xorg;</application>
-	зачастую может работать без какого-либо файла настройки,
-	для его запуска достаточно просто набрать:</para>
-
-      <screen>&prompt.user; <userinput>startx</userinput></screen>
-
-      <para>Начиная с версии 7.4, <application>&xorg;</application>
-	может использовать <acronym>HAL</acronym> для автоматического поиска клавиатуры и мыши.
+      <para><application>&xorg;</application> использует <acronym>HAL</acronym>
+        для автоматического поиска клавиатуры и мыши.
 	Порты <package>sysutils/hal</package> и
 	<package>devel/dbus</package> будут инсталлированы как
 	зависимости <package>x11/xorg</package>, но для
@@ -424,9 +418,15 @@
       <programlisting>hald_enable="YES"
 dbus_enable="YES"</programlisting>
 
-      <para>Эти сервисы должны быть запущены (вручную или при
-	загрузки системы) до последующей загрузки <application>&xorg;</application>
-	конфигурации.</para>
+      <para>Эти сервисы должны быть запущены (вручную или при перезагрузке
+        системы) до последующей попытки запустить или настроить
+        <application>&xorg;</application>.</para>
+
+      <para><application>&xorg;</application> зачастую можно запустить без
+        каких-либо дополнительных шагов по настройке, просто выполнив из
+        командной строки вот что:</para>
+
+      <screen>&prompt.user; <userinput>startx</userinput></screen>
 
      <para>Автоматическая конфигурация не всегда может сработать на некотором оборудовании,
 	либо создать не совсем ту настройку, которая желаема. В этих случаях, необходима ручная
@@ -463,15 +463,8 @@ dbus_enable="YES"</programlisting>
 
       <para>Следующим шагом является тестирование существующей конфигурации для
 	проверки того, что <application>&xorg;</application> может работать
-	с графическим оборудованием в настраиваемой системе.  Для этого
-	выполните:</para>
-
-      <screen>&prompt.root; <userinput>Xorg -config xorg.conf.new</userinput></screen>
-
-      <para>Начиная с <application>&xorg;</application> 7.4 и выше,
-	это тестирование покажет лишь черный экран, что делает диагностику
-	не совсем полноценным. Старое поведение будет доступно
-	при использовании опции <option>retro</option></para>
+	с графическим оборудованием в настраиваемой системе.  Выполните
+        следующую команду:</para>
 
       <screen>&prompt.root; <userinput>Xorg -config xorg.conf.new -retro</userinput></screen>
 
@@ -491,16 +484,14 @@ dbus_enable="YES"</programlisting>
         </keycombo>.</para>
 
       <note>
-        <para>Во <application>&xorg;</application> версий по 7.3 комбинация
-          клавиш 
+        <para>Для выхода из <application>&xorg;</application> также может быть
+          использована комбинация клавиш
           <keycombo action="simul">
             <keycap>Ctrl</keycap>
             <keycap>Alt</keycap>
             <keycap>Backspace</keycap>
-          </keycombo> могла быть использована для выхода из
-          <application>&xorg;</application>.  Для включения такой
-          возможности в версии 7.4 и выше, вы должны либо ввести следующую
-	  команду в любом эмуляторе X терминала:</para>
+          </keycombo>.  Для включения такой возможности вы должны либо ввести
+          следующую команду в любом эмуляторе X терминала:</para>
 
 	<screen>&prompt.user; <userinput>setxkbmap -option terminate:ctrl_alt_bksp</userinput></screen>
 
@@ -534,12 +525,12 @@ dbus_enable="YES"</programlisting>
 
 	<para>Если мышь не работает, ее необходимо настроить.
 	  Обратитесь к <xref linkend="mouse"/> в главе об установке
-	  &os;. Дополнительно, начиная с версии
-	  7.4, секция <literal>InputDevice</literal> в
+	  &os;. В последних версиях <application>Xorg</application>
+	  секция <literal>InputDevice</literal> в файле
 	  <filename>xorg.conf</filename> игнорируется в пользу
-          автоматического поиска устройств. Для возвращения старого поведения, добавьте
-	  следующие строчки в секции <literal>ServerLayout</literal> или
-	  <literal>ServerFlags</literal>:</para>
+          автоматического поиска устройств.  Для возвращения старого поведения,
+          добавьте следующие строчки в секции <literal>ServerLayout</literal>
+          или <literal>ServerFlags</literal>:</para>
 
 	  <programlisting>Option "AutoAddDevices" "false"</programlisting>
 
@@ -548,13 +539,13 @@ dbus_enable="YES"</programlisting>
 	    например).</para>
 
       <note>
-	<para>Как ранее уже сообщалось, начиная с версии 7.4, по-умолчанию,
-	  <application>hald</application> демон будет пытаться распознать
-	  вашу клавиатуру автоматически. Есть возможность, что раскладка вашей
-	   клавиатуры или ее модель будут определены некорректно. Такие оконные
-	  менеджеры как <application>GNOME</application>,
+	<para>Как было объяснено выше, по-умолчанию даемон
+	  <application>hald</application> будет пытаться распознать
+	  вашу клавиатуру автоматически. Есть вероятность, что раскладка вашей
+	  клавиатуры или её модель будут определены некорректно. Такие оконные
+	  менеджеры, как <application>GNOME</application>,
 	  <application>KDE</application> или
-	  <application>Xfce</application> содержат свои инструменты для конфигурирования
+	  <application>Xfce</application>, содержат свои инструменты для конфигурирования
           клавиатур. Тем не менее, можно установить параметры клавиатуры
           непосредственно с помощью утилиты &man.setxkbmap.1; или через
 	  <application>hald</application>конфигурационные правила.</para>
