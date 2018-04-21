@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r36503
+     Original revision: r36653
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -24,26 +24,13 @@
     <title>Обзор</title>
 
     <para>FreeBSD использует X11 для того, чтобы дать пользователям мощный
-      графический интерфейс.  X11 является свободно доступной версией
-      X Window System, реализованной в <application>&xorg;</application> и
-      <application>&xfree86;</application> (а также других программных
-      пакетах, здесь не рассматриваемых).  В версиях &os; до и включая
-      &os;&nbsp;5.2.1-RELEASE сервером X11
-      по умолчанию был <application>&xfree86;</application>, выпускаемый
-      The &xfree86; Project, Inc.  Начиная с &os;&nbsp;5.3-RELEASE,
-      официальной версией X11 по умолчанию стал
+      графический интерфейс.  X11 является свободно распространяемой версией
+      X Window System, реализованной в <application>&xorg;</application> (а
+      также других программных пакетах, которые здесь не рассматриваются).  Во
+      &os; официальной и используемой по умолчанию версией X11 является пакет
       <application>&xorg;</application>, разработанный
-      X.Org Foundation под лицензией, очень похожей на ту, которая используется
-      &os;.  Под &os; существуют также коммерческие X серверы.</para>
-
-    <para>Эта глава посвящена установке и настройке
-      X11 в системе FreeBSD, с акцентом на релиз
-      <application>&xorg;</application> &xorg.version;.
-      За информацией о настройке <application>&xfree86;</application>
-      (в более старых релизах &os; <application>&xfree86;</application>
-      был реализацией X11 по умолчанию), или более старых релизов
-      <application>&xorg;</application>, всегда можно обратиться к старым
-      версиям Руководства &os; по адресу <uri xlink:href="http://docs.FreeBSD.org/doc/">http://docs.FreeBSD.org/doc/</uri>.</para>
+      X.Org Foundation под лицензией, очень похожей на ту, что используется
+      во &os;.  Для &os; существуют также коммерческие X серверы.</para>
 
     <para>За дополнительной информацией по видео оборудованию, поддерживаемому
       X11, обратитесь к веб сайту
