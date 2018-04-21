@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r35988
+     Original revision: r36295
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -839,8 +839,8 @@ EndSection</programlisting>
 	справочной системы &man.X.7; и в <link linkend="truetype">разделе о
 	шрифтах &truetype;</link> ниже.</para>
 
-      <para>Для установки вышеупомянутых коллекций шрифтов Type1 из коллекции
-	портов выполните следующие команды:</para>
+      <para>Для установки вышеупомянутых коллекций шрифтов Type1 из Коллекции
+	Портов выполните следующие команды:</para>
 
       <screen>&prompt.root; <userinput>cd /usr/ports/x11-fonts/urwfonts</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
@@ -1738,8 +1738,8 @@ DisplayManager.requestPort:     0</screen>
 
 	<screen>&prompt.root; <userinput>pkg_add -r xfce4</userinput></screen>
 
-	<para>Либо, в случае построения из исходных текстов, используйте
-	  Коллекцию Портов: </para>
+	<para>Либо, в случае построения из исходного кода, используйте
+	  Коллекцию Портов:</para>
 
 	<screen>&prompt.root; <userinput>cd /usr/ports/x11-wm/xfce4</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
