@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r36295
+     Original revision: r36503
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -1661,18 +1661,22 @@ DisplayManager.requestPort:     0</screen>
 	  входа в систему.</para>
 
 	<para>Для того, чтобы разрешить запуск <application>kdm</application>,
-	  измените в файле <filename>/etc/ttys</filename> строку, относящуюся
-	  к консоли <literal>ttyv8</literal>:</para>
+          необходимо отредактировать различные файлы, в зависимости от версии
+          <application>KDE</application>.</para>
 
-	<para>Для <application>KDE3</application>:</para>
+	<para>В случае использования <application>KDE3</application> в файле
+          <filename>/etc/ttys</filename> должна быть изменена запись о
+          <literal>ttyv8</literal> следующим образом:</para>
 
 	<programlisting>ttyv8 "/usr/local/bin/kdm -nodaemon" xterm on secure</programlisting>
 
-	<para>Для <application>KDE4</application>:</para>
+	<para>В случае использования <application>KDE4</application> в файл
+          <filename>/etc/rc.conf</filename> должны быть добавлены следующие
+          строки:</para>
 
-	<programlisting>ttyv8 "/usr/local/kde4/bin/kdm -nodaemon" xterm on secure</programlisting>
+        <programlisting>local_startup="${local_startup} /usr/local/kde4/etc/rc.d"
+kdm4_enable="YES"</programlisting>
       </sect3>
-
     </sect2>
 
     <sect2 xml:id="x11-wm-xfce">
