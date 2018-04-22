@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r38472
+     Original revision: r38820
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -1344,9 +1344,9 @@ DisplayManager.requestPort:     0</screen>
 
       <para>Существует несколько программ, заменяющих
 	<application>XDM</application>.  Одна из них,
-	<application>kdm</application> (поставляемая вместе с
+	<application>KDM</application> (поставляемая вместе с
 	<application>KDE</application>), описана далее в этой главе.  В
-	<application>kdm</application> имеется много визуальных и
+	<application>KDM</application> имеется много визуальных и
 	косметических улучшений, а также функциональность, позволяющая
 	пользователям выбирать собственные оконные менеджеры во время
 	входа в систему.</para>
@@ -1481,7 +1481,7 @@ DisplayManager.requestPort:     0</screen>
 	  образом, чтобы он позволял выбирать оконный менеджер во время входа в
 	  систему; в разделе о <link linkend="x11-wm-kde-details">KDE в
 	  подробностях</link> описывается, как сделать это для
-	  <application>kdm</application>, менеджера дисплеев из
+	  <application>KDM</application>, менеджера дисплеев из
 	  <application>KDE</application>.</para>
       </sect3>
     </sect2>
@@ -1526,7 +1526,7 @@ DisplayManager.requestPort:     0</screen>
 
 	  <listitem>
 	    <para>Интернационализация: в <application>KDE</application>
-	      поддерживается более 40 языков</para>
+	      поддерживается более 55 языков</para>
 	  </listitem>
 
 	  <listitem>
@@ -1548,13 +1548,16 @@ DisplayManager.requestPort:     0</screen>
 	  найти на веб-сайте <link xlink:href="http://www.kde.org/">KDE в
 	  FreeBSD</link>.  Для получения информации и информационных ресурсов,
 	  специфичных для <application>KDE</application> во FreeBSD, обратитесь
-	  к сайту команды <link xlink:href="http://freebsd.kde.org/">FreeBSD-KDE
-	  team</link>.</para>
+	  к сайту инициативы <link
+          xlink:href="http://freebsd.kde.org/">KDE/FreeBSD</link>.</para>
 
-	<para>Имеется две версии <application>KDE</application> доступные на FreeBSD.  Версия 3
-	  была доступна очень долгое время и она является очень зрелой. Версия 4 - это следующее
-          поколение, также доступное через Коллекцию Портов.
-	  Обе версии могут быть инсталлированы одновременно.</para>
+	<para>Для FreBSD доступны две версии <application>KDE</application>.
+          Версия 3 доступна уже достаточно давно и всё ещё присутствует в
+          Коллекции Портов, хотя в настоящее время она не поддерживается и
+          не полностью работоспособна.  Версия 4 пунктуально обновляется и
+          является выбором по умолчанию для пользователей
+          <application>KDE</application>.  Обе версии могут быть даже
+          установлены одновременно.</para>
       </sect3>
 
       <sect3 xml:id="x11-wm-kde-install">
@@ -1564,27 +1567,27 @@ DisplayManager.requestPort:     0</screen>
 	  другой графической оболочкой, программное обеспечение можно легко
 	  установить из пакета или из Коллекции Портов:</para>
 
-	<para>Для установки пакета <application>KDE3</application> из сети,
-	  просто наберите:</para>
+	<para>Для установки пакета <application>KDE 3</application> из сети
+	  наберите команду:</para>
 
 	<screen>&prompt.root; <userinput>pkg_add -r kde</userinput></screen>
 
-	<para>Для установки пакета <application>KDE4</application> из сети,
-	  просто наберите:</para>
+	<para>Для установки пакета <application>KDE 4</application> из сети
+	  наберите команду:</para>
 
         <screen>&prompt.root; <userinput>pkg_add -r kde4</userinput></screen>
 
 	<para>&man.pkg.add.1; автоматически загрузит самую последнюю версию
 	  приложения.</para>
 
-	<para>Для построения <application>KDE3</application> из исходных
-	  текстов, воспользуйтесь деревом портов:</para>
+	<para>Для построения <application>KDE 3</application> из исходных
+	  текстов воспользуйтесь деревом портов:</para>
 
 	<screen>&prompt.root; <userinput>cd /usr/ports/x11/kde3</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
 
-	  <para>Для построения <application>KDE4</application> из исходных
-          текстов, воспользуйтесь деревом портов:</para>
+        <para>Для построения <application>KDE 4</application> из исходных
+          текстов воспользуйтесь деревом портов:</para>
 
 	<screen>&prompt.root; <userinput>cd /usr/ports/x11/kde4</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
@@ -1594,11 +1597,11 @@ DisplayManager.requestPort:     0</screen>
 	  менеджера, используемого по умолчанию.  Это достигается
 	  редактированием файла <filename>.xinitrc</filename>:</para>
 
-	<para>Для <application>KDE3</application>:</para>
+	<para>Для <application>KDE 3</application>:</para>
 
 	<screen>&prompt.user; <userinput>echo "exec startkde" &gt; ~/.xinitrc</userinput></screen>
 
-	<para>Для <application>KDE4</application>:</para>
+	<para>Для <application>KDE 4</application>:</para>
 
 	<screen>&prompt.user; <userinput>echo "exec /usr/local/kde4/bin/startkde" &gt; ~/.xinitrc</userinput></screen>
 
@@ -1610,7 +1613,7 @@ DisplayManager.requestPort:     0</screen>
 	  <application>XDM</application> настройка несколько отличается.
 	  Вместо этого нужно отредактировать файл
 	  <filename>.xsession</filename>.  Указания для
-	  <application>kdm</application> описаны далее в этой главе.</para>
+	  <application>KDM</application> описаны далее в этой главе.</para>
       </sect3>
     </sect2>
 
@@ -1643,7 +1646,7 @@ DisplayManager.requestPort:     0</screen>
 	  потребоваться графический экран для входа пользователей
 	  в систему.  Вы можете использовать <link linkend="x-xdm">XDM</link>, как это описано
 	  ранее.  Однако в <application>KDE</application> имеется
-	  альтернативный менеджер <application>kdm</application>, который был
+	  альтернативный менеджер <application>KDM</application>, который был
 	  разработан более привлекательным и с
 	  большим количеством настраиваемых опций для входа в систему.  В
 	  частности, пользователи могут легко выбирать (посредством меню),
@@ -1651,22 +1654,21 @@ DisplayManager.requestPort:     0</screen>
 	  <application>GNOME</application> или что-то ещё) запускать после
 	  входа в систему.</para>
 
-	<para>Для того, чтобы разрешить запуск <application>kdm</application>,
+	<para>Для того, чтобы разрешить запуск <application>KDM</application>,
           необходимо отредактировать различные файлы, в зависимости от версии
           <application>KDE</application>.</para>
 
-	<para>В случае использования <application>KDE3</application> в файле
+	<para>В случае использования <application>KDE 3</application> в файле
           <filename>/etc/ttys</filename> должна быть изменена запись о
           <literal>ttyv8</literal> следующим образом:</para>
 
 	<programlisting>ttyv8 "/usr/local/bin/kdm -nodaemon" xterm on secure</programlisting>
 
-	<para>В случае использования <application>KDE4</application> в файл
-          <filename>/etc/rc.conf</filename> должны быть добавлены следующие
-          строки:</para>
+	<para>В случае использования <application>KDE 4</application> вам
+          необходимо смонтировать &man.procfs.5; и добавить следующую строку в
+          файл <filename>/etc/rc.conf</filename>:</para>
 
-        <programlisting>local_startup="${local_startup} /usr/local/kde4/etc/rc.d"
-kdm4_enable="YES"</programlisting>
+        <programlisting>kdm4_enable="YES"</programlisting>
       </sect3>
     </sect2>
 
