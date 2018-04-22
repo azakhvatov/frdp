@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--
      The FreeBSD Russian Documentation Project
 
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r39176
+     Original revision: r39534
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -62,11 +62,11 @@
       </listitem>
     </itemizedlist>
 
-    <para>Перед чтением этой главы вам потребуется:</para>
+    <para>Перед чтением этой главы вам требуется:</para>
 
     <itemizedlist>
       <listitem>
-	<para>Узнать, как устанавливать дополнительное программное обеспечение
+	<para>Знать, как устанавливать дополнительное программное обеспечение
 	  сторонних разработчиков (<xref linkend="ports"/>).</para>
       </listitem>
     </itemizedlist>
@@ -1156,13 +1156,15 @@ EndSection</programlisting>
 
       <para>Программой даемона <application>XDM</application> является
 	<filename>/usr/local/bin/xdm</filename>.  Эта программа может быть
-	запущена от пользователя <systemitem class="username">root</systemitem> в любой момент, и
+	запущена от пользователя <systemitem
+        class="username">root</systemitem> в любой момент, и
 	она начнёт управлять дисплеем X на локальной машине.
 	Если <application>XDM</application> нужно запускать
 	в фоновом режиме каждый раз при запуске компьютера, то наиболее
 	правильный способ &mdash; это добавить новую запись в
 	<filename>/etc/ttys</filename>. Для более подробной информации о
-	формате и использовании этого файла смотрите <xref linkend="term-etcttys"/>.  Вот строка, которую необходимо добавить
+	формате и использовании этого файла смотрите <xref
+        linkend="term-etcttys"/>.  Вот строка, которую необходимо добавить
 	в файл <filename>/etc/ttys</filename> для того, чтобы запустить
 	даемон <application>XDM</application> на виртуальном терминале:</para>
 
