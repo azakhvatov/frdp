@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r40566
+     Original revision: r41025
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -18,9 +18,7 @@
     </authorgroup>
   </info>
 
-  
-
-  <sect1 xml:id="x11-synopsis">
+  <sect1 id="x11-synopsis">
     <title>Обзор</title>
 
     <para>FreeBSD использует X11 для того, чтобы дать пользователям мощный
@@ -28,9 +26,8 @@
       X Window System, реализованной в <application>&xorg;</application> (а
       также других программных пакетах, которые здесь не рассматриваются).  Во
       &os; официальной и используемой по умолчанию версией X11 является пакет
-      <application>&xorg;</application>, разработанный
-      X.Org Foundation под лицензией, очень похожей на ту, что используется
-      во &os;.  Для &os; существуют также коммерческие X серверы.</para>
+      <application>&xorg;</application>, разработанный X.Org Foundation под
+      лицензией, очень похожей на ту, что используется во &os;.</para>
 
     <para>За дополнительной информацией по видео оборудованию, поддерживаемому
       X11, обратитесь к веб сайту
@@ -72,7 +69,7 @@
     </itemizedlist>
   </sect1>
 
-  <sect1 xml:id="x-understanding">
+  <sect1 id="x-understanding">
     <title>Основы X</title>
 
     <para>Первое знакомство с X может оказаться чем-то вроде шока для тех, кто
@@ -114,14 +111,14 @@
 	использован в качестве устройства ввода, а видеопроектор в качестве
 	альтернативного устройства вывода).  Каждое
 	X-приложение (например, <application>XTerm</application> или
-	<application>&netscape;</application>) является
+        <application>Firefox</application>) является
 	<quote>клиентом</quote>.  Клиент посылает сообщения серверу, такие,
 	как <quote>Пожалуйста, нарисуй окно со следующими координатами</quote>,
 	а сервер посылает в ответ сообщения типа <quote>Пользователь только что
 	щёлкнул мышью на кнопке OK</quote>.</para>
 
-      <para>В случае
-	использования дома или в офисе, сервер и клиенты X как правило будут работать на
+      <para>В случае использования дома или в офисе, сервер и клиенты X, как
+        правило, будут работать на
 	том же самом компьютере.  Однако реально возможно запускать X-сервер
 	на менее мощном настольном компьютере, а приложения X (клиенты) на,
 	скажем, мощной и дорогой машине, обслуживающей целый офис.  В этом
@@ -164,22 +161,17 @@
 	прочее.</para>
 
       <para>Вместо этого X делегирует ответственность за это приложению,
-	которое называется <quote>Window Manager</quote> (Менеджер Окон).  Есть
-	десятки оконных менеджеров для X: <application>AfterStep</application>,
-	<application>Blackbox</application>, <application>ctwm</application>,
-	<application>Enlightenment</application>,
-	<application>fvwm</application>, <application>Sawfish</application>,
-	<application>twm</application>,
-	<application>WindowMaker</application> и другие.  Каждый из этих
+	которое называется <quote>Window Manager</quote> (Менеджер Окон).
+        Существуют <ulink url="http://xwinman.org/">десятки оконных
+        менеджеров</ulink> для X.  Каждый из этих
 	оконных менеджеров предоставляет различные внешние виды и удобства;
 	некоторые из них поддерживают <quote>виртуальные рабочие столы</quote>;
 	некоторые из них позволяют изменять назначения комбинаций
 	клавиш, используемых для управления рабочим столом; в некоторых есть
 	кнопка <quote>Start</quote> или нечто подобное; некоторые поддерживают
 	<quote>темы</quote>, позволяя изменять внешний вид, поменяв тему.
-	Эти оконные менеджеры, а также множество
-	других, находятся в категории <filename>x11-wm</filename> коллекции
-	портов.</para>
+	Оконные менеджеры находятся в категории <filename>x11-wm</filename>
+        Коллекции Портов.</para>
 
       <para>Кроме того, оболочки <application>KDE</application> и
 	<application>GNOME</application> имеют собственные оконные
@@ -282,30 +274,22 @@
 
       <para>В результате не стоит ожидать от X-приложений
 	похожести во внешнем виде.  Существует несколько популярных наборов
-	виджетов и их разновидностей, включая оригинальный набор виджетов
-	Athena от MIT, <application>&motif;</application> (по
-	образу которого был разработан набор виджетов в &microsoft.windows;,
-	все эти скошенные углы и три разновидности серого цвета),
-	<application>OpenLook</application> и другие.</para>
-
-      <para>В большинстве появляющихся в настоящее время приложений для X будет
-	использоваться современно выглядящий набор виджетов, либо Qt,
-	используемый в <application>KDE</application>, либо
-	GTK+, используемый проектом
-	<application>GNOME</application>.  В этом отношении наблюдается
+	виджетов и их разновидностей, включая Qt, используемый в
+        <application>KDE</application>, и GTK+, который задействован в
+	проекте <application>GNOME</application>.  В этом отношении наблюдается
 	унификация внешнего вида рабочего стола в &unix;, что определённо
 	облегчает жизнь начинающему пользователю.</para>
     </sect2>
   </sect1>
 
-  <sect1 xml:id="x-install">
+  <sect1 id="x-install">
     <title>Установка X11</title>
 
-    <para>Версией X11 по умолчанию для &os; является
+    <para>Версией X11, используемой во &os;, является
       <application>&xorg;</application>.  <application>&xorg;</application>
       это сервер X дистрибутива открытой реализации X Window System,
-      выпущенной X.Org Foundation.  <application>&xorg;</application> основан на коде
-      <application>&xfree86;&nbsp;4.4RC2</application> и X11R6.6.
+      выпущенной X.Org Foundation.  <application>&xorg;</application> основан
+      на коде <application>&xfree86;&nbsp;4.4RC2</application> и X11R6.6.
       Версия <application>&xorg;</application>, доступная на данный момент
       из коллекции портов &os;: &xorg.version;.</para>
 
@@ -347,7 +331,7 @@
       X11 и настроить рабочее окружение.</para>
   </sect1>
 
-  <sect1 xml:id="x-config">
+  <sect1 id="x-config">
     <info><title>Конфигурация X11</title>
       <authorgroup>
 	<author><personname><firstname>Christopher</firstname><surname>Shumway</surname></personname><contrib>Текст предоставил </contrib></author>
@@ -797,7 +781,7 @@ EndSection</programlisting>
     </sect2>
   </sect1>
 
-  <sect1 xml:id="x-fonts">
+  <sect1 id="x-fonts">
     <info><title>Использование шрифтов в X11</title>
       <authorgroup>
 	<author><personname><firstname>Murray</firstname><surname>Stokely</surname></personname><contrib>Текст предоставил </contrib></author>
@@ -805,7 +789,7 @@ EndSection</programlisting>
     </info>
     
 
-    <sect2 xml:id="type1">
+    <sect2 id="type1">
       <title>Шрифты Type1</title>
 
       <para>Шрифты, используемые по умолчанию и распространяемые вместе с
@@ -859,7 +843,7 @@ EndSection</programlisting>
 	раздел об <link linkend="antialias">антиалиасинге</link>.</para>
     </sect2>
 
-    <sect2 xml:id="truetype">
+    <sect2 id="truetype">
       <title>Шрифты &truetype;</title>
 
       <indexterm><primary>Шрифты TrueType</primary></indexterm>
@@ -915,7 +899,7 @@ EndSection</programlisting>
 	гораздо лучше.</para>
     </sect2>
 
-    <sect2 xml:id="antialias">
+    <sect2 id="antialias">
       <info><title>Антиалиасинг шрифтов</title>
 	<authorgroup>
 	  <author><personname><firstname>Joe Marcus</firstname><surname>Clarke</surname></personname><contrib>Обновление выполнил </contrib></author>
@@ -1102,7 +1086,7 @@ EndSection</programlisting>
     </sect2>
   </sect1>
 
-  <sect1 xml:id="x-xdm">
+  <sect1 id="x-xdm">
     <info><title>Менеджеры экранов (Display Managers) X</title>
       <authorgroup>
 	<author><personname><firstname>Seth</firstname><surname>Kingsley</surname></personname><contrib>Текст предоставил </contrib></author>
@@ -1365,7 +1349,7 @@ DisplayManager.requestPort:     0</screen>
     </sect2>
   </sect1>
 
-  <sect1 xml:id="x11-wm">
+  <sect1 id="x11-wm">
     <info><title>Графические оболочки</title>
       <authorgroup>
 	<author><personname><firstname>Valentino</firstname><surname>Vaschetto</surname></personname><contrib>Текст предоставил </contrib></author>
@@ -1382,10 +1366,10 @@ DisplayManager.requestPort:     0</screen>
       <application>KDE</application> или
       <application>GNOME</application>.</para>
 
-    <sect2 xml:id="x11-wm-gnome">
+    <sect2 id="x11-wm-gnome">
       <title>GNOME</title>
 
-      <sect3 xml:id="x11-wm-gnome-about">
+      <sect3 id="x11-wm-gnome-about">
 	<title>О GNOME</title>
 
 	<indexterm><primary>GNOME</primary></indexterm>
@@ -1410,7 +1394,7 @@ DisplayManager.requestPort:     0</screen>
 	  <application>GNOME</application>.</para>
       </sect3>
 
-      <sect3 xml:id="x11-wm-gnome-install">
+      <sect3 id="x11-wm-gnome-install">
 	<title>Установка GNOME</title>
 
 	<para>Программу проще всего установить из пакета или коллекции
@@ -1498,12 +1482,12 @@ DisplayManager.requestPort:     0</screen>
       </sect3>
     </sect2>
 
-    <sect2 xml:id="x11-wm-kde">
+    <sect2 id="x11-wm-kde">
       <title>KDE</title>
 
       <indexterm><primary>KDE</primary></indexterm>
 
-      <sect3 xml:id="x11-wm-kde-about">
+      <sect3 id="x11-wm-kde-about">
 	<title>О KDE</title>
 
 	<para><application>KDE</application> является простой в использовании
@@ -1572,7 +1556,7 @@ DisplayManager.requestPort:     0</screen>
           установлены одновременно.</para>
       </sect3>
 
-      <sect3 xml:id="x11-wm-kde-install">
+      <sect3 id="x11-wm-kde-install">
 	<title>Установка KDE</title>
 
 	<para>Как и в случае с <application>GNOME</application> или любой
@@ -1629,7 +1613,7 @@ DisplayManager.requestPort:     0</screen>
       </sect3>
     </sect2>
 
-    <sect2 xml:id="x11-wm-kde-details">
+    <sect2 id="x11-wm-kde-details">
       <title>Более подробно о KDE</title>
 
       <para>Теперь, когда <application>KDE</application> установлена в
@@ -1645,7 +1629,7 @@ DisplayManager.requestPort:     0</screen>
 	части этого раздела обсуждаются технические вопросы, трудные для
 	понимания при случайном исследовании.</para>
 
-      <sect3 xml:id="x11-wm-kde-kdm">
+      <sect3 id="x11-wm-kde-kdm">
 	<title>Менеджер дисплеев KDE</title>
 
 	<indexterm>
@@ -1684,10 +1668,10 @@ DisplayManager.requestPort:     0</screen>
       </sect3>
     </sect2>
 
-    <sect2 xml:id="x11-wm-xfce">
+    <sect2 id="x11-wm-xfce">
       <title>XFce</title>
 
-      <sect3 xml:id="x11-wm-xfce-about">
+      <sect3 id="x11-wm-xfce-about">
 	<title>О XFce</title>
 
 	<para><application>XFce</application> является графической оболочкой,
@@ -1738,7 +1722,7 @@ DisplayManager.requestPort:     0</screen>
 	  XFce</link>.</para>
       </sect3>
 
-      <sect3 xml:id="x11-wm-xfce-install">
+      <sect3 id="x11-wm-xfce-install">
 	<title>Установка XFce</title>
 
 	<para>Для <application>XFce</application> имеется (на момент написания
