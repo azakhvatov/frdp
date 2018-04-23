@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r41025
+     Original revision: r41343
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -793,10 +793,9 @@ EndSection</programlisting>
       <title>Шрифты Type1</title>
 
       <para>Шрифты, используемые по умолчанию и распространяемые вместе с
-	X11, вряд ли можно назвать идеально
-	подходящими для применения в обычных издательских приложениях.  Большие
-	презентационные шрифты выглядят рвано и непрофессионально, а мелкие
-	шрифты в <application>&netscape;</application> вообще невозможно
+	X11, вряд ли можно назвать идеально подходящими для применения в
+        обычных издательских приложениях.  Большие презентационные шрифты
+        выглядят рвано и непрофессионально, а мелкие шрифты вообще невозможно
 	разобрать.  Однако есть некоторое количество свободно распространяемых
 	высококачественных шрифтов Type1 (&postscript;), которые можно без
 	изменений использовать с X11.  К примеру, в наборе шрифтов URW
@@ -890,10 +889,10 @@ EndSection</programlisting>
       <para>или добавьте строку <option>FontPath</option> в файл
 	<filename>xorg.conf</filename>.</para>
 
-      <para>Это всё.  Теперь <application>&netscape;</application>,
-	<application>Gimp</application>,
-	<application>&staroffice;</application> и все остальные X-приложения
-	должны увидеть установленные шрифты &truetype;.  Очень маленькие (как
+      <para>Это всё.  Теперь <application>Gimp</application>,
+	<application>Apache OpenOffice</application> и все остальные приложения
+        для X должны обнаружить установленные шрифты &truetype;.  Очень
+        маленькие (как
 	текст веб-страницы на дисплее с высоким разрешением) и очень большие (в
 	<application>&staroffice;</application>) шрифты будут теперь выглядеть
 	гораздо лучше.</para>
