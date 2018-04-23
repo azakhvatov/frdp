@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r39631
+     Original revision: r40566
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
   <info><title>X Window System</title>
@@ -962,8 +962,7 @@ EndSection</programlisting>
       <programlisting>
         &lt;?xml version="1.0"?&gt;
         &lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd"&gt;
-        &lt;fontconfig&gt;
-      </programlisting>
+        &lt;fontconfig&gt;</programlisting>
 
       <para>Как и говорилось ранее, все шрифты из каталога
 	<filename>/usr/local/lib/X11/fonts/</filename>, а также
@@ -1092,8 +1091,7 @@ EndSection</programlisting>
             &lt;edit name="rgba" mode="assign"&gt;
                 &lt;const&gt;rgb&lt;/const&gt;
             &lt;/edit&gt;
-        &lt;/match&gt;
-      </programlisting>
+        &lt;/match&gt;</programlisting>
 
       <note>
 	<para>В зависимости от типа дисплея, <literal>rgb</literal> может
