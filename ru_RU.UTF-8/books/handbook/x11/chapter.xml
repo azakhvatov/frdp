@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r41645
+     Original revision: r42571
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -1548,14 +1548,6 @@ DisplayManager.requestPort:     0</screen>
 	  специфичных для <application>KDE</application> во FreeBSD, обратитесь
 	  к сайту инициативы <link
           xlink:href="http://freebsd.kde.org/">KDE/FreeBSD</link>.</para>
-
-	<para>Для FreBSD доступны две версии <application>KDE</application>.
-          Версия 3 доступна уже достаточно давно и всё ещё присутствует в
-          Коллекции Портов, хотя в настоящее время она не поддерживается и
-          не полностью работоспособна.  Версия 4 пунктуально обновляется и
-          является выбором по умолчанию для пользователей
-          <application>KDE</application>.  Обе версии могут быть даже
-          установлены одновременно.</para>
       </sect3>
 
       <sect3 id="x11-wm-kde-install">
@@ -1565,11 +1557,6 @@ DisplayManager.requestPort:     0</screen>
 	  другой графической оболочкой, программное обеспечение можно легко
 	  установить из пакета или из Коллекции Портов:</para>
 
-	<para>Для установки пакета <application>KDE 3</application> из сети
-	  наберите команду:</para>
-
-	<screen>&prompt.root; <userinput>pkg_add -r kde</userinput></screen>
-
 	<para>Для установки пакета <application>KDE 4</application> из сети
 	  наберите команду:</para>
 
@@ -1578,28 +1565,29 @@ DisplayManager.requestPort:     0</screen>
 	<para>&man.pkg.add.1; автоматически загрузит самую последнюю версию
 	  приложения.</para>
 
-	<para>Для построения <application>KDE 3</application> из исходных
-	  текстов воспользуйтесь деревом портов:</para>
+	<para>Для тех, кто использует <application>pkgng</application>,
+          аналогичное действие выполняет команда:</para>
 
-	<screen>&prompt.root; <userinput>cd /usr/ports/x11/kde3</userinput>
-&prompt.root; <userinput>make install clean</userinput></screen>
+        <screen>&prompt.root; <userinput>pkg install kde4</userinput></screen>
 
-        <para>Для построения <application>KDE 4</application> из исходных
+        <para>Для построения <application>KDE</application> из исходных
           текстов воспользуйтесь деревом портов:</para>
 
 	<screen>&prompt.root; <userinput>cd /usr/ports/x11/kde4</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
 
+        <para>При первой установке этого порта будет представлено меню для
+          выбора опций установки.  Рекомендуется подтвердить параметры по
+          умолчанию.</para>
+
+        <para><application>KDE 4</application> является большим приложением,
+          его компиляция займёт определённое время даже на быстродействующем
+          компьютере.</para>
+
 	<para>После установки <application>KDE</application> нужно
 	  указать X-серверу на запуск этого приложения вместо оконного
 	  менеджера, используемого по умолчанию.  Это достигается
 	  редактированием файла <filename>.xinitrc</filename>:</para>
-
-	<para>Для <application>KDE 3</application>:</para>
-
-	<screen>&prompt.user; <userinput>echo "exec startkde" &gt; ~/.xinitrc</userinput></screen>
-
-	<para>Для <application>KDE 4</application>:</para>
 
 	<screen>&prompt.user; <userinput>echo "exec /usr/local/kde4/bin/startkde" &gt; ~/.xinitrc</userinput></screen>
 
@@ -1652,19 +1640,10 @@ DisplayManager.requestPort:     0</screen>
 	  <application>GNOME</application> или что-то ещё) запускать после
 	  входа в систему.</para>
 
-	<para>Для того, чтобы разрешить запуск <application>KDM</application>,
-          необходимо отредактировать различные файлы, в зависимости от версии
-          <application>KDE</application>.</para>
-
-	<para>В случае использования <application>KDE 3</application> в файле
-          <filename>/etc/ttys</filename> должна быть изменена запись о
-          <literal>ttyv8</literal> следующим образом:</para>
-
-	<programlisting>ttyv8 "/usr/local/bin/kdm -nodaemon" xterm on secure</programlisting>
-
-	<para>В случае использования <application>KDE 4</application> вам
-          необходимо смонтировать &man.procfs.5; и добавить следующую строку в
-          файл <filename>/etc/rc.conf</filename>:</para>
+	<para><application>KDE 4</application> требует наличия смонтированной
+          файловой системы &man.procfs.5;, в файл
+          <filename>/etc/rc.conf</filename> должна быть добавлена следующая
+          строка:</para>
 
         <programlisting>kdm4_enable="YES"</programlisting>
       </sect3>
