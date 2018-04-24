@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r42576
+     Original revision: r42646
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -1407,6 +1407,11 @@ DisplayManager.requestPort:     0</screen>
 
 	<screen>&prompt.root; <userinput>pkg_add -r gnome2</userinput></screen>
 
+        <para>Для тех, кто использует <application>pkgng</application>,
+          аналогичная команда выглядит вот так:</para>
+
+        <screen>&prompt.root; <userinput>pkg install gnome2</userinput></screen>
+
 	<para>Для построения <application>GNOME</application> из
 	  исходных текстов используйте дерево портов:</para>
 
@@ -1560,7 +1565,7 @@ DisplayManager.requestPort:     0</screen>
 	<para>Для установки пакета <application>KDE 4</application> из сети
 	  наберите команду:</para>
 
-        <screen>&prompt.root; <userinput>pkg_add -r kde4</userinput></screen>
+        <screen>&prompt.root; <userinput>pkg_add -r kde</userinput></screen>
 
 	<para>&man.pkg.add.1; автоматически загрузит самую последнюю версию
 	  приложения.</para>
@@ -1568,7 +1573,7 @@ DisplayManager.requestPort:     0</screen>
 	<para>Для тех, кто использует <application>pkgng</application>,
           аналогичное действие выполняет команда:</para>
 
-        <screen>&prompt.root; <userinput>pkg install kde4</userinput></screen>
+        <screen>&prompt.root; <userinput>pkg install kde</userinput></screen>
 
         <para>Для построения <application>KDE</application> из исходных
           текстов воспользуйтесь деревом портов:</para>
@@ -1704,13 +1709,17 @@ DisplayManager.requestPort:     0</screen>
       </sect3>
 
       <sect3 id="x11-wm-xfce-install">
-	<title>Установка XFce</title>
+	<title>Установка Xfce</title>
 
-	<para>Для <application>XFce</application> имеется (на момент написания
-	  этого текста) бинарный пакет.  Для его установки просто
-	  наберите:</para>
+	<para>Для установки <application>Xfce</application> из сети просто
+          наберите:</para>
 
-	<screen>&prompt.root; <userinput>pkg_add -r xfce4</userinput></screen>
+	<screen>&prompt.root; <userinput>pkg_add -r xfce</userinput></screen>
+
+        <para>Для тех, кто использует <application>pkgng</application>,
+          аналогичная команда такова:</para>
+
+        <screen>&prompt.root; <userinput>pkg install xfce</userinput></screen>
 
 	<para>Либо, в случае построения из исходного кода, используйте
 	  Коллекцию Портов:</para>
