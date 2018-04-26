@@ -5,19 +5,40 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r42894
+     Original revision: r42895
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
   xml:id="x11">
 
-  <info><title>X Window System</title>
+  <info>
+    <title>X Window System</title>
+
     <authorgroup>
-      <author><personname><firstname>Ken</firstname><surname>Tom</surname></personname><contrib>Обновили для сервера X.Org X11 </contrib></author>
-      <author><personname><firstname>Marc</firstname><surname>Fonvieille</surname></personname></author>
+      <author>
+        <personname>
+          <firstname>Ken</firstname>
+          <surname>Tom</surname>
+        </personname>
+
+        <contrib>Обновили для сервера X.Org X11 </contrib>
+      </author>
+
+      <author>
+        <personname>
+          <firstname>Marc</firstname>
+          <surname>Fonvieille</surname>
+        </personname>
+      </author>
     </authorgroup>
+
     <authorgroup>
-      <author><personname><firstname>Андрей</firstname><surname>Захватов</surname></personname><contrib>Перевод на русский язык: </contrib></author>
+      <author>
+        <personname>
+          <firstname>Андрей</firstname>
+          <surname>Захватов</surname>
+        </personname>
+      <contrib>Перевод на русский язык</contrib></author>
     </authorgroup>
   </info>
 
