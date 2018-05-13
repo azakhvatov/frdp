@@ -5,16 +5,14 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r42895
+     Original revision: r42905
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
   xml:id="x11">
 
-  <info>
-    <title>X Window System</title>
-
-    <authorgroup>
+  <chapterinfo> 
+    <!--<authorgroup>
       <author>
         <personname>
           <firstname>Ken</firstname>
@@ -39,42 +37,56 @@
           <surname>Захватов</surname>
         </personname>
       <contrib>Перевод на русский язык</contrib></author>
-    </authorgroup>
-  </info>
+    </authorgroup>-->
+  </chapterinfo> 
+
+  <title>X Window System</title>
 
   <sect1 id="x11-synopsis">
     <title>Обзор</title>
 
-    <para>FreeBSD использует X11 для того, чтобы дать пользователям мощный
-      графический интерфейс.  X11 является свободно распространяемой версией
-      X Window System, реализованной в <application>&xorg;</application> (а
-      также других программных пакетах, которые здесь не рассматриваются).  Во
-      &os; официальной и используемой по умолчанию версией X11 является пакет
-      <application>&xorg;</application>, разработанный X.Org Foundation под
-      лицензией, очень похожей на ту, что используется во &os;.</para>
+    <para>Процедура установки &os; при помощи
+      <application>bsdinstall</application> не предусматривает автоматической
+      установки графического пользовательского интерфейса.  Эта глава
+      описывает процесс установки и настройки пакета
+      <application>&xorg;</application>, предоставляющий X Window System с
+      открытым кодом, обеспечивающий графическую среду работы.  Затем она
+      объясняет, как найти и установить оболочку рабочего стола или оконный
+      менеджер.</para>
 
-    <para>За дополнительной информацией по видео оборудованию, поддерживаемому
-      X11, обратитесь к веб сайту
-      <link xlink:href="http://www.x.org/">&xorg;</link>.</para>
+    <note>
+      <para>Пользователи, предпочитающие метод установки, при котором
+        <application>&xorg;</application> настраивается автоматически и
+        предлагаются варианты выбора оконных менеджеров, должно обратить
+        внимание на web-сайт <ulink
+        url="http://www.pcbsd.org/">pcbsd.org</ulink>.</para>
+    </note>
+
+    <para>Для получения дополнительной информации об оборудовании, которое
+      поддерживается в <application>&xorg;</application>, обратитесь к
+      web-сайту <ulink url="http://www.x.org/">x.org</ulink>.</para>
 
     <para>После чтения этой главы вы будете знать:</para>
 
     <itemizedlist>
-      <listitem>
-	<para>Как установить и настроить X11.</para>
-      </listitem>
-
       <listitem>
 	<para>О различных компонентах X Window System и их
 	  взаимодействии.</para>
       </listitem>
 
       <listitem>
-	<para>Как установить и использовать различные оконные менеджеры.</para>
+	<para>Как установить и настроить
+          <application>&xorg;</application>.</para>
       </listitem>
 
       <listitem>
-	<para>Как использовать шрифты &truetype; в X11.</para>
+	<para>Как установить и настроить несколько оконных менеджеров и
+          оболочек рабочего стола.</para>
+      </listitem>
+
+      <listitem>
+	<para>Как использовать шрифты &truetype; в
+          <application>&xorg;</application>.</para>
       </listitem>
 
       <listitem>
@@ -88,7 +100,8 @@
     <itemizedlist>
       <listitem>
 	<para>Знать, как устанавливать дополнительное программное обеспечение
-	  сторонних разработчиков (<xref linkend="ports"/>).</para>
+	  сторонних разработчиков в соответствии с описанием в <xref
+          linkend="ports"/>.</para>
       </listitem>
     </itemizedlist>
   </sect1>
@@ -236,70 +249,67 @@
   </sect1>
 
   <sect1 id="x-install">
-    <title>Установка X11</title>
+    <title>Установка <application>&xorg;</application></title>
 
-    <para>Версией X11, используемой во &os;, является
-      <application>&xorg;</application>.  <application>&xorg;</application>
-      это сервер X дистрибутива открытой реализации X Window System,
-      выпущенной X.Org Foundation.  <application>&xorg;</application> основан
-      на коде <application>&xfree86;&nbsp;4.4RC2</application> и X11R6.6.
-      Версия <application>&xorg;</application>, доступная на данный момент
-      из коллекции портов &os;: &xorg.version;.</para>
+    <para><application>&xorg;</application> является реализацией X Window
+      System с открытым кодом, выпущенной X.Org Foundation.  Во &os; она может
+      установлена как пакет или как порт.  Мета-порт полного установочного
+      набора, в который включены X-серверы, клиенты, библиотеки и шрифты,
+      находится в <filename role="package">x11/xorg</filename>.  Минимальный
+      установочный пакет находится в <filename
+      role="package">x11/xorg-minimal</filename>, при этом имеются отдельные
+      порты для документации, библиотек и приложений.  В примерах этого раздела
+      используется полный установочный пакет
+      <application>&xorg;</application>.</para>
 
-    <para>Для сборки и установки <application>&xorg;</application> из
-      Коллекции портов, выполните:</para>
+    <para>Для построения и установки <application>&xorg;</application> из
+      Коллекции портов, выполните следующие команды:</para>
 
     <screen>&prompt.root; <userinput>cd /usr/ports/x11/xorg</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
 
     <note>
-      <para>Перед сборкой полной версии <application>&xorg;</application>
-	удостоверьтесь в наличии хотя бы 4&nbsp;GB свободного места.</para>
+      <para>Перед построением полной версии <application>&xorg;</application>
+	удостоверьтесь в наличии хотя бы 4&nbsp;GB свободного пространства на
+        диске.</para>
     </note>
 
-    <para>Кроме того, X11 может быть установлен непосредственно из
-      пакетов.  Бинарные пакеты, устанавливаемые &man.pkg.add.1;,
-      доступны и для X11.  Когда &man.pkg.add.1; используется для удаленной
-      загрузки пакетов, номер версии пакета необходимо удалить.
-      &man.pkg.add.1; автоматически установит последнюю версию
-      приложения.</para>
-
-    <para>Таким образом, для загрузки и установки пакета
-      <application>&xorg;</application>, просто наберите:</para>
+    <para>Кроме того, <application>&xorg;</application> может быть установлен
+      непосредственно из пакетов.  Для установки пакета с помощью
+      <application>pkg_add</application> наберите следующую команду:</para>
 
     <screen>&prompt.root; <userinput>pkg_add -r xorg</userinput></screen>
 
-    <note>
-      <para>В примерах выше будет установлен полный дистрибутив
-	X11, включая серверы, клиенты, шрифты
-	и так далее.  Также доступны и отдельные пакеты и порты для
-	различных частей X11.</para>
+    <para>И наоборот, для установки пакета с помощью
+      <application>pkg</application> наберите следующую команду:</para>
 
-      <para>Для работы с минимальным пакетов X11 в качестве альтернативы
-        вы можете установить
-        <filename role="package">x11/xorg-minimal</filename>.</para>
-    </note>
-
-    <para>В оставшейся части главы будет рассказано о том, как сконфигурировать
-      X11 и настроить рабочее окружение.</para>
+    <screen>&prompt.root; <userinput>pkg install xorg</userinput></screen>
   </sect1>
 
   <sect1 id="x-config">
-    <info><title>Конфигурация X11</title>
-      <authorgroup>
-	<author><personname><firstname>Christopher</firstname><surname>Shumway</surname></personname><contrib>Текст предоставил </contrib></author>
-      </authorgroup>
-    </info>
+    <sect1info>
+      <!--<authorgroup>
+	<author>
+          <personname>
+            <firstname>Christopher</firstname>
+            <surname>Shumway</surname>
+          </personname>
 
-    
+          <contrib>Текст в июле 2001 года предоставил</contrib>
+        </author>
+      </authorgroup>-->
+    </sect1info>
+
+    <title>Настройка <application>&xorg;</application></title>
 
     <indexterm><primary>&xorg;</primary></indexterm>
-    <indexterm><primary>X11</primary></indexterm>
+    <indexterm><primary><application>&xorg;</application></primary></indexterm>
 
     <sect2>
       <title>Перед тем, как начать</title>
 
-      <para>В большинстве случаев X11 конфигурируется автоматически.  Тем, кто
+      <para>В большинстве случаев <application>&xorg;</application>
+        настраивается автоматически.  Тем, кто
         работает с устаревающим или нестандартным оборудованием, может
         пригодиться сбор дополнительной информации об аппаратном обеспечении
         до начала настройки.</para>
@@ -355,69 +365,78 @@
 
       <para>Объём памяти графического адаптера определяет максимальные
         отображаемые разрешение и глубину цвета.</para>
+
+    <sect2>
+      <title>Caveats</title>
+
+      <para>Возможности настройки оптимального разрешения зависят от
+        оборудования и поддержки, предоставляемой его драйвером.  В настоящее
+        время поддержка со стороны драйвера выглядит следующим образом:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>NVIDIA: В Коллекции Портов FreeBSD доступны несколько драйверов
+            NVIDIA.  Установите драйвер, соответствующий модели оборудования
+            NVIDIA.</para>
+        </listitem>
+
+        <listitem>
+          <para>Intel: начиная с FreeBSD 9.1, поддерживается 3D-ускорение на
+            большинстве графических адаптеров Intel, включая IronLake,
+            SandyBridge и IvyBridge.  Из-за ограничений имеющейся реализации
+            KMS переключиться между графической консолью и виртуальной консолью
+            при помощи Crtl+Alt+F# невозможно.</para>
+        </listitem>
+
+        <listitem>
+          <para>ATI/Radeon: 3D-ускорение не будет работать на адаптерах ATI или
+            Radeon, пока FreeBSD не закончит свою работу над TTM.  Указанные
+            адаптеры необходимо настраивать с драйвером 2D, и если это не
+            сработает, то с драйвером Vesa.</para>
+        </listitem>
+
+        <listitem>
+          <para>Optimus: В настоящее время поддержка переключения между двумя
+            графическими адаптерами, доступными в Optimus.  Реализации Optimus
+            различаются между собой, так что во FreeBSD не на всяком
+            оборудовании гарантируется успешная загрузка графического драйвера.
+            Если вы получили пустой экран, проверьте наличии в BIOS опции по
+            отключению одного из графических адаптеров или установки режима
+            <quote>discrete</quote>.</para>
+        </listitem>
+      </itemizedlist>
     </sect2>
 
     <sect2>
-      <title>Конфигурирование X11</title>
+      <title>Настройка <application>&xorg;</application></title>
 
       <para><application>&xorg;</application> использует <acronym>HAL</acronym>
         для автоматического поиска клавиатуры и мыши.
 	Порты <package>sysutils/hal</package> и
-	<package>devel/dbus</package> будут инсталлированы как
+	<package>devel/dbus</package> будут автоматически установлены как
 	зависимости <package>x11/xorg</package>, но для
-	их включения необходимо иметь следующие записи в
-	<filename>/etc/rc.conf</filename> file:</para>
+	их включения необходимо добавить следующие записи в файл
+	<filename>/etc/rc.conf</filename>:</para>
 
       <programlisting>hald_enable="YES"
 dbus_enable="YES"</programlisting>
 
-      <para>Эти сервисы должны быть запущены (вручную или при перезагрузке
-        системы) до последующей попытки запустить или настроить
-        <application>&xorg;</application>.</para>
+      <para>Запустите эти сервисы до того, как настраивать
+        <application>&xorg;</application>:</para>
 
-      <para><application>&xorg;</application> зачастую можно запустить без
-        каких-либо дополнительных шагов по настройке, просто выполнив из
-        командной строки вот что:</para>
+      <screen>&prompt.root; <userinput>service hald start</userinput>
+&prompt.root; <userinput>service dbus start</userinput></screen>
 
-      <screen>&prompt.user; <userinput>startx</userinput></screen>
+      <para>Как только эти сервисы будут запущены, проверьте автоматическую
+        настройку <application>&xorg;</application>, набрав:</para>
 
-     <para>Автоматическая конфигурация не всегда может сработать на некотором оборудовании,
-	либо создать не совсем ту настройку, которая желаема. В этих случаях, необходима ручная
-	настройка конфигурации.</para>
+      <screen>&prompt.root; <userinput>Xorg -configure</userinput></screen>
 
-     <note>
-	<para>Такие оконные менеджеры, как
-	  <application>GNOME</application>,
-	  <application>KDE</application> или
-	  <application>Xfce</application> имеют собственные утилиты, позволяющие пользователю
-	  легко устанавливать такие параметры, как разрешение экрана.
-	  Поэтому, если конфигурация по-умолчанию не подходящая и вы
-	  планируете инсталлировать эти оконные менеджеры, просто можете
-	  продолжить настройку рабочей среды, используя их собственные утилиты
-	  для установок параметров экрана.</para>
-      </note>
-
-      <para>Процесс настройки X11 является
-	многошаговым.  Первый шаг заключается в построении начального
-	конфигурационного файла.
-	Работая с правами суперпользователя, просто
-	запустите:</para>
-
-<screen>&prompt.root; <userinput>Xorg -configure</userinput></screen>
-
-      <para>При этом в каталоге <filename>/root</filename> будет создан скелет
-	конфигурационного файла X11 под именем
-	<filename>xorg.conf.new</filename> (там, куда после &man.su.1; или
-	непосредственного входа будет указывать переменная
-	<envar>$HOME</envar>).  Программа
-	X11 сделает попытку распознать графическое оборудование системы и
-	запишет конфигурационный файл, загружающий правильные драйверы для
-	обнаруженного оборудования в системе.</para>
-
-      <para>Следующим шагом является тестирование существующей конфигурации для
-	проверки того, что <application>&xorg;</application> может работать
-	с графическим оборудованием в настраиваемой системе.  Выполните
-        следующую команду:</para>
+      <para>Эта команда создаст файл <filename>/root/xorg.conf.new</filename>,
+        который пытается загрузить подходящие драйверы для обнаруженного
+        оборудования.  После этого проверьте, что автоматически сгенерированный
+        конфигурационный файл работает с графическим оборудованием,
+        набрав:</para>
 
       <screen>&prompt.root; <userinput>Xorg -config xorg.conf.new -retro</userinput></screen>
 
@@ -475,291 +494,62 @@ dbus_enable="YES"</programlisting>
         <programlisting>Option  "DontZap"       "off"</programlisting>
       </note>
 
-
-	<para>Если мышь не работает, ее необходимо настроить.
-	  Обратитесь к <xref linkend="mouse"/> в главе об установке
-	  &os;. В последних версиях <application>Xorg</application>
-	  секция <literal>InputDevice</literal> в файле
-	  <filename>xorg.conf</filename> игнорируется в пользу
-          автоматического поиска устройств.  Для возвращения старого поведения,
-          добавьте следующие строчки в секции <literal>ServerLayout</literal>
-          или <literal>ServerFlags</literal>:</para>
-
-        <programlisting>Option "AutoAddDevices" "false"</programlisting>
-
-        <para>После этого устройства ввода могут быть настроены так же, как в
-          предыдущих версиях, вместе с другими необходимыми параметрами
-         (например, определяющими переключение раскладок клавиатуры).</para>
-
-      <note>
-	<para>Как было объяснено выше, по-умолчанию даемон
-	  <application>hald</application> будет пытаться распознать
-	  вашу клавиатуру автоматически. Есть вероятность, что раскладка вашей
-	  клавиатуры или её модель будут определены некорректно. Такие оконные
-	  менеджеры, как <application>GNOME</application>,
-	  <application>KDE</application> или
-	  <application>Xfce</application>, содержат свои инструменты для конфигурирования
-          клавиатур. Тем не менее, можно установить параметры клавиатуры
-          непосредственно с помощью утилиты &man.setxkbmap.1; или через
-	  <application>hald</application>конфигурационные правила.</para>
-
-	<para>Например, если вы хотите использовать клавиши PC 102 клавиатуры,
-          идущая с французской раскладкой, мы должны создать конфигурационный файл
-          клавиатуры для <application>hald</application>
-	  называемый <filename>x11-input.fdi</filename> и сохранить в
-	  <filename>/usr/local/etc/hal/fdi/policy</filename>
-	  директории. Этот файл должен содержать следующие
-          строчки:</para>
-
-	<programlisting>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
-&lt;deviceinfo version="0.2"&gt;
-  &lt;device&gt;
-    &lt;match key="info.capabilities" contains="input.keyboard"&gt;
-	  &lt;merge key="input.x11_options.XkbModel" type="string"&gt;pc102&lt;/merge&gt;
-	  &lt;merge key="input.x11_options.XkbLayout" type="string"&gt;fr&lt;/merge&gt;
-    &lt;/match&gt;
-  &lt;/device&gt;
-&lt;/deviceinfo&gt;</programlisting>
-
-	<para>Если этот файл уже существует, просто скопируйте и добавьте эти строчки в
-            данный файл.</para>
-
-	<para>Вы должны будете перезагрузить систему, чтобы заставить
-	  <application>hald</application> применить настройки.</para>
-
-	<para>Есть возможность проделать ту же конфигурацию из X терминала
-          или скрипт следующей командой:</para>
-
-	<screen>&prompt.user; <userinput>setxkbmap -model pc102 -layout fr</userinput></screen>
-
-	<para>Файл
-	  <filename>/usr/local/share/X11/xkb/rules/base.lst</filename>
-	  содержит список различных клавиатур, доступные опции
-	  и раскладки.</para>
-      </note>
-
-      <indexterm><primary>Тонкая настройка X11</primary></indexterm>
-
-      <para>Теперь конфигурационный файл <filename>xorg.conf.new</filename>
-        может быть тонко настроен на ваш вкус.  Откройте этот файл в текстовом
-        редакторе, таком, как &man.emacs.1; или &man.ee.1;.  Если модель
-        монитора устарела или является нестандартной и не поддерживает
-        автоматическое определение частот развёртки, то эти параметры могут
-        быть добавлены в раздел <literal>"Monitor"</literal> файла
-        <filename>xorg.conf.new</filename>:</para>
-
-      <programlisting>Section "Monitor"
-        Identifier   "Monitor0"
-        VendorName   "Monitor Vendor"
-        ModelName    "Monitor Model"
-        HorizSync    30-107
-        VertRefresh  48-120
-EndSection</programlisting>
-
-      <para>Большинство мониторов поддерживают автоопределение частоты
-        развёртки, что делает ручной ввод этих значений ненужным.  Для
-        незначительного количества мониторов, не поддерживающих автоматическое
-        определение, следует избегать потенциальной поломки и указывать только
-        значения, предоставленные производителем.</para>
-
-      <para>X позволяет использовать возможности технологии DPMS (Energy Star)
-	с поддерживающими её мониторами.  Программа &man.xset.1; управляет
-	временными задержками и может явно задавать режимы ожидания, останова
-	и выключения.  Если вы хотите включить использование возможностей
-	DPMS вашего монитора, вы должны добавить следующую строку в раздел,
-	описывающий монитор:</para>
-
-      <programlisting>Option       "DPMS"</programlisting>
-
-      <indexterm>
-	<primary><filename>xorg.conf</filename></primary>
-      </indexterm>
-
-      <para>Пока файл конфигурации <filename>xorg.conf.new</filename>
-	открыт
-	в редакторе, выберите желаемые разрешение и глубину цвета, которые
-	будут использоваться по умолчанию.  Они задаются в разделе
-	<literal>"Screen"</literal>:</para>
-
-      <programlisting>Section "Screen"
-        Identifier "Screen0"
-        Device     "Card0"
-        Monitor    "Monitor0"
-        DefaultDepth 24
-        SubSection "Display"
-                Viewport  0 0
-                Depth     24
-                Modes     "1024x768"
-        EndSubSection
-EndSection</programlisting>
-
-      <para>Ключевое слово <literal>DefaultDepth</literal> описывает
-	глубину цвета, с которой будет работа по умолчанию.  Это значение
-	может быть переопределено при помощи параметра командной строки
-	<option>-depth</option> для &man.Xorg.1;.
-	Ключевое слово
-	<literal>Modes</literal> описывает разрешение, с которым нужно
-	работать при данной глубине цвета.  Заметьте, что поддерживаются
-	только те стандартные режимы VESA, что определены графическим
-	оборудованием настраиваемой системы.  В примере выше глубина цвета по
-	умолчанию равна двадцати четырём битам на пиксел.  При такой глубине
-	цвета принимается разрешение в 1024 на 768 точек.</para>
-
-      <para>Наконец, запишите конфигурационный файл и
-	протестируйте его при помощи тестового режима, описанного выше.</para>
-
-      <note>
-	<para>При решении проблем могут помочь лог файлы X11, в которых
-	  находится информация по каждому устройству, к которому
-	  подключен сервер X11.  Лог файлам
-	  <application>&xorg;</application> названия даются в формате
-	  <filename>/var/log/Xorg.0.log</filename>.  Имена лог файлам
-	  могут даваться от <filename>Xorg.0.log</filename> до
-	  <filename>Xorg.8.log</filename> и так далее.</para>
-      </note>
-
-      <para>Если все в порядке, то конфигурационный файл нужно установить в
-	общедоступное место, где его сможет найти &man.Xorg.1;.
-	Обычно это <filename>/etc/X11/xorg.conf</filename> или
-	<filename>/usr/local/etc/X11/xorg.conf</filename>.</para>
+      <para>Если тест закончился неудачно, перейдите к <xref
+        linkend="x11-understanding"/>.  Если тестирование прошло успешно,
+        скопируйте конфигурационный файл в
+        <filename>/etc/X11/xorg.conf</filename>:</para>
 
       <screen>&prompt.root; <userinput>cp xorg.conf.new /etc/X11/xorg.conf</userinput></screen>
 
-      <para>Теперь процесс настройки X11 завершен.
-	<application>&xorg;</application> теперь можно запустить с помощью
-	&man.startx.1;.  X11 можно также запустить через
-	&man.xdm.1;.</para>
-    </sect2>
-
-    <sect2>
-      <title>Тонкие вопросы настройки</title>
-
-      <sect3>
-	<title>Конфигурирование при работе с графическими чипсетами &intel;
-	  <literal>i810</literal></title>
-
-	<indexterm><primary>графический чипсет Intel i810</primary></indexterm>
-
-	<para>Конфигурирование при работе с интегрированными наборами микросхем
-	  &intel; i810 требует наличия <filename>agpgart</filename>,
-	  программного интерфейса AGP, посредством которого
-	  X11 будет управлять адаптером.  Подробности смотрите на странице
-	  справочника &man.agp.4;.</para>
-
-	<para>Это позволит конфигурировать графическое оборудование точно так
-	  же, как и любой другой графический адаптер.  Заметьте, что для
-	  систем, у которых драйвер &man.agp.4; в ядро не вкомпилирован,
-	  попытка погрузить модуль с помощью &man.kldload.8; окончится
-	  неудачно.  Этот драйвер должен оказаться в ядре во время загрузки,
-	  либо вкомпилированным, либо подгруженным посредством
-	  <filename>/boot/loader.conf</filename>.</para>
-      </sect3>
-
-      <sect3>
-	<title>Настройка широкоэкранного режима</title>
-
-	<indexterm><primary>настройка широкоэкранного режима</primary></indexterm>
-
-	<para>Для этого раздела необходимо несколько больше навыков настройки.
-	  Если после использования описанных выше инструментов настройки в
-	  результате рабочей конфигурации не получается, в лог файлах достаточно
-	  информации для доведения конфигурации до рабочего уровня.  Для настройки
-	  используется текстовый редактор.</para>
-
-	<para>Существующие широкоэкранные стандарты (WSXGA, WSXGA+, WUXGA, WXGA,
-	  WXGA+, и т.д.) поддерживают форматы изображения 16:10 и 10:9, которые
-	  могут быть проблемными.  Для формата 16:10, например, возможны следующие
-	  разрешения экрана:</para>
-
-	<itemizedlist>
-	  <listitem><para>2560x1600</para></listitem>
-	  <listitem><para>1920x1200</para></listitem>
-	  <listitem><para>1680x1050</para></listitem>
-	  <listitem><para>1440x900</para></listitem>
-	  <listitem><para>1280x800</para></listitem>
-	</itemizedlist>
-
-	<para>Иногда достаточно добавить одно из этих разрешений в качестве параметра
-	  <literal>Mode</literal> в раздел <literal>Section "Screen"</literal>
-	  вот так:</para>
-
-	<programlisting>Section "Screen"
-Identifier "Screen0"
-Device     "Card0"
-Monitor    "Monitor0"
-DefaultDepth 24
-SubSection "Display"
-	Viewport  0 0
-	Depth     24
-	Modes     "1680x1050"
-EndSubSection
-EndSection</programlisting>
-
-	<para><application>&xorg;</application> может извлечь информацию о разрешении
-	  из монитора посредством I2C/DDC, так что у него есть данные, какие
-	  частоты и разрешения может поддерживать монитор.</para>
-
-	<para>Если эти <literal>ModeLines</literal> не определены в драйверах,
-	  может потребоваться дополнительная настройка
-	  <application>&xorg;</application>.  Используя
-	  <filename>/var/log/Xorg.0.log</filename>, можно извлечь достаточно
-	  информации для создания рабочей строки <literal>ModeLine</literal> вручную.
-	  Просто обратитесь к следующей информации:</para>
-
-	<programlisting>(II) MGA(0): Supported additional Video Mode:
-(II) MGA(0): clock: 146.2 MHz   Image Size:  433 x 271 mm
-(II) MGA(0): h_active: 1680  h_sync: 1784  h_sync_end 1960 h_blank_end 2240 h_border: 0
-(II) MGA(0): v_active: 1050  v_sync: 1053  v_sync_end 1059 v_blanking: 1089 v_border: 0
-(II) MGA(0): Ranges: V min: 48  V max: 85 Hz, H min: 30  H max: 94 kHz, PixClock max 170 MHz</programlisting>
-
-	<para>Эта информация называется EDID.  Создание <literal>ModeLine</literal>
-	  из сводится к расположению номеров в правильном порядке:</para>
-
-	<programlisting>ModeLine &lt;name&gt; &lt;clock&gt; &lt;4 horiz. timings&gt; &lt;4 vert. timings&gt;</programlisting>
-
-	<para>Для нашего примера <literal>ModeLine</literal> в <literal>Section
-	  "Monitor"</literal> будет выглядеть так:</para>
-
-	<programlisting>Section "Monitor"
-Identifier      "Monitor1"
-VendorName      "Bigname"
-ModelName       "BestModel"
-ModeLine        "1680x1050" 146.2 1680 1784 1960 2240 1050 1053 1059 1089
-Option          "DPMS"
-EndSection</programlisting>
-
-	<para>После завершения редактирования конфигурации, X должен запуститься
-	  в новом широкоэкранном разрешении.</para>
-      </sect3>
+      <note>
+	<para>Оболочки типа <application>GNOME</application>,
+	  <application>KDE</application> или
+	  <application>Xfce</application> содержат визуальные инструменты для
+          настройки таких параметров, как разрешение экрана.  Если настройки,
+          применённые по умолчанию, подошли, перейдите к разделу <xref
+          linkend="x11-wm"/> для поиска примеров установки оболочек рабочего
+          стола.</para>
+      </note>
     </sect2>
   </sect1>
 
   <sect1 id="x-fonts">
-    <info><title>Использование шрифтов в X11</title>
+    <sect1info>
+      <!--<authorgroup>
       <authorgroup>
-	<author><personname><firstname>Murray</firstname><surname>Stokely</surname></personname><contrib>Текст предоставил </contrib></author>
-      </authorgroup>
-    </info>
-    
+	<author>
+          <personname>
+            <firstname>Murray</firstname>
+            <surname>Stokely</surname>
+          </personname><contrib>Текст предоставил </contrib></author>
+      </authorgroup>-->
+    </sect1info>
+
+    <title>Использование шрифтов в <application>&xorg;</application></title>
 
     <sect2 id="type1">
       <title>Шрифты Type1</title>
 
       <para>Шрифты, используемые по умолчанию и распространяемые вместе с
-	X11, вряд ли можно назвать идеально подходящими для применения в
+	<application>&xorg;</application>, вряд ли можно назвать идеально
+        подходящими для применения в
         обычных издательских приложениях.  Большие презентационные шрифты
         выглядят рвано и непрофессионально, а мелкие шрифты вообще невозможно
 	разобрать.  Однако есть некоторое количество свободно распространяемых
 	высококачественных шрифтов Type1 (&postscript;), которые можно без
-	изменений использовать с X11.  К примеру, в наборе шрифтов URW
+	изменений использовать с <application>&xorg;</application>.  К примеру,
+        в наборе шрифтов URW
 	(<package>x11-fonts/urwfonts</package>) имеются
-	высококачественные версии стандартных шрифтов type1 (<trademark class="registered">Times Roman</trademark>, <trademark class="registered">Helvetica</trademark>, <trademark class="registered">Palatino</trademark> и другие).  В набор Freefonts
+	высококачественные версии стандартных шрифтов type1 (<trademark
+        class="registered">Times Roman</trademark>, <trademark
+        class="registered">Helvetica</trademark>, <trademark
+        class="registered">Palatino</trademark> и другие).  В набор Freefonts
 	(<package>x11-fonts/freefonts</package>) включено ещё
 	больше шрифтов, однако большинство из них предназначено для
 	использования в программном обеспечении для работы с графикой,
 	например, <application>Gimp</application>, и они не вполне пригодны
 	для использования в качестве
-	экранных шрифтов.  Кроме того, X11 с
+	экранных шрифтов.  Кроме того, <application>&xorg;</application> с
 	минимальными усилиями может быть настроена на использование шрифтов
 	&truetype;. Более детальная информация находится на странице
 	справочной системы &man.X.7; и в <link linkend="truetype">разделе о
@@ -819,7 +609,7 @@ EndSection</programlisting>
 	(к примеру, <filename>/usr/local/lib/X11/fonts/TrueType</filename>) и
 	скопируйте все шрифты &truetype; в этот каталог.  Имейте в виду,
 	что напрямую использовать шрифты &truetype; с &macintosh; нельзя;
-	для использования с X11 они должны
+	для использования с <application>&xorg;</application> они должны
 	быть в формате &unix;/&ms-dos;/&windows;.  После того, как файлы будут
 	скопированы в этот каталог, воспользуйтесь утилитой
 	<application>ttmkfdir</application> для создания файла
@@ -852,13 +642,20 @@ EndSection</programlisting>
     </sect2>
 
     <sect2 id="antialias">
-      <info><title>Антиалиасинг шрифтов</title>
-	<authorgroup>
-	  <author><personname><firstname>Joe Marcus</firstname><surname>Clarke</surname></personname><contrib>Обновление выполнил </contrib></author>
-	</authorgroup>
-      </info>
+      <sect2info>
+        <!--<authorgroup>
+	  <author>
+            <personname>
+              <firstname>Joe Marcus</firstname>
+              <surname>Clarke</surname>
+            </personname>
 
-      
+            <contrib>Обновление выполнил </contrib>
+          </author>
+       </authorgroup>-->
+      </sect2info>
+
+      <title>Шрифты с антиалиасингом</title>
 
       <indexterm>
 	<primary>шрифты с антиалиасингом</primary>
@@ -870,8 +667,8 @@ EndSection</programlisting>
 	<secondary>антиалиасинг</secondary>
       </indexterm>
 
-      <para>Все шрифты, расположенные в каталогах
-	<filename>/usr/local/lib/X11/fonts/</filename> и
+      <para>Все шрифты <application>&xorg;</application>, расположенные в
+        каталогах <filename>/usr/local/lib/X11/fonts/</filename> и
 	<filename>~/.fonts/</filename>, автоматически становятся доступными для
 	применения антиалиасинга в приложениях, использующих Xft.
         Большинство современных приложений умеет работать с Xft, в том числе
@@ -1039,13 +836,20 @@ EndSection</programlisting>
   </sect1>
 
   <sect1 id="x-xdm">
-    <info><title>Менеджеры экранов (Display Managers) X</title>
-      <authorgroup>
-	<author><personname><firstname>Seth</firstname><surname>Kingsley</surname></personname><contrib>Текст предоставил </contrib></author>
-      </authorgroup>
-    </info>
+    <sect1info>
+      <!--<authorgroup>
+	<author>
+          <personname>
+            <firstname>Seth</firstname>
+            <surname>Kingsley</surname>
+          </personname>
 
-    
+          <contrib>Текст предоставил </contrib>
+        </author>
+      </authorgroup>-->
+    </sect1info>
+
+    <title>Менеджер экранов (X Display Manager)</title>
 
     <sect2>
       <title>Вступление</title>
@@ -1212,7 +1016,7 @@ EndSection</programlisting>
 	  приглашения к входу в систему.  В нем может быть
 	  изменён вид программы входа в систему. Формат этого файла
 	  идентичен файлу app-defaults, описанному
-	  в документации к X11.</para>
+	  в документации к <application>&xorg;</application>.</para>
       </sect3>
 
       <sect3>
@@ -1302,14 +1106,19 @@ DisplayManager.requestPort:     0</screen>
   </sect1>
 
   <sect1 id="x11-wm">
-    <info><title>Графические оболочки</title>
-      <authorgroup>
-	<author><personname><firstname>Valentino</firstname><surname>Vaschetto</surname></personname><contrib>Текст предоставил </contrib></author>
-	<!-- Июнь 2001 -->
-      </authorgroup>
-    </info>
+    <sect1info>
+      <!--<authorgroup>
+	<author>
+          <personname>
+            <firstname>Valentino</firstname>
+            <surname>Vaschetto</surname>
+          </personname>
 
-    
+          <contrib>Текст предоставил </contrib></author>
+      </authorgroup>-->
+    </sect1info>
+
+    <title>Графические оболочки</title>
 
     <para>В этом разделе описываются различные графические оболочки, доступные
       в X для FreeBSD.  Термин <quote>графическая оболочка</quote> может
@@ -1693,6 +1502,273 @@ DisplayManager.requestPort:     0</screen>
 	  настройте менеджер дисплеев так, чтобы он разрешил выбор рабочего
 	  стола во время входа в систему, как это описано в разделе о <link linkend="x11-wm-kde-kdm">kdm</link>.</para>
       </sect3>
+    </sect2>
+  </sect1>
+
+  <sect1 id="x11-understanding">
+    <title>Устранение неполадок</title>
+
+    <para>Если мышь не работает, то для продолжения работы её необходимо
+      настроить.  Обратитесь к разделу <xref linkend="mouse"/> в главе об
+      установке &os;.  В последних версиях <application>Xorg</application>
+      секции <literal>InputDevice</literal> в файле
+      <filename>xorg.conf</filename> игнорируются в пользу автоматического
+      обнаружения устройств.  Для того, чтобы вернуть старое поведение,
+      добавьте следующую строку в секции <literal>ServerLayout</literal>
+      или <literal>ServerFlags</literal> этого файла:</para>
+
+    <programlisting>Option "AutoAddDevices" "false"</programlisting>
+
+    <para>После этого устройства ввода могут быть настроены так же, как в
+      предыдущих версиях, вместе с другими необходимыми параметрами
+      (например, определяющими переключение раскладок клавиатуры).</para>
+
+    <note>
+      <para>Как было объяснено выше, по-умолчанию даемон
+        <application>hald</application> будет пытаться распознать
+        вашу клавиатуру автоматически. Есть вероятность, что раскладка вашей
+        клавиатуры или её модель будут определены некорректно. Такие оболочки,
+        как <application>GNOME</application>, <application>KDE</application>
+        или <application>Xfce</application>, содержат собственные инструменты
+        для настройки клавиатуры.  Тем не менее, можно задать параметры
+        клавиатуры явным образом с помощью утилиты &man.setxkbmap.1; или через
+        правило настройки <application>hald</application>.</para>
+
+      <para>Например, если требуется использовать клавиатуру стандарта PC 102 с
+        французской раскладкой, то необходимо создать конфигурационный файл
+        клавиатуры для <application>hald</application> под названием
+        <filename>x11-input.fdi</filename> и сохранить его в каталоге
+        <filename>/usr/local/etc/hal/fdi/policy</filename>. Этот файл должен
+        содержать следующие строки:</para>
+
+      <programlisting>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
+&lt;deviceinfo version="0.2"&gt;
+  &lt;device&gt;
+    &lt;match key="info.capabilities" contains="input.keyboard"&gt;
+         &lt;merge key="input.x11_options.XkbModel" type="string"&gt;pc102&lt;/merge&gt;
+         &lt;merge key="input.x11_options.XkbLayout" type="string"&gt;fr&lt;/merge&gt;
+    &lt;/match&gt;
+  &lt;/device&gt;
+&lt;/deviceinfo&gt;</programlisting>
+
+      <para>Если этот файл уже существует, просто скопируйте и добавьте в ваш
+        файл строки, относящиеся к настройке клавиатуры.</para>
+
+      <para>Вы должны будете перезагрузить систему, чтобы заставить
+        <application>hald</application> применить настройки.</para>
+
+      <para>Есть возможность выполнить эту же самую настройку из X терминала
+        или скрипта следующей командой:</para>
+
+      <screen>&prompt.user; <userinput>setxkbmap -model pc102 -layout fr</userinput></screen>
+
+      <para>В файле
+        <filename>/usr/local/share/X11/xkb/rules/base.lst</filename>
+        перечислены различные клавиатуры, доступные раскладки и опции.</para>
+    </note>
+
+    <indexterm><primary>тонкая настройка <application>&xorg;</application></primary></indexterm>
+
+    <para>Теперь конфигурационный файл <filename>xorg.conf.new</filename>
+      может быть тонко настроен на ваш вкус.  Откройте этот файл в текстовом
+      редакторе, таком, как &man.emacs.1; или &man.ee.1;.  Если модель
+      монитора устарела или является нестандартной и не поддерживает
+      автоматическое определение частот развёртки, то эти параметры могут
+      быть добавлены в раздел <literal>"Monitor"</literal> файла
+      <filename>xorg.conf.new</filename>:</para>
+
+    <programlisting>Section "Monitor"
+       Identifier   "Monitor0"
+       VendorName   "Monitor Vendor"
+       ModelName    "Monitor Model"
+       HorizSync    30-107
+       VertRefresh  48-120
+EndSection</programlisting>
+
+    <para>Большинство мониторов поддерживают автоопределение частоты
+      развёртки, что делает ручной ввод этих значений ненужным.  Для
+      незначительного количества мониторов, не поддерживающих автоматическое
+      определение, следует избегать потенциальной поломки и указывать только
+      значения, предоставленные производителем.</para>
+
+    <para>X позволяет использовать возможности технологии DPMS (Energy Star)
+      с поддерживающими её мониторами.  Программа &man.xset.1; управляет
+      временными задержками и может явно задавать режимы ожидания, останова
+      и выключения.  Если вы хотите включить использование возможностей
+      DPMS вашего монитора, вы должны добавить следующую строку в раздел,
+      описывающий монитор:</para>
+
+    <programlisting>Option       "DPMS"</programlisting>
+
+    <indexterm><primary><filename>xorg.conf</filename></primary></indexterm>
+
+    <para>Пока файл конфигурации <filename>xorg.conf.new</filename> открыт
+      в редакторе, выберите желаемые разрешение и глубину цвета, которые
+      будут использоваться по умолчанию.  Они задаются в разделе
+      <literal>"Screen"</literal>:</para>
+
+    <programlisting>Section "Screen"
+       Identifier "Screen0"
+       Device     "Card0"
+       Monitor    "Monitor0"
+       DefaultDepth 24
+       SubSection "Display"
+               Viewport  0 0
+               Depth     24
+               Modes     "1024x768"
+       EndSubSection
+EndSection</programlisting>
+
+    <para>Ключевое слово <literal>DefaultDepth</literal> описывает
+      глубину цвета, которая будет применяться по умолчанию.  Это значение
+      может быть переопределено при помощи параметра командной строки
+      <option>-depth</option> для &man.Xorg.1;.  Ключевое слово
+      <literal>Modes</literal> описывает разрешение, с которым нужно
+      работать при данной глубине цвета.  Заметьте, что поддерживаются
+      только те стандартные режимы VESA, что определены графическим
+      оборудованием настраиваемой системы.  В примере выше глубина цвета по
+      умолчанию равна двадцати четырём битам на точку.  При такой глубине
+      цвета принимается разрешение в 1024 на 768 точек.</para>
+
+    <para>Наконец, запишите конфигурационный файл и протестируйте его при
+      помощи тестового режима, описанного выше.</para>
+
+    <note>
+      <para>В процессе решения проблем вам могут помочь файлы протоколирования
+        <application>&xorg;</application>, в которых находится информация о
+        каждом устройстве, к которому подключается сервер
+        <application>&xorg;</application>.  Протокольным файлам
+        <application>&xorg;</application> названия даются в формате
+        <filename>/var/log/Xorg.0.log</filename>.  Конкретное название файла
+        протокола может варьироваться от <filename>Xorg.0.log</filename> до
+        <filename>Xorg.8.log</filename> и далее.</para>
+    </note>
+
+    <para>Если всё в порядке, то конфигурационный файл нужно установить в
+      обычное место, где его сможет найти &man.Xorg.1;.  Как правило, это
+      <filename>/etc/X11/xorg.conf</filename> или
+      <filename>/usr/local/etc/X11/xorg.conf</filename>.</para>
+
+    <screen>&prompt.root; <userinput>cp xorg.conf.new /etc/X11/xorg.conf</userinput></screen>
+
+    <para>Теперь процесс настройки <application>&xorg;</application> завершён.
+      <application>&xorg;</application> теперь можно запустить утилитой
+      &man.startx.1;.  Сервер <application>&xorg;</application> может быть
+      также запущен при помощи &man.xdm.1;.</para>
+
+    <sect2>
+      <title>Конфигурирование при работе с графическими чипсетами &intel;
+        <literal>i810</literal></title>
+
+      <indexterm><primary>графический чипсет Intel i810</primary></indexterm>
+
+      <para>Конфигурирование при работе с интегрированными наборами микросхем
+        &intel; i810 требует наличия <filename>agpgart</filename>,
+        программного интерфейса AGP, посредством которого
+        <application>&xorg;</application> будет управлять адаптером.
+        Подробности смотрите на странице справочника &man.agp.4;.</para>
+
+      <para>Это позволит конфигурировать графическое оборудование точно так
+        же, как и любой другой графический адаптер.  Заметьте, что для
+        систем, у которых драйвер &man.agp.4; в ядро не вкомпилирован,
+        попытка загрузить модуль с помощью &man.kldload.8; не сработает.
+        Этот драйвер должен быть в ядре во время загрузки, либо
+        вкомпилированным, либо подгруженным посредством
+        <filename>/boot/loader.conf</filename>.</para>
+    </sect2>
+
+    <sect2>
+      <title>Добавление широкоэкранной панели</title>
+
+      <indexterm><primary>настройка широкоэкранной панели</primary></indexterm>
+
+      <para>Этот раздел предполагает наличие определённых глубоких познаний в
+        настройке.  Если попытки применить описанные выше инструменты настройки
+        к созданию рабочей конфигурации не приводят, в файлах протоколов
+        достаточно информации для доведения конфигурации до рабочего состояния.
+        Для настройки необходимо использовать текстовый редактор.</para>
+
+      <para>Существующие широкоэкранные стандарты (WSXGA, WSXGA+, WUXGA, WXGA,
+        WXGA+ и так далее) поддерживают форматы изображения 16:10 и 10:9,
+        которые могут быть проблемными.  Для формата 16:10, например, возможны
+        следующие разрешения экрана:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>2560x1600</para>
+        </listitem>
+
+        <listitem>
+          <para>1920x1200</para>
+        </listitem>
+
+        <listitem>
+          <para>1680x1050</para>
+        </listitem>
+
+        <listitem>
+          <para>1440x900</para>
+        </listitem>
+
+        <listitem>
+          <para>1280x800</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Это так же легко, как добавить одно из этих
+        разрешений в качестве доступного режима (<literal>Mode</literal>) в
+        раздел <literal>Section "Screen"</literal> следующим образом:</para>
+
+      <programlisting>Section "Screen"
+Identifier "Screen0"
+Device     "Card0"
+Monitor    "Monitor0"
+DefaultDepth 24
+SubSection "Display"
+       Viewport  0 0
+       Depth     24
+       Modes     "1680x1050"
+EndSubSection
+EndSection</programlisting>
+
+      <para><application>&xorg;</application> достаточно умён, чтобы получить
+        информацию о разрешении от монитора посредством I2C/DDC, так что у него
+        есть данные, какие частоты и разрешения может поддерживать
+        монитор.</para>
+
+      <para>Если эти <literal>ModeLine</literal> не определены в драйверах,
+        может потребоваться дополнительная настройка
+        <application>&xorg;</application>.  Используя
+        <filename>/var/log/Xorg.0.log</filename>, можно извлечь достаточно
+        информации для создания работающей строки <literal>ModeLine</literal> в
+        ручном режиме.  Просто поищите информацию, похожую на такую:</para>
+
+      <programlisting>(II) MGA(0): Supported additional Video Mode:
+(II) MGA(0): clock: 146.2 MHz   Image Size:  433 x 271 mm
+(II) MGA(0): h_active: 1680  h_sync: 1784  h_sync_end 1960 h_blank_end 2240 h_border: 0
+(II) MGA(0): v_active: 1050  v_sync: 1053  v_sync_end 1059 v_blanking: 1089 v_border: 0
+(II) MGA(0): Ranges: V min: 48  V max: 85 Hz, H min: 30  H max: 94 kHz, PixClock max 170 MHz</programlisting>
+
+      <para>Это так называемая информация EDID.  Создание
+        <literal>ModeLine</literal> из этих данных является вопросом
+        расположения значений в правильном порядке:</para>
+
+      <programlisting>ModeLine &lt;name&gt; &lt;clock&gt; &lt;4 horiz. timings&gt; &lt;4 vert. timings&gt;</programlisting>
+
+      <para>Таким образом, для данного примера <literal>ModeLine</literal> в
+        разделе <literal>Section "Monitor"</literal> будет выглядеть примерно
+        так:</para>
+
+      <programlisting>Section "Monitor"
+Identifier      "Monitor1"
+VendorName      "Bigname"
+ModelName       "BestModel"
+ModeLine        "1680x1050" 146.2 1680 1784 1960 2240 1050 1053 1059 1089
+Option          "DPMS"
+EndSection</programlisting>
+
+      <para>После завершения этих простых шагов по редактированию настроек X
+        должны запуститься на вашем новом широкоэкранном мониторе.</para>
     </sect2>
   </sect1>
 </chapter>
