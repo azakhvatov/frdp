@@ -5,14 +5,15 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r42905
+     Original revision: r42925
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
   xml:id="x11">
 
+  <!--
   <chapterinfo> 
-    <!--<authorgroup>
+    <authorgroup>
       <author>
         <personname>
           <firstname>Ken</firstname>
@@ -29,16 +30,8 @@
         </personname>
       </author>
     </authorgroup>
-
-    <authorgroup>
-      <author>
-        <personname>
-          <firstname>Андрей</firstname>
-          <surname>Захватов</surname>
-        </personname>
-      <contrib>Перевод на русский язык</contrib></author>
-    </authorgroup>-->
   </chapterinfo> 
+  -->
 
   <title>X Window System</title>
 
@@ -287,8 +280,9 @@
   </sect1>
 
   <sect1 id="x-config">
+    <!--
     <sect1info>
-      <!--<authorgroup>
+      <authorgroup>
 	<author>
           <personname>
             <firstname>Christopher</firstname>
@@ -297,8 +291,9 @@
 
           <contrib>Текст в июле 2001 года предоставил</contrib>
         </author>
-      </authorgroup>-->
+      </authorgroup>
     </sect1info>
+    -->
 
     <title>Настройка <application>&xorg;</application></title>
 
@@ -514,16 +509,17 @@ dbus_enable="YES"</programlisting>
   </sect1>
 
   <sect1 id="x-fonts">
+    <!--
     <sect1info>
-      <!--<authorgroup>
       <authorgroup>
 	<author>
           <personname>
             <firstname>Murray</firstname>
             <surname>Stokely</surname>
           </personname><contrib>Текст предоставил </contrib></author>
-      </authorgroup>-->
+      </authorgroup>
     </sect1info>
+    -->
 
     <title>Использование шрифтов в <application>&xorg;</application></title>
 
@@ -642,8 +638,9 @@ dbus_enable="YES"</programlisting>
     </sect2>
 
     <sect2 id="antialias">
+      <!--
       <sect2info>
-        <!--<authorgroup>
+        <authorgroup>
 	  <author>
             <personname>
               <firstname>Joe Marcus</firstname>
@@ -652,8 +649,9 @@ dbus_enable="YES"</programlisting>
 
             <contrib>Обновление выполнил </contrib>
           </author>
-       </authorgroup>-->
+        </authorgroup>
       </sect2info>
+      -->
 
       <title>Шрифты с антиалиасингом</title>
 
@@ -836,8 +834,9 @@ dbus_enable="YES"</programlisting>
   </sect1>
 
   <sect1 id="x-xdm">
+    <!--
     <sect1info>
-      <!--<authorgroup>
+      <authorgroup>
 	<author>
           <personname>
             <firstname>Seth</firstname>
@@ -846,8 +845,9 @@ dbus_enable="YES"</programlisting>
 
           <contrib>Текст предоставил </contrib>
         </author>
-      </authorgroup>-->
+      </authorgroup>
     </sect1info>
+    -->
 
     <title>Менеджер экранов (X Display Manager)</title>
 
@@ -1106,17 +1106,20 @@ DisplayManager.requestPort:     0</screen>
   </sect1>
 
   <sect1 id="x11-wm">
+    <!--
     <sect1info>
-      <!--<authorgroup>
+      <authorgroup>
 	<author>
           <personname>
             <firstname>Valentino</firstname>
             <surname>Vaschetto</surname>
           </personname>
 
-          <contrib>Текст предоставил </contrib></author>
-      </authorgroup>-->
+          <contrib>Текст предоставил </contrib>
+        </author>
+      </authorgroup>
     </sect1info>
+    -->
 
     <title>Графические оболочки</title>
 
