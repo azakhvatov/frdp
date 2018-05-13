@@ -5,11 +5,9 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r42925
+     Original revision: r43126
 -->
-<chapter xmlns="http://docbook.org/ns/docbook"
-  xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
-  xml:id="x11">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
 
   <!--
   <chapterinfo> 
@@ -35,7 +33,7 @@
 
   <title>X Window System</title>
 
-  <sect1 id="x11-synopsis">
+  <sect1 xml:id="x11-synopsis">
     <title>Обзор</title>
 
     <para>Процедура установки &os; при помощи
@@ -51,13 +49,13 @@
       <para>Пользователи, предпочитающие метод установки, при котором
         <application>&xorg;</application> настраивается автоматически и
         предлагаются варианты выбора оконных менеджеров, должно обратить
-        внимание на web-сайт <ulink
-        url="http://www.pcbsd.org/">pcbsd.org</ulink>.</para>
+        внимание на web-сайт <link
+        xlink:href="http://www.pcbsd.org/">pcbsd.org</link>.</para>
     </note>
 
     <para>Для получения дополнительной информации об оборудовании, которое
       поддерживается в <application>&xorg;</application>, обратитесь к
-      web-сайту <ulink url="http://www.x.org/">x.org</ulink>.</para>
+      web-сайту <link xlink:href="http://www.x.org/">x.org</link>.</para>
 
     <para>После чтения этой главы вы будете знать:</para>
 
@@ -99,7 +97,7 @@
     </itemizedlist>
   </sect1>
 
-  <sect1 id="x-understanding">
+  <sect1 xml:id="x-understanding">
     <title>Терминология</title>
 
     <para>Хотя нет необходимости вникать во все тонкости различных компонент
@@ -156,8 +154,8 @@
             переключения между окнами, как должны выглядеть заголовки окон,
             должны ли в них быть кнопки для закрытия и так далее.  Вместо
             этого X делегирует ответственность за это отдельному приложению
-            управления окнами.  Существуют <ulink
-            url="http://xwinman.org/">десятки оконных менеджеров</ulink>.
+            управления окнами.  Существуют <link
+            xlink:href="http://xwinman.org/">десятки оконных менеджеров</link>.
             Каждый оконный менеджер реализует собственный внешний вид и подход
             к управлению: некоторые поддерживают виртуальные рабочие столы,
             некоторые позволяют изменять назначения комбинаций клавиш для
@@ -241,16 +239,16 @@
     </variablelist>
   </sect1>
 
-  <sect1 id="x-install">
+  <sect1 xml:id="x-install">
     <title>Установка <application>&xorg;</application></title>
 
     <para><application>&xorg;</application> является реализацией X Window
       System с открытым кодом, выпущенной X.Org Foundation.  Во &os; она может
       установлена как пакет или как порт.  Мета-порт полного установочного
       набора, в который включены X-серверы, клиенты, библиотеки и шрифты,
-      находится в <filename role="package">x11/xorg</filename>.  Минимальный
-      установочный пакет находится в <filename
-      role="package">x11/xorg-minimal</filename>, при этом имеются отдельные
+      находится в пакете <package>x11/xorg</package>.  Минимальный
+      установочный пакет находится в <package>x11/xorg-minimal</package>, при
+      этом имеются отдельные
       порты для документации, библиотек и приложений.  В примерах этого раздела
       используется полный установочный пакет
       <application>&xorg;</application>.</para>
@@ -279,7 +277,7 @@
     <screen>&prompt.root; <userinput>pkg install xorg</userinput></screen>
   </sect1>
 
-  <sect1 id="x-config">
+  <sect1 xml:id="x-config">
     <!--
     <sect1info>
       <authorgroup>
@@ -408,7 +406,7 @@
       <para><application>&xorg;</application> использует <acronym>HAL</acronym>
         для автоматического поиска клавиатуры и мыши.
 	Порты <package>sysutils/hal</package> и
-	<package>devel/dbus</package> будут автоматически установлены как
+	<package>devel/dbus</package> автоматически устанавливаются как
 	зависимости <package>x11/xorg</package>, но для
 	их включения необходимо добавить следующие записи в файл
 	<filename>/etc/rc.conf</filename>:</para>
@@ -464,10 +462,9 @@ dbus_enable="YES"</programlisting>
 
 	<para>либо создать конфигурационный файл клавиатуры для
 	  <application>hald</application> называемый
-	  <filename>x11-input.fdi</filename> и сохранить его в
-	  <filename>/usr/local/etc/hal/fdi/policy</filename>
-	  директории.  Данный файл должен содержать следующие
-	  строчки:</para>
+	  <filename>x11-input.fdi</filename> и сохранить его в каталоге
+	  <filename>/usr/local/etc/hal/fdi/policy</filename>.  Данный файл
+          должен содержать следующие строки:</para>
 
 	<programlisting>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
 &lt;deviceinfo version="0.2"&gt;
@@ -508,7 +505,7 @@ dbus_enable="YES"</programlisting>
     </sect2>
   </sect1>
 
-  <sect1 id="x-fonts">
+  <sect1 xml:id="x-fonts">
     <!--
     <sect1info>
       <authorgroup>
@@ -523,7 +520,7 @@ dbus_enable="YES"</programlisting>
 
     <title>Использование шрифтов в <application>&xorg;</application></title>
 
-    <sect2 id="type1">
+    <sect2 xml:id="type1">
       <title>Шрифты Type1</title>
 
       <para>Шрифты, используемые по умолчанию и распространяемые вместе с
@@ -581,7 +578,7 @@ dbus_enable="YES"</programlisting>
 	раздел об <link linkend="antialias">антиалиасинге</link>.</para>
     </sect2>
 
-    <sect2 id="truetype">
+    <sect2 xml:id="truetype">
       <title>Шрифты &truetype;</title>
 
       <indexterm><primary>Шрифты TrueType</primary></indexterm>
@@ -611,7 +608,7 @@ dbus_enable="YES"</programlisting>
 	<application>ttmkfdir</application> для создания файла
 	<filename>fonts.dir</filename>, который укажет подсистеме вывода
 	шрифтов X на местоположение этих новых файлов.
-	<command>ttmkfdir</command> имеется в Коллекции Портов FreeBSD:
+	<command>ttmkfdir</command> имеется в Коллекции Портов FreeBSD как
 	<package>x11-fonts/ttmkfdir</package>.</para>
 
       <screen>&prompt.root; <userinput>cd /usr/local/lib/X11/fonts/TrueType</userinput>
@@ -637,7 +634,7 @@ dbus_enable="YES"</programlisting>
 	гораздо лучше.</para>
     </sect2>
 
-    <sect2 id="antialias">
+    <sect2 xml:id="antialias">
       <!--
       <sect2info>
         <authorgroup>
@@ -833,7 +830,7 @@ dbus_enable="YES"</programlisting>
     </sect2>
   </sect1>
 
-  <sect1 id="x-xdm">
+  <sect1 xml:id="x-xdm">
     <!--
     <sect1info>
       <authorgroup>
@@ -892,10 +889,13 @@ dbus_enable="YES"</programlisting>
     <sect2>
       <title>Использование XDM</title>
 
-      <para>Программой даемона <application>XDM</application> является
+      <para>Для того, чтобы начать использовать <application>XDM</application>,
+        установите порт <package>x11/xdm</package> (в последних версиях
+        <application>&xorg;</application> по умолчанию он не устанавливается).
+        После этого даемон <application>XDM</application> можно найти в
 	<filename>/usr/local/bin/xdm</filename>.  Эта программа может быть
-	запущена от пользователя <systemitem
-        class="username">root</systemitem> в любой момент, и
+	запущена в любой момент пользователем <systemitem
+        class="username">root</systemitem>, и
 	она начнёт управлять дисплеем X на локальной машине.
 	Если <application>XDM</application> нужно запускать
 	в фоновом режиме каждый раз при запуске компьютера, то наиболее
@@ -1105,7 +1105,7 @@ DisplayManager.requestPort:     0</screen>
     </sect2>
   </sect1>
 
-  <sect1 id="x11-wm">
+  <sect1 xml:id="x11-wm">
     <!--
     <sect1info>
       <authorgroup>
@@ -1130,10 +1130,10 @@ DisplayManager.requestPort:     0</screen>
       <application>KDE</application> или
       <application>GNOME</application>.</para>
 
-    <sect2 id="x11-wm-gnome">
+    <sect2 xml:id="x11-wm-gnome">
       <title>GNOME</title>
 
-      <sect3 id="x11-wm-gnome-about">
+      <sect3 xml:id="x11-wm-gnome-about">
 	<title>О GNOME</title>
 
 	<indexterm><primary>GNOME</primary></indexterm>
@@ -1158,7 +1158,7 @@ DisplayManager.requestPort:     0</screen>
 	  <application>GNOME</application>.</para>
       </sect3>
 
-      <sect3 id="x11-wm-gnome-install">
+      <sect3 xml:id="x11-wm-gnome-install">
 	<title>Установка GNOME</title>
 
 	<para>Программу проще всего установить из пакета или коллекции
@@ -1251,12 +1251,12 @@ DisplayManager.requestPort:     0</screen>
       </sect3>
     </sect2>
 
-    <sect2 id="x11-wm-kde">
+    <sect2 xml:id="x11-wm-kde">
       <title>KDE</title>
 
       <indexterm><primary>KDE</primary></indexterm>
 
-      <sect3 id="x11-wm-kde-about">
+      <sect3 xml:id="x11-wm-kde-about">
 	<title>О KDE</title>
 
 	<para><application>KDE</application> является простой в использовании
@@ -1308,16 +1308,16 @@ DisplayManager.requestPort:     0</screen>
 	<para>Совместно с <application>KDE</application>
 	  поставляется веб-браузер под
 	  названием <application>Konqueror</application>, который
-	  является серьезным соперником другим браузерам для &unix;-систем.
+	  является серьёзным соперником другим браузерам для &unix;-систем.
 	  Дополнительную информацию о <application>KDE</application> можно
-	  найти на веб-сайте <link xlink:href="http://www.kde.org/">KDE в
-	  FreeBSD</link>.  Для получения информации и информационных ресурсов,
+	  найти на <link xlink:href="http://www.kde.org/">сайте KDE</link>.
+          Для получения информации и информационных ресурсов,
 	  специфичных для <application>KDE</application> во FreeBSD, обратитесь
 	  к сайту инициативы <link
           xlink:href="http://freebsd.kde.org/">KDE/FreeBSD</link>.</para>
       </sect3>
 
-      <sect3 id="x11-wm-kde-install">
+      <sect3 xml:id="x11-wm-kde-install">
 	<title>Установка KDE</title>
 
 	<para>Как и в случае с <application>GNOME</application> или любой
@@ -1370,7 +1370,7 @@ DisplayManager.requestPort:     0</screen>
       </sect3>
     </sect2>
 
-    <sect2 id="x11-wm-kde-details">
+    <sect2 xml:id="x11-wm-kde-details">
       <title>Более подробно о KDE</title>
 
       <para>Теперь, когда <application>KDE</application> установлена в
@@ -1386,7 +1386,7 @@ DisplayManager.requestPort:     0</screen>
 	части этого раздела обсуждаются технические вопросы, трудные для
 	понимания при случайном исследовании.</para>
 
-      <sect3 id="x11-wm-kde-kdm">
+      <sect3 xml:id="x11-wm-kde-kdm">
 	<title>Менеджер дисплеев KDE</title>
 
 	<indexterm>
@@ -1416,10 +1416,10 @@ DisplayManager.requestPort:     0</screen>
       </sect3>
     </sect2>
 
-    <sect2 id="x11-wm-xfce">
+    <sect2 xml:id="x11-wm-xfce">
       <title>XFce</title>
 
-      <sect3 id="x11-wm-xfce-about">
+      <sect3 xml:id="x11-wm-xfce-about">
 	<title>О XFce</title>
 
 	<para><application>XFce</application> является графической оболочкой,
@@ -1470,7 +1470,7 @@ DisplayManager.requestPort:     0</screen>
 	  XFce</link>.</para>
       </sect3>
 
-      <sect3 id="x11-wm-xfce-install">
+      <sect3 xml:id="x11-wm-xfce-install">
 	<title>Установка Xfce</title>
 
 	<para>Для установки <application>Xfce</application> из сети просто
@@ -1508,7 +1508,7 @@ DisplayManager.requestPort:     0</screen>
     </sect2>
   </sect1>
 
-  <sect1 id="x11-understanding">
+  <sect1 xml:id="x11-understanding">
     <title>Устранение неполадок</title>
 
     <para>Если мышь не работает, то для продолжения работы её необходимо
