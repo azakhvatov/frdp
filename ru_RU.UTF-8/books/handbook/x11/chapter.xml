@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r43371
+     Original revision: r43760
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
 
@@ -266,13 +266,7 @@
     </note>
 
     <para>Кроме того, <application>&xorg;</application> может быть установлен
-      непосредственно из пакетов.  Для установки пакета с помощью
-      <application>pkg_add</application> наберите следующую команду:</para>
-
-    <screen>&prompt.root; <userinput>pkg_add -r xorg</userinput></screen>
-
-    <para>И наоборот, для установки пакета с помощью
-      <application>pkg</application> наберите следующую команду:</para>
+      непосредственно из пакетов при помощи следующей команды:</para>
 
     <screen>&prompt.root; <userinput>pkg install xorg</userinput></screen>
   </sect1>
@@ -1164,13 +1158,8 @@ DisplayManager.requestPort:     0</screen>
 	<para>Программу проще всего установить из пакета или коллекции
 	  портов:</para>
 
-	<para>Для установки пакета <application>GNOME</application> из сети,
-	  просто наберите:</para>
-
-	<screen>&prompt.root; <userinput>pkg_add -r gnome2</userinput></screen>
-
-        <para>Для тех, кто использует <application>pkgng</application>,
-          аналогичная команда выглядит вот так:</para>
+	<para>Для установки пакета <application>GNOME</application>
+          наберите команду:</para>
 
         <screen>&prompt.root; <userinput>pkg install gnome2</userinput></screen>
 
@@ -1324,16 +1313,8 @@ DisplayManager.requestPort:     0</screen>
 	  другой графической оболочкой, программное обеспечение можно легко
 	  установить из пакета или из Коллекции Портов:</para>
 
-	<para>Для установки пакета <application>KDE 4</application> из сети
-	  наберите команду:</para>
-
-        <screen>&prompt.root; <userinput>pkg_add -r kde4</userinput></screen>
-
-	<para>&man.pkg.add.1; автоматически загрузит самую последнюю версию
-	  приложения.</para>
-
-	<para>Для тех, кто использует <application>pkgng</application>,
-          аналогичное действие выполняет команда:</para>
+	<para>Для установки пакета <application>KDE4</application>
+	  наберите:</para>
 
         <screen>&prompt.root; <userinput>pkg install kde4</userinput></screen>
 
@@ -1473,13 +1454,7 @@ DisplayManager.requestPort:     0</screen>
       <sect3 xml:id="x11-wm-xfce-install">
 	<title>Установка Xfce</title>
 
-	<para>Для установки <application>Xfce</application> из сети просто
-          наберите:</para>
-
-	<screen>&prompt.root; <userinput>pkg_add -r xfce4</userinput></screen>
-
-        <para>Для тех, кто использует <application>pkgng</application>,
-          аналогичная команда такова:</para>
+	<para>Для установки <application>Xfce</application> наберите:</para>
 
         <screen>&prompt.root; <userinput>pkg install xfce</userinput></screen>
 
