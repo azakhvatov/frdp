@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r44701
+     Original revision: r44738
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
 
@@ -538,9 +538,8 @@ dbus_enable="YES"</programlisting>
 	для использования в качестве
 	экранных шрифтов.  Кроме того, <application>&xorg;</application> с
 	минимальными усилиями может быть настроена на использование шрифтов
-	&truetype;. Более детальная информация находится на странице
-	справочной системы &man.X.7; и в <link linkend="truetype">разделе о
-	шрифтах &truetype;</link> ниже.</para>
+	&truetype;. Более подробную информацию можно найи на странице
+	справочной системы &man.X.7; или в <link linkend="truetype"/>.</para>
 
       <para>Для установки вышеупомянутых коллекций шрифтов Type1 из Коллекции
 	Портов выполните следующие команды:</para>
@@ -568,8 +567,8 @@ dbus_enable="YES"</programlisting>
 	или <filename>~/.xsession</filename> при входе через графический
 	менеджер типа <application>XDM</application>).  Третий способ
 	заключается в использовании нового файла
-	<filename>/usr/local/etc/fonts/local.conf</filename>: посмотрите
-	раздел об <link linkend="antialias">антиалиасинге</link>.</para>
+	<filename>/usr/local/etc/fonts/local.conf</filename>, как это показано
+        в <xref linkend="antialias"/>.</para>
     </sect2>
 
     <sect2 xml:id="truetype">
@@ -608,10 +607,9 @@ dbus_enable="YES"</programlisting>
       <screen>&prompt.root; <userinput>cd /usr/local/lib/X11/fonts/TrueType</userinput>
 &prompt.root; <userinput>ttmkfdir -o fonts.dir</userinput></screen>
 
-      <para>После этого добавьте каталог со шрифтами &truetype;
-	к маршруту поиска шрифтов.  Это делается точно также, как описано выше
-	для шрифтов <link linkend="type1">Type1</link>, то есть
-	выполните</para>
+      <para>Теперь добавьте каталог со шрифтами &truetype;
+	к маршруту поиска шрифтов.  Это делается точно также, как описано в
+        <xref linkend="type1"/>:</para>
 
       <screen>&prompt.user; <userinput>xset fp+ /usr/local/lib/X11/fonts/TrueType</userinput>
 &prompt.user; <userinput>xset fp rehash</userinput></screen>
@@ -1100,144 +1098,100 @@ DisplayManager.requestPort:     0</screen>
   </sect1>
 
   <sect1 xml:id="x11-wm">
-    <!--
-    <sect1info>
+    <info>
+      <title>Графические оболочки</title>
+
       <authorgroup>
-	<author>
+        <author>
           <personname>
             <firstname>Valentino</firstname>
             <surname>Vaschetto</surname>
           </personname>
-
-          <contrib>Текст предоставил </contrib>
+          <!--
+          <contrib>Текст предоставил в июне 2001 года </contrib> -->
         </author>
       </authorgroup>
-    </sect1info>
-    -->
+    </info>
 
-    <title>Графические оболочки</title>
-
-    <para>В этом разделе описываются различные графические оболочки, доступные
-      в X для FreeBSD.  Термин <quote>графическая оболочка</quote> может
-      использоваться для чего угодно, от простого менеджера окон до
-      полнофункционального набора приложений для рабочего стола, типа
-      <application>KDE</application> или
-      <application>GNOME</application>.</para>
+    <para>В этом разделе описывается порядок установки трёх популярных
+      графических оболочек на систему &os;.  Под графической оболочка может
+      пониматься что угодно, от простого менеджера окон до полнофункционального
+      набора приложений для рабочего стола.  В Коллекции Портов в категории
+      <filename>x11-wm</filename> доступно более сотни таких оболочек.</para>
 
     <sect2 xml:id="x11-wm-gnome">
       <title>GNOME</title>
 
-      <sect3 xml:id="x11-wm-gnome-about">
-	<title>О GNOME</title>
+      <indexterm><primary>GNOME</primary></indexterm>
 
-	<indexterm><primary>GNOME</primary></indexterm>
+      <para><application>GNOME</application> является графической оболочкой с
+        дружественным пользовательским интерфейсом.  В ней имеется панель для
+        запуска приложений и отображения состояния, рабочий стол, набор
+        инструментов и приложений, а также набор соглашений, облегчающих
+        совместную работу и взаимную согласованность приложений.
+        Дополнительную информацию относительно <application>GNOME</application>
+        во &os; можно найти на сайте <link
+        xlink:href="http://www.FreeBSD.org/gnome">http://www.FreeBSD.org/gnome</link>.
+        Этот сайт содержит дополнительную документацию по установке, настройке
+        и управлении <application>GNOME</application> во &os;.</para>
 
-	<para><application>GNOME</application> является дружественной к
-	  пользователю графической
-	  оболочкой, позволяющей пользователям легко использовать и настраивать
-	  свои компьютеры.  В <application>GNOME</application> имеется панель
-	  (для запуска приложений и
-	  отображения их состояния), рабочий стол (где могут быть размещены
-	  данные и приложения), набор стандартных инструментов и приложений для
-	  рабочего стола, а также набор соглашений, облегчающих совместную
-	  работу и согласованность приложений.  Пользователи других
-	  операционных систем или оболочек при использовании такой мощной
-	  графической оболочки, какую обеспечивает
-	  <application>GNOME</application>, должны чувствовать
-	  себя в родной среде.  Дополнительную информацию относительно
-	  <application>GNOME</application> во FreeBSD можно найти на сайте
-	  <link xlink:href="http://www.FreeBSD.org/gnome">FreeBSD GNOME
-	  Project</link>. Web сайт также содержит достаточно исчерпывающие
-	  FAQ'и, касающиеся установки, конфигурирования и управления
-	  <application>GNOME</application>.</para>
-      </sect3>
+      <para>Эту графическую оболочку можно установить из пакета:</para>
 
-      <sect3 xml:id="x11-wm-gnome-install">
-	<title>Установка GNOME</title>
+      <screen>&prompt.root; <userinput>pkg install gnome2</userinput></screen>
 
-	<para>Программу проще всего установить из пакета или коллекции
-	  портов:</para>
+      <para>Вместо этого можно построить <application>GNOME</application> из
+	портов:</para>
 
-	<para>Для установки пакета <application>GNOME</application>
-          наберите команду:</para>
-
-        <screen>&prompt.root; <userinput>pkg install gnome2</userinput></screen>
-
-	<para>Для построения <application>GNOME</application> из
-	  исходных текстов используйте дерево портов:</para>
-
-	<screen>&prompt.root; <userinput>cd /usr/ports/x11/gnome2</userinput>
+      <screen>&prompt.root; <userinput>cd /usr/ports/x11/gnome2</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
 
-        <para>Для полноценной работы пакету <application>GNOME</application>
-          требуется наличие смонтированной файловой системы
-          <filename>/proc</filename>.  Добавьте</para>
+      <para>Для полноценной работы <application>GNOME</application> требует
+        наличия смонтированной файловой системы <filename>/proc</filename>.
+        Добавьте следующую строку в <filename>/etc/fstab</filename> для
+        автоматического монтирования этой файловой системы при запуске
+        системы:</para>
 
-        <programlisting>proc           /proc       procfs  rw  0   0</programlisting>
+      <programlisting>proc           /proc       procfs  rw  0   0</programlisting>
 
-        <para>в <filename>/etc/fstab</filename> для автоматического
-          монтирования &man.procfs.5; при запуске системы.</para>
+      <para>После установки <application>GNOME</application> настройте
+        <application>&xorg;</application> на запуск
+        <application>GNOME</application>.  Самый простой способ сделать это
+        заключается в активации Менеджера дисплеев GNOME, 
+        <application>GDM</application>, который устанавливается в составе
+        пакета или порта <application>GNOME</application>.  Его можно
+        активировать, добавив следующую строку в
+        <filename>/etc/rc.conf</filename>:</para>
 
-	<para>После установки <application>GNOME</application> нужно указать
-	  X-серверу на запуск <application>GNOME</application> вместо
-	  стандартного оконного менеджера.</para>
+      <programlisting>gdm_enable="YES"</programlisting>
 
-	<para>Самый простой путь запустить
-	  <application>GNOME</application> - это использовать
-	  <application>GDM</application> (GNOME Display Manager).
-	  <application>GDM</application> устанавливается в составе менеджера
-          рабочего стола <application>GNOME</application>, но по умолчанию
-          отключен.  Его можно активировать, добавив следующую строку в
-	  <filename>/etc/rc.conf</filename>:</para>
+      <para>Зачастую желательно также запустить все сервисы
+        <application>GNOME</application>.  Для этого добавьте вторую строку
+        в <filename>/etc/rc.conf</filename>:</para>
 
-        <programlisting>gdm_enable="YES"</programlisting>
+      <programlisting>gnome_enable="YES"</programlisting>
 
-        <para>После перезагрузки системы
-	  <application>GDM</application> запустится автоматически.</para>
+      <para><application>GDM</application> теперь запустится автоматически при
+        загрузке системы.</para>
 
-        <para>Зачастую желательно запустить все сервисы
-          <application>GNOME</application> одновременно с
-          <application>GDM</application>.  Для этого добавьте вот такую строку
-          в файл <filename>/etc/rc.conf</filename>:</para>
+      <para>Вторым способом запуска <application>GNOME</application> является
+        набор команды <command>startx</command> в командной строке после
+        настройки <filename>~/.xinitrc</filename>.  Если указанный файл уже
+        существует, то замените строку, в которой запускается используемый
+        менеджер окон, на ту, что вызовет
+        <filename>/usr/local/bin/gnome-session</filename>.  Если такой файл
+        отсутствует, создайте его следующей командой:</para>
 
-        <programlisting>gnome_enable="YES"</programlisting>
+      <screen>&prompt.user; <userinput>echo "/usr/local/bin/gnome-session" &gt; ~/.xinitrc</userinput></screen>
 
-	<para><application>GNOME</application> может быть также запущен
-	  из командной строки с помощью конфигурирования файла
-	  <filename>.xinitrc</filename>.  Если файл
-	  <filename>.xinitrc</filename> уже откорректирован, то просто
-	  замените строку, в которой запускается используемый менеджер окон,
-	  на ту, что вызовет
-	  <application>/usr/local/bin/gnome-session</application>.
-	  Если в конфигурационном файле нет ничего особенного, то будет
-	  достаточно просто набрать:</para>
+      <para>Третий метод заключается в использовании
+        <application>XDM</application> в качестве менеджера дисплеев.  В этом
+        случае создайте выполнимый файл
+        <filename>~/.xsession</filename>:</para>
 
-	<screen>&prompt.user; <userinput>echo "/usr/local/bin/gnome-session" &gt; ~/.xinitrc</userinput></screen>
-
-	<para>Теперь наберите <command>startx</command>, и будет запущена
-	  графическая оболочка <application>GNOME</application>.</para>
-
-	<note>
-	  <para>Если используется более старый менеджер дисплеев типа
-	    <application>XDM</application>, то это не сработает.  Вместо этого
-	    создайте выполнимый файл <filename>.xsession</filename> с той
-	    же самой командой в нём.  Для этого отредактируйте файл,
-	    заменив существующую команду запуска оконного
-	    менеджера на
-	    <application>/usr/local/bin/gnome-session</application>:</para>
-	</note>
-
-	<screen>&prompt.user; <userinput>echo "#!/bin/sh" &gt; ~/.xsession</userinput>
+      <screen>&prompt.user; <userinput>echo "#!/bin/sh" &gt; ~/.xsession</userinput>
 &prompt.user; <userinput>echo "/usr/local/bin/gnome-session" &gt;&gt; ~/.xsession</userinput>
 &prompt.user; <userinput>chmod +x ~/.xsession</userinput></screen>
 
-	<para>Ещё одним вариантом является настройка менеджера дисплеев таким
-	  образом, чтобы он позволял выбирать оконный менеджер во время входа в
-	  систему; в разделе о <link linkend="x11-wm-kde-details">KDE в
-	  подробностях</link> описывается, как сделать это для
-	  <application>KDM</application>, менеджера дисплеев из
-	  <application>KDE</application>.</para>
-      </sect3>
     </sect2>
 
     <sect2 xml:id="x11-wm-kde">
@@ -1245,13 +1199,10 @@ DisplayManager.requestPort:     0</screen>
 
       <indexterm><primary>KDE</primary></indexterm>
 
-      <sect3 xml:id="x11-wm-kde-about">
-	<title>О KDE</title>
-
-	<para><application>KDE</application> является простой в использовании
-	  современной графической оболочкой.  Вот лишь некоторые из
-	  преимуществ, которые
-	  даёт пользователю <application>KDE</application>:</para>
+      <para><application>KDE</application> является простой в использовании
+        современной графической оболочкой.  Вот лишь некоторые из
+	преимуществ, которые
+	даёт пользователю <application>KDE</application>:</para>
 
 	<itemizedlist>
 	  <listitem>
@@ -1304,10 +1255,6 @@ DisplayManager.requestPort:     0</screen>
 	  специфичных для <application>KDE</application> во FreeBSD, обратитесь
 	  к сайту инициативы <link
           xlink:href="http://freebsd.kde.org/">KDE/FreeBSD</link>.</para>
-      </sect3>
-
-      <sect3 xml:id="x11-wm-kde-install">
-	<title>Установка KDE</title>
 
 	<para>Как и в случае с <application>GNOME</application> или любой
 	  другой графической оболочкой, программное обеспечение можно легко
@@ -1348,11 +1295,6 @@ DisplayManager.requestPort:     0</screen>
 	  Вместо этого нужно отредактировать файл
 	  <filename>.xsession</filename>.  Указания для
 	  <application>KDM</application> описаны далее в этой главе.</para>
-      </sect3>
-    </sect2>
-
-    <sect2 xml:id="x11-wm-kde-details">
-      <title>Более подробно о KDE</title>
 
       <para>Теперь, когда <application>KDE</application> установлена в
 	системе, можно узнать много нового из её справочных страниц или просто
@@ -1400,9 +1342,6 @@ DisplayManager.requestPort:     0</screen>
     <sect2 xml:id="x11-wm-xfce">
       <title>XFce</title>
 
-      <sect3 xml:id="x11-wm-xfce-about">
-	<title>О XFce</title>
-
 	<para><application>XFce</application> является графической оболочкой,
 	  построенной на основе инструментального пакета GTK+, используемого в
 	  <application>GNOME</application>, но она гораздо легче и предназначена
@@ -1449,10 +1388,6 @@ DisplayManager.requestPort:     0</screen>
 	<para>Дополнительную информацию о <application>XFce</application>
 	  можно найти на <link xlink:href="http://www.xfce.org/">сайте
 	  XFce</link>.</para>
-      </sect3>
-
-      <sect3 xml:id="x11-wm-xfce-install">
-	<title>Установка Xfce</title>
 
 	<para>Для установки <application>Xfce</application> наберите:</para>
 
@@ -1475,11 +1410,11 @@ DisplayManager.requestPort:     0</screen>
 	  Как сказано выше, если используется
 	  менеджер дисплеев, такой, как <filename>XDM</filename>, создайте
 	  файл <filename>.xsession</filename> так, как это
-	  описано в разделе о <link linkend="x11-wm-gnome">GNOME</link>, но
+	  описано в разделе <xref linkend="x11-wm-gnome"/>, но
 	  с командой <filename>/usr/local/bin/startxfce4</filename>, либо
-	  настройте менеджер дисплеев так, чтобы он разрешил выбор рабочего
-	  стола во время входа в систему, как это описано в разделе о <link linkend="x11-wm-kde-kdm">kdm</link>.</para>
-      </sect3>
+	  настройте менеджер дисплеев так, чтобы он разрешал выбор оболочки
+          рабочего стола во время входа в систему, как описано в разделе <xref
+          linkend="x11-wm-kde-kdm"/>.</para>
     </sect2>
   </sect1>
 
