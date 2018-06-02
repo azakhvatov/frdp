@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r44739
+     Original revision: r44741
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
 
@@ -1107,8 +1107,8 @@ DisplayManager.requestPort:     0</screen>
             <firstname>Valentino</firstname>
             <surname>Vaschetto</surname>
           </personname>
-          <!--
-          <contrib>Текст предоставил в июне 2001 года </contrib> -->
+          <contrib>Текст предоставил </contrib>
+          <!-- в июне 2001 -->
         </author>
       </authorgroup>
     </info>
@@ -1269,76 +1269,46 @@ DisplayManager.requestPort:     0</screen>
     <sect2 xml:id="x11-wm-xfce">
       <title>XFce</title>
 
-	<para><application>XFce</application> является графической оболочкой,
-	  построенной на основе инструментального пакета GTK+, используемого в
-	  <application>GNOME</application>, но она гораздо легче и предназначена
-	  для тех, кому нужен простой, эффективно работающий рабочий стол,
-	  который легко использовать и настраивать.  Визуально он выглядит
-	  очень похоже на <application>CDE</application>, который есть в
-	  коммерческих &unix;-системах.  Вот некоторые из достоинств
-	  <application>XFce</application>:</para>
+      <para><application>Xfce</application> является графической оболочкой,
+	построенной на основе инструментального пакета GTK+, используемого в
+	<application>GNOME</application>.  Однако она гораздо легче и
+	реализует простой, эффективно работающий и лёгкий в использовании
+	рабочий стол.  Она полностью настраиваема, имеет главную панель с меню,
+        апплетами и кнопками быстрого запуска приложений, включает в себя
+        менеджер файлов и звуковой менеджер, а также поддерживает темы рабочего
+        стола.  Так как оболочка является быстродействующей, лёгкой и
+        эффективной, она идеально подходит для более старых или медленных
+        машин с ограниченной оперативной памятью.  Дополнительную информацию о
+        <application>Xfce</application> можно найти на сайте <link
+        xlink:href="http://www.xfce.org/">http://www.xfce.org</link>.</para>
 
-	<itemizedlist>
-	  <listitem>
-	    <para>Простой, лёгкий в обращении рабочий стол</para>
-	  </listitem>
+      <para>Для установки пакета <application>Xfce</application>:</para>
 
-	  <listitem>
-	    <para>Полностью настраиваемый при помощи мыши, с
-	      интерфейсом drag and drop и так далее</para>
-	  </listitem>
+      <screen>&prompt.root; <userinput>pkg install xfce</userinput></screen>
 
-	  <listitem>
-	    <para>Главная панель похожа на <application>CDE</application>, с
-	      меню, апплетами и возможностями по быстрому запуску
-	      приложений</para>
-	  </listitem>
+      <para>Либо для построения порта:</para>
 
-	  <listitem>
-	    <para>Интегрированный оконный менеджер, менеджер файлов,
-	      управление звуком, модуль совместимости с
-	      <application>GNOME</application> и прочее</para>
-	  </listitem>
-
-	  <listitem>
-	    <para>Возможность использования тем (так как использует
-	      GTK+)</para>
-	  </listitem>
-
-	  <listitem>
-	    <para>Быстрый, легкий и эффективный: идеален для
-	      устаревших/слабых машин или для машин с ограниченной
-	      памятью</para>
-	  </listitem>
-	</itemizedlist>
-
-	<para>Дополнительную информацию о <application>XFce</application>
-	  можно найти на <link xlink:href="http://www.xfce.org/">сайте
-	  XFce</link>.</para>
-
-	<para>Для установки <application>Xfce</application> наберите:</para>
-
-        <screen>&prompt.root; <userinput>pkg install xfce</userinput></screen>
-
-	<para>Либо, в случае построения из исходного кода, используйте
-	  Коллекцию Портов:</para>
-
-	<screen>&prompt.root; <userinput>cd /usr/ports/x11-wm/xfce4</userinput>
+      <screen>&prompt.root; <userinput>cd /usr/ports/x11-wm/xfce4</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
 
-	<para>Теперь укажите X-серверу на запуск
-	  <application>XFce</application> при следующем
-	  запуске X.  Просто наберите:</para>
+      <para>В отличие от <application>GNOME</application> или
+        <application>KDE</application>, <application>Xfce</application> не
+        имеет собственного менеджера регистрации.  Для того, чтобы запустить
+        <application>Xfce</application> из командной строки, набрав
+        <command>startx</command>, сначала добавьте соответствующую запись в
+        <filename>~/.xinitrc</filename>:</para>
 
-	<screen>&prompt.user; <userinput>echo "/usr/local/bin/startxfce4" &gt; ~/.xinitrc</userinput></screen>
+      <screen>&prompt.user; <userinput>echo "/usr/local/bin/startxfce4" &gt; ~/.xinitrc</userinput></screen>
 
-	<para>При следующем запуске X в качестве рабочего стола
-	  будет использоваться <application>XFce</application>.
-	  Как сказано выше, если используется
-	  менеджер дисплеев, такой, как <filename>XDM</filename>, создайте
-	  файл <filename>.xsession</filename> так, как это
-	  описано в разделе <xref linkend="x11-wm-gnome"/>, но
-	  с <filename>/usr/local/bin/startxfce4</filename>.</para>
+      <para>Альтернативным способом является использование
+        <application>XDM</application>.  Для того, чтобы воспользоваться этим
+        методом, создайте исполнимый файл
+        <filename>~/.xsession</filename>:</para>
+
+      <screen>&prompt.user; <userinput>echo "#!/bin/sh" &gt; ~/.xsession</userinput>
+&prompt.user; <userinput>echo "/usr/local/bin/startxfce4" &gt;&gt; ~/.xsession</userinput>
+&prompt.user; <userinput>chmod +x ~/.xsession</userinput></screen>
+
     </sect2>
   </sect1>
 
