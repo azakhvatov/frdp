@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r44738
+     Original revision: r44739
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
 
@@ -1140,7 +1140,9 @@ DisplayManager.requestPort:     0</screen>
       <screen>&prompt.root; <userinput>pkg install gnome2</userinput></screen>
 
       <para>Вместо этого можно построить <application>GNOME</application> из
-	портов:</para>
+	портов при помощи команды ниже.  <application>GNOME</application>
+	является большим приложением, его компиляция займёт определённое время
+        даже на быстром компьютере.</para>
 
       <screen>&prompt.root; <userinput>cd /usr/ports/x11/gnome2</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
@@ -1199,144 +1201,69 @@ DisplayManager.requestPort:     0</screen>
 
       <indexterm><primary>KDE</primary></indexterm>
 
-      <para><application>KDE</application> является простой в использовании
-        современной графической оболочкой.  Вот лишь некоторые из
-	преимуществ, которые
-	даёт пользователю <application>KDE</application>:</para>
+      <para><application>KDE</application> является ещё одной простой в
+        использовании графической оболочкой.  В неё включен набор приложений с
+        общим визуальным и пользовательским подходом, стандартное меню и
+        панели инструментов, короткие комбинации клавиш, цветовые схемы,
+        интернационализация и централизованное управление настройками рабочего
+        стола в диалоговом режиме.  Дополнительную информацию о
+	<application>KDE</application> можно найти на сайте <link
+        xlink:href="http://www.kde.org/">http://www.kde.org/</link>.
+        Поищите информацию, специфичную для &os;, на сайте <link
+        xlink:href="http://freebsd.kde.org/">http://freebsd.kde.org</link>.</para>
 
-	<itemizedlist>
-	  <listitem>
-	    <para>Прекрасный современный рабочий стол</para>
-	  </listitem>
+      <para>Для установки пакета <application>KDE</application>
+	наберите:</para>
 
-	  <listitem>
-	    <para>Рабочий стол, полностью прозрачный для работы в сети</para>
-	  </listitem>
+      <screen>&prompt.root; <userinput>pkg install x11/kde4</userinput></screen>
 
-	  <listitem>
-	    <para>Интегрированная система помощи, обеспечивающая удобный и
-	      согласованный доступ к системе помощи по использованию рабочего
-	      стола <application>KDE</application> и его приложений</para>
-	  </listitem>
+      <para>Вместо этого можно построить <application>KDE</application> как
+        порт при помощи команды ниже.  Процедура установки предусматривает меню
+        для выбора компонентов для установки.  <application>KDE</application>
+	является больим приложением, для его компиляции потребуется
+        определённое время даже на быстром компьютере.</para>
 
-	  <listitem>
-	    <para>Единообразный внешний вид и управление во всех приложениях
-	      <application>KDE</application></para>
-	  </listitem>
-
-	  <listitem>
-	    <para>Стандартизированные меню и панели инструментов, комбинации
-	      клавиш, цветовые схемы и так далее.</para>
-	  </listitem>
-
-	  <listitem>
-	    <para>Интернационализация: в <application>KDE</application>
-	      поддерживается более 55 языков</para>
-	  </listitem>
-
-	  <listitem>
-	    <para>Централизованное единообразное конфигурирование рабочего
-	      стола в диалоговом режиме</para>
-	  </listitem>
-
-	  <listitem>
-	    <para>Большое количество полезных приложений для
-	      <application>KDE</application></para>
-	  </listitem>
-	</itemizedlist>
-
-	<para>Совместно с <application>KDE</application>
-	  поставляется веб-браузер под
-	  названием <application>Konqueror</application>, который
-	  является серьёзным соперником другим браузерам для &unix;-систем.
-	  Дополнительную информацию о <application>KDE</application> можно
-	  найти на <link xlink:href="http://www.kde.org/">сайте KDE</link>.
-          Для получения информации и информационных ресурсов,
-	  специфичных для <application>KDE</application> во FreeBSD, обратитесь
-	  к сайту инициативы <link
-          xlink:href="http://freebsd.kde.org/">KDE/FreeBSD</link>.</para>
-
-	<para>Как и в случае с <application>GNOME</application> или любой
-	  другой графической оболочкой, программное обеспечение можно легко
-	  установить из пакета или из Коллекции Портов:</para>
-
-	<para>Для установки пакета <application>KDE4</application>
-	  наберите:</para>
-
-        <screen>&prompt.root; <userinput>pkg install x11/kde4</userinput></screen>
-
-        <para>Для построения <application>KDE</application> из исходных
-          текстов воспользуйтесь деревом портов:</para>
-
-	<screen>&prompt.root; <userinput>cd /usr/ports/x11/kde4</userinput>
+      <screen>&prompt.root; <userinput>cd /usr/ports/x11/kde4</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
 
-        <para>При первой установке этого порта будет представлено меню для
-          выбора опций установки.  Рекомендуется подтвердить параметры по
-          умолчанию.</para>
+      <indexterm>
+        <primary>KDE</primary>
+        <secondary>display manager</secondary>
+      </indexterm>
 
-        <para><application>KDE 4</application> является большим приложением,
-          его компиляция займёт определённое время даже на быстродействующем
-          компьютере.</para>
+      <para><application>KDE</application> требует наличия смонтированной
+        файловой системы <filename>/proc</filename>.  Добавьте вот такую строку
+        в <filename>/etc/fstab</filename> для автоматического монтирования этой
+        файловой системы при запуске:</para>
 
-	<para>После установки <application>KDE</application> нужно
-	  указать X-серверу на запуск этого приложения вместо оконного
-	  менеджера, используемого по умолчанию.  Это достигается
-	  редактированием файла <filename>.xinitrc</filename>:</para>
+      <programlisting>proc           /proc       procfs  rw  0   0</programlisting>
 
-	<screen>&prompt.user; <userinput>echo "exec /usr/local/kde4/bin/startkde" &gt; ~/.xinitrc</userinput></screen>
+      <para>В установочный набор <application>KDE</application> входит
+        Менеджер Дисплееы KDE (KDE Display Manager),
+        <application>KDM</application>.  Для его активации добавьте следующую
+        строку в <filename>/etc/rc.conf</filename>:</para>
 
-	<para>Теперь при вызове X Window System по команде
-	  <command>startx</command> в качестве оболочки будет использоваться
-	  <application>KDE</application>.</para>
+      <programlisting>kdm4_enable="YES"</programlisting>
 
-	<para>При использовании менеджера дисплеев типа
-	  <application>XDM</application> настройка несколько отличается.
-	  Вместо этого нужно отредактировать файл
-	  <filename>.xsession</filename>.  Указания для
-	  <application>KDM</application> описаны далее в этой главе.</para>
+      <para>Другим способом запуска <application>KDE</application> является
+        ввод команды <command>startx</command> из командной строки.  Чтобы это
+        работало, в файле <filename>~/.xinitrc</filename> должна быть следующая
+        строка:</para>
 
-      <para>Теперь, когда <application>KDE</application> установлена в
-	системе, можно узнать много нового из её справочных страниц или просто
-	указанием и щелканьем по различным меню.  Пользователи &windows; или
-	&mac; будут чувствовать себя как дома.</para>
+      <programlisting>exec /usr/local/kde4/bin/startkde</programlisting>
 
-      <para>Лучшим справочником по <application>KDE</application> является
-	онлайновая документация.  <application>KDE</application>
-	поставляется с собственным веб-браузером, который называется
-	<application>Konqueror</application>,
-	десятками полезных приложений и подробной документацией.  В оставшейся
-	части этого раздела обсуждаются технические вопросы, трудные для
-	понимания при случайном исследовании.</para>
+      <para>Третьим способом запуска <application>KDE</application> является
+        использование <application>XDM</application>.  Чтобы это сделать,
+        создайте выполнимый файл <filename>~/.xsession</filename> следующим
+        образом:</para>
 
-      <sect3 xml:id="x11-wm-kde-kdm">
-	<title>Менеджер дисплеев KDE</title>
+      <screen>&prompt.user; <userinput>echo "#!/bin/sh" &gt; ~/.xsession</userinput>
+&prompt.user; <userinput>echo "/usr/local/kde4/bin/startkde" &gt;&gt; ~/.xsession</userinput>
+&prompt.user; <userinput>chmod +x ~/.xsession</userinput></screen>
 
-	<indexterm>
-	  <primary>KDE</primary>
-
-	  <secondary>менеджер дисплеев</secondary>
-	</indexterm>
-
-	<para>Администратору многопользовательской системы может
-	  потребоваться графический экран для входа пользователей
-	  в систему.  Вы можете использовать <link linkend="x-xdm">XDM</link>, как это описано
-	  ранее.  Однако в <application>KDE</application> имеется
-	  альтернативный менеджер <application>KDM</application>, который был
-	  разработан более привлекательным и с
-	  большим количеством настраиваемых опций для входа в систему.  В
-	  частности, пользователи могут легко выбирать (посредством меню),
-	  какую оболочку (<application>KDE</application>,
-	  <application>GNOME</application> или что-то ещё) запускать после
-	  входа в систему.</para>
-
-	<para><application>KDE 4</application> требует наличия смонтированной
-          файловой системы &man.procfs.5;, в файл
-          <filename>/etc/rc.conf</filename> должна быть добавлена следующая
-          строка:</para>
-
-        <programlisting>kdm4_enable="YES"</programlisting>
-      </sect3>
+      <para>После запуска <application>KDE</application> дополнительную
+        информацию о порядке использования её различных меню и приложений
+        можно найти во встроенной системе помощи.</para>
     </sect2>
 
     <sect2 xml:id="x11-wm-xfce">
@@ -1411,10 +1338,7 @@ DisplayManager.requestPort:     0</screen>
 	  менеджер дисплеев, такой, как <filename>XDM</filename>, создайте
 	  файл <filename>.xsession</filename> так, как это
 	  описано в разделе <xref linkend="x11-wm-gnome"/>, но
-	  с командой <filename>/usr/local/bin/startxfce4</filename>, либо
-	  настройте менеджер дисплеев так, чтобы он разрешал выбор оболочки
-          рабочего стола во время входа в систему, как описано в разделе <xref
-          linkend="x11-wm-kde-kdm"/>.</para>
+	  с <filename>/usr/local/bin/startxfce4</filename>.</para>
     </sect2>
   </sect1>
 
