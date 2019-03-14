@@ -14,7 +14,7 @@ $ cd tmp
 $ svn checkout svn://svn.FreeBSD.org/doc/head doc
 $ cd doc
 $ tar -czvf share.tar.gz share
-$ git clone http://github.com/frdp
+$ git clone http://github.com/azakhvatov/frdp
 $ cd frdp
 $ tar -zxvf ../share.tar.gz
 $ cd ru_RU.UTF-8
