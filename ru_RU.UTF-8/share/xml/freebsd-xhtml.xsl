@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='koi8-r'?>
+<?xml version='1.0' encoding='utf-8'?>
 
 <!-- $FreeBSD: head/ru_RU.KOI8-R/share/xml/freebsd-xhtml.xsl 51014 2017-10-01 12:05:26Z wosch $ -->
 

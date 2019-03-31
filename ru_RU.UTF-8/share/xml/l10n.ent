@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="koi8-r"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
      The FreeBSD Russian Documentation Project
 
@@ -16,14 +16,14 @@
 <!ENTITY docnavi.single-html "Одним файлом">
 <!ENTITY docnavi.split-html  "По разделам">
 
-<!ENTITY doc.langcode.ru "ru_RU.KOI8-R">
+<!ENTITY doc.langcode.ru "ru_RU.UTF-8">
 <!ENTITY doc.langcode    "&doc.langcode.ru;">
 
 <!-- charset for HTML output -->
-<!ENTITY doc.html.charset "koi8-r">
+<!ENTITY doc.html.charset "utf-8">
 
-<!ENTITY url.doc.langcode    'ru_RU.KOI8-R'>
-<!ENTITY xml.encoding        'koi8-r'>
+<!ENTITY url.doc.langcode    'ru_RU.UTF-8'>
+<!ENTITY xml.encoding        'utf-8'>
 
 <!ENTITY rel.current.date 'Январь 2014'>
 
