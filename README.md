@@ -9,6 +9,7 @@ To join, just drop a short message to andrey.zakhvatov@gmail.com
 
 Instructions to build
 =====================
+(root) # pkg install docproj
 $ mkdir tmp
 $ cd tmp
 $ svn checkout svn://svn.FreeBSD.org/doc/head doc
