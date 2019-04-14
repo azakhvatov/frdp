@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r51816
+     Original revision: r51867
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -53,6 +53,7 @@
       <year>2015</year>
       <year>2016</year>
       <year>2017</year>
+      <year>2018</year>
       <holder>The &os; Documentation Project</holder>
     </copyright>
 
@@ -5237,6 +5238,25 @@ Key F15	A	A	Menu Workplace Nop</programlisting>
 	    <varname>net.link.ether.inet.log_arp_wrong_iface</varname>
 	    в значение <literal>0</literal>.</para>
 	</answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question xml:id="ipv6-only">
+          <para>Как скомпилировать ядро, поддерживающее только IPv6?</para>
+        </question>
+
+        <answer>
+          <para>
+            Выполните конфигурацию ядра со следующими параметрами:
+<screen>
+include GENERIC
+ident GENERIC-IPV6ONLY
+makeoptions MKMODULESENV+="WITHOUT_INET_SUPPORT="
+nooptions INET
+nodevice gre
+</screen>
+          </para>
+        </answer>
       </qandaentry>
     </qandaset>
   </chapter>
