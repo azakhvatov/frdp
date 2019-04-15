@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r52086
+     Original revision: r52108
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -6561,9 +6561,9 @@ hint.sio.7.irq="12"</programlisting>
 	    подразумевается никак не используемая память.  Вся память,
 	    которая программам явно не выделялась, используется
 	    ядром &os; для дискового кэша.  Значения, показываемые
-	    утилитой &man.top.1;, помеченные как <literal>Inact</literal>,
-	    <literal>Cache</literal> и <literal>Buf</literal> - это
-	    всё кэшированные данные разных степеней устаревания.  То,
+	    утилитой &man.top.1; с метками <literal>Inact</literal> и
+	    <literal>Laundry</literal>, являются кэшированными данными разных
+            степеней устаревания.  То,
 	    что данные находятся в кэше, означает, что система не будет
 	    обращаться к медленному диску снова за теми данными,
 	    обращение к которым было недавно, повышая таким образом
