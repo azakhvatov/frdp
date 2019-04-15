@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r52085
+     Original revision: r52086
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -609,15 +609,13 @@
 	</question>
 
 	<answer>
-	  <para>В рамках проекта создан широкий спектр документации,
-	    которая доступна on-line по следующей ссылке: <uri
-	      xlink:href="https://www.FreeBSD.org/docs.html">https://www.FreeBSD.org/docs.html</uri>.
+	  <para>В рамках проекта создаётся обширная документация,
+	    которая доступна в онлайне по следующей ссылке: <uri
+	    xlink:href="https://www.FreeBSD.org/docs.html">https://www.FreeBSD.org/docs.html</uri>.
 	    Кроме того, в <link
-	      linkend="bibliography">Библиографии</link> в конце этого
-	    <acronym>FAQ</acronym> и в <link
-	      xlink:href="&url.books.handbook;/bibliography.html">Руководстве</link>
-	    имеются ссылки на другие рекомендуемые для чтения
-	    книги.</para>
+	    xlink:href="&url.books.handbook;/bibliography.html">библиографии
+            Руководства</link> содержатся ссылки на другие рекомендуемые
+            книги.</para>
 	</answer>
       </qandaentry>
 
@@ -7454,6 +7452,4 @@ panic: page fault</programlisting>
     <para>Мы хотим поблагодарить всех их и приглашаем вас <link xlink:href="&url.articles.contributing;/article.html">присоединиться</link>,
       чтобы сделать этот <acronym>FAQ</acronym> ещё лучше.</para>
   </chapter>
-
-  &bibliography;
 </book>
