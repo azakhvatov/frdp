@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r52023
+     Original revision: r52084
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -721,6 +721,12 @@
 		    </row>
 
 		    <row>
+                      <entry><literal>ko_KR.UTF-8</literal></entry>
+
+                      <entry>Корейский (Корея, кодировка UTF-8)</entry>
+                    </row>
+
+                    <row>
 		      <entry><literal>mn_MN.UTF-8</literal></entry>
 
 		      <entry>Монгольский (Монголия, кодировка UTF-8)</entry>
@@ -730,12 +736,6 @@
 		      <entry><literal>nl_NL.ISO8859-1</literal></entry>
 
 		      <entry>Голландский (Нидерланды)</entry>
-		    </row>
-
-		    <row>
-		      <entry><literal>no_NO.ISO8859-1</literal></entry>
-
-		      <entry>Норвежский (Норвегия)</entry>
 		    </row>
 
 		    <row>
@@ -754,12 +754,6 @@
 		      <entry><literal>ru_RU.KOI8-R</literal></entry>
 
 		      <entry>Русский (Россия, кодировка KOI8-R)</entry>
-		    </row>
-
-		    <row>
-		      <entry><literal>sr_YU.ISO8859-2</literal></entry>
-
-		      <entry>Сербский (Сербия)</entry>
 		    </row>
 
 		    <row>
