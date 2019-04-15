@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r52084
+     Original revision: r52085
 -->
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="ru">
   <info>
@@ -7143,13 +7143,18 @@ hint.sio.7.irq="12"</programlisting>
 
       <qandaentry>
 	<question xml:id="how-to-contribute">
-	  <para>Как можно оказать помощь проекту &os;?</para>
+	  <para>Как внести вклад в проект &os;?  Что можно сделать в качестве
+            помощи?</para>
 	</question>
 
 	<answer>
-	  <para>Пожалуйста, обратитесь к соответствующей <link xlink:href="&url.articles.contributing;/article.html">статье</link>,
-	    в которой вы получите советы относительно того, как это сделать.
-	    Ваша помощь более чем приветствуется!</para>
+	  <para>Мы принимаем помощь в любой форме: документации, кода и даже
+            художественной графики.  Обратитесь к соответствующей статье <link
+            xlink:href="&url.articles.contributing;/article.html">Участие в
+            проекте &os;</link>, в которой вы найдёте советы относительно
+            того, как это сделать.</para>
+
+          <para>И спасибо вам за то, что вы об этом думаете!</para>
 	</answer>
       </qandaentry>
 
@@ -7194,19 +7199,6 @@ hint.sio.7.irq="12"</programlisting>
 	    отделилась от <emphasis>-CURRENT</emphasis> &rel.relengdate;, а
             ветки &rel2.stable; и &rel2.releng; отделились от
 	    <emphasis>-CURRENT</emphasis> &rel2.relengdate;.</para>
-	</answer>
-      </qandaentry>
-
-      <qandaentry>
-	<question xml:id="submitting-kernel-extensions">
-	  <para>Я написал некоторое добавление к ядру, кому его послать?</para>
-	</question>
-
-	<answer>
-	  <para>Обратитесь к статье о том, как <link xlink:href="&url.articles.contributing;/article.html">помочь проекту
-	    &os;</link>, чтобы выяснить, как это сделать.</para>
-
-	  <para>И спасибо Вам за Ваши усилия!</para>
 	</answer>
       </qandaentry>
 
