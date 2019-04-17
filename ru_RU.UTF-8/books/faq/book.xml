@@ -2,25 +2,25 @@
 <!DOCTYPE book PUBLIC "-//FreeBSD//DTD DocBook XML V5.0-Based Extension//EN"
 	"http://www.FreeBSD.org/XML/share/xml/freebsd50.dtd" [
 <!ENTITY bibliography SYSTEM "../../../share/xml/bibliography.xml">
-<!ENTITY rel.numbranch "3">  <!-- number of branches that follow in this list -->
+<!ENTITY rel.numbranch "2">  <!-- number of branches that follow in this list -->
 <!ENTITY rel.head "<emphasis xmlns='http://docbook.org/ns/docbook'>12-CURRENT</emphasis>">
-<!ENTITY rel.head.relx "12.<replaceable xmlns='http://docbook.org/ns/docbook'>X</replaceable>">
+<!ENTITY rel.head.relx "13.<replaceable xmlns='http://docbook.org/ns/docbook'>X</replaceable>">
 <!ENTITY rel.head.releng "<symbol xmlns='http://docbook.org/ns/docbook'>head/</symbol>">
-<!ENTITY rel.relx "11.<replaceable xmlns='http://docbook.org/ns/docbook'>X</replaceable>">
-<!ENTITY rel.stable "<emphasis xmlns='http://docbook.org/ns/docbook'>11-STABLE</emphasis>">
-<!ENTITY rel.releng "<symbol xmlns='http://docbook.org/ns/docbook'>stable/11/</symbol>">
-<!ENTITY rel.relengdate "в апреле 2016 года">
-<!ENTITY rel2.relx "10.<replaceable xmlns='http://docbook.org/ns/docbook'>X</replaceable>">
-<!ENTITY rel2.stable "<emphasis xmlns='http://docbook.org/ns/docbook'>10-STABLE</emphasis>">
+<!ENTITY rel.relx "12.<replaceable xmlns='http://docbook.org/ns/docbook'>X</replaceable>">
+<!ENTITY rel.stable "<emphasis xmlns='http://docbook.org/ns/docbook'>12-STABLE</emphasis>">
+<!ENTITY rel.releng "<symbol xmlns='http://docbook.org/ns/docbook'>stable/12/</symbol>">
+<!ENTITY rel.relengdate "в декабре 2018 года">
+<!ENTITY rel2.relx "11.<replaceable xmlns='http://docbook.org/ns/docbook'>X</replaceable>">
+<!ENTITY rel2.stable "<emphasis xmlns='http://docbook.org/ns/docbook'>11-STABLE</emphasis>">
 <!ENTITY rel2.releng "<symbol xmlns='http://docbook.org/ns/docbook'>stable/10/</symbol>">
-<!ENTITY rel2.relengdate "в августе 2015 года">
+<!ENTITY rel2.relengdate "в октябре 2016 года">
 ]>
 <!--
      The FreeBSD Russian Documentation Project
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r52497
+     Original revision: r52666
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -83,7 +83,7 @@
       <para>Этот документ является так называемым
 	<acronym>FAQ</acronym> (Frequently Asked Questions),
 	то есть списком Часто Задаваемых Вопросов по &os; версий
-	&rel2.relx; и &rel.relx;.  Мы прилагаем все усилия, чтобы сделать этот
+	&rel.relx; и &rel2.relx;.  Мы прилагаем все усилия, чтобы сделать этот
 	<acronym>FAQ</acronym> максимально
 	информативным; если у вас есть идеи по его усовершенствованию,
 	присылайте их на адрес &a.doc;.</para>
