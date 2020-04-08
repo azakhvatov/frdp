@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53474
+     Original revision: r53475
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -352,11 +352,11 @@
 
 	  <para>Версия <link
             xlink:href="https://download.FreeBSD.org/ftp/releases/amd64/amd64/&rel.current;-RELEASE/">&rel.current;</link>
-            (дата выпуска &rel.current.date;) является последним релизом в
-            ветке &rel.stable;.  Версия <link
-            xlink:href="https://download.FreeBSD.org/ftp/releases/amd64/amd64/&rel2.current;-RELEASE/">&rel1.current;</link>
-	    (дата выпуска &rel1.current.date;) является последним релизом в
-            ветке &rel2.stable;.</para>
+            (дата выпуска &rel.current.date;) является самым последним релизом
+            в ветке &rel.stable;.  Версия <link
+            xlink:href="https://download.FreeBSD.org/ftp/releases/amd64/amd64/&rel1.current;-RELEASE/">&rel1.current;</link>
+	    (дата выпуска &rel1.current.date;) является самым последним релизом
+            в ветке &rel2.stable;.</para>
 
 	  <para>Релизы делаются <link linkend="release-freq">раз в
 	    несколько месяцев</link>.  Хотя многие стараются отслеживать
