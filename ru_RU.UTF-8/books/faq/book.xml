@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53215
+     Original revision: r53474
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -354,8 +354,8 @@
             xlink:href="https://download.FreeBSD.org/ftp/releases/amd64/amd64/&rel.current;-RELEASE/">&rel.current;</link>
             (дата выпуска &rel.current.date;) является последним релизом в
             ветке &rel.stable;.  Версия <link
-            xlink:href="https://download.FreeBSD.org/ftp/releases/amd64/amd64/&rel2.current;-RELEASE/">&rel2.current;</link>
-	    (дата выпуска &rel2.current.date;) является последним релизом в
+            xlink:href="https://download.FreeBSD.org/ftp/releases/amd64/amd64/&rel2.current;-RELEASE/">&rel1.current;</link>
+	    (дата выпуска &rel1.current.date;) является последним релизом в
             ветке &rel2.stable;.</para>
 
 	  <para>Релизы делаются <link linkend="release-freq">раз в
@@ -569,9 +569,9 @@
 
 	    <listitem>
 	      <para>Последний релиз &rel2.stable;,
-		&rel2.current;-RELEASE, можно найти в <link
-                xlink:href="https://download.FreeBSD.org/ftp/releases/amd64/amd64/&rel2.current;-RELEASE/">каталоге
-		&rel2.current;-RELEASE</link>.</para>
+		&rel1.current;-RELEASE, можно найти в <link
+                xlink:href="https://download.FreeBSD.org/ftp/releases/amd64/amd64/&rel1.current;-RELEASE/">каталоге
+		&rel1.current;-RELEASE</link>.</para>
 	    </listitem>
 	  </itemizedlist>
 
