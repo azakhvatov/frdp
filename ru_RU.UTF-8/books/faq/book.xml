@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53561
+     Original revision: r53605
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -338,7 +338,7 @@
 	    из ветки &rel.stable;, а релизы &rel2.relx; выполняются из
 	    &rel2.stable;.</para>
 
-	  <para>До выпуска 9.0 линейка &rel2.relx; была
+	  <para>До версии 12.0 линейка &rel2.relx; была
 	    известна как <emphasis>-STABLE</emphasis>.
 	    Однако к моменту выхода &rel.head.relx; линейка &rel2.relx;
 	    получит статус <quote>extended support</quote> (расширенная
@@ -349,14 +349,6 @@
 	    считается <quote>legacy</quote> (устаревшая), и большинство
 	    текущих изменений будет уже частью только &rel.stable; и
 	    &rel2.stable;.--></para>
-
-	  <para>Версия <link
-            xlink:href="https://download.FreeBSD.org/ftp/releases/amd64/amd64/&rel121.current;-RELEASE/">&rel121.current;</link>
-            (дата выпуска &rel121.current.date;) является самым последним
-            релизом в ветке &rel.stable;.  Версия <link
-            xlink:href="https://download.FreeBSD.org/ftp/releases/amd64/amd64/&rel1.current;-RELEASE/">&rel1.current;</link>
-	    (дата выпуска &rel1.current.date;) является самым последним релизом
-            в ветке &rel2.stable;.</para>
 
 	  <para>Релизы делаются <link linkend="release-freq">раз в
 	    несколько месяцев</link>.  Хотя многие стараются отслеживать
@@ -475,17 +467,13 @@
             xlink:href="https://www.FreeBSD.org/releng">Информация о подготовке
 	    релизов</link>.</para>
 
-	  <para>Активно разрабатываемой веткой <emphasis>-STABLE</emphasis>
-	    является &rel.current;-STABLE.  Последним релизом в ветке
-	    &rel.current;-STABLE является
-	    &rel.current;-RELEASE, выпущенный &rel.current.date;.</para>
-
-	  <para>Активно разрабатываемой веткой <emphasis>-CURRENT</emphasis>
-	    является ветка &rel.head;, которая движется к созданию следующего
-	    поколения &os;.
-	    Прочтите ответ на вопрос <link linkend="current">Что такое
-	    &os;-CURRENT?</link> для получения более подробной информации об
-	    этой ветке.</para>
+	  <para>Версия <link
+            xlink:href="https://download.FreeBSD.org/ftp/releases/amd64/amd64/&rel121.current;-RELEASE/">&rel121.current;</link>
+            (дата выпуска &rel121.current.date;) является самым последним
+            релизом в ветке &rel.stable;.  Версия <link
+            xlink:href="https://download.FreeBSD.org/ftp/releases/amd64/amd64/&rel1.current;-RELEASE/">&rel1.current;</link>
+	    (дата выпуска &rel1.current.date;) является самым последним релизом
+            в ветке &rel2.stable;.</para>
 	</answer>
       </qandaentry>
 
