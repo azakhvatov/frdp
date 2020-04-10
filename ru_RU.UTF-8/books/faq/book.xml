@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53609
+     Original revision: r53610
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -2241,13 +2241,9 @@ kern.timecounter.hardware: TSC -&gt; i8254</screen>
 
 	<answer>
 	  <para>Обратитесь на <link
-	      xlink:href="&url.base;/ports/index.html">страницу портов</link>,
+	    xlink:href="&url.base;/ports/index.html">страницу портов</link>,
 	    содержащую информацию о программных продуктах, перенесённых
-	    во &os;.  На данный момент в этом списке находится более
-	    &os.numports; приложений и он ежедневно увеличивается, так
-	    что почаще туда заглядывайте или подпишитесь на &a.announce;,
-	    в котором публикуется информация о появлении новых
-	    приложений.</para>
+	    во &os;.</para>
 
 	  <para>Большинство портов должно нормально работать во всех
 	    поддерживаемых версиях &os;.  Неработающие порты
