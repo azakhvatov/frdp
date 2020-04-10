@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53610
+     Original revision: r53611
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -2285,18 +2285,6 @@ kern.timecounter.hardware: TSC -&gt; i8254</screen>
 		информации.</para>
 	    </listitem>
 	  </itemizedlist>
-	</answer>
-      </qandaentry>
-
-      <qandaentry>
-	<question xml:id="java">
-	  <para>Поддерживает ли &os; среду &java;?</para>
-	</question>
-
-	<answer>
-	  <para>Да.  Для получения дополнительной информации посетите
-	    страницу <link
-	      xlink:href="&url.base;/java/index.html">https://www.FreeBSD.org/java/</link>.</para>
 	</answer>
       </qandaentry>
 
