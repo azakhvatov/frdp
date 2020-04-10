@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53608
+     Original revision: r53609
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -1169,18 +1169,6 @@
       </qandaentry>
 
       <qandaentry>
-	<question xml:id="need-to-run">
-	  <para>Каковы минимальные требования для запуска &os;?</para>
-	</question>
-
-	<answer>
-	  <para>Для работы &os; необходим ПК класса 486 и выше с
-	    оперативной памятью объёмом не менее 64&nbsp;Мбайт и
-	    дисковым пространством не менее 1.1 Гбайт.</para>
-	</answer>
-      </qandaentry>
-
-      <qandaentry>
 	<question xml:id="custom-boot-floppy">
 	  <para>Как сделать собственный установочный диск?</para>
 	</question>
@@ -1395,9 +1383,7 @@
 
 	<qandaentry>
 	  <question xml:id="memory-upper-limitation">
-	    <para>Какие существуют ограничения по памяти?
-	      Поддерживает ли &os; больше 4&nbsp;Гбайт памяти (ОЗУ)?
-	      Больше 16&nbsp;Гбайт? Больше 48&nbsp;Гбайт?</para>
+	    <para>Каковы ограничения на оперативную память?</para>
 	  </question>
 
 	  <answer>
@@ -1547,87 +1533,21 @@
       </qandaset>
     </sect1>
 
-    <sect1 xml:id="compatibility-drives">
-      <title>Жёсткие диски, ленточные устройства и приводы CD и DVD</title>
+    <sect1 xml:id="compatibility-peripherals">
+      <title>Периферийные устройства</title>
 
       <qandaset>
 	<qandaentry>
-	  <question xml:id="supported-hard-drives">
-	    <para>Какие типы винчестеров поддерживает &os;?</para>
+	  <question xml:id="supported-peripherals">
+	    <para>Какие рода периферийные устройства поддерживает &os;?</para>
 	  </question>
 
 	  <answer>
-	    <para>&os; работает с дисками стандартов EIDE, SATA, SCSI и
-	      SAS (с совместимыми контроллерами; смотрите следующий раздел),
-	      и всеми дисками, использующими оригинальный интерфейс <quote>Western
-	      Digital</quote> (MFM, RLL, ESDI и, конечно же, IDE).  Некоторые
-	      контроллеры ESDI, использующие собственные интерфейсы, могут и не
-	      работать: к таким относятся WD1002/3/6/7 и их клоны.</para>
-	  </answer>
-	</qandaentry>
-
-	<qandaentry>
-	  <question xml:id="supported-scsi-controllers">
-	    <para>Какие поддерживаются контроллеры SCSI или SAS?</para>
-	  </question>
-
-	  <answer>
-	    <para>Полный список приведён в Hardware Notes для &os;
-	      <link
-		xlink:href="&rel.current.hardware;">&rel.current;</link>
+	    <para>Полный список приведён в Hardware Notes для &os; <link
+	      xlink:href="&rel.current.hardware;">&rel.current;</link>
 	      или <link
-		xlink:href="&rel2.current.hardware;">&rel2.current;</link>.</para>
-	  </answer>
-	</qandaentry>
-
-	<qandaentry>
-	  <question xml:id="tape-support">
-	    <para>Какие типы стримеров поддерживаются?</para>
-	  </question>
-
-	  <answer>
-	    <para>&os; поддерживает все стандартные интерфейсы
-	      стримеров SCSI.</para>
-	  </answer>
-	</qandaentry>
-
-	<qandaentry>
-	  <question xml:id="tape-changer-support">
-	    <para>Поддерживает ли &os; роботов для смены лент?</para>
-	  </question>
-
-	  <answer>
-	    <para>&os; поддерживает роботизированные устройства SCSI через
-	      устройство &man.ch.4; и команду &man.chio.1;.  Подробная
-	      информация об управлении такими роботами находится на
-	      странице Справочника &man.chio.1;.</para>
-
-	    <para>В то время как <application>AMANDA</application> и
-	      ещё ряд программных продуктов умеют работать с роботами,
-	      другие приложения могут только переносить ленты с одного
-	      места на другое.  В этом случае надо отслеживать, в каком
-	      слоте находится нужная лента, и в какой слот нужно вернуть ленту,
-	      находящуюся в стримере.</para>
-	  </answer>
-	</qandaentry>
-
-	<qandaentry>
-	  <question xml:id="supported-cdrom-drives">
-	    <para>Какие приводы CD-ROM и CD-RW поддерживаются во
-	      &os;?</para>
-	  </question>
-
-	  <answer>
-	    <para>Поддерживаются любые SCSI-устройства чтения компакт дисков,
-	      подключенные к поддерживаемому контроллеру.  Поддерживается
-	      большинство ATAPI-совместимых IDE CD-ROM.</para>
-
-	    <para>&os; поддерживает все ATAPI-совместимые IDE-приводы CD-R
-	      или CD-RW.</para>
-
-	    <para>&os; поддерживает также все SCSI-приводы CD-R и CD-RW.
-	      Используйте команду <command>cdrecord</command> из
-	      пакета <package>sysutils/cdrtools</package>.</para>
+	      xlink:href="&rel2.current.hardware;">&rel2.current;</link>.
+              </para>
 	  </answer>
 	</qandaentry>
       </qandaset>
