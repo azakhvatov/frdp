@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53606
+     Original revision: r53607
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -397,12 +397,7 @@
 	</question>
 
 	<answer>
-	  <para>После того, как была выпущена &os; 2.0.5, разработка &os;
-	    разделилась на две части.  Одна ветка получила название <link
-	      xlink:href="&url.books.handbook;/current-stable.html#stable">-STABLE</link>,
-	    а другая <link
-	      xlink:href="&url.books.handbook;/current-stable.html#current">-CURRENT</link>.
-	    <emphasis>&os;-STABLE</emphasis> является веткой разработки, из
+	  <para><emphasis>&os;-STABLE</emphasis> является веткой разработки, из
             которой выполняются основные релизы. В эту ветку изменения вносятся
             медленнее, и при этом предполагается, что до этого они были
             протестированы во &os;-CURRENT. Несмотря на это, исходный код
@@ -411,11 +406,11 @@
             скрытые ошибки и вырожденные случаи, которые ещё не были выявлены
             в &os;-CURRENT. Пользователям, не имеющим возможностей для
             тестирования, следует работать с самым свежим релизом &os;.
-	    С другой стороны, <emphasis>&os;-CURRENT</emphasis> являлась
-	    единой веткой, не
-	    разрываемой с момента выхода версии 2.0 и ведущей к
-	    &rel.current;-RELEASE и последующим релизам.  Для получения
-	    более подробной информации по веткам обратитесь к
+	    С другой стороны, <emphasis>&os;-CURRENT</emphasis> продолжает
+            являться единой веткой, не разрываемой с момента выхода версии
+            2.0.</para>
+
+	  <para>Для получения более подробной информации о ветках обратитесь к
 	    разделу статьи <quote><link
 	    xlink:href="&url.articles.releng;/release-proc.html#rel-branch">
 	    Подготовка релизов &os;: Создание ветки
