@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53611
+     Original revision: r53612
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -5324,57 +5324,6 @@ nodevice gre</screen></para>
 	      архивах</link> более подробное обсуждение.  Предпочтителен
 	      более гибкий механизм.</para>
 	  </warning>
-	</answer>
-      </qandaentry>
-
-      <qandaentry>
-	<question xml:id="extra-named-port">
-	  <para><application>BIND9</application> (<command>named</command>)
-            работает на одном из портов с большим номером.  Что
-            происходит?</para>
-	</question>
-
-	<answer>
-	  <para>Для исходящих запросов BIND использует случайно
-	    выбираемый порт с большим номером.  В последних версиях
-	    при каждом запросе выбирается новый случайный порт UDP.
-	    Это может вызвать проблемы в некоторых сетевых конфигурациях,
-	    особенно если фаервол блокирует входящие UDP пакеты на
-	    определенных портах.  Чтобы обеспечить прохождение
-	    пакетов через фаервол, попробуйте параметры
-	    <literal>avoid-v4-udp-ports</literal> и
-	    <literal>avoid-v6-udp-ports</literal>, чтобы предотвратить
-	    случайный выбор номеров портов, пересекающихся с блокируемым
-	    диапазоном.</para>
-
-	  <warning>
-	    <para>Если в <filename>/usr/local/etc/namedb/named.conf</filename>
-	      указан номер порта (например, 53) в параметре
-	      <literal>query-source</literal> или
-	      <literal>query-source-v6</literal>, то случайный
-	      выбор порта использоваться не будет.  Настоятельно
-	      рекомендуется, чтобы эти параметры не использовались для
-	      указания фиксированных номеров порта.</para>
-	  </warning>
-
-	  <para>Кстати, поздравляем.  Прекрасно, что вы читаете вывод
-	    команды &man.sockstat.1; и обращаете внимание на
-	    аномалии!</para>
-	</answer>
-      </qandaentry>
-
-      <qandaentry>
-	<question xml:id="sendmail-port-587">
-	  <para>Даемон <application>Sendmail</application> ждёт
-	    соединений как на стандартном порту 25, так и на
-	    порту 587!  Что происходит?</para>
-	</question>
-
-	<answer>
-	  <para>Последние версии <application>Sendmail</application>
-	    поддерживают механизм посылки почты, который работает по
-	    порту 587.  Эта возможность пока широко не используется,
-	    но её популярность растёт.</para>
 	</answer>
       </qandaentry>
 
