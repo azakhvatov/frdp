@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53607
+     Original revision: r53608
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -610,10 +610,14 @@
 	  <para>В рамках проекта создаётся обширная документация,
 	    которая доступна в онлайне по следующей ссылке: <uri
 	    xlink:href="https://www.FreeBSD.org/docs.html">https://www.FreeBSD.org/docs.html</uri>.
+<!-- TODO исключить, пока не наступит момент, когда библиография будет
+     обновлена
 	    Кроме того, в <link
 	    xlink:href="&url.books.handbook;/bibliography.html">библиографии
             Руководства</link> содержатся ссылки на другие рекомендуемые
-            книги.</para>
+            книги.
+-->
+          </para>
 	</answer>
       </qandaentry>
 
