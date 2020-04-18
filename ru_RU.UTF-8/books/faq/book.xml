@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53614
+     Original revision: r53615
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -5471,31 +5471,6 @@ hint.sio.7.irq="12"</programlisting>
 	  <para>Смотрите раздел Руководства &os;, посвящённый <link
 	      xlink:href="&url.books.handbook;/serial.html#serial-hw-config">последовательным
 	    соединениям</link>.</para>
-	</answer>
-      </qandaentry>
-
-      <qandaentry>
-	<question xml:id="enable-dialup">
-	  <para>Как сделать вход через модем?</para>
-	</question>
-
-	<answer>
-	  <para>Ознакомьтесь с разделом Руководства &os;, посвящённым
-	    <link
-	      xlink:href="&url.books.handbook;/dialup.html">входящим
-	    соединениям</link>.</para>
-	</answer>
-      </qandaentry>
-
-      <qandaentry>
-	<question xml:id="dumb-terminal">
-	  <para>Как подключить терминал к &os;?</para>
-	</question>
-
-	<answer>
-	  <para>Информация по этому вопросу находится в разделе <link
-	      xlink:href="&url.books.handbook;/term.html">Терминалы</link>
-	    Руководства &os;.</para>
 	</answer>
       </qandaentry>
 
