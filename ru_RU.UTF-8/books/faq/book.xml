@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53615
+     Original revision: r53616
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -1184,7 +1184,8 @@
 
       <qandaentry>
 	<question xml:id="windows-coexist">
-	  <para>Может ли &windows; сосуществовать с &os;?</para>
+	  <para>Может ли &windows; сосуществовать с &os;? (специфично для
+            x86)</para>
 	</question>
 
 	<answer>
@@ -1199,7 +1200,8 @@
       <qandaentry>
 	<question xml:id="bootmanager-restore">
 	  <para>Другая операционная система уничтожила мой загрузчик
-	    операционной системы!  Как мне его вернуть?</para>
+	    операционной системы!  Как мне его вернуть? (специфично для
+            x86)</para>
 	</question>
 
 	<answer>
@@ -5390,7 +5392,7 @@ sio1: type 16550A</screen>
       <qandaentry>
 	<question xml:id="access-serial-ports">
 	  <para>Как осуществляется доступ к последовательным портам во
-	    &os;?</para>
+	    &os;? (специфично для x86)</para>
 	</question>
 
 	<answer>
