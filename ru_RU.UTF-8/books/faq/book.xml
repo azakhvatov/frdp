@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53703
+     Original revision: r53758
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -58,6 +58,7 @@
       <year>2017</year>
       <year>2018</year>
       <year>2019</year>
+      <year>2020</year>
       <holder>The &os; Documentation Project</holder>
     </copyright>
 
@@ -2424,27 +2425,6 @@ kern.timecounter.hardware: TSC -&gt; i8254</screen>
 	    использование памяти этими оболочками, посмотрев в колонки
 	    <quote>VSZ</quote> и <quote>RSS</quote> вывода команды
 	    <command>ps -u</command>.</para>
-	</answer>
-      </qandaentry>
-
-      <qandaentry>
-	<question xml:id="midi-sound-files">
-	  <para>Как создать аудио-CD из файлов MIDI?</para>
-	</question>
-
-	<answer>
-	  <para>Для создания аудио-CD из MIDI-файлов сначала установите из
-	    портов программу <package>audio/timidity++</package>, затем установите набор
-	    патчей GUS от Эрика Уэлша (Eric A. Welsh), доступный по адресу
-	    <uri xlink:href="http://alleg.sourceforge.net/digmid.html">http://alleg.sourceforge.net/digmid.html</uri>.  После корректной установки
-	    <application>TiMidity++</application> MIDI-файлы могут
-	    быть преобразованы в WAV-файлы следующей командой:</para>
-
-	  <screen>&prompt.user; <userinput>timidity -Ow -s 44100 -o /tmp/juke/01.wav 01.mid</userinput></screen>
-
-	  <para>WAV-файлы затем могут быть преобразованы в другие форматы или
-	    записаны как аудио-CD, что описано в <link xlink:href="&url.books.handbook;/creating-cds.html">Руководстве
-	    &os;</link>.</para>
 	</answer>
       </qandaentry>
     </qandaset>
