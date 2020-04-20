@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53662
+     Original revision: r53671
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -227,18 +227,18 @@
 	    администраторов &unix;, используют &os; в качестве своей
 	    единственной настольной операционной системы.</para>
 
-	  <para>Пользователи при переходе на &os; с другого варианта
-	    &unix; найдут для себя &os; очень похожей.  Пользователей
-	    &windows; и &macos;, напротив, может заинтересовать дистрибутив
-            <link xlink:href="http://www.trueos.org/">TrueOS</link>,
-	    на основе &os;, предназначенный для настольных систем.
-            Пользователям, которые не
-	    использовали до этого &unix;, понадобится затратить
-	    дополнительное время на изучение подхода &unix; к работе.
-	    Этот <acronym>FAQ</acronym> и <link
-	      xlink:href="&url.books.handbook;/index.html">Руководство по
-	      &os;</link> являются прекрасным способом начать это
-	    изучение.</para>
+	  <para>Пользователи, переходящие на &os; с другого варианта
+	    &unix;, найдут &os; очень похожей.  Пользователей &windows; и
+            &macos;, напротив, может привлечь использование трёх дистрибутивов
+            <link xlink:href="https://www.furybsd.org/">FuryBSD</link>, <link
+            xlink:href="https://ghostbsd.org/">GhostBSD</link> или <link
+            xlink:href="https://www.midnightbsd.org/">MidnightBSD</link>,
+	    предназначенный для настольных систем и построенных на базе &os;.
+            Пользователям, которые не использовали до этого &unix;, нужно
+            понимать, что понадобится потратить дополнительное время на
+            изучение подхода &unix; к работе.  Этот <acronym>FAQ</acronym> и
+            <link xlink:href="&url.books.handbook;/index.html">Руководство по
+	    &os;</link> являются прекрасными отправными точками.</para>
 	</answer>
       </qandaentry>
 
