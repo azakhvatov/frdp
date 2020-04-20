@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53687
+     Original revision: r53691
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -1655,18 +1655,14 @@
 	      следующие строки в <filename>~/.shrc</filename>.  Смотрите
 	      &man.sh.1; и &man.editrc.5;.</para>
 
-	    <programlisting>bind ^? ed-delete-next-char # для консоли
-bind ^[[3~ ed-delete-next-char # для xterm</programlisting>
+            <programlisting>bind ^[[3~ ed-delete-next-char # for xterm</programlisting>
 
 	    <para>Для <application>C Shell</application> добавьте следующие
 	      строки в <filename>~/.cshrc</filename>.  Смотрите
 	      &man.csh.1;.</para>
 
-	    <programlisting>bindkey ^? delete-char # для консоли
-bindkey ^[[3~ delete-char # для xterm</programlisting>
+            <programlisting>bindkey ^[[3~ delete-char # for xterm</programlisting>
 
-	    <para>За дополнительной информацией обращайтесь к <link xlink:href="http://www.ibb.net/~anne/keyboard.html">этой
-	      странице</link>.</para>
 	  </answer>
 	</qandaentry>
       </qandaset>
