@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53671
+     Original revision: r53687
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -1368,7 +1368,7 @@
 	      Обратитесь к Hardware&nbsp;Notes для &os; <link
 	      xlink:href="&rel121.current.hardware;">&rel121.current;</link>
 	      или <link
-	      xlink:href="&rel2.current.hardware;">&rel2.current;</link>,
+	      xlink:href="&rel1.current.hardware;">&rel1.current;</link>,
 	      а также <link
 		xlink:href="https://www.FreeBSD.org/search/#mailinglists">архивам</link>
 	      списков рассылки перед тем, как задавать вопросы о самом
@@ -1548,7 +1548,7 @@
 	    <para>Полный список приведён в Hardware Notes для &os; <link
 	      xlink:href="&rel121.current.hardware;">&rel121.current;</link>
 	      или <link
-	      xlink:href="&rel2.current.hardware;">&rel2.current;</link>.
+	      xlink:href="&rel1.current.hardware;">&rel1.current;</link>.
               </para>
 	  </answer>
 	</qandaentry>
