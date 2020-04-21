@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53817
+     Original revision: r53820
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -1378,9 +1378,8 @@
 	      раз на прошлой неделе.</para>
 
 	    <para>Перед приобретением лэптопа посмотрите архивы
-	      &a.mobile; и &a.questions; или, по возможности, более
-	      специфичные списки рассылки по данному типу
-	      оборудования.</para>
+	      &a.questions; или, возможно, более
+	      специфичные списки рассылки по данному типу оборудования.</para>
 	  </answer>
 	</qandaentry>
 
