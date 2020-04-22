@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53820
+     Original revision: r53871
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -1565,7 +1565,7 @@
 	  </question>
 
 	  <answer>
-	    <para>Стандартный драйвер консоли &man.syscons.4;
+	    <para>Используемый по умолчанию драйвер консоли &man.vt.4;
 	      предоставляет возможность использования указателя мыши
 	      в текстовых консолях для выделения и переноса текста.
 	      Запустите демон мыши &man.moused.8; и включите
@@ -3762,21 +3762,10 @@ options    SYSVMSG	  # enable for messaging</programlisting>
 
 	<answer>
 	  <para>При использовании стандартного драйвера консоли
-	    &man.syscons.4; перегенерируйте и установите новое ядро
-	    с таким параметром в конфигурационном файле:</para>
+	    &man.vt.4; этого можно добиться, задав следующий системный
+            параметр:</para>
 
-	  <programlisting>options SC_DISABLE_REBOOT</programlisting>
-
-	  <para>Этого также можно достичь установкой следующего &man.sysctl.8;,
-	    что не требует перезагрузки или пересборки ядра:</para>
-
-	  <screen>&prompt.root; <userinput>sysctl hw.syscons.kbd_reboot=0</userinput></screen>
-
-	  <note>
-	    <para>Оба этих метода являются взаимоисключающими.  Данный
-	      &man.sysctl.8; не существует, если ядро скомпилировано
-	      с параметром <literal>SC_DISABLE_REBOOT</literal>.</para>
-	  </note>
+          <screen>&prompt.root; <userinput>sysctl kern.vt.kbd_reboot=0</userinput></screen>
 	</answer>
       </qandaentry>
 
@@ -4224,9 +4213,9 @@ options    SYSVMSG	  # enable for messaging</programlisting>
 
 	<answer>
 	  <para>При использовании стандартного драйвера консоли
-	    &man.syscons.4; во &os; можно включить поддержку указателя
+	    &man.vt.4; во &os; можно включить поддержку указателя
 	    мыши во всех виртуальных экранах.  Во избежание конфликтов
-	    с X, драйвер &man.syscons.4; поддерживает виртуальное
+	    с X, драйвер &man.vt.4; поддерживает виртуальное
 	    устройство <filename>/dev/sysmouse</filename>.  Все события
 	    от реального устройства мыши пишутся в устройство
 	    &man.sysmouse.4; через &man.moused.8;.  Чтобы использовать
