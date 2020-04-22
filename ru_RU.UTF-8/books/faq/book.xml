@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r53871
+     Original revision: r53876
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -941,7 +941,7 @@
 	  <itemizedlist>
 	    <listitem>
 	      <para>Канал <literal>#FreeBSDhelp</literal> в сети <link
-		  xlink:href="http://www.efnet.org/index.php">EFNet</link>
+		xlink:href="http://www.efnet.org/index.php">EFNet</link>
 		предназначен для помощи пользователям &os;.</para>
 	    </listitem>
 
@@ -2244,10 +2244,10 @@ kern.timecounter.hardware: TSC -&gt; i8254</screen>
 	    во &os;.</para>
 
 	  <para>Большинство портов должно нормально работать во всех
-	    поддерживаемых версиях &os;.  Неработающие порты
+	    поддерживаемых версиях &os;.  Неработоспособные порты
 	    специально помечаются соответствующим образом.
 	    При выходе нового релиза &os; в него в каталог
-	    <filename>ports/</filename> включается актуальная на
+	    <filename>ports/</filename> также включается актуальная на
 	    момент выхода Коллекция Портов.</para>
 
 	  <para>&os; умеет работать со сжатыми двоичными пакетами для
