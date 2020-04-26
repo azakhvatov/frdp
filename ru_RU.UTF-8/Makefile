@@ -7,7 +7,7 @@
 # Original revision: r38886
 #
 
-SUBDIR = articles
+#SUBDIR = articles
 SUBDIR+= books
 
 COMPAT_SYMLINK = ru
