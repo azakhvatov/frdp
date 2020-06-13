@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r44741
+     Original revision: r44742
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
 
@@ -823,29 +823,31 @@ dbus_enable="YES"</programlisting>
   </sect1>
 
   <sect1 xml:id="x-xdm">
-    <!--
-    <sect1info>
+    <info>
+      <title>Менеджер экранов (X Display Manager)</title>
+
       <authorgroup>
-	<author>
+        <author>
           <personname>
             <firstname>Seth</firstname>
             <surname>Kingsley</surname>
           </personname>
-
           <contrib>Текст предоставил </contrib>
         </author>
       </authorgroup>
-    </sect1info>
-    -->
+    </info>
 
-    <title>Менеджер экранов (X Display Manager)</title>
+    <indexterm><primary>X Display Manager</primary></indexterm>
+    <para><application>&xorg;</application> включает в себя менеджер дисплеев
+      X, <application>XDM</application>, который может использоваться для
+      управления сеансами входа.  <application>XDM</application> обеспечивает
+      графический интерфейс для выбора сервера дисплеев для подключения, а
+      также для ввода авторизационной информации, такой как учётной записи
 
-    <sect2>
-      <title>Вступление</title>
 
-      <indexterm>
-	<primary>X Display Manager</primary>
-      </indexterm>
+provides a graphical
++       interface for choosing which display server to connect to
++       and for entering authorization information such as a login and
 
       <para>Менеджер Экранов X (<application>XDM</application>) это
 	необязательный компонент
