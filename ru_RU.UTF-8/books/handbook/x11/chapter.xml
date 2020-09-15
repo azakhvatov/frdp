@@ -838,118 +838,99 @@ dbus_enable="YES"</programlisting>
     </info>
 
     <indexterm><primary>X Display Manager</primary></indexterm>
-    <para><application>&xorg;</application> включает в себя менеджер дисплеев
-      X, <application>XDM</application>, который может использоваться для
-      управления сеансами входа.  <application>XDM</application> обеспечивает
-      графический интерфейс для выбора сервера дисплеев для подключения, а
-      также для ввода авторизационной информации, такой как учётной записи
+    <para><application>&xorg;</application> включает в себя менеджер
+      графических дисплеев, <application>XDM</application>, который может
+      использоваться для управления сеансами входа.
+      <application>XDM</application> обеспечивает графический интерфейс для
+      выбора сервера дисплеев, к которому вы хотите подключиться, а также для
+      ввода авторизационной информации, такой, как комбинация учётной записи и
+      пароля.</para>
 
-
-provides a graphical
-+       interface for choosing which display server to connect to
-+       and for entering authorization information such as a login and
-
-      <para>Менеджер Экранов X (<application>XDM</application>) это
-	необязательный компонент
-	X Window System, который используется для управления входом
-	пользователей в систему.
-	Это полезно в ряде ситуаций, например для минимальных
-	<quote>X Терминалов</quote>,
-	десктопов, больших сетевых серверов экранов. Так как X Window System
-	не зависит от сетей и протоколов, то существует множество различных
-	конфигураций для X клиентов и серверов, запущенных на различных
-	компьютерах, подключенных к сети.  <application>XDM</application>
-	предоставляет графический
-	интерфейс для выбора сервера, к которому вы желаете подключится, и
-	введения информации, авторизующей пользователя, например комбинации
-	логина и пароля.</para>
-
-      <para><application>XDM</application> можно рассматривать как аналог
-	программы &man.getty.8;, предоставляющий такие же возможности
-	для пользователей
-	(смотрите <xref linkend="term-config"/> для подробной информации).
-	И это именно так, <application>XDM</application> производит вход в
-	систему для подключенного
-	пользователя и запускает управляющую сессию для пользователя (обычно
-	это менеджер окон X). После этого <application>XDM</application>
-	ожидает завершения
-	приложения, означающее завершение пользователем работы и
-	отключает управляющую сессию.  Затем
-	<application>XDM</application> может снова вывести
-	приглашение к входу в систему и ожидать входа другого пользователя.
-      </para>
+    <para>В этом разделе показывается, как настроить X Display Manager во
+      &os;.  Некоторые графические оболочки имеют собственные графические
+      менеджеры, управляющие входом в систему.  Обратитесь к <xref
+      linkend="x11-wm-gnome"/> для получения инструкций по настройке GNOME
+      Display Manager и <xref linkend="x11-wm-kde"/> для получения инструкций
+      по настройке KDE Display Manager.</para>
     </sect2>
 
     <sect2>
-      <title>Использование XDM</title>
+      <title>Настройка <application>XDM</application></title>
 
-      <para>Для того, чтобы начать использовать <application>XDM</application>,
-        установите порт <package>x11/xdm</package> (в последних версиях
-        <application>&xorg;</application> по умолчанию он не устанавливается).
-        После этого даемон <application>XDM</application> можно найти в
-	<filename>/usr/local/bin/xdm</filename>.  Эта программа может быть
-	запущена в любой момент пользователем <systemitem
-        class="username">root</systemitem>, и
-	она начнёт управлять дисплеем X на локальной машине.
-	Если <application>XDM</application> нужно запускать
-	в фоновом режиме каждый раз при запуске компьютера, то наиболее
-	правильный способ &mdash; это добавить новую запись в
-	<filename>/etc/ttys</filename>. Для более подробной информации о
-	формате и использовании этого файла смотрите <xref
-        linkend="term-etcttys"/>.  Вот строка, которую необходимо добавить
-	в файл <filename>/etc/ttys</filename> для того, чтобы запустить
-	даемон <application>XDM</application> на виртуальном терминале:</para>
+      <para>Для установки <application>XDM</application> используйте пакадж или
+        порт <package>x11/xdm</package>.  После установки
+        <application>XDM</application> может быть настроен для запуска при
+        загрузке системы путём редактирования следующей строки в
+        <filename>/etc/ttys</filename>:</para>
 
       <screen>ttyv8	"/usr/local/bin/xdm -nodaemon"	xterm	off secure</screen>
 
-      <para>По умолчанию эта запись отключена; для её включения
-	нужно заменить пятое поле с <literal>off</literal> на
-	<literal>on</literal> и перезапустить &man.init.8;, используя метод,
-	описанный в <xref linkend="term-hup"/>.  Первое поле это название
-	терминала, которым будет управлять программа, <literal>ttyv8</literal>.
-	Это означает, что <application>XDM</application> будет запущен на 9ом
-	виртуальном терминале.</para>    </sect2>
+      <para>Замените <literal>off</literal> на <literal>on</literal> и
+        сохраните откорректированную версию.  <literal>ttyv8</literal> в этой
+        строке указывает на то, что <application>XDM</application> будет
+        запускаться на девятом виртуальном терминале.</para>
 
-    <sect2>
-      <title>Конфигурирование XDM</title>
+      <para>Каталог с конфигурационными файлами <application>XDM</application>
+        находится в <filename>/usr/local/lib/X11/xdm</filename>.  Он содержит
+        несколько файлов, используемых для изменения поведения и внешнего вида
+        <application>XDM</application>, а также небольшой набор скриптов и
+        программ, применяемых для настройки рабочего стола при запуске
+        <application>XDM</application>.  В <xref linkend="xdm-config-files"/>
+        кратко описывается предназначение каждого из этих файлов.  Точный
+        синтаксис и использование этих файлов описывается в &man.xdm.1;.</para>
 
-      <para>Конфигурационные файлы <application>XDM</application> находятся в
-	каталоге
-	<filename>/usr/local/lib/X11/xdm</filename>.  В нём размещаются
-	насколько файлов, которые используются для изменения
-	поведения и внешнего вида <application>XDM</application>.
-	Обычно это следующие файлы:</para>
+      <table frame="none" pgwide="1" xml:id="xdm-config-files">
+        <title>Конфигурационные файлы XDM</title>
 
-	<informaltable frame="none" pgwide="1">
-	  <tgroup cols="2">
-	    <thead>
-	      <row>
-		<entry>Файл</entry>
-		<entry>Описание</entry>
-	      </row>
-	    </thead>
+        <tgroup cols="2">
+          <thead>
+	    <row>
+	      <entry>Файл</entry>
+	      <entry>Описание</entry>
+	    </row>
+	  </thead>
 
-	    <tbody>
-	      <row>
-		<entry><filename>Xaccess</filename></entry>
-		<entry>Правила авторизации клиентов.</entry>
-	      </row>
+	  <tbody>
+	    <row>
+	      <entry><filename>Xaccess</filename></entry>
+              <entry>Протокол для подключения к <application>XDM</application>
+                называется X Display Manager Connection Protocol
+                (<acronym>XDMCP</acronym>)  Данный файл является набором правил
+                для авторизации клиентов, контролирующий
+                <acronym>XDMCP</acronym>-соединения с удалённых машин.  По
+                умолчанию этот файл не разрешает подключаться никаким удалённым
+                клиентам.</entry>
+	    </row>
 
-	      <row>
-		<entry><filename>Xresources</filename></entry>
-		<entry>Значения ресурсов X по умолчанию.</entry>
-	      </row>
+	    <row>
+	      <entry><filename>Xresources</filename></entry>
+	      <entry>Этот файл управляет внешним видом и поведением экранов
+                той части <application>XDM</application>, которая отвечает за
+                выбор дисплеев и вход в систему.  Настройки по умолчанию
+                соответствуют прямоугольному окну входа в систему с хост-именем
+		машины, отображаемым вверху крупным шрифтом, с приглашениями
+                <quote>Login:</quote> и <quote>Password:</quote> ниже.  Формат
+	        этого файла идентичен файлу app-defaults, описанному в
+                документации к <application>&xorg;</application>.</entry>
+	    </row>
 
-	      <row>
-		<entry><filename>Xservers</filename></entry>
-		<entry>Список локальных и удаленных экранов.</entry>
-	      </row>
+	    <row>
+	      <entry><filename>Xservers</filename></entry>
+	      <entry>Список локальных и удалённых дисплеев, которые должны
+                отображаться приложением выбора дисплеев в качестве вариантов
+	        входа в систему.</entry>
+	    </row>
 
-	      <row>
-		<entry><filename>Xsession</filename></entry>
-		<entry>Сценарий сессии по умолчанию.</entry>
-	      </row>
+	    <row>
+	      <entry><filename>Xsession</filename></entry>
+	      <entry>Сценарий, который <application>XDM</application> запускает
+                по умолчанию после входа пользователя в систему.  Как правило,
+                у каждого пользователя будет иметься собственный сценарий в
+	  	файле <filename>~/.xsession</filename>, который имеет более
+		высокий приоритет</entry>
+	    </row>
 
+XXX
 	      <row>
 		<entry><filename>Xsetup_</filename>*</entry>
 
