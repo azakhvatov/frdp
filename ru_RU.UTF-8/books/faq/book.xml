@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r54378
+     Original revision: r54391
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -625,14 +625,14 @@
       <qandaentry>
 	<question xml:id="doc-formats">
 	  <para>Есть ли версии документации в другом формате, например,
-	    в виде обычного текста ASCII или &postscript;?</para>
+	    в виде обычного текста ASCII или PDF?</para>
 	</question>
 
 	<answer>
 	  <para>Да.  Документация доступна в нескольких различных форматах и
 	    упакованная разными способами на FTP-сервере &os;, и находится
 	    она в каталоге <link
-            xlink:href="https://download.freebsd.org/ftp/doc/">/pub/FreeBSD/doc/</link>.</para>
+            xlink:href="https://download.freebsd.org/ftp/doc/">/ftp/doc/</link>.</para>
 
 	  <para>Документация подразделяется на категории различными способами.
 	    Это включает:</para>
@@ -829,18 +829,6 @@
 		    </row>
 
 		    <row>
-		      <entry><literal>ps</literal></entry>
-
-		      <entry>&postscript;</entry>
-		    </row>
-
-		    <row>
-		      <entry><literal>rtf</literal></entry>
-
-		      <entry>Rich Text Format от &microsoft;</entry>
-		    </row>
-
-		    <row>
 		      <entry><literal>txt</literal></entry>
 
 		      <entry>Обычный текст</entry>
@@ -848,17 +836,6 @@
 		  </tbody>
 		</tgroup>
 	      </informaltable>
-
-	      <note>
-		<para>Номера страниц при загрузке Rich Text Format в
-		  Word автоматически не обновляются.  Для обновления
-		  нумерации нажмите <keycombo action="simul">
-		    <keycap>Ctrl</keycap><keycap>A</keycap>
-		  </keycombo>,
-		  <keycombo action="simul">
-		    <keycap>Ctrl</keycap><keycap>End</keycap></keycombo>,
-		  <keycap>F9</keycap> после загрузки документа.</para>
-	      </note>
 	    </listitem>
 
 	    <listitem>
@@ -882,10 +859,9 @@
 		    Для работы с этими файлами можно использовать
 		    &man.tar.1;.</para>
 
-		  <para>Таким образом, сжатая в <literal>bzip2</literal>
-		    версия Руководства в формате &postscript;, будет
-		    находиться в файле
-		    с именем <filename>book.ps.bz2</filename> в каталоге
+		  <para>Таким образом, версия Руководства в формате PDF, сжатая
+                    при помощи <literal>bzip2</literal>, будет находиться в
+                    файле с именем <filename>book.pdf.bz2</filename> в каталоге
 		    <filename>handbook/</filename>.</para>
 		</listitem>
 	      </orderedlist>
