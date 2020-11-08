@@ -20,7 +20,7 @@
 
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/faq/book.xml,v 1.213 2007/05/14 19:27:34 gad Exp $
 
-     Original revision: r54295
+     Original revision: r54378
 -->
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -2276,10 +2276,11 @@ kern.timecounter.hardware: TSC -&gt; i8254</screen>
 	    </listitem>
 
 	    <listitem>
-	      <para>Используйте Subversion, если нужно применять собственные
-                патчи для дерева портов.  Обратитесь к разделу <link
-		  xlink:href="&url.books.handbook;/svn.html">Использование
-		  Subversion</link> для получения дополнительной
+	      <para>Если есть необходимость применять собственные патчи для
+                дерева портов, или если вы работаете с &os.current;, то
+                используйте Subversion.  Обратитесь к разделу <link
+	        xlink:href="&url.books.handbook;/svn.html">Использование
+		Subversion</link> для получения дополнительной
 		информации.</para>
 	    </listitem>
 	  </itemizedlist>
