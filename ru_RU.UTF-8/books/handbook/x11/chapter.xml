@@ -971,42 +971,30 @@ dbus_enable="YES"</programlisting>
       </table>
     </sect2>
 
-XXX
     <sect2>
-      <title>Использование сетевого сервера дисплеев</title>
+      <title>Настройка удалённого доступа</title>
 
-      <para>Для того, чтобы позволить другим клиентам подключаться к серверу
-	дисплеев, необходимо отредактировать правила
-	контроля доступа и включить обслуживание сетевых соединений.
-	По умолчанию они выключены, что является хорошим решением
-	с точки зрения обеспечения безопасности.  Для того, чтобы
-	позволить <application>XDM</application> принимать сетевые соединения,
-	в первую очередь
-	закомментируйте строку в файле <filename>xdm-config</filename>:</para>
+      <para>По умолчанию только пользователи этой же системы могут входить в
+        неё средствами <application>XDM</application>.  Чтобы разрешить
+        пользователям других систем подключаться к серверу дисплеев,
+	отредактируйте правила управления доступом и включите обработку
+	входящих соединений.</para>
 
-      <screen>! БЕЗОПАСНОСТЬ: do not listen for XDMCP or Chooser requests
-! Закомментируйте эти линии, если вы хотите управлять X терминалами с xdm
+      <para>Для настройки <application>XDM</application> на обработку любых
+	соединений с удалённых систем, закомментируйте строку
+        <literal>DisplayManager.requestPort</literal> файла
+        <filename>/usr/local/lib/X11/xdm/xdm-config</filename>, указав
+	<literal>!</literal> в её начале:</para>
+
+      <screen>! SECURITY: do not listen for XDMCP or Chooser requests
+! Comment out this line if you want to manage X terminals with xdm
 DisplayManager.requestPort:     0</screen>
 
-      <para>и потом перезапустите <application>XDM</application>.  Помните,
-	что комментарии в файлах app-defaults начинаются с символа
-	<quote>!</quote>, а не как обычно, <quote>#</quote>.  Может
-	потребоваться более жёсткий контроль доступа &mdash; взгляните на примеры из
-	<filename>Xaccess</filename> и обратитесь к странице справочника
-	&man.xdm.1; за дальнейшей информацией.</para>
-    </sect2>
-
-    <sect2>
-      <title>Замены для XDM</title>
-
-      <para>Существует несколько программ, заменяющих
-	<application>XDM</application>.  Одна из них,
-	<application>KDM</application> (поставляемая вместе с
-	<application>KDE</application>), описана далее в этой главе.  В
-	<application>KDM</application> имеется много визуальных и
-	косметических улучшений, а также функциональность, позволяющая
-	пользователям выбирать собственные оконные менеджеры во время
-	входа в систему.</para>
+      <para>Сохраните отредактированное и перезапустите
+	<application>XDM</application>.  Чтобы ограничить удалённый доступ,
+	посмотрите пример записей в файле
+	<filename>/usr/local/lib/X11/xdm/Xaccess</filename> и обратитесь к
+        &man.xdm.1; для получения дополнительной информации.</para>
     </sect2>
   </sect1>
 
