@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r44743
+     Original revision: r44783
 -->
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="x11">
 
@@ -1084,7 +1084,7 @@ DisplayManager.requestPort:     0</screen>
         <filename>/usr/local/bin/gnome-session</filename>.  Если такой файл
         отсутствует, создайте его следующей командой:</para>
 
-      <screen>&prompt.user; <userinput>echo "/usr/local/bin/gnome-session" &gt; ~/.xinitrc</userinput></screen>
+      <screen>&prompt.user; <userinput>echo "exec /usr/local/bin/gnome-session" &gt; ~/.xinitrc</userinput></screen>
 
       <para>Третий метод заключается в использовании
         <application>XDM</application> в качестве менеджера дисплеев.  В этом
@@ -1092,7 +1092,7 @@ DisplayManager.requestPort:     0</screen>
         <filename>~/.xsession</filename>:</para>
 
       <screen>&prompt.user; <userinput>echo "#!/bin/sh" &gt; ~/.xsession</userinput>
-&prompt.user; <userinput>echo "/usr/local/bin/gnome-session" &gt;&gt; ~/.xsession</userinput>
+&prompt.user; <userinput>echo "exec /usr/local/bin/gnome-session" &gt;&gt; ~/.xsession</userinput>
 &prompt.user; <userinput>chmod +x ~/.xsession</userinput></screen>
 
     </sect2>
@@ -1159,7 +1159,7 @@ DisplayManager.requestPort:     0</screen>
         образом:</para>
 
       <screen>&prompt.user; <userinput>echo "#!/bin/sh" &gt; ~/.xsession</userinput>
-&prompt.user; <userinput>echo "/usr/local/kde4/bin/startkde" &gt;&gt; ~/.xsession</userinput>
+&prompt.user; <userinput>echo "exec /usr/local/kde4/bin/startkde" &gt;&gt; ~/.xsession</userinput>
 &prompt.user; <userinput>chmod +x ~/.xsession</userinput></screen>
 
       <para>После запуска <application>KDE</application> дополнительную
@@ -1199,7 +1199,7 @@ DisplayManager.requestPort:     0</screen>
         <command>startx</command>, сначала добавьте соответствующую запись в
         <filename>~/.xinitrc</filename>:</para>
 
-      <screen>&prompt.user; <userinput>echo "/usr/local/bin/startxfce4" &gt; ~/.xinitrc</userinput></screen>
+      <screen>&prompt.user; <userinput>echo "exec /usr/local/bin/startxfce4" &gt; ~/.xinitrc</userinput></screen>
 
       <para>Альтернативным способом является использование
         <application>XDM</application>.  Для того, чтобы воспользоваться этим
@@ -1207,7 +1207,7 @@ DisplayManager.requestPort:     0</screen>
         <filename>~/.xsession</filename>:</para>
 
       <screen>&prompt.user; <userinput>echo "#!/bin/sh" &gt; ~/.xsession</userinput>
-&prompt.user; <userinput>echo "/usr/local/bin/startxfce4" &gt;&gt; ~/.xsession</userinput>
+&prompt.user; <userinput>echo "exec /usr/local/bin/startxfce4" &gt;&gt; ~/.xsession</userinput>
 &prompt.user; <userinput>chmod +x ~/.xsession</userinput></screen>
 
     </sect2>
