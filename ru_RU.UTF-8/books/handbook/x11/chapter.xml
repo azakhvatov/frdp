@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r46277
+     Original revision: r46352
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -605,11 +605,11 @@ dbus_enable="YES"</programlisting>
 	файл настройки X сервера (<filename>/etc/X11/xorg.conf</filename>),
 	которая должна выглядеть так:</para>
 
-      <programlisting>FontPath "/usr/local/lib/X11/fonts/URW/"</programlisting>
+      <programlisting>FontPath "/usr/local/lib/X11/fonts/urwfonts/"</programlisting>
 
       <para>Либо из командной строки при работе с X выполните:</para>
 
-      <screen>&prompt.user; <userinput>xset fp+ /usr/local/lib/X11/fonts/URW</userinput>
+      <screen>&prompt.user; <userinput>xset fp+ /usr/local/lib/X11/fonts/urwfonts</userinput>
 &prompt.user; <userinput>xset fp rehash</userinput></screen>
 
       <para>Это сработает, но будет потеряно, когда сеанс работы с X будет
@@ -669,8 +669,8 @@ dbus_enable="YES"</programlisting>
       <para>или добавьте строку <option>FontPath</option> в файл
 	<filename>xorg.conf</filename>.</para>
 
-      <para>Это всё.  Теперь <application>Gimp</application>,
-	<application>Apache OpenOffice</application> и все остальные приложения
+      <para>Теперь <application>Gimp</application>,
+	<application>OpenOffice</application> и все остальные приложения
         для X должны обнаружить установленные шрифты &truetype;.  Очень
         маленькие (как
 	текст веб-страницы на дисплее с высоким разрешением) и очень большие (в
