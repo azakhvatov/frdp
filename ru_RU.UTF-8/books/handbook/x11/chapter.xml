@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r46352
+     Original revision: r46462
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -1308,7 +1308,7 @@ DisplayManager.requestPort:     0</screen>
           немедленно при помощи команды типа <command>kldload nvidia</command>,
           следует отметить, что некоторые версии
           <application>&xorg;</application> работают некорректно, если драйвер
-          не был загружен во время запуска системы.  После редактирования файла
+          был загружен не во время запуска системы.  После редактирования файла
           <filename>/boot/loader.conf</filename> рекомендуется выполнить
           перезагрузку.</para>
       </note>
@@ -1362,14 +1362,103 @@ DisplayManager.requestPort:     0</screen>
 
       <para>Найдите подраздел <quote>Subsection</quote>, указывающий на
         разрешение экрана, которое вы хотите использовать.  Например, если вы
-        желаете использовать 1280x1024, найдите соответствующий раздел.  Если
-        требуемого разрешения нет ни в одном подразделе, вам может
-        потребоваться добавить соответствующую запись вручную:</para>
-+
+        желаете использовать 1280x1024, поищите подраздел, приведённый ниже.
+        Если требуемого разрешения нет ни в одном подразделе, вы можете
+        добавить соответствующую запись вручную:</para>
 
+      <programlisting>SubSection     "Display"
+    Viewport    0 0
+    Modes      "1280x1024"
+    EndSubSection</programlisting>
 
+      <para>Для настольных цветовых композиций требуется глубина цвета в
+        24&nbsp;бита, измените подраздел выше на следующий:</para>
 
-XXX
+      <programlisting>SubSection     "Display"
+    Viewport    0 0
+    Depth       24
+    Modes      "1280x1024"
+    EndSubSection</programlisting>
+
+      <para>Наконец, убедитесь, что загрузка модулей <quote>glx</quote> и
+        <quote>extmod</quote> отражена в разделе <quote>Module</quote>:</para>
+
+      <programlisting>Section "Module"
+    Load           "extmod"
+    Load           "glx"
+    ...</programlisting>
+
+      <para>Предыдущие действия могут быть выполнены в автоматизированном
+        режиме при помощи пакета <package>x11/nvidia-xconfig</package> запуском
+        (в режиме пользователя root):</para>
+
+      <screen>&prompt.root; <userinput>nvidia-xconfig --add-argb-glx-visuals</userinput>
+    &prompt.root; <userinput>nvidia-xconfig --composite</userinput>
+    &prompt.root; <userinput>nvidia-xconfig --depth=24</userinput></screen>
+    </sect2>
+
+    <sect2 xml:id="compiz-fusion">
+      <title>Установка и настройка Compiz&nbsp;Fusion</title>
+
+      <para>Установить <application>Compiz&nbsp;Fusion</application> так же
+        просто, как и любой другой пакет:</para>
+
+      <screen>&prompt.root; <userinput>pkg install x11-wm/compiz-fusion</userinput></screen>
+
+      <para>После завершения установки запустите ваше графическое окружение и
+        в терминальном режиме введите следующие команды (в режиме обычного
+        пользователя):</para>
+
+      <screen>&prompt.user; <userinput>compiz --replace --sm-disable --ignore-desktop-hints ccp &amp;</userinput>
+    &prompt.user; <userinput>emerald --replace &amp;</userinput></screen>
+
+      <para>Ваш экран померцает в течение нескольких секунд, пока ваш менеджер
+        окон (например, <application>Metacity</application> при использовании
+        <application>GNOME</application>) заменяется на
+        <application>Compiz&nbsp;Fusion</application>.  Приложение
+        <application>emerald</application> берёт на себя оформление окон (то
+        есть кнопки закрытия, минимизации и максимизации, заголовки и так
+        далее).</para>
+
+      <para>Вы можете преобразовать это в тривиальный скрипт и настроить его
+        автоматическое выполнение при запуске (к примеру, добавив его в
+        <quote>Sessions</quote> рабочего стола
+        <application>GNOME</application>):</para>
+
+      <programlisting>#! /bin/sh
+    compiz --replace --sm-disable --ignore-desktop-hints ccp &amp;
+    emerald --replace &amp;</programlisting>
+
+      <para>Сохраните его в вашем домашнем каталоге под именем, например,
+        <filename>start-compiz</filename> и сделайте файл исполняемым:</para>
+
+      <screen>&prompt.user; <userinput>chmod +x ~/start-compiz</userinput></screen>
+
+      <para>После этого воспользуйтесь GUI для добавления в меню
+        <guimenuitem>Startup Programs</guimenuitem> (находится в
+        <guimenuitem>System</guimenuitem>,
+        <guimenuitem>Preferences</guimenuitem>,
+        <guimenuitem>Sessions</guimenuitem> на рабочем столе
+        <application>GNOME</application>).</para>
+
+      <para>Для реального выбора всех желаемых эффектов и их настроек,
+        запустите (снова в режиме обычного пользователя)
+        <application>Compiz&nbsp;Config&nbsp;Settings&nbsp;Manager</application>:</para>
+
+      <screen>&prompt.user; <userinput>ccsm</userinput></screen>
+
+      <note>
+        <para>В <application>GNOME</application> это можно также найти в меню
+         <guimenuitem>System</guimenuitem>,
+         <guimenuitem>Preferences</guimenuitem>.</para>
+      </note>
+
+      <para>Если при компиляции вы выбрали <quote>gconf support</quote>, то вы
+        также сможете просмотреть эти настройки при помощи
+        <command>gconf-editor</command> из <literal>apps/compiz</literal>.
+      </para>
+    </sect2>
+  </sect1>
 
   <sect1 xml:id="x11-understanding">
     <title>Устранение неполадок</title>
@@ -1635,6 +1724,55 @@ EndSection</programlisting>
 
       <para>После завершения этих простых шагов по редактированию настроек X
         должны запуститься на вашем новом широкоэкранном мониторе.</para>
+    </sect2>
+
+    <sect2 xml:id="compiz-troubleshooting">
+      <title>Устранение неполадок Compiz&nbsp;Fusion</title>
+
+      <qandaset>
+        <qandaentry>
+          <question xml:id="no-decorations">
+            <para>Я установил <application>Compiz&nbsp;Fusion</application>, но
+              после запуска указанных вами команд мои окна остались без
+              заголовков и кнопок.  Что пошло не так?</para>
+          </question>
+
+          <answer>
+            <para>Вероятно, не хватает настроек в файле
+              <filename>/etc/X11/xorg.conf</filename>.  Внимательно
+              проанализируйте этот файл, уделив особенное внимание директивам
+              <literal>DefaultDepth</literal> и
+              <literal>AddARGBGLXVisuals</literal>.</para>
+          </answer>
+        </qandaentry>
+
+        <qandaentry>
+          <question xml:id="xorg-crash">
+            <para>Когда я выполняю команду для запуска
+              <application>Compiz&nbsp;Fusion</application>, X-сервер аварийно
+              прекращает работу и я снова оказываюсь в режиме консоли.  В чём
+              ошибка?</para>
+          </question>
+
+          <answer>
+            <para>Если вы проанализируете ваш файл
+              <filename>/var/log/Xorg.0.log</filename>, то, вероятно, найдёте
+              сообщения об ошибках при запуске X.  Самыми частыми могут быть
+              следующие:</para>
+
+            <screen>(EE) NVIDIA(0):     Failed to initialize the GLX module; please check in your X
+    (EE) NVIDIA(0):     log file that the GLX module has been loaded in your X
+    (EE) NVIDIA(0):     server, and that the module is the NVIDIA GLX module.  If
+    (EE) NVIDIA(0):     you continue to encounter problems, Please try
+    (EE) NVIDIA(0):     reinstalling the NVIDIA driver.</screen>
+
+            <para>Эти сообщения, как правило, возникают при обновлении
+              <application>&xorg;</application>.  Вам потребуется
+              переустановить пакет <package>x11/nvidia-driver</package>, чтобы
+              glx был построен снова.</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
     </sect2>
   </sect1>
 </chapter>
