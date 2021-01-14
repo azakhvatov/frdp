@@ -1265,6 +1265,112 @@ DisplayManager.requestPort:     0</screen>
     </sect2>
   </sect1>
 
+  <sect1 xml:id="x-compiz-fusion">
+    <title>Установка Compiz Fusion</title>
+
+    <para>Одним из способов повышения удовлетворённости от использования
+      настольного компьютера является включение красивых 3D-эффектов.</para>
+
+    <para>Установить пакет <application>Compiz&nbsp;Fusion</application> легко,
+      однако его настройка требует выполнения нескольких шагов, не описанных
+      в документации к порту.</para>
+
+    <sect2 xml:id="x-compiz-video-card">
+      <title>Настройка драйвера nVidia для &os;</title>
+
+      <para>Эффекты на рабочем стале могут вызывать достаточно высокую нагрузку
+        на графический адаптер.  Для обеспечения хорошей производительности для
+        графических адаптеров, основанных на решениях nVidia, требуется
+        проприетарный драйвер.  Пользователи других графических адаптеров могут
+        пропустить этот раздел и продолжить с этапа настройки
+        <filename>xorg.conf</filename> configuration.</para>
+
+      <para>Для определения требуемого драйвера nVidia к <link
+        xlink:href="&url.books.faq;/x.html#idp59950544">вопросу FAQ по этой
+        теме</link>.</para>
+
+      <para>После определения корректного драйвера для использования с вашим
+        адаптером его установка проста так же, как и установка любого другого
+        пакета.</para>
+
+      <para>Например, для установки самой последней версии драйвера:</para>
+
+      <screen>&prompt.root; <userinput>pkg install x11/nvidia-driver</userinput></screen>
+
+      <para>Драйвер создаст модуль ядра, который должен быть загружен при
+        запуске системы.  Добавьте следующую строку в файл
+        <filename>/boot/loader.conf</filename>:</para>
+
+      <programlisting>nvidia_load="YES"</programlisting>
+
+      <note>
+        <para>Несмотря на то, что модуль ядра можно загрузить в работающее ядро
+          немедленно при помощи команды типа <command>kldload nvidia</command>,
+          следует отметить, что некоторые версии
+          <application>&xorg;</application> работают некорректно, если драйвер
+          не был загружен во время запуска системы.  После редактирования файла
+          <filename>/boot/loader.conf</filename> рекомендуется выполнить
+          перезагрузку.</para>
+      </note>
+
+      <para>При наличии загруженного модуля ядра, как правило, для включения
+        проприетарного драйвера вам требуется изменить только одну строку в
+        вашем файле <filename>xorg.conf</filename>:</para>
+
+      <para>Найдите следующую строку в файле
+        <filename>/etc/X11/xorg.conf</filename>:</para>
+
+      <programlisting>Driver      "nv"</programlisting>
+
+      <para>и замените её на:</para>
+
+      <programlisting>Driver      "nvidia"</programlisting>
+
+      <para>Запустите графический интерфейс обычным образом, и вы должны
+        увидеть приветственную заставку от nVidia.  Всё должно работать в
+        обычном режиме.</para>
+    </sect2>
+
+    <sect2 xml:id="xorg-configuration">
+      <title>Конфигурирование xorg.conf для получения эффектов на рабочем
+        столе</title>
+
+      <para>Для активирования <application>Compiz&nbsp;Fusion</application>
+        необходимо изменить файл
+        <filename>/etc/X11/xorg.conf</filename>:</para>
+
+      <para>Добавьте следующий раздел для включения эффектов композиций:</para>
+
+      <programlisting>Section "Extensions"
+    Option         "Composite" "Enable"
+    EndSection</programlisting>
+
+      <para>Найдите раздел <quote>Screen</quote>, который должен выглядеть
+        похожим на текст ниже:</para>
+
+      <programlisting>Section "Screen"
+    Identifier     "Screen0"
+    Device         "Card0"
+    Monitor        "Monitor0"
+    ...</programlisting>
+
+      <para>и добавьте следующие две строки (они будут следовать за
+        <quote>Monitor</quote>):</para>
+
+      <programlisting>DefaultDepth    24
+    Option         "AddARGBGLXVisuals" "True"</programlisting>
+
+      <para>Найдите подраздел <quote>Subsection</quote>, указывающий на
+        разрешение экрана, которое вы хотите использовать.  Например, если вы
+        желаете использовать 1280x1024, найдите соответствующий раздел.  Если
+        требуемого разрешения нет ни в одном подразделе, вам может
+        потребоваться добавить соответствующую запись вручную:</para>
++
+
+
+
+XXX
+
   <sect1 xml:id="x11-understanding">
     <title>Устранение неполадок</title>
 
