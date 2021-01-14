@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r46816
+     Original revision: r46820
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -1279,7 +1279,7 @@ DisplayManager.requestPort:     0</screen>
       <title>Настройка драйвера nVidia для &os;</title>
 
       <para>Эффекты на рабочем стале могут вызывать достаточно высокую нагрузку
-        на графический адаптер.  Для обеспечения хорошей производительности для
+        на графический адаптер.  Для обеспечения хорошей производительности
         графических адаптеров, основанных на решениях nVidia, требуется
         проприетарный драйвер.  Пользователи других графических адаптеров могут
         пропустить этот раздел и продолжить с этапа настройки
@@ -1315,7 +1315,7 @@ DisplayManager.requestPort:     0</screen>
 
       <para>При наличии загруженного модуля ядра, как правило, для включения
         проприетарного драйвера вам требуется изменить только одну строку в
-        вашем файле <filename>xorg.conf</filename>:</para>
+        файле <filename>xorg.conf</filename>:</para>
 
       <para>Найдите следующую строку в файле
         <filename>/etc/X11/xorg.conf</filename>:</para>
@@ -1755,7 +1755,7 @@ EndSection</programlisting>
           </question>
 
           <answer>
-            <para>Если вы проанализируете ваш файл
+            <para>Если вы проанализируете файл
               <filename>/var/log/Xorg.0.log</filename>, то, вероятно, найдёте
               сообщения об ошибках при запуске X.  Самыми частыми могут быть
               следующие:</para>
