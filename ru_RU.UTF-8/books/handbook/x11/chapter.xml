@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r46049
+     Original revision: r46057
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -620,7 +620,7 @@ dbus_enable="YES"</programlisting>
 	менеджер типа <application>XDM</application>).  Третий способ
 	заключается в использовании нового файла
 	<filename>/usr/local/etc/fonts/local.conf</filename>, как это показано
-        в <xref linkend="antialias"/>.</para>
+        в разделе <xref linkend="antialias"/>.</para>
     </sect2>
 
     <sect2 xml:id="truetype">
@@ -651,9 +651,9 @@ dbus_enable="YES"</programlisting>
 	быть в формате &unix;/&ms-dos;/&windows;.  После того, как файлы будут
 	скопированы в этот каталог, воспользуйтесь утилитой
 	<application>ttmkfdir</application> для создания файла
-	<filename>fonts.dir</filename>, который укажет подсистеме вывода
-	шрифтов X на местоположение этих новых файлов.
-	<command>ttmkfdir</command> имеется в Коллекции Портов FreeBSD как
+	<filename>fonts.dir</filename>, который подскажет подсистеме вывода
+	шрифтов X, что эти новые файлы были установлены.
+        <command>ttmkfdir</command> присутствует в Коллекции Портов FreeBSD как
 	<package>x11-fonts/ttmkfdir</package>.</para>
 
       <screen>&prompt.root; <userinput>cd /usr/local/lib/X11/fonts/TrueType</userinput>
@@ -1100,8 +1100,8 @@ DisplayManager.requestPort:     0</screen>
       <screen>&prompt.root; <userinput>cd /usr/ports/x11/gnome2</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
 
-      <para>Для полноценной работы <application>GNOME</application> требует
-        наличия смонтированной файловой системы <filename>/proc</filename>.
+      <para>Для полноценной работы <application>GNOME</application> требуется
+        наличие смонтированной файловой системы <filename>/proc</filename>.
         Добавьте следующую строку в <filename>/etc/fstab</filename> для
         автоматического монтирования этой файловой системы при запуске
         системы:</para>
