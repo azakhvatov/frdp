@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r47273
+     Original revision: r47473
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -1090,14 +1090,14 @@ DisplayManager.requestPort:     0</screen>
 
       <para>Эту графическую оболочку можно установить из пакета:</para>
 
-      <screen>&prompt.root; <userinput>pkg install gnome2</userinput></screen>
+      <screen>&prompt.root; <userinput>pkg install gnome3</userinput></screen>
 
       <para>Вместо этого можно построить <application>GNOME</application> из
 	портов при помощи команды ниже.  <application>GNOME</application>
 	является большим приложением, его компиляция займёт определённое время
         даже на быстром компьютере.</para>
 
-      <screen>&prompt.root; <userinput>cd /usr/ports/x11/gnome2</userinput>
+      <screen>&prompt.root; <userinput>cd /usr/ports/x11/gnome3</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
 
       <para>Для полноценной работы <application>GNOME</application> требуется
