@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r46820
+     Original revision: r46930
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -605,11 +605,11 @@ dbus_enable="YES"</programlisting>
 	файл настройки X сервера (<filename>/etc/X11/xorg.conf</filename>),
 	которая должна выглядеть так:</para>
 
-      <programlisting>FontPath "/usr/local/lib/X11/fonts/urwfonts/"</programlisting>
+      <programlisting>FontPath "/usr/local/share/fonts/urwfonts/"</programlisting>
 
       <para>Либо из командной строки при работе с X выполните:</para>
 
-      <screen>&prompt.user; <userinput>xset fp+ /usr/local/lib/X11/fonts/urwfonts</userinput>
+      <screen>&prompt.user; <userinput>xset fp+ /usr/local/share/fonts/urwfonts</userinput>
 &prompt.user; <userinput>xset fp rehash</userinput></screen>
 
       <para>Это сработает, но будет потеряно, когда сеанс работы с X будет
@@ -644,7 +644,7 @@ dbus_enable="YES"</programlisting>
       <programlisting>Load  "freetype"</programlisting>
 
       <para>Теперь создайте каталог для шрифтов &truetype;
-	(к примеру, <filename>/usr/local/lib/X11/fonts/TrueType</filename>) и
+	(к примеру, <filename>/usr/local/share/fonts/TrueType</filename>) и
 	скопируйте все шрифты &truetype; в этот каталог.  Имейте в виду,
 	что напрямую использовать шрифты &truetype; с &apple; &mac; нельзя;
 	для использования с <application>&xorg;</application> они должны
@@ -656,14 +656,14 @@ dbus_enable="YES"</programlisting>
         <command>ttmkfdir</command> присутствует в Коллекции Портов FreeBSD как
 	<package>x11-fonts/ttmkfdir</package>.</para>
 
-      <screen>&prompt.root; <userinput>cd /usr/local/lib/X11/fonts/TrueType</userinput>
+      <screen>&prompt.root; <userinput>cd /usr/local/share/fonts/TrueType</userinput>
 &prompt.root; <userinput>ttmkfdir -o fonts.dir</userinput></screen>
 
       <para>Теперь добавьте каталог со шрифтами &truetype;
 	к маршруту поиска шрифтов.  Это делается точно также, как описано в
         <xref linkend="type1"/>:</para>
 
-      <screen>&prompt.user; <userinput>xset fp+ /usr/local/lib/X11/fonts/TrueType</userinput>
+      <screen>&prompt.user; <userinput>xset fp+ /usr/local/share/fonts/TrueType</userinput>
 &prompt.user; <userinput>xset fp rehash</userinput></screen>
 
       <para>или добавьте строку <option>FontPath</option> в файл
@@ -707,7 +707,7 @@ dbus_enable="YES"</programlisting>
       </indexterm>
 
       <para>Все шрифты <application>&xorg;</application>, расположенные в
-        каталогах <filename>/usr/local/lib/X11/fonts/</filename> и
+        каталогах <filename>/usr/local/share/fonts/</filename> и
 	<filename>~/.fonts/</filename>, автоматически становятся доступными для
 	применения антиалиасинга в приложениях, использующих Xft.
         Большинство современных приложений умеет работать с Xft, в том числе
@@ -737,7 +737,7 @@ dbus_enable="YES"</programlisting>
         &lt;fontconfig&gt;</programlisting>
 
       <para>Как и говорилось ранее, все шрифты из каталога
-	<filename>/usr/local/lib/X11/fonts/</filename>, а также
+	<filename>/usr/local/share/fonts/</filename>, а также
 	<filename>~/.fonts/</filename> уже доступны для приложений,
 	использующих Xft.  Если вы хотите добавить каталог, отличный от этих
 	двух, добавьте строчку, подобную следующей, в файл
