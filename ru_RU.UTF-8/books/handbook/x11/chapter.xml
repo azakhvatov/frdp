@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r47473
+     Original revision: r47566/inprogress
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -244,37 +244,150 @@
   <sect1 xml:id="x-install">
     <title>Установка <application>&xorg;</application></title>
 
-    <para><application>&xorg;</application> является реализацией X Window
-      System с открытым кодом, выпущенной X.Org Foundation.  Во &os; она может
-      установлена как пакет или как порт.  Мета-порт полного установочного
-      набора, в который включены X-серверы, клиенты, библиотеки и шрифты,
-      находится в пакете <package>x11/xorg</package>.  Минимальный
-      установочный пакет находится в <package>x11/xorg-minimal</package>, при
-      этом имеются отдельные
-      порты для документации, библиотек и приложений.  В примерах этого раздела
-      используется полный установочный пакет
-      <application>&xorg;</application>.</para>
+    <para>Во &os; <application>&xorg;</application> может быть установлен как
+      пакет или как порт.</para>
 
-    <para>Для построения и установки <application>&xorg;</application> из
-      Коллекции портов, выполните следующие команды:</para>
+    <para>Для построения и установки из Коллекции портов выполните следующие
+      команды:</para>
 
     <screen>&prompt.root; <userinput>cd /usr/ports/x11/xorg</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
 
-    <note>
-      <para>Перед построением полной версии <application>&xorg;</application>
-	удостоверьтесь в наличии хотя бы 4&nbsp;GB свободного пространства на
-        диске.</para>
-    </note>
-
-    <para>Кроме того, <application>&xorg;</application> может быть установлен
-      непосредственно из пакетов при помощи следующей команды:</para>
+    <para>Откомпилированный пакет может быть установлен быстрее, но он даёт
+      меньше опций для настройки:</para>
 
     <screen>&prompt.root; <userinput>pkg install xorg</userinput></screen>
+
+    <para>Любой из этих методов приводит к установке полной системы
+      <application>&xorg;</application> и является наилучшим подходом для
+      большинства пользователей.</para>
+
+    <para>Более компактная версия X, подходящая для опытных пользователей,
+      доступна в пакете <package>x11/xorg-minimal</package>.  При его выборе
+      подавляющее большинство документов, библиотек и приложений не будут
+      устаналиваться.  Некоторым приложениям для работы требуются эти
+      дополнительные компоненты.</para>
   </sect1>
 
-  <sect1 xml:id="x-config-quick-start">
-    <title>Быстрый Запуск</title>
+  <sect1 xml:id="x-config">
+    <title>Настройка <application>&xorg;</application></title>
+
+    <info>
+      <author>
+        <personname>
+          <firstname>Warren</firstname>
+          <surname>Block</surname>
+        </personname>
+        <contrib>Оригинальный текст предоставил</contrib>
+      </author>
+    </info>
+
+    <indexterm><primary>&xorg;</primary></indexterm>
+    <indexterm><primary><application>&xorg;</application></primary></indexterm>
+
+    <sect2 xml:id="x-config-quick-start">
+      <title>Быстрый запуск</title>
+
+      <para><application>&xorg;</application> поддерживает большинство
+        распространённых графических адаптеров, клавиатур и устройств
+        позиционирования.  Эти устройства распознаются автоматически и не
+        требуют ручной настройки.</para>
+
+      <procedure>
+        <step>
+          <para>Если <application>&xorg;</application> использовалась ранее на
+            этом компьютере, перенесите или удалите все существующие
+            конфигурационные файлы:</para>
+
+          <screen>&prompt.root; <userinput>mv /etc/X11/xorg.conf ~/xorg.conf.etc</userinput>
+&prompt.root; <userinput>mv /usr/local/etc/X11/xorg.conf ~/xorg.conf.localetc</userinput></screen>
+        </step>
+
+        <step>
+          <para>Добавьте пользователя, который будет запускать
+            <application>&xorg;</application>, к группе
+            <literal>video</literal> или
+            <literal>wheel</literal> для обеспечения возможности использования
+            3D-ускорения при его доступности. Чтобы добавить пользователя
+            <replaceable>jru</replaceable> к одной из указанных групп
+            выполните следующую команду:</para>
+
+          <screen>&prompt.root; <userinput>pw groupmod video -m <replaceable>jru</replaceable> || pw groupmod wheel -m <replaceable>jru</replaceable></userinput></screen>
+        </step>
+
+        <step>
+          <para>По умолчанию в поставку включён оконный менеджер
+            <acronym>TWM</acronym>.  Он запускается вместе с запуском
+            <application>&xorg;</application> следующей командой:</para>
+
+          <screen>&prompt.user; <userinput>startx</userinput></screen>
+        </step>
+
+        <step>
+          <para>В некоторых более старых версиях &os; для того, чтобы обратное
+            переключение в текстовый режим работало корректно, в качестве
+            системной консоли должно использоваться устройство &man.vt.4;.
+            Для получения более полной информации обратитесь к разделу <xref
+            linkend="x-config-kms"/>.</para>
+        </step>
+      </procedure>
+    </sect2>
+
+    <sect2 xml:id="x-config-user-group">
+      <title>Пользовательская группа для графики с ускорением</title>
+
+      <para>Для включения 3D-ускорения на графических адаптерах необходим
+        доступ к устройству <filename>/dev/dri</filename>.  Как правило, проще
+        всего добавить пользователя, который будет запускать X, в группу
+        <literal>video</literal> или <literal>wheel</literal>.  Для включения
+        пользователя <replaceable>slurms</replaceable> в группу
+        <literal>video</literal> или в группу <literal>wheel</literal> в случае
+        отсутствия группы <literal>video</literal> в команде ниже используется
+        &man.pw.8;:</para>
+
+      <screen>&prompt.root; <userinput>pw groupmod video -m <replaceable>slurms</replaceable> || pw groupmod wheel -m <replaceable>slurms</replaceable></userinput></screen>
+    </sect2>
+
+    <sect2 xml:id="x-config-kms">
+      <title>Настройка режима ядра (<acronym>KMS</acronym>)</title>
+
+      <para>Когда компьютер переключает консоль в режим более высокого
+        разрешения для работы X, он должен задать <emphasis>режим</emphasis>
+        выдачи видео.  Последние версии <acronym>&xorg;</acronym> используют
+        систему внутри ядра для переключения этих режимов более эффективно.
+        Более старые версии &os; используют устройство &man.sc.4;, которое не
+        работает с <acronym>KMS</acronym>.  В итоге после закрытия сеанса X
+        системная консоль пуста, хотя продолжает функционировать.  Более новое
+        консольное устройство &man.vt.4; не имеет этой проблемы.</para>
+
+      <para>Для активации &man.vt.4; добавьте в файл
+        <filename>/boot/loader.conf</filename> следующую строку:</para>
+
+      <programlisting>kern.vty=vt</programlisting>
+    </sect2>
+
+    <sect2 xml:id="x-config-files">
+      <title>Конфигурационные файлы</title>
+
+      <sect3 xml:id="x-config-files-directory">
+        <title>Каталог</title>
+
+        <para><application>&xorg;</application> использует несколько каталогов
+          для размещения конфигурационных файлов.  Для &os; каталог
+          <filename>/usr/local/etc/X11/</filename> является рекомендованным
+          для таких файлов.  Использование этого каталога помогает размещать
+          файлы прикладной системы отдельно от файлов операционной
+          системы.</para>
+
+        <para>Размещение конфигурационных файлов в когда-то традиционном
+          каталоге <filename>/etc/X11/</filename> всё ещё поддерживается.
+          Однако это приводит к смешиванию файлов прикладной системы со
+          стандартными файлами &os;, что не рекомендуется.</para>
+      </sect3>
+
+XXX
+
+XXX
 
     <para>В большинстве случаев <application>&xorg;</application> настраивается
       автоматически.  При запуске без какого-либо конфигурационного файла
@@ -282,6 +395,7 @@
       используются.  Автонастройка является предпочтительным методом и должна
       быть опробована в первую очередь.</para>
 
+XXX
     <procedure xml:id="x-config-quick-start-procedure">
       <step>
         <para>Проверьте, использует ли <acronym>HAL</acronym>
@@ -302,30 +416,9 @@ dbus_enable="YES"</programlisting>
         <screen>&prompt.root; <userinput>service hald start ; service dbus start</userinput></screen>
       </step>
 
-      <step>
-        <para>Переименуйте или удалите старые версии файла
-          <filename>xorg.conf</filename>:</para>
 
-        <screen>&prompt.root; <userinput>mv /etc/X11/xorg.conf ~/xorg.conf.etc</userinput>
-&prompt.root; <userinput>mv /usr/local/etc/X11/xorg.conf ~/xorg.conf.localetc</userinput></screen>
-      </step>
+YYY
 
-      <step>
-        <para>Запустите X system:</para>
-
-        <screen>&prompt.user; <userinput>startx</userinput></screen>
-
-        <para>Проверьте систему, двигая мышью и вводя текст в окна.  Если и
-          мышь, и клавиатура работают так, как ожидалось, обратитесь к разделам
-          <xref linkend="x11-wm"/> и <xref linkend="x-xdm"/>.</para>
-
-        <para>Если мышь или клавиатура не работают, продолжите чтение раздела
-          <xref linkend="x-config"/>.</para>
-      </step>
-    </procedure>
-  </sect1>
-
-  <sect1 xml:id="x-config">
     <!--
     <sect1info>
       <authorgroup>
@@ -342,9 +435,6 @@ dbus_enable="YES"</programlisting>
     -->
 
     <title>Настройка <application>&xorg;</application></title>
-
-    <indexterm><primary>&xorg;</primary></indexterm>
-    <indexterm><primary><application>&xorg;</application></primary></indexterm>
 
     <sect2>
       <title>Перед тем, как начать</title>
@@ -408,19 +498,6 @@ dbus_enable="YES"</programlisting>
     <sect2>
       <title>Caveats</title>
 
-      <para>Возможности настройки оптимального разрешения зависят от
-        оборудования и поддержки, предоставляемой его драйвером.  В настоящее
-        время поддержка со стороны драйвера включает:</para>
-
-      <itemizedlist>
-        <listitem>
-          <para>Intel: начиная с &os;&nbsp;9.3 и &os;&nbsp;10.1, поддерживается
-            ускорение операций 3D на большинстве графических адаптеров
-            Intel, включая IronLake, SandyBridge и IvyBridge.  Поддержка
-            переключения между X и виртуальными консолями обеспечивается через
-            &man.vt.4;.</para>
-        </listitem>
-
         <listitem>
           <para>ATI/Radeon: Ускорение операций 2D и 3D поддерживается для
             большинства графических адаптеров Radeon вплоть по серию
@@ -446,7 +523,6 @@ dbus_enable="YES"</programlisting>
     </sect2>
 
     <sect2>
-      <title>Настройка <application>&xorg;</application></title>
 
       <para>По умолчанию <application>&xorg;</application> использует
         <acronym>HAL</acronym> для автоматического определения клавиатуры и
@@ -479,58 +555,6 @@ dbus_enable="YES"</programlisting>
 
       <screen>&prompt.root; <userinput>Xorg -config xorg.conf.new -retro</userinput></screen>
 
-      <para>Если появилась чёрно-белая сетка и курсор мыши в виде X, то
-        настройка была выполнена успешно.  Для выхода из режима тестирования
-	переключитесь в виртуальную консоль, которая использовалась для
-        запуска, нажав
-	<keycombo action="simul">
-	  <keycap>Ctrl</keycap>
-	  <keycap>Alt</keycap>
-          <keycap>F<replaceable>n</replaceable></keycap>
-        </keycombo> (<keycap>F1</keycap> соответствует первой виртуальной
-        консоли), а затем нажмите
-        <keycombo action="simul">
-          <keycap>Ctrl</keycap>
-          <keycap>C</keycap>
-        </keycombo>.</para>
-
-      <note>
-        <para>Для выхода из <application>&xorg;</application> также может быть
-          использована комбинация клавиш
-          <keycombo action="simul">
-            <keycap>Ctrl</keycap>
-            <keycap>Alt</keycap>
-            <keycap>Backspace</keycap>
-          </keycombo>.  Для включения такой возможности вы должны либо ввести
-          следующую команду в любом эмуляторе X терминала:</para>
-
-	<screen>&prompt.user; <userinput>setxkbmap -option terminate:ctrl_alt_bksp</userinput></screen>
-
-	<para>либо создать конфигурационный файл клавиатуры для
-	  <application>hald</application> называемый
-	  <filename>x11-input.fdi</filename> и сохранить его в каталоге
-	  <filename>/usr/local/etc/hal/fdi/policy</filename>.  Данный файл
-          должен содержать следующие строки:</para>
-
-	<programlisting>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
-&lt;deviceinfo version="0.2"&gt;
-  &lt;device&gt;
-    &lt;match key="info.capabilities" contains="input.keyboard"&gt;
-	  &lt;merge key="input.x11_options.XkbOptions" type="string"&gt;terminate:ctrl_alt_bksp&lt;/merge&gt;
-    &lt;/match&gt;
-  &lt;/device&gt;
-&lt;/deviceinfo&gt;</programlisting>
-
-	<para>Вам необходимо будет перезагрузить систему для вступления
-          параметров <application>hald</application> в силу.</para>
-
-        <para>В раздел <literal>ServerLayout</literal> или
-          <literal>ServerFlags</literal> файла
-          <filename>xorg.conf.new</filename> необходимо будет также добавить
-          следующую строку:</para>
-
-        <programlisting>Option  "DontZap"       "off"</programlisting>
-      </note>
 
       <para>Если тест закончился неудачно, перейдите к <xref
         linkend="x11-understanding"/>.  Если тестирование прошло успешно,
