@@ -402,6 +402,319 @@
           гибко и не так прозрачно, как использование нескольких файлов в
           подкаталоге <filename>xorg.conf.d/</filename>.</para>
       </sect3>
+    </sect2>
+
+    <sect2 xml:id="x-config-video-cards">
+      <title>Графические адаптеры</title>
+
+      <variablelist>
+        <varlistentry xml:id="x-config-video-cards-intel">
+          <term>&intel;</term>
+
+          <listitem>
+            <para>Ускорение 3D-графики поддерживается для большинства
+              графических адаптеров &intel;, включая IronLake, SandyBridge и
+              IvyBridge.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry xml:id="x-config-video-cards-radeon">
+          <term>&amd; Radeon</term>
+
+          <listitem>
+            <para>Ускорение 2D и 3D поддерживается для адаптеров Radeon вплоть
+              до и включая линейку HD6000.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry xml:id="x-config-video-cards-nvidia">
+          <term>NVIDIA</term>
+
+          <listitem>
+            <para>В категории <filename>x11</filename> Коллекции Портов
+              доступно несколько драйверов NVIDIA.  Установите драйвер,
+              соответствующий графическому адаптеру.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry xml:id="x-config-video-cards-hybrid">
+          <term>Hybrid Combination Graphics</term>
+
+          <listitem>
+            <para>Некоторые ноутбуки добавляют дополнительные модули обработки
+	      графики дополнительно к тем, что встроены в набор микросхем или
+              процессор.  <emphasis>Optimus</emphasis> комбинирует оборудование
+              &intel; и NVIDIA.  <emphasis>Переключаемая графика</emphasis> или 
+              <emphasis>Гибридная графика</emphasis> являются комбинацией
+              <acronym>GPU</acronym> от &intel; и &amd; Radeon.</para>
+
+            <para>Реализации подобных гибридных графических систем
+              разнообразны, и <application>&xorg;</application> во &os; не
+              имеет возможности отслеживать все их варианты.</para>
+
+            <para>Некоторые компьютеры имеют возможность отключить один из
+              графических адаптеров в <acronym>BIOS</acronym> или выбрать режим
+              <emphasis>discrete</emphasis>, который может быть использован
+	      в комбинации с одним из стандартных драйверов видеокарт.  К
+              примеру, иногда возможно отключить <acronym>GPU</acronym> от
+              NVIDIA в системе Optimus.  В таком случае возможно использовать
+              адаптер &intel; вместе с драйвером от &intel;.</para>
+
+            <para>Настройки <acronym>BIOS</acronym> зависят от модели
+              компьютера.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry xml:id="x-config-video-cards-other">
+          <term>Прочие видеокарты</term>
+
+          <listitem>
+            <para>В каталоге <filename>x11-drivers</filename> Коллекции Портов
+              можно найти драйверы для некоторых реже встречающихся графических
+              адаптеров.</para>
+
+            <para>Адаптеры, которые не поддерживаются специализированным
+              драйвером, всё же могут использоваться совместно с драйвером
+              <package>x11-drivers/xf86-video-vesa</package>.  Этот драйвер
+	      устанавливается вместе с пакетом <package>x11/xorg</package>.
+	      Также его можно установить в ручном режиме как пакет
+              <package>x11-drivers/xf86-video-vesa</package>.
+              <application>&xorg;</application> пытается использовать этот
+              драйвер в тех случаях, когда для установленного графического
+              адаптера специализированный драйвер не может быть найден.</para>
+
+            <para><package>x11-drivers/xf86-video-scfb</package> представляет
+              собой подобный неспециализированный драйвер видео, работающий со
+              многими компьютерами <acronym>UEFI</acronym> и &arm;.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+
+    <sect2 xml:id="x-config-monitors">
+      <title>Мониторы</title>
+
+      <para>Практически все мониторы поддерживают стандарт Extended Display
+        Identification Data (<acronym>EDID</acronym>).
+        <application>&xorg;</application> использует <acronym>EDID</acronym>
+        для работы с монитором и выявления поддерживаемых разрешений и частот
+        обновления.  Затем система выбирает комбинацию параметров, наиболее
+        подходящую к использованию с данным монитором.</para>
+
+      <para>Другие разрешения, поддерживаемые данным монитором, могут быть
+        установлены указанием требуемого разрешения в конфигурационных файлах
+        либо после запуска X-сервера при помощи &man.xrandr.1;.</para>
+
+      <variablelist>
+        <varlistentry xml:id="x-config-monitors-xrandr">
+          <term>Использование &man.xrandr.1;</term>
+
+          <listitem>
+            <para>Запустите &man.xrandr.1; без каких-либо параметров, чтобы
+	      посмотреть список устройств и выявленные режимы работы
+	      мониторов:</para>
+
+            <screen>&prompt.user; <userinput>xrandr</userinput>
+Screen 0: minimum 320 x 200, current 3000 x 1920, maximum 8192 x 8192
+DVI-0 connected primary 1920x1200+1080+0 (normal left inverted right x axis y axis) 495mm x 310mm
+   1920x1200     59.95*+
+   1600x1200     60.00
+   1280x1024     85.02    75.02    60.02
+   1280x960      60.00
+   1152x864      75.00
+   1024x768      85.00    75.08    70.07    60.00
+   832x624       74.55
+   800x600       75.00    60.32
+   640x480       75.00    60.00
+   720x400       70.08
+DisplayPort-0 disconnected (normal left inverted right x axis y axis)
+HDMI-0 disconnected (normal left inverted right x axis y axis)</screen>
+
+            <para>Этот текст показывает, что устройство
+              <literal>DVI-0</literal> используется для организации экрана
+	      разрешением 1920x1200 точек с частотой обновления около 60 Гц.
+	      К соединениям <literal>DisplayPort-0</literal> и
+              <literal>HDMI-0</literal> мониторы не подключены.</para>
+
+            <para>При помощи &man.xrandr.1; могут быть выбраны любые другие
+	      режимы работы дисплея.  К примеру, для переключения в режим
+	      1280x1024 на частоте 60 Гц запустите следующую команду:</para>
+
+            <screen>&prompt.user; <userinput>xrandr --mode 1280x1024 --rate 60</userinput></screen>
+
+            <para>Часто решаемой задачей является использование внешнего
+	      видеовыхода на ноутбуке для подключения видеопроектора.</para>
+
+            <para>Наименования и типы видеоконнекторов достаточно разнообразны,
+	      поэтому &man.xrandr.1; запускается без параметров для показа
+	      списка видеоустройств:</para>
+
+            <screen>&prompt.user; <userinput>xrandr</userinput>
+Screen 0: minimum 320 x 200, current 1366 x 768, maximum 8192 x 8192
+LVDS1 connected 1366x768+0+0 (normal left inverted right x axis y axis) 344mm x 193mm
+   1366x768      60.04*+
+   1024x768      60.00
+   800x600       60.32    56.25
+   640x480       59.94
+VGA1 connected (normal left inverted right x axis y axis)
+   1280x1024     60.02 +  75.02
+   1280x960      60.00
+   1152x864      75.00
+   1024x768      75.08    70.07    60.00
+   832x624       74.55
+   800x600       72.19    75.00    60.32    56.25
+   640x480       75.00    72.81    66.67    60.00
+   720x400       70.08
+HDMI1 disconnected (normal left inverted right x axis y axis)
+DP1 disconnected (normal left inverted right x axis y axis)</screen>
+
+            <para>Было обнаружено четыре видеоустройства: встроенная панель
+              <literal>LVDS1</literal> и внешние подключения
+              <literal>VGA1</literal>, <literal>HDMI1</literal> и
+              <literal>DP1</literal>.</para>
+
+            <para>Проектор оказался подключенным к устройству
+              <literal>VGA1</literal>.  Теперь используем &man.xrandr.1; для
+	      приведения настроек этого устройства к стандартному разрешению
+	      проектора и добавления дополнительного пространства к рабочему
+	      столу справа:</para>
+
+            <screen>&prompt.user; <userinput>xrandr --output VGA1 --auto --right-of LVDS1</userinput></screen>
+
+            <para>Параметр <literal>--auto</literal> задаёт выбор разрешения и
+	      частоты обновления, выявленному через <acronym>EDID</acronym>.
+              Если разрешение определяется некорректно, вместо параметра
+	      <literal>--auto</literal> при помощи опции
+              <literal>--mode</literal> может быть задано фиксированное
+              значение.  К примеру, большинство проекторов могут работать с
+	      разрешением 1024x768, что задаётся параметром  
+              <literal>--mode 1024x768</literal>.</para>
+
+            <para>&man.xrandr.1; часто запускается из
+	      <filename>.xinitrc</filename> для того, чтобы задать
+	      подходящий режим при запуске X.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry xml:id="x-config-monitors-files">
+          <term>Настройка разрешения монитора в файле</term>
+
+          <listitem>
+            <para>Для того, чтобы задать разрешение 1024x768 в конфигурационном
+	      файле:</para>
+
+            <programlisting>Section "Screen"
+       Identifier "Screen0"
+       Device     "Card0"
+       SubSection "Display"
+               Modes "1024x768"
+       EndSubSection
+EndSection</programlisting>
+
+            <para>То небольшое количество моделей мониторов, не поддерживающих
+              <acronym>EDID</acronym>, могут быть настроены указанием
+              параметров <literal>HorizSync</literal> и
+              <literal>VertRefresh</literal> в границах частот, поддерживаемых
+              монитором.</para>
+
+            <example>
+              <title>Ручная настройка частот монитора</title>
+
+              <para><filename>/usr/local/etc/X11/xorg.conf.d/monitor0-freq.conf</filename></para>
+
+              <programlisting>Section "Monitor"
+        Identifier   "Monitor0"
+        HorizSync    30-83   # kHz
+        VertRefresh  50-76   # Hz
+EndSection</programlisting>
+            </example>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+
+    <sect2 xml:id="x-config-input">
+      <title>Устройства ввода</title>
+XXX
+      <sect3 xml:id="x-config-input-keyboard">
++       <title>Keyboards</title>
++
++       <variablelist>
++         <varlistentry xml:id="x-config-input-keyboard-layout">
++           <term>Keyboard Layout</term>
++
++           <listitem>
++             <para>The standardized location of keys on a keyboard
++               is called a <emphasis>layout</emphasis>.  Layouts and
++               other adjustable parameters are listed in
++               &man.xkeyboard-config.7;.</para>
++
++             <para>A United States layout is the default.  To select
++               an alternate layout, set the
++               <literal>XkbLayout</literal> and
++               <literal>XkbVariant</literal> options in an
++               <literal>InputClass</literal>.  This will be applied
++               to all input devices that match the class.</para>
++
++             <para>This example selects a French keyboard layout with
++               the <literal>oss</literal> variant.</para>
++
++             <example>
++               <title>Setting Keyboard Layout</title>
++
++               <para><filename>/usr/local/etc/X11/xorg.conf.d/keyboard-fr-oss.conf</filename></para>
++
++               <programlisting>Section "InputClass"
++       Identifier      "KeyboardDefaults"
++       Driver          "keyboard"
++       MatchIsKeyboard "on"
++       Option          "XkbLayout" "fr"
++       Option          "XkbVariant" "oss"
++EndSection</programlisting>
++             </example>
++           </listitem>
++         </varlistentry>
++
++         <varlistentry xml:id="x-config-input-keyboard-zap">
++           <term>Closing <application>&xorg;</application> From the
++           Keyboard</term>
++
++           <listitem>
++             <para>A combination of keys is available to close the X
++               system.  This option is disabled by default because it
++               conflicts with keyboard commands for some
++               applications.  Enabling this option requires changes
++               to both <literal>ServerLayout</literal> and keyboard
++               <literal>InputDevice</literal> sections:</para>
++
++             <example>
++               <title>Enabling Keyboard Exit from X</title>
++
++               <para><filename>/usr/local/etc/X11/xorg.conf.d/serverlayout-enablezap.conf</filename></para>
++
++               <programlisting>Section "ServerLayout"
++       Identifier "EnableZap"
++       Option     "DontZap" "Off"
++EndSection</programlisting>
++
++               <para><filename>/usr/local/etc/X11/xorg.conf.d/keyboard-zap.conf</filename></para>
++
++               <programlisting>Section "InputClass"
++       Identifier      "KeyboardDefaults"
++       Driver          "keyboard"
++       MatchIsKeyboard "on"
++       Option          "XkbOptions" "terminate:ctrl_alt_bksp"
++EndSection</programlisting>
++             </example>
++           </listitem>
++         </varlistentry>
++       </variablelist>
++      </sect3>
++
++      <sect3 xml:id="x11-input-mice">
++       <title>Mice and Pointing Devices</title>
+
+
 
 
 XXX
