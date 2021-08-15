@@ -5,7 +5,7 @@
      $FreeBSD: head/ru_RU.KOI8-R/books/handbook/x11/chapter.xml 48458 2016-03-23 10:47:11Z amdmi3 $
      $FreeBSDru: frdp/doc/ru_RU.KOI8-R/books/handbook/x11/chapter.xml,v 1.68 2008/05/13 13:46:29 den Exp $
 
-     Original revision: r47566/inprogress
+     Original revision: r47566
 -->
 <chapter xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -438,13 +438,14 @@
         </varlistentry>
 
         <varlistentry xml:id="x-config-video-cards-hybrid">
-          <term>Hybrid Combination Graphics</term>
+          <term>Смешанные комбинации графических адаптеров</term>
 
           <listitem>
-            <para>Некоторые ноутбуки добавляют дополнительные модули обработки
-	      графики дополнительно к тем, что встроены в набор микросхем или
-              процессор.  <emphasis>Optimus</emphasis> комбинирует оборудование
-              &intel; и NVIDIA.  <emphasis>Переключаемая графика</emphasis> или 
+            <para> В некоторые ноутбуки добавляют дополнительные модули
+              обработки графики дополнительно к тем, что встроены в набор
+              микросхем или процессор.  <emphasis>Optimus</emphasis>
+              комбинирует оборудование &intel; и NVIDIA.
+	      <emphasis>Переключаемая графика</emphasis> или 
               <emphasis>Гибридная графика</emphasis> являются комбинацией
               <acronym>GPU</acronym> от &intel; и &amd; Radeon.</para>
 
@@ -635,275 +636,141 @@ EndSection</programlisting>
 
     <sect2 xml:id="x-config-input">
       <title>Устройства ввода</title>
-XXX
+
       <sect3 xml:id="x-config-input-keyboard">
-+       <title>Keyboards</title>
-+
-+       <variablelist>
-+         <varlistentry xml:id="x-config-input-keyboard-layout">
-+           <term>Keyboard Layout</term>
-+
-+           <listitem>
-+             <para>The standardized location of keys on a keyboard
-+               is called a <emphasis>layout</emphasis>.  Layouts and
-+               other adjustable parameters are listed in
-+               &man.xkeyboard-config.7;.</para>
-+
-+             <para>A United States layout is the default.  To select
-+               an alternate layout, set the
-+               <literal>XkbLayout</literal> and
-+               <literal>XkbVariant</literal> options in an
-+               <literal>InputClass</literal>.  This will be applied
-+               to all input devices that match the class.</para>
-+
-+             <para>This example selects a French keyboard layout with
-+               the <literal>oss</literal> variant.</para>
-+
-+             <example>
-+               <title>Setting Keyboard Layout</title>
-+
-+               <para><filename>/usr/local/etc/X11/xorg.conf.d/keyboard-fr-oss.conf</filename></para>
-+
-+               <programlisting>Section "InputClass"
-+       Identifier      "KeyboardDefaults"
-+       Driver          "keyboard"
-+       MatchIsKeyboard "on"
-+       Option          "XkbLayout" "fr"
-+       Option          "XkbVariant" "oss"
-+EndSection</programlisting>
-+             </example>
-+           </listitem>
-+         </varlistentry>
-+
-+         <varlistentry xml:id="x-config-input-keyboard-zap">
-+           <term>Closing <application>&xorg;</application> From the
-+           Keyboard</term>
-+
-+           <listitem>
-+             <para>A combination of keys is available to close the X
-+               system.  This option is disabled by default because it
-+               conflicts with keyboard commands for some
-+               applications.  Enabling this option requires changes
-+               to both <literal>ServerLayout</literal> and keyboard
-+               <literal>InputDevice</literal> sections:</para>
-+
-+             <example>
-+               <title>Enabling Keyboard Exit from X</title>
-+
-+               <para><filename>/usr/local/etc/X11/xorg.conf.d/serverlayout-enablezap.conf</filename></para>
-+
-+               <programlisting>Section "ServerLayout"
-+       Identifier "EnableZap"
-+       Option     "DontZap" "Off"
-+EndSection</programlisting>
-+
-+               <para><filename>/usr/local/etc/X11/xorg.conf.d/keyboard-zap.conf</filename></para>
-+
-+               <programlisting>Section "InputClass"
-+       Identifier      "KeyboardDefaults"
-+       Driver          "keyboard"
-+       MatchIsKeyboard "on"
-+       Option          "XkbOptions" "terminate:ctrl_alt_bksp"
-+EndSection</programlisting>
-+             </example>
-+           </listitem>
-+         </varlistentry>
-+       </variablelist>
-+      </sect3>
-+
-+      <sect3 xml:id="x11-input-mice">
-+       <title>Mice and Pointing Devices</title>
+        <title>Клавиатуры</title>
 
+        <variablelist>
+          <varlistentry xml:id="x-config-input-keyboard-layout">
+            <term>Раскладка клавиатуры</term>
 
+            <listitem>
+              <para>Стандартизованное размещение клавиш на клавиатуре
+	        называется раскладкой (<emphasis>layout</emphasis>).  Раскладки
+	        и другие настраиваемые параметры перечислены в
+                &man.xkeyboard-config.7;.</para>
 
+              <para>По умолчанию применяется раскладка United States
+	        (Соединённые Штаты).  Для выбора альтернативной раскладки
+                задайте параметры <literal>XkbLayout</literal> и
+                <literal>XkbVariant</literal> в <literal>InputClass</literal>.
+	        Они будут применяться ко всем устройствам ввода этого
+                класса.</para>
 
-XXX
+              <para>В данном примере выбирается раскладка клавиатуры French
+                (французская) в варианте <literal>oss</literal>.</para>
 
-XXX
+              <example>
+                <title>Установка раскладки клавиатуры</title>
 
-    <para>В большинстве случаев <application>&xorg;</application> настраивается
-      автоматически.  При запуске без какого-либо конфигурационного файла
-      видеоадаптер и устройства ввода автоматически распознаются и
-      используются.  Автонастройка является предпочтительным методом и должна
-      быть опробована в первую очередь.</para>
+                <para><filename>/usr/local/etc/X11/xorg.conf.d/keyboard-fr-oss.conf</filename></para>
 
-XXX
-    <procedure xml:id="x-config-quick-start-procedure">
-      <step>
-        <para>Проверьте, использует ли <acronym>HAL</acronym>
-          X-сервером:</para>
+                <programlisting>Section "InputClass"
+       Identifier      "KeyboardDefaults"
+       Driver          "keyboard"
+       MatchIsKeyboard "on"
+       Option          "XkbLayout" "fr"
+       Option          "XkbVariant" "oss"
+EndSection</programlisting>
+              </example>
+            </listitem>
+          </varlistentry>
 
-        <screen>&prompt.user; <userinput>pkg info xorg-server | grep HAL</userinput></screen>
+          <varlistentry xml:id="x-config-input-keyboard-zap">
+            <term>Завершение работы <application>&xorg;</application> c
+              клавиатуры</term>
 
-        <para>Если результат выполнения команды показывает состояние
-          <acronym>HAL</acronym> как <literal>off</literal>, то перейдите к
-          следующему шагу. Если <acronym>HAL</acronym> находится в
-          состоянии <literal>on</literal>, активируйте нужные сервисы, добавив
-          две строки в <filename>/etc/rc.conf</filename>.  После этого
-          запустите указанные сервисы:</para>
+            <listitem>
+              <para>Для завершения работы системы X имеется определённая
+	        комбинация клавиш.  Эта возможность по умолчанию отключена, так
+		как она конфликтует с клавиатурными командами некоторых
+		приложений.  Включение этой возможности требует внесения
+		изменений как в раздел <literal>ServerLayout</literal>, так и
+		клавиатурный <literal>InputDevice</literal>:</para>
 
-        <programlisting>hald_enable="YES"
-dbus_enable="YES"</programlisting>
+              <example>
+                <title>Активация завершения работы X с клавиатуры</title>
 
-        <screen>&prompt.root; <userinput>service hald start ; service dbus start</userinput></screen>
-      </step>
+                <para><filename>/usr/local/etc/X11/xorg.conf.d/serverlayout-enablezap.conf</filename></para>
 
+                <programlisting>Section "ServerLayout"
+       Identifier "EnableZap"
+       Option     "DontZap" "Off"
+EndSection</programlisting>
 
-YYY
+                <para><filename>/usr/local/etc/X11/xorg.conf.d/keyboard-zap.conf</filename></para>
 
-    <!--
-    <sect1info>
-      <authorgroup>
-	<author>
-          <personname>
-            <firstname>Christopher</firstname>
-            <surname>Shumway</surname>
-          </personname>
+                <programlisting>Section "InputClass"
+       Identifier      "KeyboardDefaults"
+       Driver          "keyboard"
+       MatchIsKeyboard "on"
+       Option          "XkbOptions" "terminate:ctrl_alt_bksp"
+EndSection</programlisting>
+              </example>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect3>
 
-          <contrib>Текст в июле 2001 года предоставил</contrib>
-        </author>
-      </authorgroup>
-    </sect1info>
-    -->
+      <sect3 xml:id="x11-input-mice">
+        <title>Мыши и устройства позиционирования</title>
 
-    <title>Настройка <application>&xorg;</application></title>
+        <para>Многие характеристики работы мыши могут быть изменены
+          конфигурационными параметрами.  Для получения полного списка
+	  обратитесь к &man.mousedrv.4x;.</para>
 
-    <sect2>
-      <title>Перед тем, как начать</title>
+        <variablelist>
+          <varlistentry xml:id="x11-input-mice-buttons">
+            <term>Кнопки мыши</term>
 
-      <para>Тем, кто работает с устаревающим или нестандартным оборудованием,
-        может пригодиться сбор дополнительной информации об аппаратном
-        обеспечении до начала настройки.</para>
+            <listitem>
+              <para>Количество кнопок мыши может быть задано в разделе
+                <literal>InputDevice</literal> о мыши файла
+                <filename>xorg.conf</filename>.  Для задания количества кнопок,
+		равного 7:</para>
 
-      <itemizedlist>
-	<listitem>
-	  <para>Частоты синхронизации монитора</para>
-	</listitem>
+              <example>
+                <title>Установка количества кнопок мыши</title>
 
-	<listitem>
-	  <para>Набор микросхем, используемый в видеокарте</para>
-	</listitem>
+                <para><filename>/usr/local/etc/X11/xorg.conf.d/mouse0-buttons.conf</filename></para>
 
-	<listitem>
-	  <para>Объём памяти видеокарты</para>
-	</listitem>
-      </itemizedlist>
-
-      <indexterm>
-	<primary>частота горизонтальной синхронизации</primary>
-      </indexterm>
-
-      <indexterm>
-	<primary>частота горизонтальной развёртки</primary>
-        <see>частота горизонтальной синхронизации</see>
-      </indexterm>
-
-      <indexterm>
-        <primary>частота обновления</primary>
-      </indexterm>
-
-      <indexterm>
-        <primary>частота вертикальной синхронизации</primary>
-        <see>частота обновления</see>
-      </indexterm>
-
-      <indexterm>
-        <primary>частота вертикальной развёртки</primary>
-        <see>частота обновления</see>
-      </indexterm>
-
-      <para>Разрешение экрана и частота обновления определяются частотами
-        горизонтальной и вертикальной развёрток монитора.  Практически все
-        мониторы поддерживают электронное автоопределение этих значений.
-        Незначительное количество мониторов не передают эти значения, и
-        характеристики должны быть найдены в печатном руководстве или на
-        web-сайте производителя.</para>
-
-      <para>Набор микросхем видеокарты также определяется автоматически и
-        используется для выбора подходящего видеодрайвера.  На случай, когда
-        автоопределение не приводит к нужному результату, полезно знать,
-        какой набор микросхем установлен.</para>
-
-      <para>Объём памяти графического адаптера определяет максимальные
-        отображаемые разрешение и глубину цвета.</para>
-
-    <sect2>
-      <title>Caveats</title>
-
-        <listitem>
-          <para>ATI/Radeon: Ускорение операций 2D и 3D поддерживается для
-            большинства графических адаптеров Radeon вплоть по серию
-	    HD6000.</para>
-        </listitem>
-
-        <listitem>
-          <para>NVIDIA: В категории <filename>x11</filename> Коллекции Портов
-            доступны несколько драйверов NVIDIA.  Установите драйвер
-	    соответствующего графического адаптера.</para>
-        </listitem>
-
-        <listitem>
-          <para>Optimus: В настоящее время отсутствует поддержка переключения
-	    между двумя графическими адаптерами, доступными в Optimus.
-	    Реализации Optimus различаются между собой, и &os; не может
-	    поддерживать все версии оборудования.  Некоторые компьютеры
-            предоставляют возможность в <acronym>BIOS</acronym> отключить один
-            из графических адаптеров или выбрать режим
-            <emphasis>discrete</emphasis>.</para>
-        </listitem>
-      </itemizedlist>
+                <programlisting>Section "InputDevice"
+       Identifier  "Mouse0"
+       Option      "Buttons" "7"
+EndSection</programlisting>
+              </example>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect3>
     </sect2>
 
-    <sect2>
+    <sect2 xml:id="x-config-manual-configuration">
+      <title>Ручная настройка</title>
 
-      <para>По умолчанию <application>&xorg;</application> использует
-        <acronym>HAL</acronym> для автоматического определения клавиатуры и
-        мыши.  Порты <package>sysutils/hal</package> и
-	<package>devel/dbus</package> автоматически устанавливаются как
-	зависимости <package>x11/xorg</package>, но для
-	их включения необходимо добавить вот такие записи в файл
-	<filename>/etc/rc.conf</filename>:</para>
+      <para>В некоторых случая функция автоматической настройки
+	<application>&xorg;</application> не работает с определённым аппаратным
+	обеспечением, либо имеется потребность в других настройках.  Для таких
+	ситуаций может быть создан специальный конфигурационный файл.</para>
 
-      <programlisting>hald_enable="YES"
-dbus_enable="YES"</programlisting>
+      <para>Файл с настройками может быть сгенерирован при помощи
+        <application>&xorg;</application> на основании информации о выявленном
+        оборудовании.  Этот файл зачастую оказывается полезной отправной точкой
+	для специальных конфигураций.</para>
 
-      <para>Запустите эти сервисы до того, как настраивать
-        <application>&xorg;</application>:</para>
-
-      <screen>&prompt.root; <userinput>service hald start</userinput>
-&prompt.root; <userinput>service dbus start</userinput></screen>
-
-      <para>Как только запуск этих сервисов будет завершён, проверьте,
-	выполнена ли автоматическая настройка
-        <application>&xorg;</application>, набрав:</para>
+      <para>Генерация <filename>xorg.conf</filename>:</para>
 
       <screen>&prompt.root; <userinput>Xorg -configure</userinput></screen>
 
-      <para>Эта команда создаст файл <filename>/root/xorg.conf.new</filename>,
-        который пытается загрузить подходящие драйверы для обнаруженного
-        оборудования.  После этого проверьте, что автоматически сгенерированный
-        конфигурационный файл работает с графическим оборудованием,
-        набрав:</para>
+      <para>Конфигурационный файл сохраняется в
+        <filename>/root/xorg.conf.new</filename>.  Внесите любые требуемые
+	изменения, затем проверьте этот файл следующей командой:</para>
 
-      <screen>&prompt.root; <userinput>Xorg -config xorg.conf.new -retro</userinput></screen>
+      <screen>&prompt.root; <userinput>Xorg -config /root/xorg.conf.new</userinput></screen>
 
-
-      <para>Если тест закончился неудачно, перейдите к <xref
-        linkend="x11-understanding"/>.  Если тестирование прошло успешно,
-        скопируйте конфигурационный файл в
-        <filename>/etc/X11/xorg.conf</filename>:</para>
-
-      <screen>&prompt.root; <userinput>cp xorg.conf.new /etc/X11/xorg.conf</userinput></screen>
-
-      <note>
-	<para>Оболочки типа <application>GNOME</application>,
-	  <application>KDE</application> или
-	  <application>Xfce</application> содержат визуальные инструменты для
-          настройки таких параметров, как разрешение экрана.  Если настройки,
-          применённые по умолчанию, подошли, перейдите к разделу <xref
-          linkend="x11-wm"/> для поиска примеров установки оболочек рабочего
-          стола.</para>
-      </note>
+      <para>После того, как новая конфигурация откорректирована и проверена,
+	её можно разделить на файлы меньшего размера и разместить в обычном
+	месте, <filename>/usr/local/etc/X11/xorg.conf.d/</filename>.</para>
     </sect2>
   </sect1>
 
@@ -1446,14 +1313,14 @@ DisplayManager.requestPort:     0</screen>
 
       <para>Эту графическую оболочку можно установить из пакета:</para>
 
-      <screen>&prompt.root; <userinput>pkg install gnome3</userinput></screen>
+      <screen>&prompt.root; <userinput>pkg install gnome2</userinput></screen>
 
       <para>Вместо этого можно построить <application>GNOME</application> из
 	портов при помощи команды ниже.  <application>GNOME</application>
 	является большим приложением, его компиляция займёт определённое время
         даже на быстром компьютере.</para>
 
-      <screen>&prompt.root; <userinput>cd /usr/ports/x11/gnome3</userinput>
+      <screen>&prompt.root; <userinput>cd /usr/ports/x11/gnome2</userinput>
 &prompt.root; <userinput>make install clean</userinput></screen>
 
       <para>Для полноценной работы <application>GNOME</application> требуется
