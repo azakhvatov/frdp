@@ -7,7 +7,7 @@ trademarks: ["freebsd", "ibm", "ieee", "adobe", "intel", "linux", "microsoft", "
 isIndex: true
 ---
 
-// Original revision: r46686
+// Original revision: r47142 + b82184
 
 = Часто задаваемые вопросы по FreeBSD {rel2-relx} и {rel-relx}
 :doctype: book
