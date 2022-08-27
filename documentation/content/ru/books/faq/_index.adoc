@@ -7,7 +7,7 @@ trademarks: ["freebsd", "ibm", "ieee", "adobe", "intel", "linux", "microsoft", "
 isIndex: true
 ---
 
-// Original EN revision (03.03.2021): 4d8cfb575f4fab3131a14cc229b8909411ab7901
+// Original EN/RU revision (14.03.2021): a9a9e661059557e5bb6ab3e756e007b8e5d231ce
 
 = Часто задаваемые вопросы по FreeBSD {rel2-relx} и {rel-relx}
 :doctype: book
@@ -1535,7 +1535,7 @@ options    SYSVMSG	  # enable for messaging
 При использовании стандартного драйвера консоли man:vt[4] этого можно добиться,
 задав следующий системный параметр man:sysctl[8]:
 
-[source,bash]
+[source,shell]
 ....
 # sysctl kern.vt.kbd_reboot=0
 ....
@@ -2138,7 +2138,7 @@ device bpf	# Berkeley Packet Filter
 
 Выполните конфигурацию ядра со следующими параметрами:
 
-[source,bash]
+[source,shell]
 ....
 include GENERIC
 ident GENERIC-IPV6ONLY
@@ -2224,7 +2224,7 @@ nodevice gre
 
 В процессе своей загрузки ядро FreeBSD будет пытаться найти последовательные порты, с поддержкой которых ядро сконфигурировано. Внимательно просмотрите сообщения загрузки либо выполните такую команду после того, как система запустилась и работает:
 
-[source,bash]
+[source,shell]
 ....
 % grep -E '^(sio|uart)[0-9]' < /var/run/dmesg.boot
 sio0: <16550A-compatible COM port> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
