@@ -7,7 +7,7 @@ trademarks: ["freebsd", "ibm", "ieee", "adobe", "intel", "linux", "microsoft", "
 isIndex: true
 ---
 
-// Original EN revision (19.04.2021): dbde9910146157cd33559c36a866542f2c3b73cd
+// Original EN revision (19.04.2021): 25f9b4641d5e1558f6fd0d6ff6e97ee53b9770d5
 
 = Часто задаваемые вопросы по FreeBSD {rel2-relx} и {rel-relx}
 :doctype: book
@@ -1727,7 +1727,7 @@ X Window System (обычно `X11`) является наиболее обще�
 
 [source,shell]
 ....
-#  pkg install xorg
+# pkg install xorg
 ....
 
 После установки Xorg следуйте указаниям в разделе extref:{handbook}x11/[Конфигурация X11, x-config] Руководства FreeBSD.
