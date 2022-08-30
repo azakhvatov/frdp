@@ -7,7 +7,7 @@ trademarks: ["freebsd", "ibm", "ieee", "adobe", "intel", "linux", "microsoft", "
 isIndex: true
 ---
 
-// Original EN revision (13.04.2021): b632ecb3fd66be37fda123f01b782c45cc2453f4
+// Original EN revision (19.04.2021): dbde9910146157cd33559c36a866542f2c3b73cd
 
 = Часто задаваемые вопросы по FreeBSD {rel2-relx} и {rel-relx}
 :doctype: book
@@ -1407,16 +1407,29 @@ link:https://svnweb.freebsd.org/changeset/base/286444[r286444].
 
 === Где расположены файлы конфигурации системы?
 
-Основным конфигурационным файлом является [.filename]#/etc/defaults/rc.conf#, который описан в man:rc.conf[5]). Этот файл подключают системные скрипты запуска, такие как [.filename]#/etc/rc# и [.filename]#/etc/rc.d#, которые описаны в man:rc[8]. _Не редактируйте этот файл!_ Вместо изменения параметра в [.filename]#/etc/defaults/rc.conf# скопируйте эту строку в [.filename]#/etc/rc.conf# и поменяйте значение там.
+Основным конфигурационным файлом является [.filename]#/etc/defaults/rc.conf#,'
+который описан в man:rc.conf[5]). Этот файл подключают системные скрипты
+запуска, такие как [.filename]#/etc/rc# и [.filename]#/etc/rc.d#, которые
+описаны в man:rc[8].  _Не редактируйте этот файл!_  Вместо изменения параметра
+в [.filename]#/etc/defaults/rc.conf# скопируйте эту строку в
+[.filename]#/etc/rc.conf# и поменяйте значение там.
 
-Пример запуска man:named[8], поставляемого с системой сервера DNS:
+К примеру, для запуска man:sshd[8], поставляемого с системой сервера DNS:
 
 [source,shell]
 ....
-# echo 'named_enable="YES"' >> /etc/rc.conf
+# echo 'sshd_enable="YES"' >> /etc/rc.conf
 ....
 
-Чтобы запустить местные сервисы, поместите скрипты в каталог [.filename]#/usr/local/etc/rc.d#. У этих скриптов должен быть выставлен бит выполнимости, по умолчанию используются права доступа `555`.
+Альтернативным способом является использование man:sysrc[8] для
+корректировки [.filename]#/etc/rc.conf#:
+
+[source,shell]
+....
+# sysrc sshd_enable="YES"
+....
+
+Для запуска локальных сервисов поместите соответствующие скрипты в каталог [.filename]#/usr/local/etc/rc.d#. У этих скриптов должен быть выставлен бит выполнимости, по умолчанию используются права доступа `555`.
 
 === Как проще всего добавить пользователя?
 
