@@ -7,7 +7,7 @@ trademarks: ["freebsd", "ibm", "ieee", "adobe", "intel", "linux", "microsoft", "
 isIndex: true
 ---
 
-// Original EN revision (19.04.2021): 8aa58e89c5c6b895ddb473c3871df3f9199b4273
+// Original EN revision (19.04.2021): f8030676a59034416488d620992e19787e7f7f3d
 
 = Часто задаваемые вопросы по FreeBSD {rel2-relx} и {rel-relx}
 :doctype: book
@@ -1111,7 +1111,8 @@ UFS::
 Компакт-диски с файловой системой UFS могут быть смонтированы без всяких проблем. Монтирование файловых систем Digital UNIX или других систем, поддерживающих UFS, может быть более сложным, в зависимости от особенностей разбиения диска конкретной операционной системой.
 
 ext2/ext3::
-FreeBSD поддерживает разделы `ext2fs` и `ext3fs`. За дополнительной информацией обратитесь к странице Справочника man:ext2fs[5].
+FreeBSD поддерживает разделы `ext2fs`, `ext3fs` и `ext4fs`. За дополнительной
+информацией обратитесь к странице Справочника man:ext2fs[5].
 
 NTFS::
 Поддержка NTFS через FUSE доступна через порт package:sysutils/fusefs-ntfs[]. Для получения более полной информации смотрите документацию к http://www.tuxera.com/community/ntfs-3g-manual/[ntfs-3g].
