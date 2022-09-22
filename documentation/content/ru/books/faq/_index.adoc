@@ -3,12 +3,13 @@ title: Часто задаваемые вопросы по FreeBSD 11.X, 12.X и
 authors: 
   - author: Проект документирования FreeBSD
 copyright: 1995-2022 The FreeBSD Russian Documentation Project
-description: Часто задаваемые вопросы по FreeBSD 11.X, 12.X и 13.X
+description: Часто задаваемые вопросы и ответы по FreeBSD 11.X, 12.X и 13.X, касающиеся всех аспектов FreeBSD
 trademarks: ["freebsd", "ibm", "ieee", "adobe", "intel", "linux", "microsoft", "opengroup", "sun", "netbsd", "general"]
+weight: 5
 isIndex: true
 ---
 
-// Original EN revision (02.05.2021): 0d9894b11e0e94cde952b0112782e68e27c893da
+// Original EN revision (02.05.2021): 2c5bff688d8653c4306a2f6fdbb2c966eaee5a1c
 
 = Часто задаваемые вопросы по FreeBSD {rel2-relx} и {rel-relx}
 :doctype: book
