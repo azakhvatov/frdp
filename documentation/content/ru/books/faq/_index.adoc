@@ -10,7 +10,7 @@ tags: ["FAQ", "FreeBSD FAQ"]
 isIndex: true
 ---
 
-// Original EN revision (22.11.2021): c2c63155b2e220d63a4ae40947629539adb9355d
+// Original EN revision (04.12.2021): f66fca12e527e161095ff5eb56e2c5f5779209c4
 
 = Часто задаваемые вопросы по FreeBSD {rel2-relx} и {rel-relx}
 :doctype: book
@@ -2120,11 +2120,18 @@ Key F15	A	A	Menu Workplace Nop
 [[x-3d-acceleration]]
 === Как активировать аппаратное ускорение 3D-графики для OpenGL(R)?
 
-Наличие 3D-ускорения зависит от версии сервера Xorg и типа графического адаптера. Для адаптера nVidia используйте двоичный драйвер для FreeBSD, установив один из нижеследующих портов:
+Наличие 3D-ускорения зависит от версии сервера Xorg и типа графического
+адаптера.  Для адаптера nVidia используйте предскомпилированный драйвер для
+FreeBSD, установив один из нижеследующих портов:
 
-Последние версии адаптеров nVidia поддерживаются портом package:x11/nvidia-driver[].
+Последние версии адаптеров nVidia поддерживаются портом
+package:x11/nvidia-driver[].
 
-Более старые драйверы доступны как package:x11/nvidia-driver-###[].
+Более старые драйверы доступны в следующем виде:
+
+* package:x11/nvidia-driver-390[]
+* package:x11/nvidia-driver-340[]
+* package:x11/nvidia-driver-304[]
 
 nVidia предоставляет подробную информацию о том, какие адаптеры поддерживаются тем или иным драйвером, на своём сайте: http://www.nvidia.com/object/IO_32667.html[http://www.nvidia.com/object/IO_32667.html].
 
