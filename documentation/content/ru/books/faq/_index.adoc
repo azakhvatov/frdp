@@ -9,7 +9,7 @@ bookOrder: 5
 tags: ["FAQ", "FreeBSD FAQ"]
 ---
 
-// Original EN revision (11.12.2021): 2b027dd0175e739f8b5fedd2ae6bd96cf0c14125
+// Original EN revision (14.01.2022): 0c272255af9a5442191d8d1e0bb79ff2424254cc
 
 = Часто задаваемые вопросы по FreeBSD {rel2-relx} и {rel-relx}
 :doctype: book
@@ -63,12 +63,10 @@ endif::[]
 информативным; если у вас есть идеи по его усовершенствованию, присылайте их на
 адрес {freebsd-doc}.
 
-Последняя редакция этого документа всегда доступна на extref:{faq}[Web-сайте
-FreeBSD].  Его также можно сгрузить в виде одного большого файла в формате
-link:.[HTML] по HTTP или в других форматах с
-https://download.freebsd.org/ftp/doc/[FTP-сервера FreeBSD].
-
-Последняя редакция этого документа всегда доступна с extref:{faq}[Web-сервера FreeBSD]. Его также можно получить в виде одного большого link:.[ HTML-файла] по HTTP или в ряде других форматов с link:ftp://ftp.FreeBSD.org/pub/FreeBSD/doc/[FTP-сервера].
+Самая последняя редакция этого документа всегда доступна на
+extref:{faq}[Web-сайте FreeBSD].  Его также можно сгрузить в виде одного
+большого файла в формате link:.[HTML] по HTTP или в различных других форматах с
+https://download.freebsd.org/doc/[FTP-сервера FreeBSD].
 
 '''
 
@@ -201,10 +199,10 @@ FreeBSD-CURRENT.  Пользователям, не имеющим возможн
 rel-branch]".  Статус веток и расписание предстоящих релизов можно получить
 на странице https://www.FreeBSD.org/releng[Информация о подготовке релизов].
 
-Версия https://download.FreeBSD.org/ftp/releases/amd64/amd64/{rel121-current}-RELEASE/[{rel121-current}]
+Версия https://download.FreeBSD.org/releases/amd64/amd64/{rel121-current}-RELEASE/[{rel121-current}]
 (дата выпуска {rel121-current-date}) является самым последним релизом в ветке
 {rel-stable}.  Версия
-https://download.FreeBSD.org/ftp/releases/amd64/amd64/{rel113-current}-RELEASE/[{rel113-current}]
+https://download.FreeBSD.org/releases/amd64/amd64/{rel113-current}-RELEASE/[{rel113-current}]
 (дата выпуска {rel113-current-date}) является самым последним релизом в ветке
 {rel2-stable}.
  
@@ -259,13 +257,13 @@ link:https://www.FreeBSD.org/snapshots/[отсюда].
 === Где можно найти FreeBSD?
 
 Все значимые релизы FreeBSD доступны по FTP с анонимного
-link:https://download.FreeBSD.org/ftp/releases/[FTP-сервера FreeBSD]:
+link:https://download.FreeBSD.org/releases/[FTP-сервера FreeBSD]:
 
 * Последний релиз {rel-stable}, {rel121-current}-RELEASE, можно найти в
-https://download.FreeBSD.org/ftp/releases/amd64/amd64/{rel121-current}-RELEASE[каталоге {rel121-current}-RELEASE].
+https://download.FreeBSD.org/releases/amd64/amd64/{rel121-current}-RELEASE[каталоге {rel121-current}-RELEASE].
 * link:https://www.FreeBSD.org/snapshots/[Снэпшот-релизы] для веток <<current,-CURRENT>> и <<stable,-STABLE>> выпускаются ежемесячно, но они нужны исключительно для разработчиков и тех, кто тестирует самые последние наработки.
 * Последний релиз {rel2-stable}, {rel113-current}-RELEASE, можно найти в
-https://download.FreeBSD.org/ftp/releases/amd64/amd64/{rel113-current}-RELEASE/[{каталоге rel113-current}-RELEASE].
+https://download.FreeBSD.org/releases/amd64/amd64/{rel113-current}-RELEASE/[{каталоге rel113-current}-RELEASE].
 
 Информация о получении/приобретении FreeBSD на CD, DVD и других носителях доступна в extref:{handbook}[Руководстве, mirrors].
 
@@ -285,11 +283,11 @@ https://download.FreeBSD.org/ftp/releases/amd64/amd64/{rel113-current}-RELEASE/[
 следующей ссылке: https://www.FreeBSD.org/docs/[https://www.FreeBSD.org/docs/].
 
 [[doc-formats]]
-=== Есть ли версии документации в другом формате, например, в виде обычного текста ASCII или PDF?
+=== Есть ли версии документации в другом формате, например, в виде обычного текста (ASCII) или PDF?
 
 Да. Документация доступна в нескольких различных форматах и упакованная разными
 способами на FTP-сервере FreeBSD, и находится она в каталоге
-https://download.freebsd.org/ftp/doc/[/ftp/doc/].
+https://download.freebsd.org/doc/[/doc/].
 
 Документация подразделяется на категории различными способами. Это включает:
 
@@ -403,7 +401,7 @@ FreeBSD. На данный момент поддерживаются следу�
 
 [source,shell]
 ....
-# fetch https://download.freebsd.org/ftp/doc/en_US.ISO8859-1/books/faq/book.html-split.tar.bz2
+# fetch https://download.freebsd.org/doc/en_US.ISO8859-1/books/faq/book.html-split.tar.bz2
 # tar xvf book.html-split.tar.bz2
 ....
 
