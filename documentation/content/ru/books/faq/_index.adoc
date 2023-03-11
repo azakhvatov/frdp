@@ -7,9 +7,10 @@ description: Часто задаваемые вопросы и ответы по
 trademarks: ["freebsd", "ibm", "ieee", "adobe", "intel", "linux", "microsoft", "opengroup", "sun", "netbsd", "general"]
 bookOrder: 5
 tags: ["FAQ", "FreeBSD FAQ"]
+layout: single
 ---
 
-// Original EN revision (19.12.2022): 8940aaee4bcda66a53261bb068ae910859cae890
+// Original EN revision (23.01.2023): 34aaac36f56c4b56a168d9f392f5bc2a25998a63
 
 = Часто задаваемые вопросы по FreeBSD {rel2-relx} и {rel-relx}
 :doctype: book
