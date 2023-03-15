@@ -5,6 +5,8 @@ sidenav: about
 
 include::shared/ru/urls.adoc[]
 
+// Original EN revision (19.01.2021): 8e22e76d94dc5fef83abcb3c082ab4242ef90ba2
+
 = О FreeBSD
 
 == Что такое FreeBSD?
