@@ -1,4 +1,4 @@
-# Original EN revision (24.07.2021): 41a39b1b9049a17b2a63c59e07d7adee5a362cc2
+# Original EN revision (24.07.2022): 41a39b1b9049a17b2a63c59e07d7adee5a362cc2
 
 # Глобальные
 [freebsd]
@@ -109,7 +109,7 @@ other = "Форумы"
 other = "Группы пользователей"
 
 [events]
-other = "События"
+other = "Мероприятия"
 
 [FreeBSDJournal]
 other = "Журнал FreeBSD"
@@ -178,15 +178,14 @@ other = "Большое"
 [freebsdDescription4]
 other = "сообщество"
 
-XXX
 [freebsdDescription5]
-other = "постоянно разрабатывало её на протяжении более 30 лет.  Передовые сетевые технологии, FreeBSD обеспечивает современные сетевые возможности, безопасность и производительность, используется на"
+other = "постоянно разрабатывало её на протяжении более 30 лет.  Благодаря передовым сетевым технологиям, информационной безопасности и технологиям хранения данных FreeBSD стала целевой платформой для"
 
 [freebsdDescription6]
-other = "самых загруженных веб-сайтах,"
+other = "самых загруженных веб-сайтов"
 
 [freebsdDescription7]
-other = "в популярных встроенных сетевых устройствах и системах хранения данных."
+other = "и популярнейших интегрированных сетевых устройств и устройств хранения данных."
 
 [learnMore]
 other = "Подробнее"
@@ -195,28 +194,28 @@ other = "Подробнее"
 other = "Получить"
 
 [journal]
-other = "журнал FreeBSD"
+other = "Журнал FreeBSD"
 
 [25th-logo]
-other = "25th Anniversary Logo"
+other = "Логотип 25-летнего юбилея"
 
 [supportedReleases]
-other = "Последние релизы"
+other = "Поддерживаемые релизы"
 
 [supportLifecycle]
-other = "Жизненный цикл"
+other = "Цикл поддержки"
 
 [upcoming]
-other = "Предстоящий"
+other = "Предстоящее"
 
 [newFreeBSD]
-other= "Впервые на FreeBSD?"
+other= "Новичок во FreeBSD?"
 
 [shortcuts]
-other = "БЫСТРЫЕ ССЫЛКИ"
+other = "Быстрые ссылки"
 
 [reportingProblems]
-other = "Сообщить об ошибке"
+other = "Сообщить о проблемах"
 
 [ports]
 other = "Порты"
@@ -225,16 +224,16 @@ other = "Порты"
 other = "ПОСЛЕДНИЕ НОВОСТИ"
 
 [upcomingEvents]
-other = "ПРЕДСТОЯЩИЕ СОБЫТИЯ"
+other = "АНОНСЫ СОБЫТИЙ"
 
 [press]
-other = "В СМИ"
+other = "ПРЕССА"
 
 [securityAdvisories]
 other = "БЮЛЛЕТЕНИ БЕЗОПАСНОСТИ"
 
 [errataNotices]
-other = "УВЕДОМЛЕНИЯ ОБ ИСПРАВЛЕНИЯХ"
+other = "ОШИБКИ"
 
 [moreNews]
 other = "Все новости"
@@ -243,46 +242,46 @@ other = "Все новости"
 other = "Все события"
 
 [moreMedia]
-other = "Всё в СМИ"
+other = "Все публикации"
 
 [moreErrata]
-other = "Все уведомления об исправлениях"
+other = "Все важные исправления"
 
 [more]
-other = "Все"
+other = "Больше"
 
 [rssNews]
-other = "Лента новостей в RSS"
+other = "Лента новостей (RSS)"
 
 [rssSecurity]
-other = "Лента RSS"
+other = "Лента информационной безопасности и важных исправлений (RSS)"
 
 #404
 [pageNotFound]
 other = "Страница не найдена."
 
 [notFoundTitle]
-other = "Мы не смогли найти запрашиваемую страницу."
+other = "Мы не смогли найти запрошенную страницу."
 
 [notFoundDesc]
-other = "Please try your request again, use one of the links in the navigation menu, or the search box at the top of the page."
+other = "Пожалуйста, повторите ваш запрос либо воспользуйтесь одной из ссылок в меню навигации или окном поиска вверху страницы."
 
 # Footer
 [copyright]
 other = "Все права защищены."
 
 [trademark]
-other = "Название FreeBSD - это зарегистрированная торговая марка The FreeBSD Foundation и используется The FreeBSD Project с разрешения"
+other = "Название FreeBSD является зарегистрированным торговым знаком The FreeBSD Foundation и используется Проектом FreeBSD с разрешения"
 
 [contact]
 other = "Контакты"
 
 [legalNotices]
-other = "Условия использования"
+other = "Юридическая информация"
 
-# Ports form
+# Форма для работы с портами
 [ports-search]
-other = "Поиск портов:"
+other = "Поиск в портах:"
 
 [all]
 other = "Все"
@@ -291,21 +290,21 @@ other = "Все"
 other = "Название пакета"
 
 [description]
-other = "Описание"
+other = "Краткое описание"
 
 [long-description]
-other = "Полное описание"
+other = "Расширенное описание"
 
 [maintainer]
-other = "Сопровождающий"
+other = "Ответственный"
 
 [requires]
-other = "Зависимости"
+other = "Зависит от"
 
 [submit]
 other = "Искать"
 
-# Months
+# Месяцы
 [1]
 other = "Январь"
 
@@ -342,27 +341,27 @@ other = "Ноябрь"
 [12]
 other = "Декабрь"
 
-# Security section
+# Раздел Информационной безопасности
 [data]
-other = "Дата"
+other = "Данные"
 
 [errataNoticeName]
-other = "Название"
+other = "Название сообщения об ошибке"
 
 [advisoryName]
-other = "Название"
+other = "Название бюллетеня"
 
-# Events section
+# Раздел о мероприятиях
 [currentEvents]
-other = "Текущие и планируемые мероприятия:"
+other = "Текущие/Планируемые мероприятия:"
 
 [pastEvents]
-other = "Прошлые события:"
+other = "Прошедшие мероприятия:"
 
 [upcomingFreeBSDEvents]
-other = "Предстоящие события FreeBSD"
+other = "Предстоящие мероприятия FreeBSD"
 
-# Continents, countries
+# Континенты, страны
 [europe]
 other = "Европа"
 
@@ -388,37 +387,37 @@ other = "Южная Америка"
 other = "Океания"
 
 [global]
-other = "Глобальный"
+other = "Весь мир"
 
-# Commercial software
+# Коммерческое программное обеспечение
 [databases]
-other = "Databases"
+other = "Базы данных"
 
 [developmentTools]
-other = "Development Tools"
+other = "Средства разработки"
 
 [ecommerce]
-other = "E-Commerce Solutions and Tools"
+other = "Решения и инструменты для электронной комерции"
 
 [email]
-other = "Electronic Mail Software"
+other = "Программное обеспечение для электронной почты"
 
 [misc]
-other = "Прочее"
+other = "Разное"
 
 [network]
-other = "Network Systems and Applications"
+other = "Системы и приложения для работы с сетью"
 
 [scientific]
-other = "Scientific and Language Tools"
+other = "Научные инструменты и работа с языками"
 
 [security]
-other = "Security"
+other = "Безопасность"
 
 [isp]
-other = "System Administration / ISP"
+other = "Системное администрирование / Поддержка провайдеров"
 
-# sidenav
+# боковая панель навигации
 [applications]
 other = "Приложения"
 
@@ -450,13 +449,13 @@ other = "Политика конфиденциальности"
 other = "Списки рассылки"
 
 [newsgroups]
-other = "Телеконференции"
+other = "Новостные группы"
 
 [usergroups]
 other = "Группы пользователей"
 
 [sourceCodeRepositories]
-other = "Репозитории с исходным кодом"
+other = "Репозитории исходного кода"
 
 [releng]
 other = "Подготовка релизов"
@@ -468,16 +467,16 @@ other = "Платформы"
 other = "Идеи для проекта"
 
 [contributing]
-other = "Содействие проекту"
+other = "Участие в проекте"
 
 [FAQ]
 other = "Часто задаваемые вопросы"
 
 [man]
-other = "Страницы справочника"
+other = "Страницы Справочника"
 
 [papers]
-other = "Презентации и труды"
+other = "Презентации и исследования"
 
 [booksArticles]
 other = "Книги и статьи"
@@ -537,7 +536,7 @@ other = "Связаться с нами"
 other = "HAL FAQ"
 
 [upgradeFAQ]
-other = "Обновление 2.30 до 2.32"
+other = "FAQ по обновлению с 2.30 до 2.32"
 
 [developmentBranchFAQ]
 other = "FAQ по ветке разработки"
@@ -564,22 +563,22 @@ other = "Поиск"
 other = "Категории"
 
 [alphabetically]
-other = "список по алфавиту"
+other = "в алфавитном порядке"
 
 [logicalGroup]
-other = "список по группам"
+other = "по логическим группам"
 
 [allPorts]
 other = "Список всех портов"
 
 [moreInformation]
-other = "Прочая информация"
+other = "Дополнительная информация"
 
 [software]
 other = "Программное обеспечение"
 
 [hardware]
-other = "Аппаратное обеспечение"
+other = "Оборудование"
 
 [consulting]
 other = "Консалтинговые услуги"
@@ -588,28 +587,28 @@ other = "Консалтинговые услуги"
 other = "Интернет-провайдеры"
 
 [securityInfo]
-other = "Информация о безопасности"
+other = "О информационной безопасности"
 
 [advisories]
 other = "Бюллетени"
 
 [errataNoticesSidenav]
-other = "Исправления"
+other = "Ошибки"
 
 [unsupportedReleases]
 other = "Неподдерживаемые релизы"
 
 [readSecurityAdvisories]
-other = "Как читать бюллетени безопасности FreeBSD"
+other = "Как читать Бюллетени безопасности FreeBSD"
 
 [charterSecurityOfficerTeam]
-other = "Устав команды информационной безопасности"
+other = "Устав директора и команды по информационной безопасности"
 
 [bugreports]
 other = "Сообщения об ошибках"
 
 [submitPR]
-other = "Отправить сообщение об ошибке"
+other = "Отправить сообщение о проблеме"
 
 [webresources]
-other = "Web ресурсы"
+other = "Веб-ресурсы"
