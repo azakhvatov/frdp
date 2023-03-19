@@ -1,3 +1,9 @@
+//
+// The FreeBSD Russian Documentation Project
+//
+// Original EN revision: SVN 34751
+//
+
 ---
 title: Глава 6. X Window System
 part: Часть I. В начале
