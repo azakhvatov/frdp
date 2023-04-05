@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 47566
+// Original EN revision: SVN 47581
 // Synced with Russian version (SVN 52803) from official repository
 //
 
@@ -425,7 +425,7 @@ EndSection
 
 В данном примере выбирается раскладка клавиатуры French (французская) в варианте `oss`.
 
-.Установка раскладки клавиатуры
+.Настройка раскладки клавиатуры
 [example]
 ====
 [.filename]#/usr/local/etc/X11/xorg.conf.d/keyboard-fr-oss.conf#
@@ -438,6 +438,24 @@ Section "InputClass"
        MatchIsKeyboard "on"
        Option          "XkbLayout" "fr"
        Option          "XkbVariant" "oss"
+EndSection
+....
+====
+
+.Настройка нескольких раскладок клавиатуры
+[example]
+====
+Установка клавиатурных раскладок Соединённых Штатов, Испании и Украины.
+Последовательное переключение между ними выполняется нажатием kbd:[Alt+Shift].
+
+[.filename]#/usr/local/etc/X11/xorg.conf.d/kbd-layout-multi.conf#
+
+[.programlisting]
+....
+Section "InputClass"
+       Identifier      "All Keyboards"
+       MatchIsKeyboard "yes"
+       Option          "XkbLayout" "us, es, ua"
 EndSection
 ....
 ====
