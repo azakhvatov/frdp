@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 47598
+// Original EN revision: SVN 47617
 // Synced with Russian version (SVN 52803) from official repository
 //
 
@@ -390,11 +390,11 @@ man:xrandr[1] часто запускается из [.filename]#.xinitrc# дл�
 
 ....
 Section "Screen"
-       Identifier "Screen0"
-       Device     "Card0"
-       SubSection "Display"
-               Modes "1024x768"
-       EndSubSection
+	Identifier "Screen0"
+	Device     "Card0"
+	SubSection "Display"
+	Modes "1024x768"
+	EndSubSection
 EndSection
 ....
 ====
@@ -1352,9 +1352,9 @@ Device     "Card0"
 Monitor    "Monitor0"
 DefaultDepth 24
 SubSection "Display"
-       Viewport  0 0
-       Depth     24
-       Modes     "1680x1050"
+	Viewport  0 0
+	Depth     24
+	Modes     "1680x1050"
 EndSubSection
 EndSection
 ....
