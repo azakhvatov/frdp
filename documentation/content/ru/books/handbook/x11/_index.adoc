@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 47834
+// Original EN revision: SVN 47847
 // Synced with Russian version (SVN 52803) from official repository
 //
 
@@ -1137,7 +1137,7 @@ Driver      "nvidia"
 ....
 Section "Extensions"
     Option         "Composite" "Enable"
-    EndSection
+EndSection
 ....
 
 Найдите раздел "Screen", который должен выглядеть похожим на текст ниже:
@@ -1156,7 +1156,7 @@ Section "Screen"
 [.programlisting]
 ....
 DefaultDepth    24
-    Option         "AddARGBGLXVisuals" "True"
+Option         "AddARGBGLXVisuals" "True"
 ....
 
 Найдите подраздел "Subsection", указывающий на разрешение экрана, которое вы хотите использовать.
@@ -1168,7 +1168,7 @@ DefaultDepth    24
 SubSection     "Display"
     Viewport    0 0
     Modes      "1280x1024"
-    EndSubSection
+EndSubSection
 ....
 
 Для настольных цветовых композиций требуется глубина цвета в 24 бита, измените подраздел выше на следующий:
@@ -1179,7 +1179,7 @@ SubSection     "Display"
     Viewport    0 0
     Depth       24
     Modes      "1280x1024"
-    EndSubSection
+EndSubSection
 ....
 
 Наконец, убедитесь, что загрузка модулей "glx" и "extmod" отражена в разделе "Module":
@@ -1474,10 +1474,10 @@ EndSection
 [source,shell]
 ....
 (EE) NVIDIA(0):     Failed to initialize the GLX module; please check in your X
-    (EE) NVIDIA(0):     log file that the GLX module has been loaded in your X
-    (EE) NVIDIA(0):     server, and that the module is the NVIDIA GLX module.  If
-    (EE) NVIDIA(0):     you continue to encounter problems, Please try
-    (EE) NVIDIA(0):     reinstalling the NVIDIA driver.
+(EE) NVIDIA(0):     log file that the GLX module has been loaded in your X
+(EE) NVIDIA(0):     server, and that the module is the NVIDIA GLX module.  If
+(EE) NVIDIA(0):     you continue to encounter problems, Please try
+(EE) NVIDIA(0):     reinstalling the NVIDIA driver.
 ....
 
 Эти сообщения, как правило, возникают при обновлении Xorg.  Вам потребуется переустановить пакет package:x11/nvidia-driver[], чтобы glx был построен снова.
