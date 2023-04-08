@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 47833
+// Original EN revision: SVN 47834
 // Synced with Russian version (SVN 52803) from official repository
 //
 
@@ -309,9 +309,9 @@ package:x11-drivers/xf86-video-scfb[] представляет собой под
 
 Для настройки драйвера Intel(R) в конфигурационном файле:
 
+.Выберите драйвер видео Intel(R) в файле
 [example]
 ====
-Выберите драйвер видео Intel(R) в файле
 
 [.filename]#/usr/local/etc/X11/xorg.conf.d/driver-intel.conf#
 
@@ -330,9 +330,9 @@ EndSection
 
 Для настройки драйвера Radeon в конфигурационном файле:
 
+.Выберите драйвер видео Radeon в файле
 [example]
 ====
-Выберите драйвер видео Radeon в файле
 
 [.filename]#/usr/local/etc/X11/xorg.conf.d/driver-radeon.conf#
 
@@ -347,9 +347,9 @@ EndSection
 
 Для настройки драйвера VESA в конфигурационном файле:
 
+.Выберите драйвер видео VESA в файле
 [example]
 ====
-Выберите драйвер видео VESA в файле
 
 [.filename]#/usr/local/etc/X11/xorg.conf.d/driver-vesa.conf#
 
@@ -538,22 +538,13 @@ EndSection
 
 [[x-config-input-keyboard-zap]]
 Завершение работы Xorg c клавиатуры::
-Для завершения работы системы X имеется определённая комбинация клавиш.
-Эта возможность по умолчанию отключена, так как она конфликтует с клавиатурными командами некоторых приложений.
-Включение этой возможности требует внесения изменений как в раздел `ServerLayout`, так и клавиатурный `InputDevice`:
+Работа X может быть завершена нажатием определённой комбинации клавиш.
+По умолчанию эта комбинация не задана, так как эта возможность конфликтует с клавиатурными командами некоторых приложений.
+Включение этой функции требует внесения изменений в раздел настройки клавиатуры `InputDevice`:
 
 .Активация завершения работы X с клавиатуры
 [example]
 ====
-[.filename]#/usr/local/etc/X11/xorg.conf.d/serverlayout-enablezap.conf#
-
-[.programlisting]
-....
-Section "ServerLayout"
-       Identifier "EnableZap"
-       Option     "DontZap" "Off"
-EndSection
-....
 
 [.filename]#/usr/local/etc/X11/xorg.conf.d/keyboard-zap.conf#
 
