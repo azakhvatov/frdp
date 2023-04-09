@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 47847
+// Original EN revision: SVN r47900
 // Synced with Russian version (SVN 52803) from official repository
 //
 
@@ -309,6 +309,7 @@ package:x11-drivers/xf86-video-scfb[] представляет собой под
 
 Для настройки драйвера Intel(R) в конфигурационном файле:
 
+[[x-config-video-cards-file-intel]]
 .Выберите драйвер видео Intel(R) в файле
 [example]
 ====
@@ -330,6 +331,7 @@ EndSection
 
 Для настройки драйвера Radeon в конфигурационном файле:
 
+[[x-config-video-cards-file-radeon]]
 .Выберите драйвер видео Radeon в файле
 [example]
 ====
@@ -347,6 +349,7 @@ EndSection
 
 Для настройки драйвера VESA в конфигурационном файле:
 
+[[x-config-video-cards-file-vesa]]
 .Выберите драйвер видео VESA в файле
 [example]
 ====
