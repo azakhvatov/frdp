@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN r48082
+// Original EN revision: SVN r48105
 // Synced with Russian version (SVN 52803) from official repository
 //
 
@@ -923,7 +923,7 @@ GNOME является графической оболочкой с дружес
 # make install clean
 ----
 
-Для полноценной работы GNOME требуется наличие смонтированной файловой системы [.filename]#/proc#.
+GNOME требует наличия смонтированной файловой системы [.filename]#/proc#.
 Добавьте следующую строку в [.filename]#/etc/fstab# для автоматического монтирования этой файловой системы при запуске системы:
 
 [.programlisting]
@@ -931,8 +931,35 @@ GNOME является графической оболочкой с дружес
 proc           /proc       procfs  rw  0   0
 ....
 
-После установки GNOME настройте Xorg на запуск GNOME.
-Самый простой способ сделать это заключается в активации Менеджера дисплеев GNOME, GDM, который устанавливается в составе пакета или порта GNOME.
+GNOME также требует наличия D-Bus и HAL.
+Это программное обеспечение обеспечивают шину передачи сообщений и уровень аппаратной абстракции.
+Оно может быть установлено из пакетов:
+
+[source,shell]
+----
+# pkg install dbus hal
+----
+
+или из Коллекции Портов:
+
+[source,shell]
+----
+# cd /usr/ports/devel/dbus
+# make install clean
+# cd /usr/ports/sysutils/hal
+# make install clean
+----
+
+После этого активируйте обе системы в файле [.filename]#/etc/rc.conf#:
+
+[.programlisting]
+....
+dbus_enable="YES"
+hald_enable="YES"
+....
+
+После установки настройте Xorg на запуск GNOME.
+Самый простой способ сделать это заключается в активации GDM, Менеджера дисплеев GNOME, который устанавливается в составе пакета или порта GNOME.
 Его можно активировать, добавив следующую строку в [.filename]#/etc/rc.conf#:
 
 [.programlisting]
