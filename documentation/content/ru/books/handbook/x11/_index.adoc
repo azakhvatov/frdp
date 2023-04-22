@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (20.02.2022): 5db574a05dad0438fd77eb6360cce2dacccffb33
+// Original EN revision (03.05.2022): 6d50dd7f08ad3a3847c717bd22d247ed7b7d7d0f
 // Progress: 
 //
 
@@ -1040,7 +1040,7 @@ GNOME является графической оболочкой с дружес
 
 [source,shell]
 ----
-# pkg install gnome3
+# pkg install gnome
 ----
 
 Вместо этого можно построить GNOME из портов при помощи команды ниже.
@@ -1048,7 +1048,7 @@ GNOME является большим приложением, его компи�
 
 [source,shell]
 ----
-# cd /usr/ports/x11/gnome3
+# cd /usr/ports/x11/gnome
 # make install clean
 ----
 
