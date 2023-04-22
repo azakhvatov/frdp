@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (02.09.2022): 45b85d3fc587b0984b2b8878510429c214945114
+// Original EN revision (01.10.2022): f9fed0e06d0dc93a0353c43a52884cca1353fe09
 //
 
 ---
@@ -14,16 +14,7 @@ tags: ["X11", "Xorg", "TrueType", "DE", "KDE", "Plasma", "Xfce", "Gnome", "XDM",
 showBookMenu: true
 weight: 7
 path: "/books/handbook/"
-aliases: [
-"/ru/books/handbook/x-understanding/",
-"/ru/books/handbook/x-install/",
-"/ru/books/handbook/x-config/",
-"/ru/books/handbook/x-fonts/",
-"/ru/books/handbook/x-xdm/",
-"/ru/books/handbook/x11-wm/",
-"/ru/books/handbook/x-compiz-fusion/",
-"/ru/books/handbook/x11-troubleshooting/"
-]
+aliases: ["/ru/books/handbook/x-understanding/","/ru/books/handbook/x-install/","/ru/books/handbook/x-config/","/ru/books/handbook/x-fonts/","/ru/books/handbook/x-xdm/","/ru/books/handbook/x11-wm/","/ru/books/handbook/x-compiz-fusion/","/ru/books/handbook/x11-troubleshooting/"]
 ---
 
 [[x11]]
