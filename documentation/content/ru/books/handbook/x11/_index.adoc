@@ -1,8 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (03.05.2022): 6d50dd7f08ad3a3847c717bd22d247ed7b7d7d0f
-// Progress: 
+// Original EN revision (28.06.2022): 6889293c81459afd6e026876282be59e919a31e9
 //
 
 ---
@@ -1734,7 +1733,7 @@ pw groupmod video -m user
 
 [source,shell]
 ----
-# sysrc seatd_enable=”YES”
+# sysrc seatd_enable="YES"
 # service seatd start
 ----
 
