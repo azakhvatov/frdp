@@ -10,7 +10,7 @@ tags: ["FAQ", "FreeBSD FAQ"]
 layout: single
 ---
 
-// Original EN revision (23.01.2023): 34aaac36f56c4b56a168d9f392f5bc2a25998a63
+// Original EN revision (22.05.2023): 52c0a842a1bd2825221ad5555c147798d01a93e4
 
 = Часто задаваемые вопросы по FreeBSD {rel2-relx} и {rel-relx}
 :doctype: book
@@ -259,19 +259,11 @@ link:https://www.FreeBSD.org/snapshots/[отсюда].
 === Где можно найти FreeBSD?
 
 Все поддерживаемые релизы FreeBSD доступны на странице
-https://www.freebsd.org/where/[выбора релизов FreeBSD]:
+https://www.freebsd.org/where/[поиска релизов FreeBSD]:
 
-* Для получения самого последнего релиза {rel-stable},
-{rel131-current}-RELEASE, перейдите по ссылке для выбора
-link:https://www.freebsd.org/where/#download-rel131[соответствующей архитектуры
-и режима установки для {rel131-current}-RELEASE].
-* Для получения самого последнего релиза {rel2-stable},
-{rel123-current}-RELEASE, перейдите по ссылке для выбора
-link:https://www.freebsd.org/where/#download-rel123[соответствующей архитектуры и режима установки для {rel123-current}-RELEASE].
-* link:https://www.FreeBSD.org/snapshots/[Снэпшот-релизы] для веток
-<<current,-CURRENT>> и <<stable,-STABLE>> выпускаются ежемесячно, но они нужны
-исключительно для разработчиков и тех, кто тестирует самые последние
-нововведения.
+* Для получения самого последнего релиза {rel-stable}, {rel132-current}-RELEASE, перейдите по ссылке для выбора link:https://www.freebsd.org/where/#download-rel132[соответствующей архитектуры и режима установки для {rel132-current}-RELEASE].
+* Для получения самого последнего релиза {rel2-stable}, {rel124-current}-RELEASE, перейдите по ссылке для выбора link:https://www.freebsd.org/where/#download-rel124[соответствующей архитектуры и режима установки для {rel124-current}-RELEASE].
+* link:https://www.FreeBSD.org/snapshots/[Снэпшот-релизы] для веток <<current,-CURRENT>> и <<stable,-STABLE>> выпускаются ежемесячно, но они нужны исключительно для разработчиков и тех, кто тестирует самые последние нововведения.
 
 Информация о возможностях получения FreeBSD на CD, DVD и других носителях
 доступна в extref:{handbook}mirrors/[Руководстве, mirrors].
