@@ -10,7 +10,7 @@ tags: ["FAQ", "FreeBSD FAQ"]
 layout: single
 ---
 
-// Original EN revision (22.05.2023): 34c42fd3b3d491814035dc03b476fa2fd9fd156a
+// Original EN revision (22.07.2023): 11611d6b5aa14e7520fb976cc72c4a925c1a1729
 
 = Часто задаваемые вопросы по FreeBSD {rel2-relx} и {rel-relx}
 :doctype: book
@@ -436,7 +436,7 @@ https://wiki.freebsd.org/IRC/Channels[список IRC-каналов].
 [[training]]
 === Где можно пройти платные курсы по FreeBSD и получить поддержку?
 
-http://www.ixsystems.com[iXsystems, Inc.], дочерней компанией которой является http://www.freebsdmall.com/[FreeBSD Mall], оказывает http://www.ixsystems.com/bsdsupport[услуги поддержки] программного обеспечения FreeBSD и TrueOS на коммерческой основе, в дополнение к разработке FreeBSD и решениям, требующим тонкой настройки.
+http://www.ixsystems.com[iXsystems, Inc.], дочерней компанией которой является http://www.freebsdmall.com/[FreeBSD Mall], оказывает http://www.ixsystems.com/support[услуги поддержки] программного обеспечения FreeBSD на коммерческой основе, в дополнение к разработкам на платформе FreeBSD и решениям, требующим тонкой настройки.
 
 BSD Certification Group, Inc. предоставляет сертификацию системного администрирования DragonFly BSD, FreeBSD, NetBSD и OpenBSD. Для получения дополнительной информации посетите http://www.BSDCertification.org[их сайт].
 
