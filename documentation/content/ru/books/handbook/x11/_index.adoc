@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (13.02.2023): 2ddb6c9f38dfb4d6935792d9a0161c2ea5a77334
+// Original EN revision (17.02.2023): bef2d6fc48e91189f6c378046cc3a889bcc7d879
 //
 
 ---
@@ -278,14 +278,14 @@ FreeBSD поддерживает различные версии проприе�
 | x11/nvidia-driver-470
 | link:https://www.nvidia.com/Download/driverResults.aspx/191234/en-us/[поддерживаемое оборудование]
 
-| x11/nvidia-driver-510
+| x11/nvidia-driver
 | link:https://www.nvidia.com/Download/driverResults.aspx/187164/en-us/[поддерживаемое оборудование]
 
 |===
 
 [WARNING]
 ====
-Версия 304 драйверов графики NVIDIA(R) (package:x11/nvidia-driver-304[]) не поддерживает xorg-server версии 1.20 и выше.
+Версия 304 драйверов графики NVIDIA(R) (nvidia-driver-304) не поддерживает xorg-server версии 1.20 и выше.
 ====
 
 Самый последний драйвер NVIDIA(R) можно установить, выполнив следующую команду:
