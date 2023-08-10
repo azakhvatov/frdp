@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (17.02.2023): bef2d6fc48e91189f6c378046cc3a889bcc7d879
+// Original EN revision (04.03.2023): 74845c5c7fbe2822092af5fa238a5a7d12ecd38d
 //
 
 ---
@@ -14,7 +14,6 @@ tags: ["X11", "Xorg", "TrueType", "Intel", "AMD", "NVIDIA", "Anti-Aliased", "VES
 showBookMenu: true
 weight: 7
 path: "/books/handbook/"
-aliases: ["/ru/books/handbook/x-understanding/","/ru/books/handbook/x-install/","/ru/books/handbook/x-config/","/ru/books/handbook/x-fonts/","/ru/books/handbook/x-xdm/","/ru/books/handbook/x11-wm/","/ru/books/handbook/x-compiz-fusion/","/ru/books/handbook/x11-troubleshooting/"]
 ---
 
 [[x11]]
