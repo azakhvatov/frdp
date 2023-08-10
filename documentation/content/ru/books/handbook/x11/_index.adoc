@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (04.03.2023): 9af61238fc24d4772b3c9e5fbd63fcaee2526699
+// Original EN revision (05.03.2023): 8cd114521263d52494afebc6d74472f9f38a99ab
 //
 
 ---
@@ -364,7 +364,7 @@ EndSection
 ====
 
 Для настройки драйвера AMD(R) в конфигурационном файле:
-[[x-config-video-cards-file-intel]]
+[[x-config-video-cards-file-amd]]
 .Выберите драйвер видео AMD(R) в файле
 [example]
 ====
@@ -381,7 +381,7 @@ EndSection
 
 Для настройки драйвера NVIDIA(R) в конфигурационном файле:
 
-[[x-config-video-cards-file-intel]]
+[[x-config-video-cards-file-nvidia]]
 .Выберите драйвер видео NVIDIA(R) в файле
 [example]
 ====
@@ -398,7 +398,7 @@ EndSection
 
 Для настройки драйвера VESA в конфигурационном файле:
 
-[[x-config-video-cards-file-intel]]
+[[x-config-video-cards-file-vesa]]
 .Выберите драйвер видео VESA в файле
 [example]
 ====
@@ -415,7 +415,7 @@ EndSection
 
 Для настройки драйвера SCFB в конфигурационном файле:
 
-[[x-config-video-cards-file-intel]]
+[[x-config-video-cards-file-sfcb]]
 .Выберите драйвер видео SCFB в файле
 [example]
 ====
