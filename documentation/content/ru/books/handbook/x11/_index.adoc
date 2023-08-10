@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (04.03.2023): 74845c5c7fbe2822092af5fa238a5a7d12ecd38d
+// Original EN revision (04.03.2023): 9af61238fc24d4772b3c9e5fbd63fcaee2526699
 //
 
 ---
@@ -298,17 +298,16 @@ FreeBSD поддерживает различные версии проприе�
 
 [source,shell]
 ....
-# sysrc kld_list+=nvidia
+# sysrc kld_list+=nvidia-modeset
 ....
 
 [WARNING]
 ====
-Драйвер `nvidia-modeset` должен использоваться *исключительно* в качестве альтернативы для `nvidia`, если запуск сервера X приводит к зависанию или в `/var/log/Xorg.0.log` появляются следующие строки:
+Драйвер `nvidia` должен использоваться в случае, если установлен пакет x11/nvidia-driver-304 или x11/nvidia-driver-340.
 
-[.programlisting]
+[source,shell]
 ....
-(II) NVIDIA(0): Validated MetaModes:
-(II) NVIDIA(0):     "NULL"
+# sysrc kld_list+=nvidia
 ....
 ====
 
