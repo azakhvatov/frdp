@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (22.04.2023): fe27cb167ac0d42f7dfef344adb8c0b1779d921e
+// Original EN revision (12.07.2023): b54c362ba634bc7ca080be3bfe8b05d62c8c8d71
 //
 
 ---
@@ -278,7 +278,7 @@ FreeBSD поддерживает различные версии проприе�
 | link:https://www.nvidia.com/Download/driverResults.aspx/191234/en-us/[поддерживаемое оборудование]
 
 | x11/nvidia-driver
-| link:https://www.nvidia.com/Download/driverResults.aspx/202352/en-us/[поддерживаемое оборудование]
+| link:https://www.nvidia.com/Download/driverResults.aspx/205466/en-us/[поддерживаемое оборудование]
 
 |===
 
