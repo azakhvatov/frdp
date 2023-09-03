@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r33212
+// Original EN revision (SVN): r33245
 //
 
 ---
@@ -172,7 +172,7 @@ _crossref:l10n[l10n, Локализация - использование и на
 _crossref:cutting-edge[updating-upgrading, Обновление системы и смена версии FreeBSD], Обновление системы и смена версии_::
 Объясняет различия между FreeBSD-STABLE, FreeBSD-CURRENT и FreeBSD-RELEASE. Рассказывает, кому из пользователей будет полезно отслеживать версию системы в разработке и вкратце описывает этот процесс.
 
-_crossref:dtrace[dtrace, Dtrace], Dtrace_::
+_crossref:dtrace[dtrace, DTrace], DTrace_::
 Описывает порядок настройки и использования инструмента DTrace компании Sun(TM) во FreeBSD.  Динамическая трассировка может помочь в локализации проблем с производительностью за счёт выполнения анализа системы в реальном режиме времени.
 
 // Часть IV - Сетевые Коммуникации
