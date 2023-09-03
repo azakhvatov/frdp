@@ -58,6 +58,12 @@ other = "by"
 [search]
 other = "Поиск"
 
+[stale-warning-message]
+other = "Этот перевод может быть устаревшим. Для того, чтобы помочь с переводом, пожалуйста, обратитесь к"
+
+[translation-instance]
+other = "Сервер переводов FreeBSD"
+
 # ---------------------------------------------------
 # Верхний колонтитул
 # ---------------------------------------------------
@@ -66,6 +72,84 @@ other = "Документация"
 
 [community]
 other = "Сообщество"
+
+[h-about]
+other = "О нас"
+
+[h-freebsd]
+other = "FreeBSD"
+
+[h-freebsd-foundation]
+other = "Фонд FreeBSD"
+
+[h-code-of-conduct]
+other = "Кодекс Этики"
+
+[h-get-freebsd]
+other = "Получить FreeBSD"
+
+[h-release-information]
+other = "Информация о релизах"
+
+[h-release-engineering]
+other = "Подготовка релизов"
+
+[h-security-advisories]
+other = "Бюллетени Безопасности"
+
+[h-documentation]
+other = "Документация"
+
+[h-documentation-portal]
+other = "Портал документации"
+
+[h-freebsd-handbook]
+other = "Руководство"
+
+[h-porter-handbook]
+other = "Руководство по созданию портов"
+
+[h-documentation-handbook]
+other = "Учебник Проекта Документирования"
+
+[h-manual-pages]
+other = "Страницы Справочника"
+
+[h-presentation-and-papers]
+other = "Презентации и публикации"
+
+[h-wiki]
+other = "Wiki"
+
+[h-books]
+other = "Книги"
+
+[h-articles]
+other = "Статьи"
+
+[h-community]
+other = "Сообщество"
+
+[h-get-involved]
+other = "Стать участником"
+
+[h-community-forum]
+other = "Форум"
+
+[h-mailing-lists]
+other = "Списки рассылки"
+
+[h-irc-channels]
+other = "Каналы IRC"
+
+[h-bug-tracker]
+other = "Трекер ошибок"
+
+[h-support]
+other = "Поддержка"
+
+[h-donate]
+other = "Пожертвования"
 
 # ---------------------------------------------------
 # Главная страница
@@ -107,7 +191,7 @@ other = "Учебник Проекта Документирования"
 other = "Полное руководство, посвящённое тому, как принять участие в создании документации"
 
 [books-list]
-other = "Список книг по FreeBSD"
+other = "Список книг о FreeBSD"
 
 [articles-list]
 other = "Список статей о FreeBSD"
@@ -133,6 +217,87 @@ other = "Тёмный"
 [high-contrast]
 other = "Высокая контрастность"
 
+[f-about]
+other = "О нас"
+
+[f-freebsd]
+other = "FreeBSD"
+
+[f-freebsd-foundation]
+other = "Фонд FreeBSD"
+
+[f-get-freebsd]
+other = "Получить FreeBSD"
+
+[f-code-of-conduct]
+other = "Кодекс Этики"
+
+[f-security-advisories]
+other = "Бюллетени Безопасности"
+
+[f-documentation]
+other = "Документация"
+
+[f-documentation-portal]
+other = "Портал документации"
+
+[f-manual-pages]
+other = "Страницы Справочника"
+
+[f-presentation-and-papers]
+other = "Презентации и публикации"
+
+[f-previous-versions]
+other = "Предыдущие версии"
+
+[f-44bsd-documents]
+other = "Документы 4.4BSD"
+
+[f-wiki]
+other = "Wiki"
+
+[f-community]
+other = "Сообщество"
+
+[f-get-involved]
+other = "Принять участие"
+
+[f-community-forum]
+other = "Форум Сообщества"
+
+[f-mailing-lists]
+other = "Списки рассылки"
+
+[f-irc-channels]
+other = "Каналы IRC"
+
+[f-bug-tracker]
+other = "Трекер ошибок"
+
+[f-legal]
+other = "Юридическая информация"
+
+[f-donations]
+other = "Пожертвования"
+
+[f-licensing]
+other = "Лицензирование"
+
+[f-privacy-policy]
+other = "Политика Конфиденциальности"
+
+[f-legal-notices]
+other = "Юридические оговорки"
+
+[f-all-rights-reserved]
+other = "Проект FreeBSD. Все права защищены"
+
+[f-made-with]
+other = "Сделано с помощью"
+
+[f-by-freebsd-community]
+other = "Сообществом FreeBSD"
+
 [previous-versions]
 other = "Предыдущие версии"
 
@@ -140,7 +305,7 @@ other = "Предыдущие версии"
 other = "Документы 4.4BSD"
 
 [about]
-other = "Общая информация"
+other = "О нас"
 
 [legal]
 other = "Юридическая информация"
@@ -149,7 +314,7 @@ other = "Юридическая информация"
 other = "Пожертвования"
 
 [legal-notices]
-other = "Юридические пояснения"
+other = "Юридические оговорки"
 
 [made-with]
 other = "Сделано при помощи"
