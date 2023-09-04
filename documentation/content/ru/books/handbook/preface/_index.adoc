@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r36722
+// Original EN revision (SVN): r37811
 //
 
 ---
@@ -65,8 +65,8 @@ endif::[]
 * Добавлена глава crossref:dtrace[dtrace,DTrace], содержащая информацию о мощном инструменте анализа производительности DTrace.
 * Добавлена глава crossref:filesystems[filesystems,Поддержка Файловых Систем], содержащая информацию о поддержке неосновных файловых систем во FreeBSD, таких как ZFS от компании Sun(TM).
 * Добавлена глава crossref:audit[audit,Аудит Событий Безопасности], покрывающая новые возможности аудита во FreeBSD и описывающая его использование.
-
 * Добавлена глава crossref:virtualization[virtualization,Виртуализация] с информацией об установке FreeBSD в виртуализированном программном окружении.
+* Добавлена глава crossref:bsdinstall[bsdinstall,Установка FreeBSD 9.x и более поздних версий], описывающая установку FreeBSD при помощи новой установочной утилиты bsdinstall.
 
 [[preface-changes-from2]]
 == Изменения по сравнению со Вторым Изданием (2004)
