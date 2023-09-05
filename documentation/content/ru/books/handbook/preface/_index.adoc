@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r39544
+// Original EN revision (SVN): r39631
 //
 
 ---
@@ -9,7 +9,7 @@ title: Предисловие
 prev: books/handbook/
 next: books/handbook/parti
 showBookMenu: true
-weight: 1
+weight: 15
 path: "/books/handbook/"
 ---
 
