@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r42896
+// Original EN revision (SVN): r42900
 //
 
 ---
@@ -256,7 +256,7 @@ kbd:[Ctrl+X], kbd:[Ctrl+S]
 [[preface-conv-examples]]
 === Примеры
 
-Примеры, которые начинаются с [.filename]#E:\># обозначают команды MS-DOS(R). Если не указано обратного, эти команды могут вводиться из окна "Сеанс MS-DOS(R)" в современных системах Microsoft(R) Windows(R).
+Примеры, которые начинаются с [.filename]#C:\>#, обозначают команды MS-DOS(R).  Если не указано обратного, эти команды могут вводиться из окна "Командная строка" в современных системах Microsoft(R) Windows(R).
 
 [source,shell]
 ....
