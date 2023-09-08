@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (11.12.2021): 2b027dd0175e739f8b5fedd2ae6bd96cf0c14125
+// Original EN revision (21.05.2022): d95da68f2e546f5c9daa0c22651eb061a689f0fe
 //
 
 ---
@@ -303,3 +303,5 @@ C:\> tools\fdimage floppies\kern.flp A:
 Впоследствии компания Wind River Systems оплатила работу нескольких авторов по улучшению генерации книги в удобном для печати виде и добавлению нескольких глав.
 Кульминация этой работы являла собой публикацию второй печатной версии в ноябре 2001 года (ISBN 1-57176-303-1).
 В 2003-2004 годах http://www.freebsdmall.com[FreeBSD Mall, Inc] заплатила нескольким контрибьюторам за улучшение Handbook при подготовке к третьей редакции.
+Третье печатное издание было разделено на два тома.
+Оба тома были опубликованы и получили названия The FreeBSD Handbook 3rd Edition Volume 1:User Guide (ISBN 1-57176-327-9) и The FreeBSD Handbook 3rd Edition Volume 2: Administrators Guide (ISBN 1-57176-328-7).
