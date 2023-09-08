@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (03.11.2021): 64acd169b82416fe39ad8c4b1be106680d4a3eb3
+// Original EN revision (11.12.2021): 2b027dd0175e739f8b5fedd2ae6bd96cf0c14125
 //
 
 ---
@@ -11,7 +11,7 @@ next: books/handbook/parti
 description: Начинающий пользователь FreeBSD увидит, что первая часть этой книги помогает пройти процесс установки FreeBSD и ненавязчиво объясняет концепции и соглашения, лежащие в основе UNIX
 tags: ["предисловие", "аудитория", "организация", "соглашения", "благодарности"]
 showBookMenu: true
-weight: 15
+weight: 1
 path: "/books/handbook/"
 ---
 
