@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r47274
+// Original EN revision (16.02.2021): bba35091cdc17904a014528b6781b0ad7073ac49
 //
 
 ---
@@ -253,7 +253,7 @@ kbd:[Ctrl+X], kbd:[Ctrl+S]
 
 [source,shell]
 ....
-E:\> tools\fdimage floppies\kern.flp A:
+C:\> tools\fdimage floppies\kern.flp A:
 ....
 
 Примеры, которые начинаются с # обозначают команды, которые должны быть запущены с правами суперпользователя в FreeBSD. Вы можете войти в систему как пользователь `root` для того, чтобы ввести эти команды или войти в систему обычным пользователем и использовать man:su[1] для того, чтобы получить привилегии суперпользователя.
