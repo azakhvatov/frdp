@@ -1,9 +1,3 @@
-//
-// The FreeBSD Russian Documentation Project
-//
-// Original EN revision (08.01.2023): d17f5a8e61630f4514fdc93d113e4173234b1395
-//
-
 ---
 title: Предисловие
 prev: books/handbook
@@ -49,6 +43,12 @@ ifndef::env-beastie[]
 toc::[]
 include::../../../../../shared/asciidoctor.adoc[]
 endif::[]
+
+//
+// The FreeBSD Russian Documentation Project
+//
+// Original EN revision (08.01.2023): d17f5a8e61630f4514fdc93d113e4173234b1395
+//
 
 [[preface-audience]]
 == Целевая аудитория
@@ -146,7 +146,7 @@ _crossref:introduction[introduction,Введение]_::
 Знакомит пользователя с FreeBSD. Рассказывает об истории проекта FreeBSD, его задачах и модели разработки.
 
 _crossref:bsdinstall[bsdinstall,Установка FreeBSD]_::
-Проводит пользователя через весь процесс установки FreeBSD 9.x и более поздних версий с использованием sysinstall. 
+Проводит пользователя через весь процесс установки FreeBSD 9.x и более поздних версий с использованием sysinstall.
 
 _crossref:basics[basics,Основы FreeBSD]_::
 Рассказывает об основных командах и функциональности операционной системы FreeBSD. Если вы знакомы с Linux(R) или другой UNIX(R)-подобной операционной системой, возможно, вы пропустите эту главу.
