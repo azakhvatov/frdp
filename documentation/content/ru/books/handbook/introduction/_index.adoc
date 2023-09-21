@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r33449
+// Original EN revision (SVN): r33452
 //
 
 ---
@@ -117,22 +117,27 @@ FreeBSD доступна как в исходных текстах, так и в
 
 === Кто использует FreeBSD?
 
-FreeBSD используется в качестве платформы на некоторых крупнейших сайтах в интернет, включая:
+FreeBSD используется как платформа в устройствах и продуктах многих крупнейших ИТ-компаний мира, в том числе:
+
+* http://www.apple.com/[Apple]
+* http://www.cisco.com/[Cisco]
+* http://www.juniper.com/[Juniper]
+* http://www.netapp.com/[NetApp]
+
+FreeBSD также обеспечивает работу некоторых крупнейших сайтов Интернет, среди которых:
 
 * http://www.yahoo.com/[Yahoo!]
 * http://www.yandex.ru/[Yandex]
 * http://www.apache.org/[Apache]
-* http://www.bluemountain.com/[Blue Mountain Arts]
+* http://www.rambler.ru/[Rambler]
 * http://www.pair.com/[Pair Networks]
 * http://www.sony.co.jp/[Sony Japan]
 * http://www.netcraft.com/[Netcraft]
 * http://www.wni.com/[Weathernews]
-* http://www.supervalu.com/[Supervalu]
 * http://www.telehouse.com/[TELEHOUSE America]
 * http://www.sophos.com/[Sophos Anti-Virus]
-* http://www.jmawired.com/[JMA Wired]
 
-и на многих других.
+и многие другие.
 
 [[history]]
 == О Проекте FreeBSD
