@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r32814
+// Original EN revision (SVN): r33440
 //
 
 ---
@@ -120,6 +120,7 @@ FreeBSD доступна как в исходных текстах, так и в
 FreeBSD используется в качестве платформы на некоторых крупнейших сайтах в интернет, включая:
 
 * http://www.yahoo.com/[Yahoo!]
+* http://www.yandex.ru/[Yandex]
 * http://www.apache.org/[Apache]
 * http://www.bluemountain.com/[Blue Mountain Arts]
 * http://www.pair.com/[Pair Networks]
