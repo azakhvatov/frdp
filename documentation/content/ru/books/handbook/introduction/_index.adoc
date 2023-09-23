@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r33452
+// Original EN revision (SVN): r33457
 //
 
 ---
@@ -130,12 +130,12 @@ FreeBSD также обеспечивает работу некоторых кр
 * http://www.yandex.ru/[Yandex]
 * http://www.apache.org/[Apache]
 * http://www.rambler.ru/[Rambler]
+* http://www.sina.com/[Sina]
 * http://www.pair.com/[Pair Networks]
 * http://www.sony.co.jp/[Sony Japan]
 * http://www.netcraft.com/[Netcraft]
 * http://www.wni.com/[Weathernews]
 * http://www.telehouse.com/[TELEHOUSE America]
-* http://www.sophos.com/[Sophos Anti-Virus]
 
 и многие другие.
 
