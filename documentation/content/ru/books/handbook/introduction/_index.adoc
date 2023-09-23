@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r33636
+// Original EN revision (SVN): r33708
 //
 
 ---
@@ -122,7 +122,7 @@ FreeBSD используется как платформа в устройств
 
 * http://www.apple.com/[Apple]
 * http://www.cisco.com/[Cisco]
-* http://www.juniper.com/[Juniper]
+* http://www.juniper.net/[Juniper]
 * http://www.netapp.com/[NetApp]
 
 FreeBSD также обеспечивает работу некоторых крупнейших сайтов Интернет, среди которых:
