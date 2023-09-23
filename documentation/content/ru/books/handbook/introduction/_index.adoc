@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r33457
+// Original EN revision (SVN): r33565
 //
 
 ---
@@ -115,6 +115,7 @@ FreeBSD основана на 4.4BSD-Lite от Computer Systems Research Group (
 
 FreeBSD доступна как в исходных текстах, так и в двоичном виде на CD-ROM, DVD и через анонимный доступ к FTP. Подробнее о том, как получить FreeBSD, см. в crossref:mirrors[mirrors, Получение FreeBSD].
 
+[[introduction-nutshell-users]]
 === Кто использует FreeBSD?
 
 FreeBSD используется как платформа в устройствах и продуктах многих крупнейших ИТ-компаний мира, в том числе:
