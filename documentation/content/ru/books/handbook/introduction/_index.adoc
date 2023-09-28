@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r41758
+// Original EN revision (SVN): r41759
 //
 
 ---
@@ -136,7 +136,7 @@ FreeBSD также обеспечивает работу некоторых кр
 * http://www.sony.co.jp/[Sony Japan]
 * http://www.netcraft.com/[Netcraft]
 * http://www.163.com/[NetEase]
-* http://www.wni.com/[Weathernews]
+* http://www.weathernews.com/[Weathernews]
 * http://www.telehouse.com/[TELEHOUSE America]
 * http://www.experts-exchange.com/[Experts Exchange]
 
