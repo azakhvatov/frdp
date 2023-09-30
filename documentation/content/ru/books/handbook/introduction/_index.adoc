@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r42409
+// Original EN revision (SVN): r42851
 //
 
 ---
@@ -134,6 +134,7 @@ FreeBSD также обеспечивает работу некоторых кр
 * http://www.pair.com/[Pair Networks]
 * http://www.sony.co.jp/[Sony Japan]
 * http://www.netcraft.com/[Netcraft]
+* https://signup.netflix.com/openconnect[Netflix]
 * http://www.163.com/[NetEase]
 * http://www.weathernews.com/[Weathernews]
 * http://www.telehouse.com/[TELEHOUSE America]
