@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r50360
+// Original EN revision (SVN): r50968
 //
 
 ---
@@ -264,4 +264,4 @@ link:file://localhost/usr/local/share/doc/freebsd/handbook/index.html[/usr/local
 FreeBSD FAQ (Часто задаваемые вопросы)::
 link:file://localhost/usr/local/share/doc/freebsd/faq/index.html[/usr/local/share/doc/freebsd/faq/index.html]
 
-Вы также можете просмотреть основные (и наиболее часто обновляемые) копии на http://www.FreeBSD.org/ru/[http://www.FreeBSD.org/ru/].
+Вы также можете просмотреть основные (и наиболее часто обновляемые) копии на https://www.FreeBSD.org/ru/[https://www.FreeBSD.org/ru/].
