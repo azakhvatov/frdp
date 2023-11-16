@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r51251
+// Original EN revision (SVN): r51826
 //
 
 ---
@@ -68,7 +68,7 @@ endif::[]
 [[nutshell]]
 == Добро пожаловать во FreeBSD!
 
-FreeBSD - это операционная система, основанная на 4.4BSD-Lite и предназначенная для компьютеров Intel (x86 и Itanium(R)), AMD64, ARM(R) и Sun UltraSPARC(R). Ведётся работа по портированию и на другие архитектуры. Вы можете также прочесть об <<history,истории FreeBSD>>, или о link:https://www.freebsd.org/releases[текущем релизе]. Если вы заинтересованы в помощи проекту (разработками, оборудованием, финансированием), прочтите статью extref:{contributing}[Помощь FreeBSD].
+FreeBSD - это Unix-подобная операционная система с открытым кодом, изначально основанная на 4.4BSD-Lite и предназначенная для компьютеров Intel (32 и 64-разрядных), ARM, AArch64,  RISC-V, MIPS, POWER, PowerPC и Sun UltraSPARC(R). Вы можете также прочесть об <<history,истории FreeBSD>>, или о link:https://www.freebsd.org/releases[текущем релизе]. Если вы заинтересованы в помощи проекту (разработками, оборудованием, финансированием), прочтите статью extref:{contributing}[Помощь FreeBSD].
 
 === Что может FreeBSD?
 
