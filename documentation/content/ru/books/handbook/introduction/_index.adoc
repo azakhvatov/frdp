@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r52020
+// Original EN revision (SVN): r52021
 //
 
 ---
@@ -110,16 +110,16 @@ FreeBSD доступна к скачиванию без дополнительн
 [[introduction-nutshell-users]]
 === Кто использует FreeBSD?
 
-FreeBSD известна своими возможностями по обеспечению работы веб-серверов, и среди тех, что используют FreeBSD:
-
-* http://www.netcraft.com/[Netcraft]
-* http://www.163.com/[NetEase]
-* https://signup.netflix.com/openconnect[Netflix]
-* http://www.sina.com/[Sina]
-* http://www.sony.co.jp/[Sony Japan]
-* http://www.rambler.ru/[Rambler]
-* http://www.yahoo.com/[Yahoo!]
-* http://www.yandex.ru/[Yandex]
+FreeBSD известна своими возможностями по обеспечению работы веб-серверов, и в списке тех, что используют FreeBSD, можно найти
+link:https://news.ycombinator.com/[Hacker News],
+link:http://www.netcraft.com/[Netcraft],
+link:http://www.163.com/[NetEase],
+link:https://signup.netflix.com/openconnect[Netflix],
+link:http://www.sina.com/[Sina],
+link:http://www.sony.co.jp/[Sony Japan],
+link:http://www.rambler.ru/[Rambler],
+link:http://www.yahoo.com/[Yahoo!] и
+link:http://www.yandex.ru/[Yandex].
 
 Передовые возможности FreeBSD, признанная безопасность, предсказуемый цикл выпуска версий и неограничивающей лицензией способствовали её использованию в качестве платформы для построения многих готовых решений, устройств и продуктов, как коммерческих, так и открытых. FreeBSD используется многими крупнейшими ИТ-компаниями мира:
 
