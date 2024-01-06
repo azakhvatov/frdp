@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): r54306
+// Original EN revision (26.01.2021): 989d921f5d4ac8d8b7c831c13b8954ad1901be24
 //
 
 ---
