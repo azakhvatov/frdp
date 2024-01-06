@@ -1,14 +1,15 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (13.04.2021): 6b0ae8b1ffb025e4917e1091403af19871a23fa9
+// Original EN revision (02.05.2021): 0d9894b11e0e94cde952b0112782e68e27c893da
 //
 
 ---
 title: Глава 1. Введение
 part: Часть I. Начало работы
 prev: books/handbook/parti
-next: books/handbook/install
+next: books/handbook/bsdinstall
+description: Эта глава посвящена различным аспектам Проекта FreeBSD, в частности, его истории, целям, модели разработки и так далее
 showBookMenu: true
 weight: 3
 path: "/books/handbook/"
