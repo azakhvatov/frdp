@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (17.01.2022): bea17821ed7d28bbbd85ccd7619a6b4672ed8e14
+// Original EN revision (17.01.2022): e4831417a67a4c94fbcb438fc37634025fa4bb1d
 //
 
 ---
@@ -279,13 +279,19 @@ extref:{contributors}[Список контрибуторов проекта Fre
 === Дополнительная документация
 
 Все поддерживаемые версии FreeBSD предоставляют возможность указать программе установки на копирование дополнительной документации в каталог [.filename]#/usr/local/share/doc/freebsd# во время первичной настройки системы.
-Также документация может быть установлена в любой момент позже при помощи пакетов, как описано в разделе crossref:cutting-edge[doc-ports-install-package,Обновление документации из Портов].
-Вы можете просматривать локально установленные документы с помощью любого браузера, поддерживающего HTML, используя следующие ссылки:
+Документация также может быть установлена в любое время позже при помощи пакетов:
+[source,shell]
+....
+# pkg install en-freebsd-doc
+....
+
+Для локализованных версий замените "en" на префикс выбранного языка.
+Вы можете просматривать локально установленные документы с помощью веб-браузера, используя следующие ссылки:
 
 Руководство FreeBSD::
-[.filename]#link:file://localhost/usr/local/share/doc/freebsd/handbook/index.html[/usr/local/share/doc/freebsd/handbook/index.html]#
+[.filename]#link:file:///usr/local/share/doc/freebsd/en/books/handbook/book.html[/usr/local/share/doc/freebsd/en/books/handbook/book.html]#
 
 FreeBSD FAQ (Часто задаваемые вопросы)::
-[.filename]#link:file://localhost/usr/local/share/doc/freebsd/faq/index.html[/usr/local/share/doc/freebsd/faq/index.html]#
+[.filename]#link:file://localhost/usr/local/share/doc/freebsd/en/books/faq/book.html[/usr/local/share/doc/freebsd/en/books/faq/book.html]#
 
-Вы также можете просмотреть основные (и наиболее часто обновляемые) копии на https://www.FreeBSD.org/ru/[https://www.FreeBSD.org/ru/].
+Вы всегда можете найти самые актуальные копии по адресу https://docs.FreeBSD.org/[https://docs.FreeBSD.org/].
