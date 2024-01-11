@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (10.06.2022): 3613834f5a9e7326f5c63ca900e0b02d7edb0eb6
+// Original EN revision (24.06.2022): a7a82e122ec1a56b2cd65c219f242be2957b07ac
 //
 
 ---
@@ -136,7 +136,7 @@ FreeBSD используется многими крупнейшими ИТ-ко
 * link:http://www.netapp.com/[NetApp] - Линейка устройств хранения Data ONTAP GX основана на FreeBSD. Кроме того, NetApp передал во FreeBSD много новых функций, в том числе bhyve, новый гипервизор с лицензией BSD.
 * link:http://www.netflix.com/[Netflix] - Устройство OpenConnect, которое используется Netflix для трансляции фильмов своим подписчикам, основано на FreeBSD.  Netflix внесла существенный вклад в код и работы, направленные на поддержание нулевых отличий от основной ветки FreeBSD. Через устройства Netflix OpenConnect обеспечивается доставка более чем 32% всего трафика Интернет в Северной Америке.
 * link:http://www.sandvine.com/[Sandvine] - Sandvine использует FreeBSD в качестве основы для своих высокопроизводительных платформ обработки сетевого трафика реального времени, являющихся ядром их продуктов интеллектуального контроля сетевых политик.
-* link:http://www.sony.com/[Sony] - Игровые консоли PlayStation 3, PlayStation Vita, PlayStation 4 и PlayStation 5 работают под управлением модифицированной версии FreeBSD.
+* link:http://www.sony.com/[Sony] - Игровые консоли PlayStation Vita, PlayStation 4 и PlayStation 5 работают под управлением модифицированной версии FreeBSD.
 * link:http://www.sophos.com/[Sophos] - Продукт Sophos Email Appliance, основанный на защищённом варианте FreeBSD, предназначен для сканирования входящей почты на предмет спама и вирусов с одновременным мониторингом исходящей почты на наличие вредоносных программ и случайных утечек чувствительной информации.
 * link:http://www.spectralogic.com/[Spectra Logic] - Линейка устройств хранения данных архивного класса nTier использует FreeBSD и OpenZFS.
 * link:https://www.stormshield.com[Stormshield] - Устройства Stormshield Network Security построены на версии FreeBSD с усиленной защитой.  Лицензия BSD позволяет им интегрировать их результаты интеллектуальной деятельности в систему, одновременно с этим делясь большим количеством интересных разработок с сообществом.
