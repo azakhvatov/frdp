@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (12.01.2023): e1ecde315c9847a7f8a607d639540fbab713f550
+// Original EN revision (04.03.2023): 74845c5c7fbe2822092af5fa238a5a7d12ecd38d
 //
 
 ---
@@ -14,7 +14,6 @@ tags: ["введение", "краткий обзор", "о системе", "К
 showBookMenu: true
 weight: 3
 path: "/books/handbook/"
-aliases: ["/ru/books/handbook/nutshell/", "/ru/books/handbook/history/"]
 ---
 
 [[introduction]]
