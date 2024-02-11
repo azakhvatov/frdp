@@ -10,7 +10,7 @@ tags: ["FAQ", "FreeBSD FAQ"]
 layout: single
 ---
 
-// Original EN revision (16.12.2023): 1c49288d58b161c364b1bc2e5231f3ac16182bdc
+// Original EN revision (29.12.2023): 4348bf7a124dad60a08bfab3dcfabc103e8c63ac
 
 = Часто задаваемые вопросы по FreeBSD
 :doctype: book
@@ -545,7 +545,7 @@ FreeBSD будет проактивно перемещать полностью 
 Отвлекитесь от технических вопросов и погрузитесь в шутливую сторону FreeBSD.
 
 [[very-very-cool]]
-=== Насколько FreeBSD горяча?
+=== Насколько горяча FreeBSD?
 
 [qanda]
 Кто-нибудь делал замеры температуры при работе FreeBSD?::
