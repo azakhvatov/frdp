@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (20.09.2023): ae2938119d90681f355e2b8f736fb8ffc877b811
+// Original EN revision (28.09.2023): f3e091d0eb396b036b8725e0531f4298bea67c96
 //
 
 ---
@@ -275,10 +275,10 @@ FreeBSD поддерживает различные версии проприе�
 | link:https://www.nvidia.com/Download/driverResults.aspx/191122/en-us/[поддерживаемое оборудование]
 
 | x11/nvidia-driver-470
-| link:https://www.nvidia.com/Download/driverResults.aspx/191234/en-us/[поддерживаемое оборудование]
+| link:https://www.nvidia.com/Download/driverResults.aspx/194639/en-us/[поддерживаемое оборудование]
 
 | x11/nvidia-driver
-| link:https://www.nvidia.com/Download/driverResults.aspx/205466/en-us/[поддерживаемое оборудование]
+| link:https://www.nvidia.com/Download/driverResults.aspx/210651/en-us/[поддерживаемое оборудование]
 
 |===
 
@@ -394,6 +394,11 @@ Section "Device"
        Driver     "nvidia"
 EndSection
 ....
+====
+
+[TIP]
+====
+Для простого управления параметрами настройки, доступными в драйвере NVIDIA, также может быть использован пакет package:x11/nvidia-xconfig[].
 ====
 
 Для настройки драйвера VESA в конфигурационном файле:
