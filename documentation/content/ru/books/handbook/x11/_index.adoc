@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (12.07.2023): b54c362ba634bc7ca080be3bfe8b05d62c8c8d71
+// Original EN revision (20.09.2023): ae2938119d90681f355e2b8f736fb8ffc877b811
 //
 
 ---
@@ -142,10 +142,10 @@ endif::[]
 | xf86-video-scfb
 | scfb
 
-| Virtualbox
+| VirtualBox(R)
 | Открытый код
 | virtualbox-ose-additions
-| Дополнения Virtualbox OSE включают драйвер `vboxvideo`.
+| Дополнения VirtualBox(R) OSE включают драйвер `vboxvideo`.
 
 | VMware(R)
 | Открытый код
