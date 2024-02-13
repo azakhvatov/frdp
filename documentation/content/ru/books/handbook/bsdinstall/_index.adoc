@@ -1,3 +1,9 @@
+//
+// The FreeBSD Russian Documentation Project
+//
+// Original EN revision: SVN 43414
+//
+
 ---
 title: Глава 3. Установка FreeBSD версий 9.X и более поздних
 part: Часть I. В начале
