@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (26.12.2023): e4a0a54f3fc4215fe5aef21d3b175e09e989ba3f
+// Original EN revision (28.12.2023): 6a75d949c94e7a6cb97c891ea50bfe47b561c6d1
 //
 
 ---
@@ -456,7 +456,7 @@ bindsym $mod+Shift+Return exec $lock
 xwayland = true
 ....
 
-В композитном менеджере Sway по умолчанию `Xwayland` должен быть включён.
+В композитном менеджере Sway параметр `Xwayland` должен быть включён по умолчанию.
 Несмотря на это, рекомендуется вручную добавить конфигурационную строку в файл [.filename]#~/.config/sway/config#, подобно следующему:
 
 [.programlisting]
