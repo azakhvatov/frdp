@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 44655
+// Original EN revision: SVN 44844
 //
 
 ---
@@ -385,8 +385,6 @@ image::bsdinstall-boot-loader-menu.png[]
 ....
  boot cd:,\ppc\loader cd:0
 ....
-
-При работе с машинами линейки Xserve без клавиатур обратитесь к странице link:http://support.apple.com/kb/TA26930[http://support.apple.com/kb/TA26930], посвящённой загрузке в режиме Open Firmware.
 
 ==== Загрузка sparc64
 
