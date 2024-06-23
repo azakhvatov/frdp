@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 44915
+// Original EN revision: SVN 44925
 //
 
 ---
@@ -1240,7 +1240,7 @@ ACPI может быть отключена путём установки зна
 [[using-live-cd]]
 == Использование Live CD
 
-Приветственное меню sysinstall, показанное в <<bsdinstall-choose-mode>>, содержит вариант btn:[Live CD].
+Приветственное меню bsdinstall, показанное в <<bsdinstall-choose-mode>>, содержит вариант btn:[Live CD].
 Он удобен для тех пользователей, которые всё еще размышляют о том, насколько FreeBSD будет для них правильным выбором и желают проверить некоторые функциональные возможности до её установки.
 
 До перехода к использованию варианта btn:[Live CD] необходимо отметить следующее:
