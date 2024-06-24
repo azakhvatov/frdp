@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 45602
+// Original EN revision: SVN 45695
 //
 
 ---
@@ -135,7 +135,7 @@ pc98::
 Шина NESA (New Extend Standard Architecture), используемая в линейках PC-H98, SV-H98 и FC-H98, не поддерживается.
 
 powerpc::
-Поддерживаются все системы Apple(R) Macintosh типа New World со встроенным USB.
+Поддерживаются все системы Apple(R) Mac(R) типа New World со встроенным USB.
 Для многопроцессорных машин есть поддержка SMP.
 
 32-разрядное ядро может использовать лишь первые 2 ГБ ОЗУ.
