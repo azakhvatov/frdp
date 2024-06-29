@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 47273
+// Original EN revision: SVN 47277
 //
 
 ---
@@ -15,7 +15,7 @@ path: "/books/handbook/"
 ---
 
 [[bsdinstall]]
-= Установка FreeBSD версий 9.X и более поздних
+= Установка FreeBSD
 :doctype: book
 :toc: macro
 :toclevels: 1
