@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 47277
+// Original EN revision: SVN 47511
 //
 
 ---
@@ -65,8 +65,8 @@ endif::[]
 [NOTE]
 ====
 Пользователей, которые предпочитают устанавливать FreeBSD при помощи графической программы установки, может заинтересовать программа pc-sysinstall, используемая для установки Проектом PC-BSD.
-Она может использоваться как установки либо рабочего места с графической оболочкой (PC-BSD), либо версии FreeBSD с командной строкой.
-Для уточнения деталей обратитесь к Руководству пользователя PC-BSD (link:http://wiki.pcbsd.org/index.php/PC-BSD%C2%AE_Users_Handbook/10.1[http://wiki.pcbsd.org/index.php/PC-BSD%C2%AE_Users_Handbook/10.1].
+Она может использоваться как установки либо рабочей станции с графической оболочкой (PC-BSD), либо версии FreeBSD с командной строкой.
+Для уточнения деталей обратитесь к Руководству пользователя PC-BSD (link:http://wiki.pcbsd.org/index.php/Colophon[http://wiki.pcbsd.org/index.php/Colophon]).
 ====
 
 После прочтения этой главы вы будете знать:
