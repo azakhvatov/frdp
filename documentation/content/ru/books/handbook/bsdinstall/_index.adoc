@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 48525
+// Original EN revision: SVN 48531
 //
 
 ---
@@ -72,8 +72,6 @@ endif::[]
 После прочтения этой главы вы будете знать:
 
 * Минимальные аппаратные требования и архитектуры, поддерживаемые FreeBSD.
-// WB: verify this, including GPT partition notation (ada0p2)
-// * Разбиение и именование разделов жёстких дисков во FreeBSD.
 * Как создавать установочные носители для FreeBSD.
 * Как запустить bsdinstall.
 * Вопросы, задаваемые утилитой bsdinstall, что они значат и как на них отвечать.
