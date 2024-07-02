@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 50125
+// Original EN revision: SVN 50142
 //
 
 ---
@@ -66,7 +66,7 @@ endif::[]
 ====
 Пользователей, которые предпочитают устанавливать FreeBSD при помощи графической программы установки, может заинтересовать программа pc-sysinstall, используемая для установки Проектом TrueOS.
 Она может использоваться как установки либо рабочей станции с графической оболочкой (TrueOS), либо версии FreeBSD с командной строкой.
-Для уточнения деталей обратитесь к Руководству пользователя TrueOS (link:http://wiki.pcbsd.org/index.php/Colophon[http://wiki.pcbsd.org/index.php/Colophon]).
+Для уточнения деталей обратитесь к Руководству пользователя TrueOS (link:https://www.trueos.org/handbook/trueos.html[https://www.trueos.org/handbook/trueos.html]).
 ====
 
 После прочтения этой главы вы будете знать:
