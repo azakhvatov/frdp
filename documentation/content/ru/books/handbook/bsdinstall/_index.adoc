@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 52928
+// Original EN revision: SVN 53101
 //
 
 ---
@@ -539,11 +539,6 @@ image::bsdinstall-netinstall-mirrorselect.png[]
 == Распределение дискового пространства
 
 Следующее меню используется для задания метода распределения дискового пространства.
-Набор доступных в меню вариантов зависит от устанавливаемой версии FreeBSD.
-
-[[bsdinstall-part-guided-manual]]
-.Варианты распределения для FreeBSD 9.x
-image::bsdinstall-part-guided-manual.png[]
 
 [[bsdinstall-zfs-partmenu]]
 .Варианты распределения для FreeBSD 10.x и более старших версий
