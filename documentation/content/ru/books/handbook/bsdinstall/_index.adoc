@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 52774
+// Original EN revision: SVN 52928
 //
 
 ---
@@ -665,9 +665,10 @@ image::bsdinstall-part-manual-partscheme.png[]
 |===
 
 После того, как схема разбиения определена и создана, выберите btn:[Create] повторно для создания дисковых разделов.
+Для перемещения курсора между полями используется клавиша kbd:[Tab]. 
 
 [[bsdinstall-part-manual-addpart]]
-.Создание нового раздела
+.Создание новых разделов в неавтоматизированном режиме
 image::bsdinstall-part-manual-addpart.png[]
 
 Стандартная установка FreeBSD со схемой GPT создаст как минимум три раздела:
