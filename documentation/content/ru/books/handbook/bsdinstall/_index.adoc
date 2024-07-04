@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 53885
+// Original EN revision: SVN 53893
 //
 
 ---
@@ -439,6 +439,12 @@ image::bsdinstall-choose-mode.png[]
 
 [[bsdinstall-keymap]]
 === Выбор раскладки клавиатуры
+
+Перед тем, как продолжить работу, bsdinstall загрузит файлы с раскладками клавиатуры, как это показано в <<bsdinstall-keymap-loading>>.
+
+[[bsdinstall-keymap-loading]]
+.Загрузка раскладки клавиатуры
+image::bsdinstall-keymap-loading.png[Загрузка раскладки клавиатуры]
 
 В зависимости от используемой системной консоли, bsdinstall может сначала отобразить меню, показанное на <<bsdinstall-keymap-select-default>>.
 
