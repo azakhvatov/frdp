@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 53618
+// Original EN revision: SVN 53862
 //
 
 ---
@@ -389,6 +389,7 @@ image::bsdinstall/bsdinstall-newboot-loader-menu[]
 * `Boot Single User`: Этот режим может использоваться для проведения аварийных работ на существующей инсталляции FreeBSD, как описано в <<boot-singleuser>>. Нажмите kbd:[2] или kbd:[S] (в верхнем или нижнем регистре) для перехода в этот режим.
 * `Escape to loader prompt`: Загрузит систему в режим командной строки аварийного режима, который содержит ограниченный набор низкоуровневых команд. Этот режим описан в <<boot-loader>>. Нажмите kbd:[3] или kbd:[Esc] для перехода в этот режим.
 * `Reboot`: Выполняет перезагрузку системы.
+* `Kernel`: Загружает другое ядро.
 * `Configure Boot Options`: Открывает режим меню, показанный и описанный в <<bsdinstall-boot-options-menu>>.
 
 [[bsdinstall-boot-options-menu]]
