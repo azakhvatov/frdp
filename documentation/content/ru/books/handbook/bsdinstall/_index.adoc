@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 53935
+// Original EN revision: SVN 53936
 //
 
 ---
@@ -647,9 +647,6 @@ image::bsdinstall-part-manual-partscheme.png[]
 
 |MBR
 |Master Boot Record (link:http://en.wikipedia.org/wiki/Master_boot_record[http://en.wikipedia.org/wiki/Master_boot_record].
-
-|PC98
-|Разновидность MBR, используемая в компьютерах NEC PC-98 (link:http://en.wikipedia.org/wiki/Pc9801[(link:http://en.wikipedia.org/wiki/Pc9801].
 
 |VTOC8
 |Volume Table Of Contents, используемая в компьютерах Sun SPARC64 и UltraSPARC.
