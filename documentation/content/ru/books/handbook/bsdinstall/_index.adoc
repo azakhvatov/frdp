@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 53992
+// Original EN revision: SVN 53995
 //
 
 ---
@@ -340,29 +340,8 @@ commit your changes?
 
 [source,shell]
 ....
- boot cd:,\ppc\loader cd:0
+boot cd:,\ppc\loader cd:0
 ....
-
-=== Загрузка SPARC64(R)
-
-Большинство систем SPARC64(R) настроены на автоматическую загрузку с жёсткого диска.
-Для установки FreeBSD с CD необходим вход в PROM.
-
-Для этого перегрузите систему и дождитесь появления загрузочных сообщений. Текст сообщений зависит от модели машины, но должен выглядеть подобно следующему:
-
-[source,shell]
-....
-Sun Blade 100 (UltraSPARC-IIe), Keyboard Present
-Copyright 1998-2001 Sun Microsystems, Inc.  All rights reserved.
-OpenBoot 4.2, 128 MB memory installed, Serial 51090132.
-Ethernet address 0:3:ba:b:92:d4, Host ID: 830b92d4.
-....
-
-Если в этот момент компьютер продолжает загружаться с жёсткого диска, то для получения приглашения PROM вам необходимо нажать на клавиатуре kbd:[L1+A] или kbd:[Stop+A], или же послать сигнал `BREAK` через консоль, подключённую к последовательному порту.
-При использовании утилит tip или cu сигнал BREAK генерируется при наборе `~#`.
-Приглашение PROM имеет форму `ok` в системах с одним ЦПУ и `ok {0} ` в многопроцессорных (SMP) системах, при этом цифра указывает на номер активного ЦПУ.
-
-На этом этапе вставьте CD в привод и наберите `boot cdrom` в приглашении PROM.
 
 [[bsdinstall-view-probe]]
 === Меню загрузки FreeBSD
