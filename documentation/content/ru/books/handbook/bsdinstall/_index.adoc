@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 54495
+// Original EN revision (02.02.2021): 9374bec4869a9387f39e89abd26a8ebd2a626c4c
 //
 
 ---
@@ -701,6 +701,8 @@ image::bsdinstall-part-manual-addpart.png[]
 
 |`freebsd-boot`
 |`512K`
+|
+|
 
 |`freebsd-ufs`
 |`2G`
