@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision: SVN 54019
+// Original EN revision: SVN 54061
 //
 
 ---
@@ -71,9 +71,7 @@ endif::[]
 
 [NOTE]
 ====
-Пользователей, которые предпочитают устанавливать FreeBSD при помощи графической программы установки, может заинтересовать программа pc-sysinstall, используемая для установки Проектом TrueOS.
-Она может использоваться как установки либо рабочей станции с графической оболочкой (TrueOS), либо версии FreeBSD с командной строкой.
-Для уточнения деталей обратитесь к Руководству пользователя TrueOS (link:https://www.trueos.org/handbook/trueos.html[https://www.trueos.org/handbook/trueos.html]).
+Пользователей, которые предпочитают устанавливать FreeBSD при помощи графической программы установки, могут заинтересовать link:https://www.furybsd.org[FuryBSD], link:https://ghostbsd.org[GhostBSD] или link:https://www.midnightbsd.org[MidnightBSD].
 ====
 
 После прочтения этой главы вы будете знать:
