@@ -1,17 +1,15 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (09.04.2021): 25cd4c9db5680cf33dc7fdd1eb3cc1158abeeb99
+// Original EN revision (02.05.2021): 0d9894b11e0e94cde952b0112782e68e27c893da
 //
 
 ---
-title: Глава 3. Установка FreeBSD версий 9.X и более поздних
-part: Часть I. В начале
-prev: books/handbook/install
+title: Глава 2. Установка FreeBSD
+part: Часть I. Начало работы
+prev: books/handbook/introduction
 next: books/handbook/basics
-showBookMenu: true
-weight: 5
-path: "/books/handbook/"
+description: Руководство о том, как установить FreeBSD, минимальные аппаратные требования и поддерживаемые архитектуры, как подготовить установочный носитель и так далее
 ---
 
 [[bsdinstall]]
