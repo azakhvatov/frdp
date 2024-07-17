@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (21.09.2021): 5a96948406c46a8c31594fb7f6780fc316033a96
+// Original EN revision (03.11.2021): 64acd169b82416fe39ad8c4b1be106680d4a3eb3
 //
 
 ---
@@ -21,7 +21,7 @@ tags: ["bsdinstall", "установка FreeBSD", "требования", "уч
 :icons: font
 :sectnums:
 :sectnumlevels: 6
-:sectnumoffset: 3
+:sectnumoffset: 2
 :partnums:
 :source-highlighter: rouge
 :experimental:
@@ -36,9 +36,9 @@ include::shared/authors.adoc[]
 include::shared/mirrors.adoc[]
 include::shared/releases.adoc[]
 include::shared/attributes/attributes-{{% lang %}}.adoc[]
-include::shared/en/mailing-lists.adoc[]
-include::shared/en/teams.adoc[]
-include::shared/en/urls.adoc[]
+include::shared/{{% lang %}}/teams.adoc[]
+include::shared/{{% lang %}}/mailing-lists.adoc[]
+include::shared/{{% lang %}}/urls.adoc[]
 toc::[]
 endif::[]
 ifdef::backend-pdf,backend-epub3[]
