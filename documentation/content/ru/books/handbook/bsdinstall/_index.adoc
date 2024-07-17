@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (03.11.2021): 64acd169b82416fe39ad8c4b1be106680d4a3eb3
+// Original EN revision (11.12.2021): 2b027dd0175e739f8b5fedd2ae6bd96cf0c14125
 //
 
 ---
@@ -11,6 +11,9 @@ prev: books/handbook/introduction
 next: books/handbook/basics
 description: Руководство о том, как установить FreeBSD, минимальные аппаратные требования и поддерживаемые архитектуры, как подготовить установочный носитель и так далее
 tags: ["bsdinstall", "установка FreeBSD", "требования", "учебник", "руководство"]
+showBookMenu: true
+weight: 4
+path: "/books/handbook/"
 ---
 
 [[bsdinstall]]
