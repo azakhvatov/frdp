@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (09.06.2022): 1c0e8be1cf95d42b6a30214146f907579cf87910
+// Original EN revision (01.10.2022): f9fed0e06d0dc93a0353c43a52884cca1353fe09
 //
 
 ---
@@ -14,18 +14,7 @@ tags: ["bsdinstall", "установка FreeBSD", "требования", "уч
 showBookMenu: true
 weight: 4
 path: "/books/handbook/"
-aliases: [
-"/en/books/handbook/bsdinstall-hardware/",
-"/en/books/handbook/bsdinstall-pre/",
-"/en/books/handbook/bsdinstall-start/",
-"/en/books/handbook/using-bsdinstall/",
-"/en/books/handbook/bsdinstall-partitioning/",
-"/en/books/handbook/bsdinstall-fetching-distribution/",
-"/en/books/handbook/bsdinstall-post/",
-"/en/books/handbook/bsdinstall-network/",
-"/en/books/handbook/bsdinstall-install-trouble/",
-"/en/books/handbook/using-live-cd/"
-]
+aliases: ["/en/books/handbook/bsdinstall-hardware/", "/en/books/handbook/bsdinstall-pre/", "/en/books/handbook/bsdinstall-start/", "/en/books/handbook/using-bsdinstall/", "/en/books/handbook/bsdinstall-partitioning/", "/en/books/handbook/bsdinstall-fetching-distribution/", "/en/books/handbook/bsdinstall-post/", "/en/books/handbook/bsdinstall-network/", "/en/books/handbook/bsdinstall-install-trouble/", "/en/books/handbook/using-live-cd/"]
 ---
 
 [[bsdinstall]]
