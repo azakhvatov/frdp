@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (05.10.2022): a21f100e426e39bfe752cb7e8eb97ff27a73e741
+// Original EN revision (05.10.2022): 3cceb0106c6c81cbfa488ae9a365f23f6b047bd4
 //
 
 ---
@@ -241,8 +241,7 @@ GParted включён также во многие другие дистриб�
 
 [source,shell]
 ....
-% sha256sum -c CHECKSUM.SHA256-FreeBSD-13.1-RELEASE-amd64
-FreeBSD-13.1-RELEASE-amd64-dvd1.iso
+% sha256sum -c CHECKSUM.SHA256-FreeBSD-13.1-RELEASE-amd64 FreeBSD-13.1-RELEASE-amd64-dvd1.iso
 FreeBSD-13.1-RELEASE-amd64-dvd1.iso: OK
 ....
 
