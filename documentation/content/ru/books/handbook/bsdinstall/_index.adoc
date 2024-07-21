@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (05.10.2022): 3cceb0106c6c81cbfa488ae9a365f23f6b047bd4
+// Original EN revision (12.01.2023): 080f1b7f1122fe82b5d57e2c3d0ed57e6b92a953
 //
 
 ---
@@ -62,7 +62,7 @@ endif::[]
 Эти варианты таковы:
 
 * Образы виртуальных машин, которые сгружаются и импортируются в виртуальное окружение на ваш выбор. Эти образы могут быть сгружены со страницы link:https://www.freebsd.org/where.html[Скачивания FreeBSD]. Имеются образы для KVM ("qcow2"), VMWare ("vmdk") и Hyper-V ("vhd"), а также прямые образы устройств, поддерживаемые повсеместно. Они не являются образами для проведения установки, но представляют собой преднастроенные ("уже установленные") экземпляры, готовые к запуску и выполнению шагов после установки.
-* Образы виртуальных машин, доступные в сервисах https://aws.amazon.com/marketplace/prodview-ukzmy5dzc6nbq[AWS Marketplace] компании Amazon, https://azuremarketplace.microsoft.com/en-US/marketplace/apps/thefreebsdfoundation.freebsd-13_0[Microsoft Azure Marketplace] и https://console.cloud.google.com/marketplace/details/freebsd-cloud/freebsd-13[Google Cloud Platform]. Для получения дополнительной информации о разворачивании FreeBSD в сервисе Azure, пожалуйста, обратитесь к соответствующей главе в https://docs.microsoft.com/en-us/azure/virtual-machines/linux/freebsd-intro-on-azure[Документации по Azure].
+* Образы виртуальных машин, доступные в сервисах https://aws.amazon.com/marketplace/prodview-ukzmy5dzc6nbq[AWS Marketplace] компании Amazon, https://azuremarketplace.microsoft.com/en-US/marketplace/apps/thefreebsdfoundation.freebsd-13_1[Microsoft Azure Marketplace] и https://console.cloud.google.com/marketplace/details/freebsd-cloud/freebsd-13[Google Cloud Platform], предназначенные для запуска в соответствующих сервисах хостинга. Для получения дополнительной информации о разворачивании FreeBSD в сервисе Azure, пожалуйста, обратитесь к соответствующей главе в https://docs.microsoft.com/en-us/azure/virtual-machines/linux/freebsd-intro-on-azure[Документации по Azure].
 * Образы карт памяти SD для таких интегрированных систем, как Raspberry Pi или BeagleBone Black. Они могут быть сгружены со страницы link:https://www.freebsd.org/where.html[Скачивания FreeBSD]. Эти файлы должны быть распакованы и записаны как прямой образ на карту памяти SD, с которой затем будет загружаться система.
 * Установочные образы для установки FreeBSD на жёсткий диск обычного настольного компьютера, ноутбука или сервера.
 
