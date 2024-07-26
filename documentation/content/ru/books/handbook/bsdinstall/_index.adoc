@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (18.03.2024): 184a6af025571ff232d2c4153ddf17569ad78db5
+// Original EN revision (09.03.2024): 6199af92e7e4872598ebc19c3f8bd0ae7809ee2e
 //
 
 ---
@@ -13,7 +13,7 @@ description: Руководство о том, как установить FreeB
 tags: ["bsdinstall", "установка FreeBSD", "требования", "учебник", "руководство"]
 showBookMenu: true
 weight: 4
-path: "/books/handbook/"
+path: "/books/handbook/bsdinstall/"
 ---
 
 [[bsdinstall]]
