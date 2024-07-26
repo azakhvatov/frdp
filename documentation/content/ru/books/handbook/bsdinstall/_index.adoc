@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (09.03.2024): 6199af92e7e4872598ebc19c3f8bd0ae7809ee2e
+// Original EN revision (31.05.2024): a3ed3390dae1bc8a89748b1f5169682ebdcee72b
 //
 
 ---
@@ -286,7 +286,7 @@ commit your changes?
 Порядок настройки системы на загрузку с вставленного носителя зависит от архитектуры.
 
 [[bsdinstall-view-probe]]
-=== Меню загрузки FreeBSD
+=== Меню загрузчика FreeBSD
 
 Как только система загрузится с установочного носителя, будет отображено меню, подобное следующему:
 
