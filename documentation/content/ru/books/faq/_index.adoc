@@ -10,7 +10,7 @@ tags: ["FAQ", "FreeBSD FAQ"]
 layout: single
 ---
 
-// Original EN revision (29.12.2023): 4348bf7a124dad60a08bfab3dcfabc103e8c63ac
+// Original EN revision (19.02.2024): d2a0941ab671367aa305e529228def21a62e4ddd
 
 = Часто задаваемые вопросы по FreeBSD
 :doctype: book
