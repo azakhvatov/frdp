@@ -1,3 +1,9 @@
+//
+// The FreeBSD Russian Documentation Project
+//
+// Original EN revision (SVN): 36653
+//
+
 ---
 title: Глава 4. Основы UNIX
 part: Часть I. В начале
