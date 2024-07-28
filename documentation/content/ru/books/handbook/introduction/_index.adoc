@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (06.11.2023): 8dfdd5d47dcc8b4c9e3f3b5fddf00e8b9dfeb9b2
+// Original EN revision (09.03.2024): 6199af92e7e4872598ebc19c3f8bd0ae7809ee2e
 //
 
 ---
@@ -13,7 +13,7 @@ description: Эта глава посвящена различным аспек�
 tags: ["введение", "краткий обзор", "о системе", "Кто использует FreeBSD", "цели", "история"]
 showBookMenu: true
 weight: 3
-path: "/books/handbook/"
+path: "/books/handbook/introduction/"
 ---
 
 [[introduction]]
