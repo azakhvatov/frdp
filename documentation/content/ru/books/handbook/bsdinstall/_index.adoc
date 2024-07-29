@@ -1,3 +1,9 @@
+//
+// The FreeBSD Russian Documentation Project
+//
+// Original EN revision (31.05.2024): a3ed3390dae1bc8a89748b1f5169682ebdcee72b
+//
+
 ---
 title: Глава 2. Установка FreeBSD
 part: Часть I. Начало работы
@@ -9,12 +15,6 @@ showBookMenu: true
 weight: 4
 path: "/books/handbook/bsdinstall/"
 ---
-
-//
-// The FreeBSD Russian Documentation Project
-//
-// Original EN revision (31.05.2024): a3ed3390dae1bc8a89748b1f5169682ebdcee72b
-//
 
 [[bsdinstall]]
 = Установка FreeBSD
