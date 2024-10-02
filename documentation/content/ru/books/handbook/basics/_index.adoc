@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 45378
+// Original EN revision (SVN): 45379
 //
 
 ---
@@ -128,15 +128,15 @@ login:
 ....
 # name	getty				type	status	comments
 #
-ttyv0   "/usr/libexec/getty Pc"         cons25  on  secure
+ttyv0   "/usr/libexec/getty Pc"         xterm	on  secure
 # Virtual terminals
-ttyv1   "/usr/libexec/getty Pc"         cons25  on  secure
-ttyv2   "/usr/libexec/getty Pc"         cons25  on  secure
-ttyv3   "/usr/libexec/getty Pc"         cons25  on  secure
-ttyv4   "/usr/libexec/getty Pc"         cons25  on  secure
-ttyv5   "/usr/libexec/getty Pc"         cons25  on  secure
-ttyv6   "/usr/libexec/getty Pc"         cons25  on  secure
-ttyv7   "/usr/libexec/getty Pc"         cons25  on  secure
+ttyv1   "/usr/libexec/getty Pc"         xterm	on  secure
+ttyv2   "/usr/libexec/getty Pc"         xterm	on  secure
+ttyv3   "/usr/libexec/getty Pc"         xterm	on  secure
+ttyv4   "/usr/libexec/getty Pc"         xterm	on  secure
+ttyv5   "/usr/libexec/getty Pc"         xterm	on  secure
+ttyv6   "/usr/libexec/getty Pc"         xterm	on  secure
+ttyv7   "/usr/libexec/getty Pc"         xterm	on  secure
 ttyv8   "/usr/X11R6/bin/xdm -nodaemon"  xterm   off secure
 ....
 
@@ -1781,7 +1781,7 @@ FreeBSD поставляется вместе с несколькими кома
 Копии сообщений, выдаваемых при загрузке, сохраняются в [.filename]#/var/run/dmesg.boot#.
 
 Каждое устройство имеет имя и номер.
-Например, [.filename]#acd0# соответствует первому устройству IDE CD-ROM, а [.filename]#kbd0# представляет собой клавиатуру.
+Например, [.filename]#ada0# соответствует первому приводу жёстких дисков с интерфейсом SATA, а [.filename]#kbd0# представляет собой клавиатуру.
 
 Во FreeBSD доступ к большинству устройств должен осуществляться через специальные файлы, называемые узлами устройств, которые размещаются в [.filename]#/dev#.
 
@@ -1839,7 +1839,7 @@ FreeBSD поставляется вместе с несколькими кома
 Эта команда выдаёт список команд, имеющих ключевое слово "mail" в своих описаниях.
 Это равнозначно использованию команды man:apropos[1].
 
-Чтобы прочитать описания команд из [.filename]#/usr/bin#, наберите:
+Чтобы прочитать описания всех команд из [.filename]#/usr/bin#, наберите:
 
 [source,shell]
 ....
@@ -1858,7 +1858,7 @@ FreeBSD поставляется вместе с несколькими кома
 [[basics-info]]
 === Файлы GNU Info
 
-FreeBSD поставляется с многочисленными приложениями и утилитами от Фонда Свободного Программного Обеспечения, Free Software Foundation (FSF).
+FreeBSD поставляется с некоторым количеством приложений и утилит, выпущенных Free Software Foundation (FSF).
 В дополнение к страницам справочника, с этими программами могут поставляться гипертекстовые документы в виде так называемых файлов `info`.
 Они могут быть просмотрены с помощью команды man:info[1] или, если установлен пакет package:editors/emacs[], в режиме info редактора emacs.
 
