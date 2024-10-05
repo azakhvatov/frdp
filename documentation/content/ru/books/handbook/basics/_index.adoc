@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (04.05.2021): 3ae8c2115a35cccd0564791ab40f4ac5054cba6f
+// Original EN revision (22.05.2021): e697386cd9505cf71ec17ca2bf5eba5585bbc09f
 //
 
 ---
@@ -1546,10 +1546,9 @@ man:top[1] автоматически обновляет экран каждые
 [source,shell]
 ....
 % pgrep -l inetd
-198  inetd -wW
+198  inetd
 ....
-+ 
-
++
 . Используйте man:kill[1] для отправки сигнала. Поскольку владельцем man:inetd[8] является `root`, сначала воспользуйтесь командой man:su[1] для получения прав `root`.
 +
 [source,shell]
