@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 48973
+// Original EN revision (SVN): 49033
 //
 
 ---
@@ -15,7 +15,7 @@ path: "/books/handbook/basics/"
 ---
 
 [[basics]]
-= Основы UNIX
+= Основы FreeBSD
 :doctype: book
 :toc: macro
 :toclevels: 1
