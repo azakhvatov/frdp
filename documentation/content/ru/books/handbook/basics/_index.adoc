@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 50188
+// Original EN revision (SVN): 51390
 //
 
 ---
@@ -1025,9 +1025,6 @@ drwxrwxrwt  10 root  wheel         512 Aug 31 01:49 tmp
 
 |[.filename]#/etc/mail/#
 |Конфигурационные файлы для систем обработки почты (например, man:sendmail[8]).
-
-|[.filename]#/etc/namedb/#
-|Конфигурационные файлы man:named[8].
 
 |[.filename]#/etc/periodic/#
 |Файлы сценариев, выполняемые ежедневно, еженедельно и ежемесячно при помощи man:cron[8]. Обратитесь к man:periodic[8] для получения более подробной информации.
