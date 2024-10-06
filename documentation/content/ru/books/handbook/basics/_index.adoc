@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (10.06.2022): f60735399862c6826c63d931e3d0850ef91449df
+// Original EN revision (01.10.2022): f9fed0e06d0dc93a0353c43a52884cca1353fe09
 //
 
 ---
@@ -14,19 +14,7 @@ tags: ["основы", "виртуальные консоли", "пользов�
 showBookMenu: true
 weight: 5
 path: "/books/handbook/"
-aliases: [
-"/ru/books/handbook/consoles/",
-"/ru/books/handbook/users-synopsis/",
-"/ru/books/handbook/permissions/",
-"/ru/books/handbook/dirstructure/",
-"/ru/books/handbook/disk-organization/",
-"/ru/books/handbook/mount-unmount/",
-"/ru/books/handbook/basics-processes/",
-"/ru/books/handbook/shells/",
-"/ru/books/handbook/editors/",
-"/ru/books/handbook/basics-devices/",
-"/ru/books/handbook/basics-more-information/"
-]
+aliases: ["/ru/books/handbook/consoles/","/ru/books/handbook/users-synopsis/","/ru/books/handbook/permissions/","/ru/books/handbook/dirstructure/","/ru/books/handbook/disk-organization/","/ru/books/handbook/mount-unmount/","/ru/books/handbook/basics-processes/","/ru/books/handbook/shells/","/ru/books/handbook/editors/","/ru/books/handbook/basics-devices/","/ru/books/handbook/basics-more-information/"]
 ---
 
 [[basics]]
