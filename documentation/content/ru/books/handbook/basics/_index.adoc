@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (10.07.2021): f6cee70fe2595252099fa05c9b5dc4ddb6b1bd35
+// Original EN revision (03.11.2021): 64acd169b82416fe39ad8c4b1be106680d4a3eb3
 //
 
 ---
@@ -24,7 +24,7 @@ path: "/books/handbook/basics/"
 :icons: font
 :sectnums:
 :sectnumlevels: 6
-:sectnumoffset: 4
+:sectnumoffset: 3
 :partnums:
 :source-highlighter: rouge
 :experimental:
@@ -38,9 +38,10 @@ ifndef::book[]
 include::shared/authors.adoc[]
 include::shared/mirrors.adoc[]
 include::shared/releases.adoc[]
-include::shared/en/mailing-lists.adoc[]
-include::shared/en/teams.adoc[]
-include::shared/en/urls.adoc[]
+include::shared/attributes/attributes-{{% lang %}}.adoc[]
+include::shared/{{% lang %}}/teams.adoc[]
+include::shared/{{% lang %}}/mailing-lists.adoc[]
+include::shared/{{% lang %}}/urls.adoc[]
 toc::[]
 endif::[]
 ifdef::backend-pdf,backend-epub3[]
