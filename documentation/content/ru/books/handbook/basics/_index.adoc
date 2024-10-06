@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (22.05.2021): e697386cd9505cf71ec17ca2bf5eba5585bbc09f
+// Original EN revision (24.05.2021): ed1e8451a507305a18a5da67324708b9726e8e0c
 //
 
 ---
@@ -1847,11 +1847,11 @@ FreeBSD поставляется вместе с несколькими кома
 Эта команда выдаёт список команд, имеющих ключевое слово "mail" в своих описаниях.
 Это равнозначно использованию команды man:apropos[1].
 
-Чтобы прочитать описания всех команд из [.filename]#/usr/bin#, наберите:
+Чтобы прочитать описания всех команд из [.filename]#/usr/sbin#, наберите:
 
 [source,shell]
 ....
-% cd /usr/bin
+% cd /usr/sbin
 % man -f * | more
 ....
 
@@ -1859,7 +1859,7 @@ FreeBSD поставляется вместе с несколькими кома
 
 [source,shell]
 ....
-% cd /usr/bin
+% cd /usr/sbin
 % whatis * |more
 ....
 
