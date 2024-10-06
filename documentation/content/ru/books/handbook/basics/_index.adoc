@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (06.06.2021): a8c5c8965cd534ff9634d95e6d84edb321c273d5
+// Original EN revision (19.06.2021): 3462d12db6ebf303064db168a2333374344f369a
 //
 
 ---
@@ -39,8 +39,8 @@ include::shared/authors.adoc[]
 include::shared/mirrors.adoc[]
 include::shared/releases.adoc[]
 include::shared/attributes/attributes-{{% lang %}}.adoc[]
-include::shared/{{% lang %}}/teams.adoc[]
 include::shared/{{% lang %}}/mailing-lists.adoc[]
+include::shared/{{% lang %}}/teams.adoc[]
 include::shared/{{% lang %}}/urls.adoc[]
 toc::[]
 endif::[]
