@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (19.01.2023): 27721a2fd3fba5c653c866a6bfb1e476bf4888a1
+// Original EN revision (19.01.2023): 4a9bfe3a29d27809febed1e636d19444dc6fa588
 //
 
 ---
