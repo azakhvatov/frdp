@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (20.01.2023): d3edb5256cea7daffbd0e95e989030c2bce5a04c
+// Original EN revision (28.01.2023): 0536b0e71685f6e1aca3d8f8aab20254a4bfdf92
 //
 
 ---
@@ -1699,6 +1699,9 @@ FreeBSD поставляется вместе с несколькими кома
 ....
 % chsh -s /usr/local/bin/bash
 ....
+
+Введите ваш пароль в строке приглашения и нажмите kbd:[Return] для смены вашего командного процессора.
+Для того, чтобы начать использовать новую оболочку, выйдите из системы и войдите в неё снова.
 
 [NOTE]
 ====
