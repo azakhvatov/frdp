@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (28.12.2023): 1e27e564c179325b977e6264936524521bda3829
+// Original EN revision (09.03.2024): 6199af92e7e4872598ebc19c3f8bd0ae7809ee2e
 //
 
 ---
@@ -13,7 +13,7 @@ description: Основные команды и функциональность
 tags: ["основы", "виртуальные консоли", "пользователи", "управление", "полномочия", "структура каталогов", "организация диска", "монтирование", "процессы", "даемоны", "оболочка", "редактор", "страницы справочника", "устройства"]
 showBookMenu: true
 weight: 5
-path: "/books/handbook/"
+path: "/books/handbook/basics/"
 ---
 
 [[basics]]
