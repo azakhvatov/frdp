@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 41782
+// Original EN revision (SVN): 41876
 //
 
 ---
@@ -1059,8 +1059,8 @@ Portmaster делит порты на четыре категории:
 ===>>> 7 root ports
 ...
 ===>>> Branch ports (Have dependencies, are depended on)
-===>>> apache-2.2.3
-        ===>>> New version available: apache-2.2.8
+===>>> apache22-2.2.3
+        ===>>> New version available: apache22-2.2.8
 ...
 ===>>> Leaf ports (Have dependencies, not depended on)
 ===>>> automake-1.9.6_2
