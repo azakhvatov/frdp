@@ -1,13 +1,14 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (10.05.2024): 5ca8d62299c9819be1b9529519e128b67161bdf3
+// Original EN revision (09.08.2024): a5d2f4ebbf3c57ad1064ae97fae70ff1ac75805e
 //
 
 [.abstract-title]
 Аннотация
 
-Добро пожаловать во FreeBSD! Это Руководство описывает установку и ежедневное использование _FreeBSD {rel140-current}-RELEASE_ и _FreeBSD {rel132-current}-RELEASE_.
+Добро пожаловать во FreeBSD!
+Это Руководство описывает установку и ежедневное использование _FreeBSD {rel141-current}-RELEASE_ и _FreeBSD {rel133-current}-RELEASE_.
 Эта книга является результатом всё время ведущейся работы многих людей.
 Некоторые разделы могут оказаться устаревшими.
 Если вы заинтересованы в том, чтобы помочь с актуализацией и расширением этого документа, направьте сообщение на адрес {freebsd-doc}.
