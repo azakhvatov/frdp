@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (23.09.2024): c6f45f005306d23f396e1ec9ddff165312aad867
+// Original EN revision (29.12.2024): 1e892b3d1ed2a1985ab13b559994d74f96479a72
 //
 
 ---
@@ -510,7 +510,7 @@ Removing user (jru): mailspool home passwd.
 ====
 [source,shell]
 ....
-# chpass
+# chpass jru
 ....
 
 Выводимый текст должен быть похож на следующее:
