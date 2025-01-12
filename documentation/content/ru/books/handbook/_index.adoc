@@ -1,14 +1,14 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original revision (01.01.2024): f9763bfd87c0a4bb1c985c2417b9556016668d1a
+// Original revision (31.12.2024): a2bd454f3271ea8224d2e245b23a1e60f726ec7d
 //
 
 ---
 title: Руководство FreeBSD
 authors:
   - author: The FreeBSD Russian Documentation Project
-copyright: 1995-2024 The FreeBSD Documentation Project
+copyright: 1995-2025 The FreeBSD Documentation Project
 description: Постоянно обновляющийся и всеобъемлющий источник информации для пользователей FreeBSD
 trademarks: ["freebsd", "ibm", "ieee", "redhat", "3com", "adobe", "apple", "intel", "linux", "microsoft", "opengroup", "sun", "realnetworks", "oracle", "3ware", "arm", "adaptec", "google", "heidelberger", "intuit", "lsilogic", "themathworks", "thomson", "vmware", "wolframresearch", "xiph", "xfree86", "general"]
 tags: ["FreeBSD Handbook", "Handbook"]
