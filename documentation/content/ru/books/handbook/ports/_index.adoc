@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 43779
+// Original EN revision (SVN): 43886
 //
 
 ---
@@ -645,15 +645,8 @@ Deinstalling ca_root_nss-3.15.1_1... done
 # cd /usr/ports/devel/subversion
 # make install clean
 ....
-+ 
-Если портов нет, то Subversion может быть установлен при помощи системы пакетов:
 +
-[source,shell]
-....
-# pkg install subversion
-....
-+ 
-Если же для управления пакетами используется pkgng, то Subversion устанавливается при помощи следующей команды:
+Если дерево портов недоступно, то Subversion может быть установлен как пакет:
 +
 [source,shell]
 ....
@@ -664,7 +657,7 @@ Deinstalling ca_root_nss-3.15.1_1... done
 +
 [source,shell]
 ....
-# svn checkout https://svn0.us-east.FreeBSD.org/ports/head /usr/ports
+# svn checkout https://_svn0.us-east.FreeBSD.org_/ports/head /usr/ports
 ....
 +
 . По мере необходимости после первичного извлечения хранилища Subversion обновляйте [.filename]#/usr/ports#:
