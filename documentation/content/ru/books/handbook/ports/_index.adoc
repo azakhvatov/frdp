@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 43757
+// Original EN revision (SVN): 43770
 //
 
 ---
@@ -597,7 +597,6 @@ Deinstalling ca_root_nss-3.15.1_1... done
 *Procedure: Метод Portsnap*
 
 Portsnap является быстрым и удобным для пользователей инструментом для получения Коллекции Портов, рекомендуемый к выбору для большинства пользователей.
-Обратитесь к разделу <<updating-upgrading-portsnap>> для получения подробного описания Portsnap.
 
 . Скачайте сжатый снэпшот Коллекции Портов в [.filename]#/var/db/portsnap#.
 +
