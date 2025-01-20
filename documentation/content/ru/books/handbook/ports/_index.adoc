@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 43777
+// Original EN revision (SVN): 43779
 //
 
 ---
@@ -849,7 +849,7 @@ ftp://ftp.organization.org/pub/FreeBSD/ports/distfiles/ fetch
 Установленные порты могут быть удалены при помощи команды `pkg delete`.
 Примеры использования этой команды можно найти в разделе <<pkgng-intro>>.
 
-Либо в каталоге порта может быть запущена команда `make deinstall`:
+Альтернативным способом является запуск команды `make deinstall` в каталоге порта:
 
 [source,shell]
 ....
