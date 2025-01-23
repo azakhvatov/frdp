@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 45559
+// Original EN revision (SVN): 45897
 //
 
 ---
@@ -1185,7 +1185,7 @@ Building new INDEX files... done.
 
 На одном компьютере poudriere может компилировать порты с множеством конфигураций в нескольких изоляторах и из разных деревьев портов.
 Специальные конфигурации для таких комбинаций называются _наборами_.
-Обратитесь к разделу CUSTOMIZATION в man:poudriere[8] для уточнения деталей.
+Обратитесь к разделу CUSTOMIZATION в man:poudriere[8] для уточнения деталей после установки package:ports-mgmt/poudriere[] или package:ports-mgmt/poudriere-devel[].
 
 В базовой конфигурации, показанной здесь, файл [.filename]#make.conf#, специфичный для одного изолятора, порта и набора, размещается в каталоге [.filename]#/usr/local/etc/poudriere.d#.
 Имя файла в этом примере создано объединением имени изолятора, имени порта и имени набора: [.filename]#_10amd64-local-workstation_-make.conf#.
