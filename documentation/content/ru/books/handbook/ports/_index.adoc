@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 47483
+// Original EN revision (SVN): 47724
 //
 
 ---
@@ -707,11 +707,11 @@ Deinstalling ca_root_nss-3.15.1_1... done
 # pkg install subversion
 ....
 +
-. Извлеките рабочую копию дерева портов. Для повышения производительности замените _svn0.us-east.FreeBSD.org_ на географически ближайшее к вам crossref:mirrors[svn-mirrors,зеркало Subversion].
+. Извлеките копию дерева портов:
 +
 [source,shell]
 ....
-# svn checkout https://_svn0.us-east.FreeBSD.org_/ports/head /usr/ports
+# svn checkout https://svn.FreeBSD.org/ports/head /usr/ports
 ....
 +
 . По мере необходимости после первичного извлечения хранилища Subversion обновляйте [.filename]#/usr/ports#:
