@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 46064
+// Original EN revision (SVN): 46220
 //
 
 ---
@@ -1205,14 +1205,14 @@ ports-mgmt/pkg
 
 [source,shell]
 ....
-# poudriere options -j _10amd64_ -p _local_ -z _workstation_ -f _workstation-pkglist_
+# poudriere options -j _10amd64_ -p _local_ -z _workstation_ -f _10amd64-local-workstation-pkglist_
 ....
 
 Наконец, выполняется построение пакетов и создаётся соответствующее хранилище:
 
 [source,shell]
 ....
-# poudriere bulk -j _10amd64_ -p _local_ -z _workstation_ -f _workstation-pkglist_
+# poudriere bulk -j _10amd64_ -p _local_ -z _workstation_ -f _10amd64-local-workstation-pkglist_
 ....
 
 При нажатии kbd:[Ctrl+t] отображается текущее состояние построения.
@@ -1220,7 +1220,7 @@ Poudriere также формирует файлы в каталоге [.filenam
 
 Теперь пакеты доступны к установке из хранилища poudriere.
 
-Для получения дополнительной информации об использовании poudriere обратитесь к man:poudriere[8] и основному веб-сайту, https://fossil.etoilebsd.net/poudriere/doc/trunk/doc/index.wiki[].
+Для получения дополнительной информации об использовании poudriere обратитесь к man:poudriere[8] и основному веб-сайту, https://github.com/freebsd/poudriere/wiki[].
 
 [[ports-nextsteps]]
 == Действия после установки
