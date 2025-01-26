@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 47473
+// Original EN revision (SVN): 47474
 //
 
 ---
@@ -1244,8 +1244,7 @@ FreeBSD: {
 [source,shell]
 ....
 custom: {
-	url: "<replaceable>http://pkg.example.com/10amd64</replaceable>",
-	mirror_type: "http",
+	url: "_http://pkg.example.com/10amd64_",
 	enabled: yes,
 }
 ....
