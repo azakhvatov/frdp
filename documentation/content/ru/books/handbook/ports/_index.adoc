@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 46921
+// Original EN revision (SVN): 47473
 //
 
 ---
@@ -1053,7 +1053,7 @@ Portmaster может быть также задействован для уст
 
 [source,shell]
 ....
-# portupgrade -PP gnome2
+# portupgrade -PP gnome3
 ....
 
 Для того, чтобы сгрузить только дистрибутивные файлы порта или пакеты при наличии параметра `-P`, без построения или установки чего бы то ни было, используете параметр `-F`.
