@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 50140
+// Original EN revision (SVN): 50603
 //
 
 ---
@@ -1153,7 +1153,7 @@ Poudriere также формирует файлы в каталоге [.filenam
 Это делается путём создания конфигурационного файла, который переопределяет и отключает официальный конфигурационный файл.
 Создайте файл [.filename]#/usr/local/etc/pkg/repos/FreeBSD.conf#, содержащий следующее:
 
-[source,shell]
+[.programlisting]
 ....
 FreeBSD: {
 	enabled: no
@@ -1165,7 +1165,7 @@ FreeBSD: {
 
 Если URL хранилища пакетов имеет вид `http://pkg.example.com/10amd64`, то конфигурационный файл хранилища в [.filename]#/usr/local/etc/pkg/repos/custom.conf# может выглядеть подобно следующему:
 
-[source,shell]
+[.programlisting]
 ....
 custom: {
 	url: "_http://pkg.example.com/10amd64_",
