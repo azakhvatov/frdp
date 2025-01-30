@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 52705
+// Original EN revision (SVN): 53860
 //
 
 ---
@@ -842,7 +842,7 @@ _ftp://ftp.organization.org/pub/FreeBSD/ports/distfiles/_ fetch
 [source,shell]
 ....
 # cd /usr/ports/sysutils/lsof
-make deinstall
+# make deinstall
 ===>  Deinstalling for sysutils/lsof
 ===>   Deinstalling
 Deinstallation has been requested for the following 1 packages:
