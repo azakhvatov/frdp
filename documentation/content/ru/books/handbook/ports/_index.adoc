@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 54009
+// Original EN revision (SVN): 54395
 //
 
 ---
@@ -637,7 +637,7 @@ security/sudo
 *Procedure: Метод portsnap*
 
 В базовый комплект поставки FreeBSD включено приложение Portsnap.
-Оно является быстрым и удобным для пользователей инструментом для получения Коллекции Портов, рекомендуемый к выбору для большинства пользователей.
+Оно является быстрым и удобным для пользователей инструментом для получения Коллекции Портов, рекомендуемый к выбору для большинства пользователей, не работающих с FreeBSD-CURRENT.
 Эта утилита подключается к сайту FreeBSD, выполняет проверку ключа безопасности и сгружает новую копию Коллекции Портов.
 Ключ безопасности используется для проверки целостности всех сгруженных файлов.
 
@@ -676,7 +676,7 @@ security/sudo
 ====
 *Procedure: Метод Subversion*
 
-Если необходим дополнительный контроль за деревом портов или имеется необходимость в поддержании локальных изменений, то для получения Коллекции Портов может быть задействован Subversion.
+Если необходим дополнительный контроль за деревом портов, либо имеется необходимость в поддержании локальных изменений, либо вы работаете с FreeBSD-CURRENT, то для получения Коллекции Портов может быть задействован Subversion.
 Обратитесь к extref:{committers-guide}[Subversion Primer, subversion-primer] за детальным описанием Subversion.
 
 . Для создания рабочей копии дерева портов необходимо иметь установленный Subversion. Если порты есть в наличии, то установите Subversion выполнив следующее:
@@ -1138,55 +1138,57 @@ Poudriere устанавливается при помощи пакета или
 
 [source,shell]
 ....
-# poudriere jail -c -j _10amd64_ -v _10.0-RELEASE_
-====>> Creating 10amd64 fs... done
-====>> Fetching base.txz for FreeBSD 10.0-RELEASE amd64
-/poudriere/jails/10amd64/fromftp/base.txz      100% of   59 MB 1470 kBps 00m42s
-====>> Extracting base.txz... done
-====>> Fetching src.txz for FreeBSD 10.0-RELEASE amd64
-/poudriere/jails/10amd64/fromftp/src.txz       100% of  107 MB 1476 kBps 01m14s
-====>> Extracting src.txz... done
-====>> Fetching games.txz for FreeBSD 10.0-RELEASE amd64
-/poudriere/jails/10amd64/fromftp/games.txz     100% of  865 kB  734 kBps 00m01s
-====>> Extracting games.txz... done
-====>> Fetching lib32.txz for FreeBSD 10.0-RELEASE amd64
-/poudriere/jails/10amd64/fromftp/lib32.txz     100% of   14 MB 1316 kBps 00m12s
-====>> Extracting lib32.txz... done
-====>> Cleaning up... done
-====>> Jail 10amd64 10.0-RELEASE amd64 is ready to be used
+# poudriere jail -c -j _11amd64_ -v _11.4-RELEASE_
+[00:00:00] Creating 11amd64 fs at /poudriere/jails/11amd64... done
+[00:00:00] Using pre-distributed MANIFEST for FreeBSD 11.4-RELEASE amd64
+[00:00:00] Fetching base for FreeBSD 11.4-RELEASE amd64
+/poudriere/jails/11amd64/fromftp/base.txz              125 MB 4110 kBps    31s
+[00:00:33] Extracting base... done
+[00:00:54] Fetching src for FreeBSD 11.4-RELEASE amd64
+/poudriere/jails/11amd64/fromftp/src.txz               154 MB 4178 kBps    38s
+[00:01:33] Extracting src... done
+[00:02:31] Fetching lib32 for FreeBSD 11.4-RELEASE amd64
+/poudriere/jails/11amd64/fromftp/lib32.txz              24 MB 3969 kBps    06s
+[00:02:38] Extracting lib32... done
+[00:02:42] Cleaning up... done
+[00:02:42] Recording filesystem state for clean... done
+[00:02:42] Upgrading using ftp
+/etc/resolv.conf -> /poudriere/jails/11amd64/etc/resolv.conf
+Looking up update.FreeBSD.org mirrors... 3 mirrors found.
+Fetching public key from update4.freebsd.org... done.
+Fetching metadata signature for 11.4-RELEASE from update4.freebsd.org... done.
+Fetching metadata index... done.
+Fetching 2 metadata files... done.
+Inspecting system... done.
+Preparing to download files... done.
+Fetching 124 patches.....10....20....30....40....50....60....70....80....90....100....110....120.. done.
+Applying patches... done.
+Fetching 6 files... done.
+The following files will be added as part of updating to
+11.4-RELEASE-p1:
+/usr/src/contrib/unbound/.github
+/usr/src/contrib/unbound/.github/FUNDING.yml
+/usr/src/contrib/unbound/contrib/drop2rpz
+/usr/src/contrib/unbound/contrib/unbound_portable.service.in
+/usr/src/contrib/unbound/services/rpz.c
+/usr/src/contrib/unbound/services/rpz.h
+/usr/src/lib/libc/tests/gen/spawnp_enoexec.sh
+The following files will be updated as part of updating to
+11.4-RELEASE-p1:
+[...]
+Installing updates...Scanning //usr/share/certs/blacklisted for certificates...
+Scanning //usr/share/certs/trusted for certificates...
+ done.
+11.4-RELEASE-p1
+[00:04:06] Recording filesystem state for clean... done
+[00:04:07] Jail 11amd64 11.4-RELEASE-p1 amd64 is ready to be used
 ....
 
 [source,shell]
 ....
-# poudriere ports -c -p _local_
-====>> Creating local fs... done
-====>> Extracting portstree "local"...
-Looking up portsnap.FreeBSD.org mirrors... 7 mirrors found.
-Fetching public key from ec2-eu-west-1.portsnap.freebsd.org... done.
-Fetching snapshot tag from ec2-eu-west-1.portsnap.freebsd.org... done.
-Fetching snapshot metadata... done.
-Fetching snapshot generated at Tue Feb 11 01:07:15 CET 2014:
-94a3431f0ce567f6452ffde4fd3d7d3c6e1da143efec76100% of   69 MB 1246 kBps 00m57s
-Extracting snapshot... done.
-Verifying snapshot integrity... done.
-Fetching snapshot tag from ec2-eu-west-1.portsnap.freebsd.org... done.
-Fetching snapshot metadata... done.
-Updating from Tue Feb 11 01:07:15 CET 2014 to Tue Feb 11 16:05:20 CET 2014.
-Fetching 4 metadata patches... done.
-Applying metadata patches... done.
-Fetching 0 metadata files... done.
-Fetching 48 patches.
-(48/48) 100.00%  done.
-done.
-Applying patches...
-done.
-Fetching 1 new ports or files... done.
-/poudriere/ports/tester/CHANGES
-/poudriere/ports/tester/COPYRIGHT
-
-[...]
-
-Building new INDEX files... done.
+# poudriere ports -c -p _local_ -m svn+https
+[00:00:00] Creating local fs at /poudriere/ports/local... done
+[00:00:00] Checking out the ports tree... done
 ....
 
 На одном компьютере poudriere может компилировать порты с множеством конфигураций в нескольких изоляторах и из разных деревьев портов.
@@ -1194,10 +1196,10 @@ Building new INDEX files... done.
 Обратитесь к разделу CUSTOMIZATION в man:poudriere[8] для уточнения деталей после установки package:ports-mgmt/poudriere[] или package:ports-mgmt/poudriere-devel[].
 
 В базовой конфигурации, показанной здесь, файл [.filename]#make.conf#, специфичный для одного изолятора, порта и набора, размещается в каталоге [.filename]#/usr/local/etc/poudriere.d#.
-Имя файла в этом примере создано объединением имени изолятора, имени порта и имени набора: [.filename]#_10amd64-local-workstation_-make.conf#.
+Имя файла в этом примере создано объединением имени изолятора, имени порта и имени набора: [.filename]#_11amd64-local-workstation_-make.conf#.
 Системный файл [.filename]#make.conf# и этот новый файл комбинируются во время построения для создания файла [.filename]#make.conf#, используемого компилирующим изолятором.
 
-Пакеты, предназначенные для построения, задаются в файле [.filename]#_10amd64-local-workstation_-pkglist#:
+Пакеты, предназначенные для построения, задаются в файле [.filename]#_11amd64-local-workstation_-pkglist#:
 
 [.programlisting]
 ....
@@ -1218,7 +1220,7 @@ ports-mgmt/pkg
 
 [source,shell]
 ....
-# poudriere bulk -j _10amd64_ -p _local_ -z _workstation_ -f _10amd64-local-workstation-pkglist_
+# poudriere bulk -j _11amd64_ -p _local_ -z _workstation_ -f _11amd64-local-workstation-pkglist_
 ....
 
 При нажатии во время исполнения kbd:[Ctrl+t] отображается текущее состояние построения.
@@ -1242,14 +1244,14 @@ FreeBSD: {
 ....
 
 Как правило, самым лёгким механизмом предоставления хранилища poudriere клиентским машинам является HTTP.
-Настройте веб-сервер для обслуживания каталога с пакетами, к примеру: [.filename]#/usr/local/poudriere/data/packages/_10amd64_#, где [.filename]#_10amd64_# является названием сборки.
+Настройте веб-сервер для обслуживания каталога с пакетами, к примеру: [.filename]#/usr/local/poudriere/data/packages/_11amd64_#, где [.filename]#_11amd64_# является названием сборки.
 
-Если URL хранилища пакетов имеет вид `http://pkg.example.com/10amd64`, то конфигурационный файл хранилища в [.filename]#/usr/local/etc/pkg/repos/custom.conf# может выглядеть подобно следующему:
+Если URL хранилища пакетов имеет вид `http://pkg.example.com/11amd64`, то конфигурационный файл хранилища в [.filename]#/usr/local/etc/pkg/repos/custom.conf# может выглядеть подобно следующему:
 
 [.programlisting]
 ....
 custom: {
-	url: "_http://pkg.example.com/10amd64_",
+	url: "_http://pkg.example.com/11amd64_",
 	enabled: yes,
 }
 ....
