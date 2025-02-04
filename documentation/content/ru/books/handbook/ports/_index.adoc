@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 54395
+// Original EN revision (SVN): 54447
 //
 
 ---
@@ -1213,7 +1213,7 @@ ports-mgmt/pkg
 
 [source,shell]
 ....
-# poudriere options -j _10amd64_ -p _local_ -z _workstation_ -f _10amd64-local-workstation-pkglist_
+# poudriere options -j _11amd64_ -p _local_ -z _workstation_ -f _11amd64-local-workstation-pkglist_
 ....
 
 Наконец, выполняется построение пакетов и создаётся соответствующее хранилище:
