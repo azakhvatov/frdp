@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (SVN): 54691
+// Original EN revision (08.02.2021): 4bf990d288f87e2b1781ed15e65334e91bb1e37f
 //
 
 ---
@@ -346,6 +346,7 @@ WITH_PKGNG=	yes
 
 [source,shell]
 ....
+# mkdir -p /usr/local/etc/pkg/repos
 # cp /etc/pkg/FreeBSD.conf /usr/local/etc/pkg/repos/FreeBSD.conf
 ....
 
