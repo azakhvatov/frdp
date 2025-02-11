@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (06.04.2021): a3ad91f11fea5cc457eb053c46c26e4dd43df599
+// Original EN revision (17.04.2021): 132ff9d79530ae03e2cf0ade5dd02e5758bd80d1
 //
 
 ---
@@ -624,7 +624,7 @@ security/sudo
 [[ports-using]]
 == Использование Коллекции Портов
 
-Коллекция Портов является набором файлов [.filename]#Makefile#, патчей и файлов описаний.
+Коллекция Портов является набором файлов [.filename]##Makefile##, патчей и файлов описаний.
 Каждый набор таких файлов используется для компиляции и установки отдельного приложения во FreeBSD и называется _портом_.
 
 По умолчанию сама Коллекция Портов хранится как подкаталог [.filename]#/usr/ports#.
@@ -648,7 +648,7 @@ security/sudo
 В базовый комплект поставки FreeBSD включено приложение Portsnap.
 Оно является быстрым и удобным для пользователей инструментом для получения Коллекции Портов, рекомендуемый к выбору для большинства пользователей, не работающих с FreeBSD-CURRENT.
 Эта утилита подключается к сайту FreeBSD, выполняет проверку ключа безопасности и сгружает новую копию Коллекции Портов.
-Ключ безопасности используется для проверки целостности всех сгруженных файлов.
+Этот ключ используется для проверки целостности всех сгруженных файлов.
 
 . Для сгрузки сжатого снэпшота Коллекции Портов в [.filename]#/var/db/portsnap#:
 +
@@ -682,10 +682,10 @@ security/sudo
 
 [[ports-using-git-method]]
 [.procedure]
-====
+****
 *Procedure: Метод Git*
 
-Если необходим дополнительный контроль за деревом портов либо имеется необходимость в организации работы с локальными изменениями, то для получения Коллекции Портов может быть задействован Git.
+Если необходим дополнительный контроль за деревом портов или имеется необходимость в организации работы с локальными изменениями, либо используется FreeBSD-CURRENT, то для получения Коллекции Портов может быть задействован Git.
 Обратитесь к extref:{committers-guide}#git-primer[учебнику по Git] за детальным описанием Git.
 
 . Для создания рабочей копии дерева портов необходимо иметь установленный Git. Если дерево портов уже есть в наличии, то установите Git примерно следующим образом:
@@ -703,11 +703,18 @@ security/sudo
 # pkg install git
 ....
 +
-. Извлеките копию дерева портов:
+. Извлеките копию ветки HEAD дерева портов:
 +
 [source,shell]
 ....
 # git clone https://git.FreeBSD.org/ports.git /usr/ports
+....
++
+. Либо извлеките копию квартальной ветки:
++
+[source,shell]
+....
+# git clone https://git.FreeBSD.org/ports.git -b 2020Q3 /usr/ports
 ....
 +
 . После первичного извлечения хранилища Git и по мере необходимости обновляйте [.filename]#/usr/ports#:
@@ -716,7 +723,14 @@ security/sudo
 ....
 # git -C /usr/ports pull
 ....
-====
++
+. По мере необходимости переключайте [.filename]#/usr/ports# на другую квартальную ветку:
++
+[source,shell]
+....
+# git -C /usr/ports switch 2020Q4
+....
+****
 
 Коллекция Портов содержит каталоги, соответствующие категориям программного обеспечения.
 В каждой категории присутствуют подкаталоги для отдельных приложений.
@@ -1205,10 +1219,10 @@ Scanning //usr/share/certs/trusted for certificates...
 Обратитесь к разделу CUSTOMIZATION в man:poudriere[8] для уточнения деталей после установки package:ports-mgmt/poudriere[] или package:ports-mgmt/poudriere-devel[].
 
 В базовой конфигурации, показанной здесь, файл [.filename]#make.conf#, специфичный для одного изолятора, порта и набора, размещается в каталоге [.filename]#/usr/local/etc/poudriere.d#.
-Имя файла в этом примере создано объединением имени изолятора, имени порта и имени набора: [.filename]#_11amd64-local-workstation_-make.conf#.
+Имя файла в этом примере создано объединением имени изолятора, имени порта и имени набора: [.filename]#11amd64-local-workstation-make.conf#.
 Системный файл [.filename]#make.conf# и этот новый файл комбинируются во время построения для создания файла [.filename]#make.conf#, используемого компилирующим изолятором.
 
-Пакеты, предназначенные для построения, задаются в файле [.filename]#_11amd64-local-workstation_-pkglist#:
+Пакеты, предназначенные для построения, задаются в файле [.filename]#11amd64-local-workstation-pkglist#:
 
 [.programlisting]
 ....
@@ -1222,14 +1236,14 @@ ports-mgmt/pkg
 
 [source,shell]
 ....
-# poudriere options -j _11amd64_ -p _local_ -z _workstation_ -f _11amd64-local-workstation-pkglist_
+# poudriere options -j 11amd64 -p local -z workstation -f 11amd64-local-workstation-pkglist
 ....
 
 Наконец, выполняется построение пакетов и создаётся соответствующее хранилище:
 
 [source,shell]
 ....
-# poudriere bulk -j _11amd64_ -p _local_ -z _workstation_ -f _11amd64-local-workstation-pkglist_
+# poudriere bulk -j 11amd64 -p local -z workstation -f 11amd64-local-workstation-pkglist
 ....
 
 При нажатии во время исполнения kbd:[Ctrl+t] отображается текущее состояние построения.
@@ -1253,14 +1267,14 @@ FreeBSD: {
 ....
 
 Как правило, самым лёгким механизмом предоставления хранилища poudriere клиентским машинам является HTTP.
-Настройте веб-сервер для обслуживания каталога с пакетами, к примеру: [.filename]#/usr/local/poudriere/data/packages/_11amd64_#, где [.filename]#_11amd64_# является названием сборки.
+Настройте веб-сервер для обслуживания каталога с пакетами, к примеру: [.filename]#/usr/local/poudriere/data/packages/11amd64#, где [.filename]#11amd64# является названием сборки.
 
 Если URL хранилища пакетов имеет вид `http://pkg.example.com/11amd64`, то конфигурационный файл хранилища в [.filename]#/usr/local/etc/pkg/repos/custom.conf# может выглядеть подобно следующему:
 
 [.programlisting]
 ....
 custom: {
-	url: "_http://pkg.example.com/11amd64_",
+	url: "http://pkg.example.com/11amd64",
 	enabled: yes,
 }
 ....
