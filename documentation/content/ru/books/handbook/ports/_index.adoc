@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (01.10.2022): f9fed0e06d0dc93a0353c43a52884cca1353fe09
+// Original EN revision (08.10.2022): 0e7cd233ef49952e967f3ed719921004ac4e777d
 //
 
 ---
@@ -1170,25 +1170,25 @@ Poudriere устанавливается при помощи пакета или
 
 [source,shell]
 ....
-# poudriere jail -c -j _11amd64_ -v _11.4-RELEASE_
-[00:00:00] Creating 11amd64 fs at /poudriere/jails/11amd64... done
-[00:00:00] Using pre-distributed MANIFEST for FreeBSD 11.4-RELEASE amd64
-[00:00:00] Fetching base for FreeBSD 11.4-RELEASE amd64
-/poudriere/jails/11amd64/fromftp/base.txz              125 MB 4110 kBps    31s
+# poudriere jail -c -j 13amd64 -v 13.1-RELEASE
+[00:00:00] Creating 13amd64 fs at /poudriere/jails/13amd64... done
+[00:00:00] Using pre-distributed MANIFEST for FreeBSD 13.1-RELEASE amd64
+[00:00:00] Fetching base for FreeBSD 13.1-RELEASE amd64
+/poudriere/jails/13amd64/fromftp/base.txz              125 MB 4110 kBps    31s
 [00:00:33] Extracting base... done
-[00:00:54] Fetching src for FreeBSD 11.4-RELEASE amd64
-/poudriere/jails/11amd64/fromftp/src.txz               154 MB 4178 kBps    38s
+[00:00:54] Fetching src for FreeBSD 13.1-RELEASE amd64
+/poudriere/jails/13amd64/fromftp/src.txz               154 MB 4178 kBps    38s
 [00:01:33] Extracting src... done
-[00:02:31] Fetching lib32 for FreeBSD 11.4-RELEASE amd64
-/poudriere/jails/11amd64/fromftp/lib32.txz              24 MB 3969 kBps    06s
+[00:02:31] Fetching lib32 for FreeBSD 13.1-RELEASE amd64
+/poudriere/jails/13amd64/fromftp/lib32.txz              24 MB 3969 kBps    06s
 [00:02:38] Extracting lib32... done
 [00:02:42] Cleaning up... done
 [00:02:42] Recording filesystem state for clean... done
 [00:02:42] Upgrading using ftp
-/etc/resolv.conf -> /poudriere/jails/11amd64/etc/resolv.conf
+/etc/resolv.conf -> /poudriere/jails/13amd64/etc/resolv.conf
 Looking up update.FreeBSD.org mirrors... 3 mirrors found.
 Fetching public key from update4.freebsd.org... done.
-Fetching metadata signature for 11.4-RELEASE from update4.freebsd.org... done.
+Fetching metadata signature for 13.1-RELEASE from update4.freebsd.org... done.
 Fetching metadata index... done.
 Fetching 2 metadata files... done.
 Inspecting system... done.
@@ -1197,7 +1197,7 @@ Fetching 124 patches.....10....20....30....40....50....60....70....80....90....1
 Applying patches... done.
 Fetching 6 files... done.
 The following files will be added as part of updating to
-11.4-RELEASE-p1:
+13.1-RELEASE-p1:
 /usr/src/contrib/unbound/.github
 /usr/src/contrib/unbound/.github/FUNDING.yml
 /usr/src/contrib/unbound/contrib/drop2rpz
@@ -1206,14 +1206,14 @@ The following files will be added as part of updating to
 /usr/src/contrib/unbound/services/rpz.h
 /usr/src/lib/libc/tests/gen/spawnp_enoexec.sh
 The following files will be updated as part of updating to
-11.4-RELEASE-p1:
+13.1-RELEASE-p1:
 [...]
 Installing updates...Scanning //usr/share/certs/blacklisted for certificates...
 Scanning //usr/share/certs/trusted for certificates...
  done.
-11.4-RELEASE-p1
+13.1-RELEASE-p1
 [00:04:06] Recording filesystem state for clean... done
-[00:04:07] Jail 11amd64 11.4-RELEASE-p1 amd64 is ready to be used
+[00:04:07] Jail 13amd64 13.1-RELEASE-p1 amd64 is ready to be used
 ....
 
 [source,shell]
@@ -1228,10 +1228,10 @@ Scanning //usr/share/certs/trusted for certificates...
 Обратитесь к разделу CUSTOMIZATION в man:poudriere[8] для уточнения деталей после установки package:ports-mgmt/poudriere[] или package:ports-mgmt/poudriere-devel[].
 
 В базовой конфигурации, показанной здесь, файл [.filename]#make.conf#, специфичный для одного изолятора, порта и набора, размещается в каталоге [.filename]#/usr/local/etc/poudriere.d#.
-Имя файла в этом примере создано объединением имени изолятора, имени порта и имени набора: [.filename]#11amd64-local-workstation-make.conf#.
+Имя файла в этом примере создано объединением имени изолятора, имени порта и имени набора: [.filename]#13amd64-local-workstation-make.conf#.
 Системный файл [.filename]#make.conf# и этот новый файл комбинируются во время построения для создания файла [.filename]#make.conf#, используемого компилирующим изолятором.
 
-Пакеты, предназначенные для построения, задаются в файле [.filename]#11amd64-local-workstation-pkglist#:
+Пакеты для построения задаются в файле [.filename]#13amd64-local-workstation-pkglist#:
 
 [.programlisting]
 ....
@@ -1245,14 +1245,14 @@ ports-mgmt/pkg
 
 [source,shell]
 ....
-# poudriere options -j 11amd64 -p local -z workstation -f 11amd64-local-workstation-pkglist
+# poudriere options -j 13amd64 -p local -z workstation -f 13amd64-local-workstation-pkglist
 ....
 
 Наконец, выполняется построение пакетов и создаётся соответствующее хранилище:
 
 [source,shell]
 ....
-# poudriere bulk -j 11amd64 -p local -z workstation -f 11amd64-local-workstation-pkglist
+# poudriere bulk -j 13amd64 -p local -z workstation -f 13amd64-local-workstation-pkglist
 ....
 
 При нажатии во время исполнения kbd:[Ctrl+t] отображается текущее состояние построения.
@@ -1276,14 +1276,14 @@ FreeBSD: {
 ....
 
 Как правило, самым лёгким механизмом предоставления хранилища poudriere клиентским машинам является HTTP.
-Настройте веб-сервер для обслуживания каталога с пакетами, к примеру: [.filename]#/usr/local/poudriere/data/packages/11amd64#, где [.filename]#11amd64# является названием сборки.
+Настройте веб-сервер для обслуживания каталога с пакетами, к примеру: [.filename]#/usr/local/poudriere/data/packages/13amd64#, где [.filename]#13amd64# является названием сборки.
 
-Если URL хранилища пакетов имеет вид `http://pkg.example.com/11amd64`, то конфигурационный файл хранилища в [.filename]#/usr/local/etc/pkg/repos/custom.conf# может выглядеть подобно следующему:
+Если URL хранилища пакетов имеет вид `http://pkg.example.com/13amd64`, то конфигурационный файл хранилища в [.filename]#/usr/local/etc/pkg/repos/custom.conf# может выглядеть подобно следующему:
 
 [.programlisting]
 ....
 custom: {
-	url: "http://pkg.example.com/11amd64",
+	url: "http://pkg.example.com/13amd64",
 	enabled: yes,
 }
 ....
