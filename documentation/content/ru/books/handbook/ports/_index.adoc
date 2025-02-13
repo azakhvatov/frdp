@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (03.11.2021): 64acd169b82416fe39ad8c4b1be106680d4a3eb3
+// Original EN revision (11.12.2021): 2b027dd0175e739f8b5fedd2ae6bd96cf0c14125
 //
 
 ---
@@ -12,8 +12,8 @@ next: books/handbook/x11
 description: "FreeBSD имеет две взаимодополняющие технологии для установки программного обеспечения сторонних разрабочиков: Коллекцию Портов FreeBSD для установки из исходных текстов и пакеты для установки из уже скомпилированных бинарных файлов"
 tags: ["порты", "коллекция", "pkg", "poudriere", "управление"]
 showBookMenu: true
-weight: 7
-path: "/books/handbook/ports/"
+weight: 6
+path: "/books/handbook/"
 ---
 
 [[ports]]
