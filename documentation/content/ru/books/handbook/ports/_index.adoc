@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (12.02.2023): db3bba9456e5c501c552f045f5b5070a44f97e11
+// Original EN revision (04.03.2023): 74845c5c7fbe2822092af5fa238a5a7d12ecd38d
 //
 
 ---
@@ -14,7 +14,6 @@ tags: ["порты", "коллекция", "pkg", "poudriere", "управлен
 showBookMenu: true
 weight: 6
 path: "/books/handbook/"
-aliases: ["/ru/books/handbook/ports-overview/","/ru/books/handbook/ports-finding-applications/","/ru/books/handbook/pkgng-intro/","/ru/books/handbook/ports-using/","/ru/books/handbook/ports-poudriere/","/ru/books/handbook/ports-nextsteps/","/ru/books/handbook/ports-broken/"]
 ---
 
 [[ports]]
