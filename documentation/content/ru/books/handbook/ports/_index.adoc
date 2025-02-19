@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (04.03.2023): 74845c5c7fbe2822092af5fa238a5a7d12ecd38d
+// Original EN revision (19.04.2023): d8753d6e7a04a6d2b6145759be37e6c5f4adb9ba
 //
 
 ---
@@ -740,7 +740,7 @@ security/sudo
 +
 [source,shell]
 ....
-# git clone https://git.FreeBSD.org/ports.git -b 2020Q3 /usr/ports
+# git clone https://git.FreeBSD.org/ports.git -b 2023Q1 /usr/ports
 ....
 +
 . После первичного извлечения хранилища Git и по мере необходимости обновляйте `/usr/ports`:
@@ -754,7 +754,7 @@ security/sudo
 +
 [source,shell]
 ....
-# git -C /usr/ports switch 2020Q4
+# git -C /usr/ports switch 2023Q1
 ....
 ****
 
