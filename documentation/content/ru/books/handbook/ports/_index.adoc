@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (12.02.2023): 82561b0c956cdcdfb4f5cb521d55bef726865e91
+// Original EN revision (12.02.2023): 54094385038889f702a92018bf8fc520702b4153
 //
 
 ---
@@ -194,30 +194,15 @@ man:pkg[7] перехватит эту команду, и если вы подт
 К примеру, квартальная ветка, созданная в январе 2023 года, именуется как 2023Q1.
 А ветка `Latest` предоставляет пользователям самые последние версии пакетов.
 
-Для переключения от квартальной ветке к ветке с последними версиями выполните следующие команды:
+Для переключения man:pkg[8] с квартальной ветки на ветку с последними версиями выполните следующие команды:
 
 [source,shell]
 ....
 # mkdir -p /usr/local/etc/pkg/repos
-# cp /etc/pkg/FreeBSD.conf /usr/local/etc/pkg/repos/FreeBSD.conf
+# echo 'FreeBSD: { url: "pkg+http://pkg.FreeBSD.org/${ABI}/latest" }' > /usr/local/etc/pkg/repos/FreeBSD.conf
 ....
 
-Отредактируйте файл `/usr/local/etc/pkg/repos/FreeBSD.conf` и замените текст _quarterly_ на _latest_ в строке `url:`.
-
-Результат должен быть похож на следующее:
-
-[.programlisting]
-....
-FreeBSD: {
-	url: "pkg+http://pkg.FreeBSD.org/${ABI}/latest",
-	mirror_type: "srv",
-	signature_type: "fingerprints",
-	fingerprints: "/usr/share/keys/pkg",
-	enabled: yes
-}
-....
-
-И, наконец, запустите следующую команду для обновления метаданных из нового (latest) хранилища.
+Затем запустите следующую команду для обновления каталогов локального хранилища пакетов до ветки хранилища с последними версиями:
 
 [source,shell]
 ....
