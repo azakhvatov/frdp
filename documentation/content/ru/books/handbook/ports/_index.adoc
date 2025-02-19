@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (19.04.2023): d8753d6e7a04a6d2b6145759be37e6c5f4adb9ba
+// Original EN revision (13.05.2022): 56d55c92b940c9755f8aba81f9253b93c238a8c1
 //
 
 ---
@@ -1279,6 +1279,16 @@ FreeBSD: {
 ....
 custom: {
 	url: "http://pkg.example.com/13amd64",
+	enabled: yes,
+}
+....
+
+Если открытие хранилища пакетов для сети Интернет нежелательно, то для прямого указания на хранилище может быть использован протокол `file://`:
+
+[.programlisting]
+....
+custom: {
+	url: "file:///usr/local/poudriere/data/packages/11amd64",
 	enabled: yes,
 }
 ....
