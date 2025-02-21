@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (17.07.2023): 54c0945f7dab278705311e5be394347b3d629b58
+// Original EN revision (19.08.2023): 2d8291224c4fe79182c92e3b6a7e3de91208c9b1
 //
 
 ---
@@ -1196,12 +1196,13 @@ Scanning //usr/share/certs/trusted for certificates...
 Имя файла в этом примере создано объединением имени изолятора, имени порта и имени набора: `13amd64-local-workstation-make.conf`.
 Системный файл `make.conf` и этот новый файл комбинируются во время построения для создания файла `make.conf`, используемого компилирующим изолятором.
 
-Пакеты для построения задаются в файле `13amd64-local-workstation-pkglist`:
+Пакеты для построения задаются в файле `13amd64-local-workstation-pkglist` (порты с extref:{porters-handbook}flavors[оттенками] могут быть заданы с их указанием как @оттенок):
 
 [.programlisting]
 ....
 editors/emacs
 devel/git
+devel/php-composer2@php82
 ports-mgmt/pkg
 ...
 ....
