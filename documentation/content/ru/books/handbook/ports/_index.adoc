@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (19.08.2023): 2d8291224c4fe79182c92e3b6a7e3de91208c9b1
+// Original EN revision (08.09.2023): dda2e19531a519d615d64f1cf5a883659a46a0ec
 //
 
 ---
@@ -161,7 +161,7 @@ man:pkg[8] предоставляет интерфейс для управлен
 [.programlisting]
 ....
 The package management tool is not yet installed on your system.
-Do you want to fetch and install it not? [y/N]
+Do you want to fetch and install it now? [y/N]
 ....
 
 man:pkg[7] перехватит эту команду, и если вы подтвердите свои намерения, сгрузит файл с архивом man:pkg[8], установит из него man:pkg[8], выполнит первичную загрузку локальной базы данных пакетов и затем продолжит исполнение команды, которая изначально была запрошена.
