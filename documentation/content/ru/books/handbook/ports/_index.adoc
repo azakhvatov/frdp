@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (15.01.2025): 277365f0c339e85a740bb9c0da820b82d3f634a2
+// Original EN revision (18.02.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
 
 ---
@@ -13,7 +13,8 @@ description: "FreeBSD имеет две взаимодополняющие те�
 tags: ["порты", "коллекция", "pkg", "poudriere", "управление"]
 showBookMenu: true
 weight: 6
-path: "/books/handbook/ports/"
+params:
+  path: "/books/handbook/ports/"
 ---
 
 [[ports]]
