@@ -1,7 +1,7 @@
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (09.03.2024): 6199af92e7e4872598ebc19c3f8bd0ae7809ee2e
+// Original EN revision (29.05.2024): cbe1572983c139a36fb0357e16df0dd01e1318ad
 //
 
 ---
@@ -684,6 +684,9 @@ security/sudo
 Если необходим дополнительный контроль за деревом портов или имеется необходимость в организации работы с локальными изменениями, либо используется FreeBSD-CURRENT, то для получения Коллекции Портов может быть задействован Git.
 Обратитесь к extref:{committers-guide}[Учебнику Git, git-primer] за детальным описанием Git.
 
+Мы добавляем --depth 1 к командной строке git для клонирования дерева без получения истории внесения изменений, что экономит время и подходит большинству пользователей.
+Если у вас имеются собственные изменения в дереве портов или по какой-либо причине нужна история изменений, опустите параметр --depth 1 ниже.
+
 . Для создания рабочей копии дерева портов необходимо иметь установленный Git. Если дерево портов уже есть в наличии, то установите Git примерно следующим образом:
 +
 [source,shell]
@@ -703,14 +706,14 @@ security/sudo
 +
 [source,shell]
 ....
-# git clone https://git.FreeBSD.org/ports.git /usr/ports
+# git clone --depth 1 https://git.FreeBSD.org/ports.git /usr/ports
 ....
 +
 . Либо извлеките копию квартальной ветки:
 +
 [source,shell]
 ....
-# git clone https://git.FreeBSD.org/ports.git -b 2023Q1 /usr/ports
+# git clone --depth 1 https://git.FreeBSD.org/ports.git -b 2023Q1 /usr/ports
 ....
 +
 . После первичного извлечения хранилища Git и по мере необходимости обновляйте `/usr/ports`:
