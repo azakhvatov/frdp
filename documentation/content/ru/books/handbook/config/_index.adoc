@@ -3,7 +3,7 @@
 //
 // Original RU revision (18.02.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
-// Original EN revision (SVN): 29124
+// Original EN revision (SVN): 29145
 //
 
 ---
@@ -902,13 +902,16 @@ cron.*                                          /var/log/cron
 
 [.filename]#sysctl.conf# очень похож на [.filename]#rc.conf#. Значения устанавливаются в виде `variable=value`. Указанные значения устанавливаются после перевода системы в многопользовательский режим. Однако не все переменные могут быть установлены в этом режиме.
 
-Для того, чтобы отключить протоколирование прекращения работы программ из-за фатальных ошибок и позволить программам Linux определять, что они запускаются под управлением FreeBSD, в [.filename]#sysctl.conf# могут быть заданы следующие параметры:
+Для того, чтобы отключить протоколирование прекращения работы программ из-за аварийных ошибок и ограничить пользователям просмотр процессов, запущенных другими пользователями, в [.filename]#sysctl.conf# могут быть заданы следующие параметры:
 
 [.programlisting]
 ....
-kern.logsigexit=0       # Do not log fatal signal exits (e.g. sig 11)
-compat.linux.osname=FreeBSD
-compat.linux.osrelease=4.3-STABLE
+# Do not log fatal signal exits (e.g. sig 11)
+kern.logsigexit=0
+
+# Prevent users from seeing information about processes that
+# are being run under another UID.
+security.bsd.see_other_uids=0
 ....
 
 [[configtuning-sysctl]]
