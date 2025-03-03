@@ -3,7 +3,7 @@
 //
 // Original RU revision (18.02.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
-// Original EN revision (SVN): 29953
+// Original EN revision (SVN): 30653
 //
 
 ---
@@ -1094,7 +1094,7 @@ TCP Bandwidth Delay Product Limiting похоже на TCP/Vegas в NetBSD. Он
 
 Текущее количество использованных vnode можно посмотреть при помощи команды:
 
-[.programlisting]
+[source,shell]
 ....
 #  sysctl vfs.numvnodes
 vfs.numvnodes: 91349
@@ -1102,7 +1102,7 @@ vfs.numvnodes: 91349
 
 Максимальное количество vnode, доступных системе:
 
-[.programlisting]
+[source,shell]
 ....
 #  sysctl kern.maxvnodes
 kern.maxvnodes: 100000
