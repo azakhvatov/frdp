@@ -3,7 +3,7 @@
 //
 // Original RU revision (18.02.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
-// Original EN revision (SVN): 36302
+// Original EN revision (SVN): 36334
 //
 
 ---
@@ -407,16 +407,18 @@ Starting background file system checks in 60 seconds.
 ....
 dc0: <82c169 PNIC 10/100BaseTX> port 0xa000-0xa0ff mem 0xd3800000-0xd38
 000ff irq 15 at device 11.0 on pci0
-dc0: Ethernet address: 00:a0:cc:da:da:da
 miibus0: <MII bus> on dc0
-ukphy0: <Generic IEEE 802.3u media interface> on miibus0
-ukphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+bmtphy0: <BCM5201 10/100baseTX PHY> PHY 1 on miibus0
+bmtphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+dc0: Ethernet address: 00:a0:cc:da:da:da
+dc0: [ITHREAD]
 dc1: <82c169 PNIC 10/100BaseTX> port 0x9800-0x98ff mem 0xd3000000-0xd30
 000ff irq 11 at device 12.0 on pci0
-dc1: Ethernet address: 00:a0:cc:da:da:db
 miibus1: <MII bus> on dc1
-ukphy1: <Generic IEEE 802.3u media interface> on miibus1
-ukphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+bmtphy1: <BCM5201 10/100baseTX PHY> PHY 1 on miibus1
+bmtphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+dc1: Ethernet address: 00:a0:cc:da:da:db
+dc1: [ITHREAD]
 ....
 
 В этом примере две карты используют имеющийся в системе драйвер man:dc[4].
@@ -511,39 +513,38 @@ W32DRIVER_SYS_load="YES"
 
 Как только для сетевой карты загружен подходящий драйвер, ее потребуется настроить. Как и многое другое, сетевая карта может быть настроена во время установки с помощью sysinstall.
 
-Для вывода информации о настройке сетевых интерфейсов системы, введите следующую команду:
+Для выдачи информации о настройке сетевых интерфейсов системы введите следующую команду:
 
 [source,shell]
 ....
 % ifconfig
-dc0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+dc0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+	options=80008<VLAN_MTU,LINKSTATE>
+	ether 00:a0:cc:da:da:da
         inet 192.168.1.3 netmask 0xffffff00 broadcast 192.168.1.255
-        ether 00:a0:cc:da:da:da
         media: Ethernet autoselect (100baseTX <full-duplex>)
         status: active
-dc1: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
-        inet 10.0.0.1 netmask 0xffffff00 broadcast 10.0.0.255
+dc1: flags=8802<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+        options=80008<VLAN_MTU,LINKSTATE>
         ether 00:a0:cc:da:da:db
+        inet 10.0.0.1 netmask 0xffffff00 broadcast 10.0.0.255
         media: Ethernet 10baseT/UTP
         status: no carrier
-lp0: flags=8810<POINTOPOINT,SIMPLEX,MULTICAST> mtu 1500
-lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384
+plip0: flags=8810<POINTOPOINT,SIMPLEX,MULTICAST> metric 0 mtu 1500
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
+        options=3<RXCSUM,TXCSUM>
+        inet6 fe80::1%lo0 prefixlen 64 scopeid 0x4
+        inet6 ::1 prefixlen 128
         inet 127.0.0.1 netmask 0xff000000
-tun0: flags=8010<POINTOPOINT,MULTICAST> mtu 1500
+	nd6 options=3<PERFORMNUD,ACCEPT_RTADV>
 ....
-
-[NOTE]
-====
-Старые версии FreeBSD могут потребовать запуска man:ifconfig[8] с параметром `-a`, за более подробным описанием синтаксиса man:ifconfig[8] обращайтесь к странице справочника. Учтите также, что строки, относящиеся к IPv6 (`inet6` и т.п.) убраны из этого примера.
-====
 
 В этом примере были показаны следующие устройства:
 
 * [.filename]#dc0#: первый Ethernet интерфейс
 * [.filename]#dc1#: второй Ethernet интерфейс
-* [.filename]#lp0#: интерфейс параллельного порта
+* [.filename]#plip0#: Интерфейс параллельного порта (если параллельный порт присутствует в машине)
 * [.filename]#lo0#: устройство loopback
-* [.filename]#tun0#: туннельное устройство, используемое ppp
 
 Для присвоения имени сетевой карте FreeBSD использует имя драйвера и порядковый номер, в котором карта обнаруживается при инициализации устройств. Например, [.filename]#sis2# это третья сетевая карта, использующая драйвер man:sis[4].
 
@@ -557,15 +558,18 @@ tun0: flags=8010<POINTOPOINT,MULTICAST> mtu 1500
 . Выбор физической среды передачи данных в режиме автовыбора (`media: Ethernet autoselect (100baseTX full-duplex)`). Мы видим, что [.filename]#dc1# была настроена для работы с `10baseT/UTP`. За более подробной информацией о доступных драйверу типах среды обращайтесь к странице справочника.
 . Статус соединения (`status`) `active`, т.е. несущая обнаружена. Для [.filename]#dc1#, мы видим `status: no carrier`. Это нормально, когда Ethernet кабель не подключен к карте.
 
-Если man:ifconfig[8] показывает примерно следующее:
+Если в выдаче man:ifconfig[8] присутствует что-то, подобное следующему:
 
 [source,shell]
 ....
-dc0: flags=8843<BROADCAST,SIMPLEX,MULTICAST> mtu 1500
-	        ether 00:a0:cc:da:da:da
+dc0: flags=8843<BROADCAST,SIMPLEX,MULTICAST> metric 0 mtu 1500
+	options=80008<VLAN_MTU,LINKSTATE>
+        ether 00:a0:cc:da:da:da
+        media: Ethernet autoselect (100baseTX <full-duplex>)
+        status: active
 ....
 
-это означает, что карта не была настроена.
+это означает, что адаптер не был настроен.
 
 Для настройки карты вам потребуются привилегии пользователя `root`. Настройка сетевой карты может быть выполнена из командной строки с помощью man:ifconfig[8], но вам потребуется делать это после каждой перезагрузки системы. Подходящее место для настройки сетевых карт это файл [.filename]#/etc/rc.conf#.
 
@@ -581,13 +585,40 @@ ifconfig_dc1="inet 10.0.0.1 netmask 255.255.255.0 media 10baseT/UTP"
 
 Если вы настроили сетевую карту в процессе установки системы, некоторые строки, касающиеся сетевой карты, могут уже присутствовать. Внимательно проверьте [.filename]#/etc/rc.conf# перед добавлением каких-либо строк.
 
-Отредактируйте также файл [.filename]#/etc/hosts# для добавления имен и IP адресов различных компьютеров сети, если их еще там нет. За дополнительной информацией обращайтесь к man.hosts.5; и к [.filename]#/usr/shared/examples/etc/hosts#.
+Отредактируйте также файл [.filename]#/etc/hosts# для добавления имен и IP адресов различных компьютеров сети, если их еще там нет. За дополнительной информацией обращайтесь к man:hosts[5] и к [.filename]#/usr/shared/examples/etc/hosts#.
+
+[NOTE]
+====
+Если с машины планируется доступ в Интернет, то вам также необходимо самостоятельно настроить шлюз и сервер имён:
+
+[source,shell]
+....
+# echo 'defaultrouter="ваш_маршрутизатор_по_умолчанию"' >> /etc/rc.conf
+# echo 'nameserver ваш_сервер_DNS' >> /etc/resolv.conf
+....
+====
 
 === Тестирование и решение проблем
 
 Как только вы внесете необходимые изменения в [.filename]#/etc/rc.conf#, перегрузите компьютер. Изменения настроек интерфейсов будут применены, кроме того будет проверена правильность настроек.
+Либо вы можете просто перезапустить систему работы с сетью:
 
-Как только система перезагрузится, проверьте сетевые интерфейсы.
+[source,shell]
+....
+# /etc/rc.d/netif restart
+....
+
+[NOTE]
+====
+Если используемый по умолчанию шлюз был настроен в [.filename]#/etc/rc.conf#, также используйте эту команду:
+
+[source,shell]
+....
+# /etc/rc.d/routing restart
+....
+====
+
+После того, как система работы с сетью перезапустится, вы должны проверить сетевые интерфейсы.
 
 ==== Проверка Ethernet карты
 
