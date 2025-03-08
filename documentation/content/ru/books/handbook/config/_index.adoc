@@ -3,7 +3,7 @@
 //
 // Original RU revision (18.02.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
-// Original EN revision (SVN): 37946
+// Original EN revision (SVN): 38233
 //
 
 ---
@@ -209,7 +209,7 @@ ifconfig_fxp0="inet 10.1.1.1/8"
 . /etc/rc.subr
 
 name=utility
-rcvar=utility_pidfile
+rcvar=utility_enable
 
 command="/usr/local/sbin/utility"
 
