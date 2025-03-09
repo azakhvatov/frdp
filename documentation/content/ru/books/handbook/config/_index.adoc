@@ -3,7 +3,7 @@
 //
 // Original RU revision (18.02.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
-// Original EN revision (SVN): 39914
+// Original EN revision (SVN): 40792
 //
 
 ---
@@ -328,11 +328,12 @@ HOME=/var/log
 [[configtuning-rcd]]
 == Использование man:rc[8] во FreeBSD
 
-В 2002 году во FreeBSD была интегрирована из NetBSD система [.filename]#rc.d#, используемая для старта системы. Многие из файлов в каталоге [.filename]#/etc/rc.d# предназначены для основных сервисов, они могут управляться параметрами `start`, `stop`, и `restart`. Например, man:sshd[8] может быть перезапущен следующей командой:
+В 2002 году во FreeBSD была интегрирована из NetBSD система [.filename]#rc.d#, используемая для старта системы. Многие из файлов в каталоге [.filename]#/etc/rc.d# предназначены для основных сервисов, они могут управляться параметрами `start`, `stop`, и `restart`.
+Например, man:sshd[8] может быть перезапущен следующей командой:
 
 [source,shell]
 ....
-# /etc/rc.d/sshd restart
+# service sshd restart
 ....
 
 Эта процедура похожа для других сервисов. Конечно, сервисы обычно запускаются автоматически при загрузке системы, как указано в man:rc.conf[5]. Например, включение даемона Network Address Translation при запуске выполняется простым добавлением следующей строки в [.filename]#/etc/rc.conf#:
@@ -350,14 +351,14 @@ natd_enable="YES"
 
 [source,shell]
 ....
-# /etc/rc.d/sshd onerestart
+# service sshd onerestart
 ....
 
 Проверить состояние переменной в файле [.filename]#/etc/rc.conf# легко: запустите соответствующий скрипт из [.filename]#rc.d# с параметром `rcvar`. Проверка переменной для `sshd` выполняется следующей командой:
 
 [source,shell]
 ....
-# /etc/rc.d/sshd rcvar
+# service sshd rcvar
 # sshd
 $sshd_enable=YES
 ....
@@ -371,7 +372,7 @@ $sshd_enable=YES
 
 [source,shell]
 ....
-# /etc/rc.d/sshd status
+# service sshd status
 sshd is running as pid 433.
 ....
 
@@ -616,7 +617,7 @@ ifconfig_dc1="inet 10.0.0.1 netmask 255.255.255.0 media 10baseT/UTP"
 
 [source,shell]
 ....
-# /etc/rc.d/netif restart
+# service netif restart
 ....
 
 [NOTE]
@@ -625,7 +626,7 @@ ifconfig_dc1="inet 10.0.0.1 netmask 255.255.255.0 media 10baseT/UTP"
 
 [source,shell]
 ....
-# /etc/rc.d/routing restart
+# service routing restart
 ....
 ====
 
