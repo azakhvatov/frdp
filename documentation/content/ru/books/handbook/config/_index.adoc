@@ -3,7 +3,7 @@
 //
 // Original RU revision (18.02.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
-// Original EN revision (SVN): 38826
+// Original EN revision (SVN): 38967
 //
 
 ---
@@ -724,6 +724,174 @@ ifconfig_fxp0_alias6="inet 202.0.75.19 netmask 255.255.255.255"
 ifconfig_fxp0_alias7="inet 202.0.75.20 netmask 255.255.255.255"
 ....
 
+[[configtuning-syslog]]
+
+== Настройка системного регистратора syslogd
+
+Протоколирование системы является важным аспектом системного администрирования.
+Оно используется как для обнаружения ошибок в системе и проблем с оборудованием и программным обеспечением, так и играет очень важную роль в аудите безопасности и ответах на инциденты.
+Системные даемоны без управляющего терминала также обычно протоколируют информацию через системные функции регистрации или другой файл журнала.
+
+В этом разделе будет описано, как настроить и использовать системный регистратор FreeBSD, man:syslogd[8], а также будут рассмотрены ротирование журналов и управление ими посредством man:newsyslog[8].
+Внимание будет сосредоточено на настройке и использовании `syslogd` на локальной машине.
+В случае более комплексных конфигураций, использующих отдельную машину для протоколирования, обратитесь к разделу <<network-syslogd>>.
+
+=== Использование syslogd
+
+В стандартной конфигурации FreeBSD man:syslogd[8] запускается при загрузке.
+Это управляется при помощи переменной `syslogd_enable` в [.filename]#/etc/rc.conf#.
+Имеется множество параметров приложения, которые влияют на поведение man:syslogd[8].
+Для их изменения используйте `syslogd_flags` в [.filename]#/etc/rc.conf#.
+Обратитесь к man:syslogd[8] для получения дополнительной информации о параметрах, а также к man:rc.conf[5], разделам <<configtuning-core-configuration>> и <<configtuning-rcd>> за дополнительной информацией о [.filename]#/etc/rc.conf# и подсистеме man:rc[8].
+
+=== Настройка syslogd
+
+Конфигурационный файл, которым по умолчанию является [.filename]#/etc/syslog.conf#, управляет тем, что делает man:syslogd[8] с записями о журналируемых событиях при их получении.
+Имеется несколько параметров для управления обработкой поступающих событий, из которых самыми основными являются _facility_ (объект или подсистема) и _level_ (уровень).
+Объект описывает, какая подсистема сформировала сообщение, например, ядро или даемон, а уровень описывает степень серьёзности произошедшего события.
+Это делает возможным записывать события в разные файлы регистрации либо отбрасывать их в зависимости от подсистемы и важности.
+Также возможно осуществление действий в зависимости от приложения, которое направило сообщение, а в случае удалённого протоколирования и от имени хоста машины, сформировавшей регистрируемое событие.
+
+Настройка man:syslogd[8] достаточно незамысловата.
+Конфигурационный файл состоит из строк, по одной на каждое действие, а синтаксически каждая строка состоит из поля выбора (селектора), за которым следует поле действия.
+Поле выбора имеет вид _объект.уровень_, и оно будет соотноситься с сообщениями о событиях от объекта _объект_ с уровнем серьёзности, соответствующим или превышающим _уровень_.
+Перед уровнем можно добавить необязательный флажковый параметр сравнения для более точного указания того, что протоколируется.
+Для одного и того же действия могут использоваться несколько селекторов, они разделяются точкой с запятой (`;`).
+Используемый символ `*` будет соответствовать любому значению.
+Поле действия указывает, куда направлять журналируемое сообщение, например, в файл или на удалённую протоколирующую машину.
+В качестве примера это файл [.filename]#syslog.conf# из FreeBSD, используемый по умолчанию:
+
+[.programlisting]
+....
+# $FreeBSD$
+#
+#	Spaces ARE valid field separators in this file. However,
+#	other *nix-like systems still insist on using tabs as field
+#	separators. If you are sharing this file between systems, you
+#	may want to use only tabs as field separators here.
+#	Consult the man:syslog.conf[5] manpage.
+*.err;kern.warning;auth.notice;mail.crit	/dev/console <.>
+*.notice;authpriv.none;kern.debug;lpr.info;mail.crit;news.err	/var/log/messages
+security.*					/var/log/security
+auth.info;authpriv.info				/var/log/auth.log
+mail.info					/var/log/maillog <.>
+lpr.info					/var/log/lpd-errs
+ftp.info					/var/log/xferlog
+cron.*						/var/log/cron
+*.=debug					/var/log/debug.log <.>
+*.emerg						*
+# uncomment this to log all writes to /dev/console to /var/log/console.log
+#console.info					/var/log/console.log
+# uncomment this to enable logging of all log messages to /var/log/all.log
+# touch /var/log/all.log and chmod it to mode 600 before it will work
+#*.*                                            /var/log/all.log
+# uncomment this to enable logging to a remote loghost named loghost
+#*.*                                            @loghost
+# uncomment these if you're running inn
+# news.crit                                     /var/log/news/news.crit
+# news.err                                      /var/log/news/news.err
+# news.notice                                   /var/log/news/news.notice
+!ppp <.>
+*.*						/var/log/ppp.log
+!*
+....
+
+<.> Соответствует всем сообщениям с уровнем `err` и выше, а также `kern.warning`, `auth.notice` и `mail.crit`, при этом направляет эти журналируемые сообщения на консоль ([.filename]#/dev/console#).
+<.> Соответствует всем сообщениям от подсистемы `mail` с уровнем `info` и выше, при этом протоколирует эти сообщения в [.filename]#/var/log/maillog#.
+<.> В этой строке используется флаг сравнения `=` для выбора сообщений только с уровнем `debug`, при этом они протоколируются в [.filename]#/var/log/debug.log#.
+<.> Это пример использования функции _указания программы_. При этом последующие правила будут применяться только для указанной программы. В данном случае эта строка и последующие заставляют все сообщения от `ppp`, но не от других программ, направляться в [.filename]#/var/log/ppp.log#.
+
+Этот пример показывает, что существует достаточное количество уровней и подсистем.
+Имеются следующие уровни, в порядке снижения уровня критичности: `emerg`, `alert`, `crit`, `err`, `warning`, `notice`, `info` и `debug`.
+Объекты без определённого порядка перечисления таковы: `auth`, `authpriv`, `console`, `cron`, `daemon`, `ftp`, `kern`, `lpr`, `mail`, `mark`, `news`, `security`, `syslog`, `user`, `uucp` и `local0` до `local7`.
+Имейте в виду, что в других операционных системах могут быть подсистемы, отличающиеся от указанных.
+
+Зная это, легко добавить новую строку в [.filename]#/etc/syslog.conf# для регистрации всех событий от различных даемонов на уровне `notice` и выше в файле [.filename]#/var/log/daemon.log#. Просто добавьте следующее:
+
+[.programlisting]
+....
+daemon.notice					/var/log/daemon.log
+....
+
+Для получения дополнительной информации о различных уровнях и подсистемах, обратитесь к man:syslog[3] и man:syslogd[8].
+Для получения дополнительной информации о [.filename]#syslog.conf#, его синтаксисе и дополнительных примеров расширенного использования обратитесь к man:syslog.conf[5] и разделу <<network-syslogd>>.
+
+=== Управление журналами событий и ротацией при помощи newsyslog
+
+Журналы событий имеют свойство быстро расти и постоянно накапливать данные.
+Это приводит к тому, что файлы полны информацией, полезность которой невелика для использования в данный момент, при этом они занимают место на жёстком диске.
+Для исключения этого в игру включается управление журналами событий.
+Во FreeBSD в качестве инструмента управления файлами журналов событий применяется man:newsyslog[8].
+Эта программа используется для периодической ротации и сжатия файлов журналов, а при необходимости создания отсутствующих файлов и уведомления программ при перемещении файлов.
+Файлы журналов не обязательно должны происходить от syslog, man:newsyslog[8] работает с любыми журналами, записываемыми любыми программами.
+Важно отметить, что `newsyslog` обычно запускается при помощи man:cron[8], и не является системным даемоном.
+В стандартной конфигурации он запускается каждый час.
+
+==== Настройка newsyslog
+
+Для того, чтобы понимать, какие действия нужно предпринимать, man:newsyslog[8] считывает свой конфигурационный файл, которым по умолчанию яявляется [.filename]#/etc/newsyslog.conf#.
+В данном конфигурационном файле для каждого файла, управляемого man:newsyslog[8], выделена одна строка.
+В каждой строке указан владелец файла, полномочия и то, когда ротировать файл, а также необязательные флажковые параметры, которые влияют на ротацию журнала (например, на сжатие), и программы для уведомления при ротации журнала.
+
+
+[.filename]#newsyslog.conf# - конфигурационный файл man:newsyslog[8], программы, обычно контролируемой man:cron[8]. man:newsyslog[8] определяет, когда лог-файлы нуждаются в архивировании и перегруппировке. [.filename]#logfile# перемещается в [.filename]#logfile.0#, [.filename]#logfile.0# перемещается в [.filename]#logfile.1#, и так далее. Другое именование получится при архивировании с помощью man:gzip[1]: [.filename]#logfile.0.gz#, [.filename]#logfile.1.gz#, и т.д.
+
+[.filename]#newsyslog.conf# показывает, какие лог файлы должны быть проинспектированы, сколько их должно быть сохранено, и когда они должны быть пересмотрены. Лог файлы могут быть перегруппированы и/или заархивированы, когда они либо достигнут определённого размера, либо при достижении определённых даты/времени.
+В качестве примера это конфигурационный файл FreeBSD, используемый по умолчанию:
+
+[.programlisting]
+....
+# configuration file for newsyslog
+# $FreeBSD$
+#
+# Entries which do not specify the '/pid_file' field will cause the
+# syslogd process to be signalled when that log file is rotated.  This
+# action is only appropriate for log files which are written to by the
+# syslogd process (ie, files listed in /etc/syslog.conf).  If there
+# is no process which needs to be signalled when a given log file is
+# rotated, then the entry for that file should include the 'N' flag.
+#
+# The 'flags' field is one or more of the letters: BCDGJNUXZ or a '-'.
+#
+# Note: some sites will want to select more restrictive protections than the
+# defaults.  In particular, it may be desirable to switch many of the 644
+# entries to 640 or 600.  For example, some sites will consider the
+# contents of maillog, messages, and lpd-errs to be confidential.  In the
+# future, these defaults may change to more conservative ones.
+#
+# logfilename		[owner:group]	mode count size when  flags [/pid_file] [sig_num]
+/var/log/all.log			600  7     *    @T00  J
+/var/log/amd.log			644  7     100  *     J
+/var/log/auth.log			600  7     100  @0101T JC
+/var/log/console.log			600  5     100  *     J
+/var/log/cron				600  3     100  *     JC
+/var/log/daily.log			640  7     *    @T00  JN
+/var/log/debug.log			600  7     100  *     JC
+/var/log/init.log			644  3     100  *     J
+/var/log/kerberos.log			600  7     100  *     J
+/var/log/lpd-errs			644  7     100  *     JC
+/var/log/maillog			640  7     *    @T00  JC
+/var/log/messages			644  5     100  @0101T JC
+/var/log/monthly.log			640  12    *    $M1D0 JN
+/var/log/pflog				600  3     100  *     JB    /var/run/pflogd.pid
+/var/log/ppp.log	root:network	640  3     100  *     JC
+/var/log/security			600  10    100  *     JC
+/var/log/sendmail.st			640  10    *    168   B
+/var/log/utx.log			644  3     *    @01T05 B
+/var/log/weekly.log			640  5     1    $W6D0 JN
+/var/log/xferlog			600  7     100  *     JC
+....
+
+Каждая строка начинается с имени файла для ротации, за которым может указываться владелец и группа для ротируемого и вновь создаваемого файлов.
+Следующее поле, `mode`, является режимом доступа к файлам, а `count` указывает на количество ротируемых файлов с журналами событий, которое должно храниться.
+Поля `size` и `when` говорят `newsyslog`, когда ротировать этот файл.
+Файл журнала ротируется, когда либо его размер превышает значение поля `size`, либо после того, как истечёт время, указанное в поле `when`.
+`*` означает, что данное поле игнорируется.
+Поле _flags_ даёт man:newsyslog[8] дополнительные инструкции, такие как способ сжатия ротированного файла или необходимость создания файла журнала, если он отсутствует.
+Последние два поля является необязательными и задают PID-файл некоторого процесса и номер сигнала, который будет направлен в этот процесс при ротации файла.
+Для получения дополнительной информации обо всех полях, действующих флажковых параметрах и о том, как задать время ротации, обратитесь к  man:newsyslog.conf[5].
+Не забывайте о том, что `newsyslog` запускается из `cron` и не может ротировать файлы чаще, чем он запускается из man:cron[8].
+
 [[configtuning-configfiles]]
 == Файлы настройки
 
@@ -853,81 +1021,6 @@ nameserver 147.11.100.30
 ....
 
 За дополнительной информацией обращайтесь к man:hosts[5].
-
-=== Настройка лог файлов
-
-==== [.filename]#syslog.conf#
-
-[.filename]#syslog.conf# is является файлом конфигурации для man:syslogd[8]. В нём указываются, типы сообщений генерируемые `syslog`, и лог файлы, в которые они записываются.
-
-[.programlisting]
-....
-# $FreeBSD$
-#
-#       Spaces ARE valid field separators in this file. However,
-#       other *nix-like systems still insist on using tabs as field
-#       separators. If you are sharing this file between systems, you
-#       may want to use only tabs as field separators here.
-#       Consult the syslog.conf(5) manual page.
-*.err;kern.debug;auth.notice;mail.crit          /dev/console
-*.notice;kern.debug;lpr.info;mail.crit;news.err /var/log/messages
-security.*                                      /var/log/security
-mail.info                                       /var/log/maillog
-lpr.info                                        /var/log/lpd-errs
-cron.*                                          /var/log/cron
-*.err                                           root
-*.notice;news.err                               root
-*.alert                                         root
-*.emerg                                         *
-# uncomment this to log all writes to /dev/console to /var/log/console.log
-#console.info                                   /var/log/console.log
-# uncomment this to enable logging of all log messages to /var/log/all.log
-#*.*                                            /var/log/all.log
-# uncomment this to enable logging to a remote log host named loghost
-#*.*                                            @loghost
-# uncomment these if you're running inn
-# news.crit                                     /var/log/news/news.crit
-# news.err                                      /var/log/news/news.err
-# news.notice                                   /var/log/news/news.notice
-!startslip
-*.*                                             /var/log/slip.log
-!ppp
-*.*                                             /var/log/ppp.log
-....
-
-За более полной информацией обратитесь к man:syslog.conf[5].
-
-==== [.filename]#newsyslog.conf#
-
-[.filename]#newsyslog.conf# - конфигурационный файл man:newsyslog[8], программы, обычно контролируемой man:cron[8]. man:newsyslog[8] определяет, когда лог-файлы нуждаются в архивировании и перегруппировке. [.filename]#logfile# перемещается в [.filename]#logfile.0#, [.filename]#logfile.0# перемещается в [.filename]#logfile.1#, и так далее. Другое именование получится при архивировании с помощью man:gzip[1]: [.filename]#logfile.0.gz#, [.filename]#logfile.1.gz#, и т.д.
-
-[.filename]#newsyslog.conf# показывает, какие лог файлы должны быть проинспектированы, сколько их должно быть сохранено, и когда они должны быть пересмотрены. Лог файлы могут быть перегруппированы и/или заархивированы, когда они либо достигнут определённого размера, либо при достижении определённых даты/времени.
-
-[.programlisting]
-....
-# configuration file for newsyslog
-# $FreeBSD$
-#
-# filename          [owner:group]    mode count size when [ZB] [/pid_file] [sig_num]
-/var/log/cron                           600  3     100  *     Z
-/var/log/amd.log                        644  7     100  *     Z
-/var/log/kerberos.log                   644  7     100  *     Z
-/var/log/lpd-errs                       644  7     100  *     Z
-/var/log/maillog                        644  7     *    @T00  Z
-/var/log/sendmail.st                    644  10    *    168   B
-/var/log/messages                       644  5     100  *     Z
-/var/log/all.log                        600  7     *    @T00  Z
-/var/log/slip.log                       600  3     100  *     Z
-/var/log/ppp.log                        600  3     100  *     Z
-/var/log/security                       600  10    100  *     Z
-/var/log/wtmp                           644  3     *    @01T05 B
-/var/log/daily.log                      640  7     *    @T00  Z
-/var/log/weekly.log                     640  5     1    $W6D0 Z
-/var/log/monthly.log                    640  12    *    $M1D0 Z
-/var/log/console.log                    640  5     100  *     Z
-....
-
-За дополнительной информацией обращайтесь к man:newsyslog[8].
 
 [[configtuning-sysctlconf]]
 === [.filename]#sysctl.conf#
