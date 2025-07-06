@@ -1,3 +1,11 @@
+//
+// The FreeBSD Russian Documentation Project
+//
+// Original RU revision (18.05.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
+//
+// Original EN revision (SVN): 37843
+//
+
 ---
 title: Глава 25. Сетевые серверы
 part: Часть IV. Сетевые коммуникации
