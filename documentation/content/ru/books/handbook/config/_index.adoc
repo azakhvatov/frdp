@@ -3,7 +3,7 @@
 //
 // Original RU revision (18.02.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
-// Original EN revision (SVN): 44298
+// Original EN revision (SVN): 44299
 //
 
 ---
@@ -74,37 +74,6 @@ endif::[]
 
 * Понять основы UNIX(R) и FreeBSD (crossref:basics[basics, Основы FreeBSD]).
 * Ознакомиться с основами конфигурирования и компиляции ядра (crossref:kernelconfig[kernelconfig, Настройка ядра FreeBSD]).
-
-[[configtuning-appconfig]]
-== Настройка приложений
-
-Как правило, установленные приложения имеют собственные конфигурационные файлы и синтаксис.
-Важно, чтобы эти файлы хранились отдельно от базовой системы, чтобы их можно было легко находить и администрировать с помощью средств управления пакетами.
-
-Обычно эти файлы устанавливаются в [.filename]#/usr/local/etc#.
-В случае, когда приложению нужно большое количество конфигурационных файлов, для их хранения будет создан подкаталог.
-
-Обычно при установке портов и пакетов также устанавливаются и образцы конфигурационных файлов.
-Эти файлы обычно помечаются расширением, подобным [.filename]#.sample#.
-Если для конкретного приложения конфигурационные файлы отсутствуют, то они могутбыть созданы путём копирования файлов образцов.
-
-К примеру, рассмотрите содержимое каталога [.filename]#/usr/local/etc/apache#:
-
-....
--rw-r--r--  1 root  wheel   2184 May 20  1998 access.conf
--rw-r--r--  1 root  wheel   2184 May 20  1998 access.conf.default
--rw-r--r--  1 root  wheel   9555 May 20  1998 httpd.conf
--rw-r--r--  1 root  wheel   9555 May 20  1998 httpd.conf.default
--rw-r--r--  1 root  wheel  12205 May 20  1998 magic
--rw-r--r--  1 root  wheel  12205 May 20  1998 magic.default
--rw-r--r--  1 root  wheel   2700 May 20  1998 mime.types
--rw-r--r--  1 root  wheel   2700 May 20  1998 mime.types.default
--rw-r--r--  1 root  wheel   7980 May 20  1998 srm.conf
--rw-r--r--  1 root  wheel   7933 May 20  1998 srm.conf.default
-....
-
-Размеры файлов показывают, что изменён был только файл [.filename]#srm.conf#.
-При последующем обновлении порта Apache этот изменённый файл уже не будет перезаписан.
 
 [[configtuning-starting-services]]
 == Запуск сервисов
