@@ -3,7 +3,7 @@
 //
 // Original RU revision (18.05.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
-// Original EN revision (SVN): 38382
+// Original EN revision (SVN): 38790
 //
 
 ---
@@ -1359,7 +1359,7 @@ dhclient_flags=""
 * [.filename]#/sbin/dhclient-script#
 + 
 `dhclient-script` является специфичным для FreeBSD скриптом настройки клиента DHCP. Он описан в man:dhclient-script[8], но для нормального функционирования никаких модификаций со стороны пользователя не требуется.
-* [.filename]#/var/db/dhclient.leases#
+* [.filename]#/var/db/dhclient.leases.interface#
 + 
 В этом файле клиент DHCP хранит базу данных выданных к использованию адресов в виде журнала. На странице man:dhclient.leases[5] дается гораздо более подробное описание.
 
