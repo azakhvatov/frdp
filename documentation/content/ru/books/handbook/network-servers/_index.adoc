@@ -3,7 +3,7 @@
 //
 // Original RU revision (18.05.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
-// Original EN revision (SVN): 40247
+// Original EN revision (SVN): 40525
 //
 
 ---
@@ -2103,9 +2103,9 @@ FreeBSD автоматически запускает named в ограниче�
 ====
 
 [[dns-read]]
-=== Дополнительная литература
+=== Дополнительные материалы для ознакомления
 
-Справочная информация по BIND/named: man:rndc[8], man:named[8], man:named.conf[8], man:nsupdate[8], man:dnssec-signzone[8], man:dnssec-keygen[8]
+Справочная информация по BIND/named: man:rndc[8], man:named[8], man:named.conf[8], man:nsupdate[1], man:dnssec-signzone[8], man:dnssec-keygen[8]
 
 * https://www.isc.org/software/bind[ Официальная страница ISC BIND]
 * https://www.isc.org/software/guild[ Официальный форум ISC BIND]
