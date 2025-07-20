@@ -3,7 +3,7 @@
 //
 // Original RU revision (18.05.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
-// Original EN revision (SVN): 42409
+// Original EN revision (SVN): 42483
 //
 
 ---
@@ -413,22 +413,18 @@ nfs_client_enable="YES"
 
 За подробной информацией о работе скриптов rc.d обращайтесь к crossref:config[configtuning-rcd,Использование rc во FreeBSD 5.X и последующих версиях].
 
-Как вариант, при перезагрузке FreeBSD всё настроится правильно. Хотя выполнять перезагрузку вовсе не обязательно. Выполнение следующих команд пользователем `root` запустит всё, что нужно.
-
-На сервере NFS:
+Теперь сервисы NFS могут быть запущены пользователем `root` выдачей следующей команды на сервере NFS:
 
 [source,shell]
 ....
-# rpcbind
-# nfsd -u -t -n 4
-# mountd -r
+# service nfsd start
 ....
 
 На клиенте NFS:
 
 [source,shell]
 ....
-# nfsiod -n 4
+# service nfsclient restart
 ....
 
 Теперь всё должно быть готово к реальному монтированию удалённой файловой системы.
@@ -757,7 +753,7 @@ nis_yppasswdd_enable="YES"
 _Карты NIS_ являются файлами баз данных, которые хранятся в каталоге [.filename]#/var/yp#.
 Они генерируются из конфигурационных файлов, находящихся в каталоге [.filename]#/etc# основного сервера NIS, за одним исключением: [.filename]#/etc/master.passwd#.
 На это есть весомая причина, ведь никогда не следует распространять пароли `root` и других административных учётных записей на все серверы в домене NIS.
-Таким образом, перед инициализированием карт NIS сконфигурируйте первичные файлы паролей:
+Таким образом, перед инициализацией карт NIS сконфигурируйте первичные файлы паролей:
 
 [source,shell]
 ....
@@ -787,7 +783,7 @@ Creating an YP server will require that you answer a few questions.
 Questions will all be asked at the beginning of the procedure.
 Do you want this procedure to quit on non-fatal errors? [y/n: n] n
 Ok, please remember to go back and redo manually whatever fails.
-If you don't, something might not work.
+If not, something might not work.
 At this point, we have to construct a list of this domains YP servers.
 rod.darktech.org is already known as master server.
 Please continue to add any slave servers, one per line. When you are
@@ -840,7 +836,7 @@ Questions will all be asked at the beginning of the procedure.
 Do you want this procedure to quit on non-fatal errors? [y/n: n]  n
 
 Ok, please remember to go back and redo manually whatever fails.
-If you don't, something might not work.
+If not, something might not work.
 There will be no further questions. The remainder of the procedure
 should take a few minutes, to copy the databases from ellington.
 Transferring netgroup...
@@ -885,7 +881,7 @@ Transferring hosts.byname...
 ypxfr: Exiting: Map successfully transferred
 
 coltrane has been setup as an YP slave server without any errors.
-Don't forget to update map ypservers on ellington.
+Remember to update map ypservers on ellington.
 ....
 
 Должен существовать каталог с именем [.filename]#/var/yp/test-domain#.
