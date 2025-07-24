@@ -3,7 +3,7 @@
 //
 // Original RU revision (18.05.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
-// Original EN revision (SVN): 42910
+// Original EN revision (SVN): 42911
 //
 
 ---
@@ -3397,8 +3397,7 @@ ctld_enable="YES"
 
 [source,shell]
 ....
-# service ctld
-          start
+# service ctld start
 ....
 
 При запуске даемон link:http://www.freebsd.org/cgi/man.cgi?query=ctld&amp;sektion=8&amp;manpath=FreeBSD+10-current[ctld(8)] считывает файл link:http://www.freebsd.org/cgi/man.cgi?query=ctl.conf&amp;sektion=5&amp;manpath=FreeBSD+10-current[ctl.conf(5)].
