@@ -3,7 +3,7 @@
 //
 // Original RU revision (18.05.2025): 54ac237fdb34d9074316cd8f8a77832bd618e4f6
 //
-// Original EN revision (SVN): 42611
+// Original EN revision (SVN): 42910
 //
 
 ---
@@ -75,6 +75,7 @@ endif::[]
 * Как настроить файловый и сервер печати для Windows(R) клиентов с использованием Samba.
 * Как синхронизировать дату и время, а также настроить сервер времени, использующий NTP (Network Time Protocol).
 * Как настроить стандартный демон протоколирования, `syslogd`, принимать сообщения от удалённых хостов.
+* Как настроить iSCSI.
 
 Эта глава предполагает базовые знания:
 
@@ -3322,3 +3323,264 @@ Logging to FILE /var/log/messages
 В таких случаях установка корректных полномочий на эти файлы будет критичным.
 Утилита man:newsyslog[8] поддерживает установку полномочий на вновь создаваемые и ротируемые журнальные файлы.
 Установка режима `600` на файлы журналов должна предотвратить любой нежелательный шпионаж со стороны локальных пользователей.
+
+[[network-iscsi]]
+== Конфигурирование инициатора и цели iSCSI
+
+iSCSI является способом совместного использования устройств хранения, или обеспечения доступности дискового пространства одной машины (сервера, в терминологии iSCSI называемом целью) на других машинах (клиентах, в iSCSI называемых инициаторами).
+Основным отличием от, к примеру, NFS является то, что NFS работает на уровне файловой системы, в то время как iSCSI работает на уровне блочного устройства - для инициаторов удалённые диски, обслуживаемые посредством iSCSI, всего лишь похожи на физические диски; они имеют соответствующие узлы устройств, появляющиеся в /dev/, которые необходимо отдельно монтировать.
+
+=== Цель iSCSI
+
+Замечание: Встроенная поддержка цели iSCSI появилась во FreeBSD 10.0-RELEASE.
+Для использования iSCSI в более старых версиях воспользуйтесь реализацией цели на пользовательском уровне, устанавливаемой из портов, таких как istgt.
+Эта глава касается только встроенной поддержки цели.
+
+==== Базовые операции
+
+Конфигурирование цели iSCSI делается достаточно последовательно: нужно создать конфигурационный файл [.filename]#/etc/ctl.conf#, добавить соответствующую строку в [.filename]#/etc/rc.conf# для обеспечения автоматического запуска даемона link:http://www.freebsd.org/cgi/man.cgi?query=ctld&amp;sektion=8&amp;manpath=FreeBSD+10-current[ctld(8)] при загрузке, а затем запустить даемон.
+
+Простой конфигурационный файл link:http://www.freebsd.org/cgi/man.cgi?query=ctl.conf&amp;sektion=5&amp;manpath=FreeBSD+10-current[ctl.conf(5)] может выглядеть подобно следующему:
+
+[.programlisting]
+....
+portal-group pg0 {
+       discovery-auth-group no-authentication
+       listen 0.0.0.0
+       listen [::]
+}
+
+target iqn.2012-06.com.example:target0 {
+       auth-group no-authentication
+       portal-group pg0
+
+       lun 0 {
+               path /data/target0-0
+               size 4G
+       }
+}
+....
+
+Первая запись в конфигурационном файле определяет портальную группу под названием "pg0".
+Портальные группы задают сетевые адреса, на которых даемон link:http://www.freebsd.org/cgi/man.cgi?query=ctld&amp;sektion=8&amp;manpath=FreeBSD+10-current[ctld(8)] будет ожидать запросы.
+Первая строка ("discovery-auth-group no-authentication") означает, что каждому инициатору разрешено выполнять обнаружение SendTargets iSCSI без какой-либо аутентификации.
+Две последующие строки заставляют link:http://www.freebsd.org/cgi/man.cgi?query=ctld&amp;sektion=8&amp;manpath=FreeBSD+10-current[ctld(8)] ожидать запросы на всех адресах IPv4 ("listen 0.0.0.0") и IPv6 ("listen [::]"), сконфигурированных на сетевых интерфейсах, на порту, используемом по умолчанию (3560).
+Новую портальную не всегда необходимо определять - имеется используемая по умолчанию с названием "default".
+Разница между "default" и "pg0" выше заключается в том, что в первом случае обнаружение iSCSI SendTargets всегда запрещается, в том время как во втором случае оно всегда разрешено.
+
+Вторая запись определяет одну цель.
+Цель имеет два значения - это машина, обслуживающая iSCSI, но также это и именованная группа нескольких LUN.
+В данном примере мы используем второе значение.
+"iqn.2012-06.com.example:target0" является именем цели.
+В целях тестирования оно может быть оставлено без изменений; в противном случае "com.example" должно быть заменено на реальное имя домена в обратнмо порядке; "2012-06" соответствуют году и месяцу получения контроля над этим доменным именем, а "target0" может быть практически всем, чем угодно.
+В конфигурационном файле может быть задано любое количество целей.
+
+Первая строка в конфигурации цели ("auth-group no-authentication") позволяет кадому инициатору подключаться к ней.
+Вторая строка ("portal-group pg0") делает эту цель доступной через портальную группу "pg0".
+
+После этого следуют LUN.
+Для инициатора каждый LUN будет доступен как отдельное дисковое устройство - к примеру, [.filename]#/dev/da0#, [.filename]#/dev/da1# и так далее.
+Для каждой цели может быть определено множество LUN.
+LUN идентифицируются по номерам; LUN 0 обязателен.
+Первая строка в конфигурации LUN ("path /data/target0-0") задаёт полный путь к файлу или ZVOL, содержащему LUN.
+Этот файл обязательно должен существовать до запуска link:http://www.freebsd.org/cgi/man.cgi?query=ctld&amp;sektion=8&amp;manpath=FreeBSD+10-current[ctld(8)].
+Вторая строка является необязательной и задаёт размер.
+
+Чтобы гарантировать запуск даемона link:http://www.freebsd.org/cgi/man.cgi?query=ctld&amp;sektion=8&amp;manpath=FreeBSD+10-current[ctld(8)] при загрузке, необходимо добавить следующую строку в [.filename]#/etc/rc.conf#:
+
+[.programlisting]
+....
+ctld_enable="YES"
+....
+
+На новом сервере, конфигурируемом в качестве цели iSCSI, link:http://www.freebsd.org/cgi/man.cgi?query=ctld&amp;sektion=8&amp;manpath=FreeBSD+10-current[ctld(8)] может быть запущен пользователем root выполнением следующей команды:
+
+[source,shell]
+....
+# service ctld
+          start
+....
+
+При запуске даемон link:http://www.freebsd.org/cgi/man.cgi?query=ctld&amp;sektion=8&amp;manpath=FreeBSD+10-current[ctld(8)] считывает файл link:http://www.freebsd.org/cgi/man.cgi?query=ctl.conf&amp;sektion=5&amp;manpath=FreeBSD+10-current[ctl.conf(5)].
+Для того, чтобы изменения в конфигурации вступили в силу немедленно, заставьте link:http://www.freebsd.org/cgi/man.cgi?query=ctld&amp;sektion=8&amp;manpath=FreeBSD+10-current[ctld(8)] считать её снова:
+
+[source,shell]
+....
+# service ctld reload
+....
+
+==== Аутентификация
+
+Пример выше изначально является небезопасным - он вообще не использует аутентификацию, предоставляя полный доступ всем ко всем целям.
+Для запроса имени пользователя и пароля для доступа к целям скорректируйте конфигурацию подобно следующему:
+
+[.programlisting]
+....
+auth-group ag0 {
+       chap username1 secretsecret
+       chap username2 anothersecret
+}
+
+portal-group pg0 {
+       discovery-auth-group no-authentication
+       listen 0.0.0.0
+       listen [::]
+}
+
+target iqn.2012-06.com.example:target0 {
+       auth-group ag0
+       portal-group pg0
+       lun 0 {
+               path /data/target0-0
+               size 4G
+       }
+}
+....
+
+Раздел auth-group задаёт пары имя пользователя/пароль.
+Инициатор, пытающийся подключиться к iqn.2012-06.com.example:target0, в обязательном порядке должен указать их оба.
+Обнаружение SendTargets остаётся разрешённым без какой-либо аутентификации; чтобы это изменить, задайте какое-то другое значение "discovery-auth-group".
+
+Распространнённой ситуацией для iSCSI является наличие одной экспортированной цели для каждого инициатора.
+В качестве упрощенного варианта синтаксиса выше можно указывать имя пользователя и пароль непосредственно в записи о цели, подобно следующему:
+
+[.programlisting]
+....
+target iqn.2012-06.com.example:target0 {
+       portal-group pg0
+       chap username1 secretsecret
+
+       lun 0 {
+               path /data/target0-0
+               size 4G
+       }
+}
+....
+
+=== Инициатор iSCSI
+
+[NOTE]
+====
+Текущая реализация инициатора iSCSI поддерживается, начиная с FreeBSD 10.0-RELEASE.
+Для использования инициатора iSCSI, доступного в более старых версиях, обратитесь к справочной странице link:http://www.freebsd.org/cgi/man.cgi?query=iscontrol&amp;sektion=8&amp;manpath=FreeBSD+10-current[iscontrol(8)].
+Данная глава касается только нового инициатора.
+====
+
+Инициатору iSCSI для работы требуется даемон link:http://www.freebsd.org/cgi/man.cgi?query=iscsid&amp;sektion=8&amp;manpath=FreeBSD+10-current[iscsid(8)].
+Он не использует какой бы то ни было конфигурационный файл.
+Для обеспечения его автоматического запуска при загрузке добавьте следующую строку в [.filename]#/etc/rc.conf#:
+
+[.programlisting]
+....
+iscsid_enable="YES"
+....
+
+На новой машине, которая конфигурируется в качестве инициатора iSCSI, link:http://www.freebsd.org/cgi/man.cgi?query=iscsid&amp;sektion=8&amp;manpath=FreeBSD+10-current[iscsid(8)] может быть запущен запуском такой команды пользователем root:
+
+[source,shell]
+....
+# service iscsid start
+....
+
+Имеется два базовых способа подключения к цели: с использованием конфигурационного файла link:http://www.freebsd.org/cgi/man.cgi?query=iscsi.conf&amp;sektion=5&amp;manpath=FreeBSD+10-current[iscsi.conf(8)] либо без него.
+
+==== Подключение к цели без использования конфигурационного файла
+
+Для того, чтобы подключить инициатоор к одной цели, запустите следующую команду с полномочиями root:
+
+[source,shell]
+....
+# iscsictl -A -h 10.10.10.10 -t iqn.2012-06.com.example:target0
+....
+
+Для проверки успешности запустите её без параметров.
+Она должна выдать что-то, подобное следующему:
+
+[.programlisting]
+....
+Target name                                     Target addr     State
+iqn.2012-06.com.example:target0                 10.10.10.10     Connected: da0
+....
+
+Это означает, что сеанс связи iSCSI был успешно установлен, и у вас имеется [.filename]#/dev/da0#, соответствующий подключённому LUN.
+В случае, когда цель ("iqn.2012-06.com.example:target0") экспортирует более чем один LUN, в выдаче link:http://www.freebsd.org/cgi/man.cgi?query=iscsictl&amp;sektion=8&amp;manpath=FreeBSD+10-current[iscictl(8)] будет несколько узлов устройств (например, "Connected: da0 da1 da2").
+
+Различные ошибки записываются в системных журналах и отражаются в выдаче link:http://www.freebsd.org/cgi/man.cgi?query=iscsictl&amp;sektion=8&amp;manpath=FreeBSD+10-current[iscictl(8)].
+Например, следующая диагностика обычно означает, что даемон link:http://www.freebsd.org/cgi/man.cgi?query=iscsid&amp;sektion=8&amp;manpath=FreeBSD+10-current[iscsid(8)] не запущен:
+
+[.programlisting]
+....
+Target name                                     Target addr     State
+iqn.2012-06.com.example:target0                 10.10.10.10     Waiting for iscsid(8)
+....
+
+Следующая диагностика предполагает наличие проблемы на сетевом уровне, такой как некорректный адрес IP или порт:
+
+[.programlisting]
+....
+Target name                                     Target addr     State
+iqn.2012-06.com.example:target0                 10.10.10.11     Connection refused
+....
+
+Следующая диагностика означает, что указанное имя цели было некорректным:
+
+[.programlisting]
+....
+Target name                                     Target addr     State
+iqn.2012-06.com.example:atrget0                 10.10.10.10     Not found
+....
+
+Следующая диагностика означает, что цель требует аутентификации:
+
+[.programlisting]
+....
+Target name                                     Target addr     State
+iqn.2012-06.com.example:target0                 10.10.10.10     Authentication failed
+....
+
+Для указания пользователя и секретного ключа CHAP используйте следующий синтаксис:
+
+[source,shell]
+....
+# iscsictl -A -h 10.10.10.10 -t iqn.2012-06.com.example:target0 -u user -s secretsecret
+....
+
+==== Подключение к цели с использованием конфигурационного файла
+
+Для подключения при помощи конфигурационного файла создайте [.filename]#/etc/iscsi.conf#, который может выглядеть подобно следующему:
+
+[.programlisting]
+....
+t0 {
+       TargetAddress   = 10.10.10.10
+       TargetName      = iqn.2012-06.com.example:target0
+       AuthMethod      = CHAP
+       chapIName       = user
+       chapSecret      = secretsecret
+}
+....
+
+Первая строка ("t0") задаёт обозначение для раздела конфигурационного файла, используемое на стороне инициатора для указания того, какую именно конфигурацию вы хотите использовать.
+Последующие строки задают различные параметры, используемые при установлении соединения - адрес цели и имя являются обязательными; прочие являются необязательными; в данном случае они задают имя пользователя и секретный ключ CHAP.
+
+Для соединения с целью, определённой выше, используйте:
+
+[source,shell]
+....
+# iscsictl -An t0
+....
+
+Для соединения со всеми целями, определёнными в соответствующем конфигурационном файле, используйте:
+
+[source,shell]
+....
+# iscsictl -Aa
+....
+
+Для того, чтобы обеспечить автоматическое соединение инициатора со всеми целями в [.filename]#/etc/iscsi.conf#, добавьте в [.filename]#/etc/rc.conf# следующее:
+
+[.programlisting]
+....
+iscsictl_enable="YES"
+iscsictl_flags="-Aa"
+....
