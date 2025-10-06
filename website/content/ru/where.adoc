@@ -1,3 +1,9 @@
+//
+// The FreeBSD Russian Documentation Project
+//
+// Original RU revision: f27178d4eb7139c6d827f4545477a28261ef1bf4
+// Original EN revision: 38826
+//
 ---
 title: "Получение FreeBSD"
 sidenav: download
