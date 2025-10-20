@@ -20,7 +20,7 @@ include::shared/ru/urls.adoc[]
 [.tblbasic]
 [cols=",,,,",options="header",]
 |===
-|Название платформы |TARGET_ARCH |13.x link:{committers-guide}#archs[Уровень поддержки] |14.x link:{committers-guide}#archs[Уровень поддержки] |Прогноз для 15.x link:{committers-guide}#archs[Уровень поддержки]
+|Название платформы |TARGET_ARCH |link:{committers-guide}#archs[Уровень поддержки] в 13.x |link:{committers-guide}#archs[Уровень поддержки] в 14.x |link:{committers-guide}#archs[Уровень поддержки] в 15.x (прогнозный)
 |64-разрядная x86 |link:amd64[amd64] |Уровень 1 |Уровень 1 |Уровень 1
 |32-разрядная x86 |link:i386[i386] |Уровень 2 |Уровень 2 |Не поддерживается
 |64-разрядная ARMv8 |link:arm[aarch64] |Уровень 1 |Уровень 1 |Уровень 1
