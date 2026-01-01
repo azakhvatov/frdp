@@ -1,0 +1,3 @@
+# man1/man.1		src/usr.bin/man
+man1/manpath.1		src/usr.bin/man
+#man5/man.conf.5	src/usr.bin/man
