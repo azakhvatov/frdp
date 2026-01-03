@@ -1,14 +1,14 @@
 ---
-description: 'Клетки (jails) улучшают концепцию традиционного окружения chroot несколькими способами'
-next: books/handbook/mac
-params:
-  path: /books/handbook/jails/
-part: 'Часть III. Администрирование системы'
+title: Глава 17. Изоляторы и контейнеры
+part: Часть III. Администрирование системы
 prev: books/handbook/security
-showBookMenu: 'true'
-tags: ["jails", "creating", "managing", "updating"]
-title: 'Глава 17. Клетки и контейнеры'
+next: books/handbook/mac
+description: Изоляторы улучшают концепцию традиционной среды chroot в нескольких направлениях
+tags: ["изоляторы", "создание", "управление", "обновление"]
+showBookMenu: true
 weight: 21
+params:
+  path: "/books/handbook/jails/"
 ---
 
 [[jails]]
@@ -1147,7 +1147,7 @@ jail:classic:memoryuse:deny=2G/jail
 | iocage
 | BSD-2
 | package:sysutils/iocage[]
-| link:https://iocage.readthedocs.io/en/latest/[Документация]
+| link:https://freebsd.github.io/iocage/[Документация]
 
 | ezjail
 | link:https://erdgeist.org/beerware.html[Пивная Лицензия]
@@ -1155,3 +1155,9 @@ jail:classic:memoryuse:deny=2G/jail
 | link:https://erdgeist.org/arts/software/ezjail/[Документация]
 
 |===
+
+//
+// The FreeBSD Russian Documentation Project
+//
+// Original EN revision (13.11.2025): c764fb9f6adec2eb56e7f56be1f669aa6ac4933f
+//
