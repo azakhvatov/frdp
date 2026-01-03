@@ -300,6 +300,11 @@ endif::[]
 |18 августа 2025
 |15.0-CURRENT после переписывания certctl, который теперь производит bundle.
 
+|1500504
+|gitref:3fbce8315ee22ef3a3e0fde3c57130e6ad16535f[repository="src",length=12]
+|18 декабря 2025
+|15.0-STABLE после изменения API `bus_alloc_resource` на принятие аргумента `rid` по значению.
+
 |===
 
 [[versions-14]]
@@ -832,7 +837,12 @@ endif::[]
 |1403503
 |gitref:6cdcf08c9c5eda6dc3b8395cefd9d30a4f5e2f1a[repository="src",length=12]
 |13 июля 2025
-|14.3-STABLE после изменений в LinuxKPI dma-mapping.h and acpi.
+|14.3-STABLE после изменений в LinuxKPI dma-mapping.h и acpi.
+
+|1403507
+|gitref:108b5d90bc1fa8ed83cfd6f58e636193e03e8049[repository="src",length=12]
+|18 декабря 2025
+|14.3-STABLE после изменения API `bus_alloc_resource` на принятие аргумента `rid` по значению.
 
 |===
 
@@ -7677,5 +7687,5 @@ Template:
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (09.12.2025): 0ce030d2265de718abfb746f2ef74b23a3ef0fb0
+// Original EN revision (18.12.2025): 39cc0a2b2a41ed5fb93a2efedb58c453990c4e83
 //
