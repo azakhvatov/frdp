@@ -1,12 +1,12 @@
 ---
-description: 'Список изменений файла sys/param.h'
-params:
-  path: /books/porters-handbook/versions/
+title: Глава 18. Значения __FreeBSD_version
 prev: books/porters-handbook/uses
-showBookMenu: 'true'
-tags: ["FreeBSD versions"]
-title: 'Глава 18. Значения __FreeBSD_version'
+description: Список изменений файла sys/param.h
+tags: ["версии FreeBSD"]
+showBookMenu: true
 weight: 18
+params:
+  path: "/books/porters-handbook/versions/"
 ---
 
 [[versions]]
@@ -274,6 +274,11 @@ endif::[]
 |gitref:a02180cf60a6a0102669b678e9c81ad9f1aa4d91[repository="src",length=12]
 |3 июня 2025
 |15.0-CURRENT после внесения изменений dma-mapping.h из drm-kmod в LinuxKPI.
+
+|1500051
+|gitref:4dd828c80828637452a8a4e07a64e294c82e5d8b[repository="src",length=12]
+|15 июля 2025
+|15.0-CURRENT после добавления kva_layout и удаления DMAP_MIN/MAX_ADDRESS.
 
 |1500062
 |gitref:567e6250c003eeb251b4bc8dbe60d2adabab2988[repository="src",length=12]
@@ -7658,3 +7663,9 @@ Template:
 | 
 |2.1.7-RELEASE
 |===
+
+//
+// The FreeBSD Russian Documentation Project
+//
+// Original EN revision (16.07.2025): 01b05fd100b1f7a674716a759f9fe4b46b0c8658
+//
