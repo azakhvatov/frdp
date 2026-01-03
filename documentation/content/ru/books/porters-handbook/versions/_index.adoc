@@ -256,17 +256,17 @@ endif::[]
 |15.0-CURRENT после внесения изменений в alloc в LinuxKPI.
 
 |1500038
-|gitref:[repository="src",length=12]
+|gitref:b7527823fdcc29f0da9c17152dbb062eeb18244d[repository="src",length=12]
 |19 апреля 2025
 |15.0-CURRENT после удаления vm_page_next() и _prev.
 
 |1500039
-|gitref:[repository="src",length=12]
+|gitref:d609c5733b00151c1236618d8be472790f765947[repository="src",length=12]
 |4 мая 2025
 |15.0-CURRENT после введения правильно типизированных jiffies.
 
 |1500040
-|gitref:[repository="src",length=12]
+|gitref:22d4fecbcf576fb799686972e3de7fc78938fe6a[repository="src",length=12]
 |4 мая 2025
 |15.0-CURRENT после изменения внутреннего API между модулями nfscommon и nfscl.
 
@@ -7667,5 +7667,5 @@ Template:
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (16.07.2025): 01b05fd100b1f7a674716a759f9fe4b46b0c8658
+// Original EN revision (03.12.2025): d05f51f35dcce4a8b0d4b714c4eb514e016c3cbc
 //
