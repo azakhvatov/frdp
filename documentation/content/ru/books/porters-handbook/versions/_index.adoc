@@ -81,6 +81,16 @@ endif::[]
 |30 октября 2025
 |16.0-CURRENT после изменения API `bus_alloc_resource`, чтобы передавать параметр `rid` по значению.
 
+|1600004
+|gitref:b3de3c2dea576b626a8a107d96b0fd6562500c1e[repository="src",length=12]
+|2 ноября 2025
+|16.0-CURRENT после добавления поддержки `_PC_CASE_INSENSITIVE` в NFS.
+
+|1600005
+|gitref:575639548cef58590a1d70c29e47aae0e8d44153[repository="src",length=12]
+|9 декабря 2025
+|16.0-CURRENT после изменения метода `BUS_ALLOC_RESOURCE` драйвера шины на передачу аргумента `rid` по значению.
+
 |===
 
 [[versions-15]]
@@ -7667,5 +7677,5 @@ Template:
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (03.12.2025): d05f51f35dcce4a8b0d4b714c4eb514e016c3cbc
+// Original EN revision (09.12.2025): 0ce030d2265de718abfb746f2ef74b23a3ef0fb0
 //
