@@ -9,8 +9,6 @@ include::shared/ru/urls.adoc[]
 
 == Внутренние поисковые сервисы
 
-* <<manpages,Страницы Справочника>>
-* <<ports,Порты>>
 * https://mail-archive.freebsd.org/cgi/mid.cgi[Поиск в списках рассылки по Message-ID]
 * https://bugs.FreeBSD.org/search/[База данных сообщений о проблемах (ошибках)]
 * link:https://man.freebsd.org/cgi/man.cgi[Страницы Справочника]
@@ -35,24 +33,6 @@ link:opensearch[Список подключаемых модулей OpenSearch 
 
 '''''
 
-[[manpages]]
-== Страницы Справочника
-
-=== Поиск:
-
-{{< form-search-man >}}
-
-'''''
-
-[[ports]]
-== Порты
-
-=== Поиск:
-
-{{< form-search-ports >}}
-
-'''''
-
 [[mailinglists]]
 == Архивы списков рассылки
 
@@ -65,5 +45,5 @@ link:opensearch[Список подключаемых модулей OpenSearch 
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (03.01.2026): 3574effa900936f6eaa5a725feea0e2b5c88c0c4
+// Original EN revision (03.01.2026): b6630fbab8b2befa8dd320535f2290e8b1082ce6
 //
