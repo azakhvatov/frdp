@@ -7,19 +7,22 @@ include::shared/ru/urls.adoc[]
 
 = Поиск
 
-== Службы поиска FreeBSD
+== Внутренние поисковые сервисы
 
-* <<web,Страницы WWW>>
 * <<manpages,Страницы Справочника>>
 * <<ports,Порты>>
-* <<mailinglists,Архивы списков рассылки>>
 * https://mail-archive.freebsd.org/cgi/mid.cgi[Поиск в списках рассылки по Message-ID]
 * https://bugs.FreeBSD.org/search/[База данных сообщений о проблемах (ошибках)]
 * link:https://man.freebsd.org/cgi/man.cgi[Страницы Справочника]
-* link:https://ports.freebsd.org/cgi/ports.cgi[Поиск по портам]
-* http://fxr.watson.org/[Исходный код]
+* link:https://ports.freebsd.org/cgi/ports.cgi[Поиск в портах]
 
-link:opensearch[Список плагинов OpenSearch для FreeBSD]
+== Внешние поисковые сервисы
+
+* <<web,Веб-страницы>> от DuckDuckGo
+* <<mailinglists,Архивы списков рассылки>> от DuckDuckGo
+* http://fxr.watson.org/[Исходный код] от fxr.watson.org
+
+link:opensearch[Список подключаемых модулей OpenSearch для FreeBSD]
 
 '''''
 
@@ -62,5 +65,5 @@ link:opensearch[Список плагинов OpenSearch для FreeBSD]
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (03.01.2026): b7c3caf36d29d305246f4f099fc59b5e9d87b233
+// Original EN revision (03.01.2026): 3574effa900936f6eaa5a725feea0e2b5c88c0c4
 //
