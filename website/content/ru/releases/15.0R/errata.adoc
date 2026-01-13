@@ -80,6 +80,10 @@ sidenav: download
 **Обходное решение**: не устанавливайте этот релиз на системах Apple G5 +
 **Статус**: исправлено в ветке main - https://bugs.freebsd.org/292341 +
 
+5. **man:loader.efi[8]**: Имеется изъян, не позволяющий осуществить загрузку на некоторых системах +
+**Обходное решение**: укажите `console="eficom"` в приглашении man:loader[8], если при загрузке ядра происходит сбой +
++**Статус**: исправлено в ветке main - https://bugs.freebsd.org/291461 +
+
 [[late-news]]
 == Последние новости
 
@@ -88,5 +92,5 @@ sidenav: download
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (12.01.2026): 5c9832dab53e25f11cbe55161302c4dc5cbee430
+// Original EN revision (13.01.2026): 4faf0e7a8a20a7ddda25d965e68587401dbf8f79
 //
