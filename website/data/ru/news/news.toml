@@ -1,4 +1,4 @@
-# Sort news by year, month and day
+# Новости сортируются по году, месяцу и дню
 
 [[news]]
 date = "2025-12-16"
@@ -3392,3 +3392,9 @@ description = "Новый коммиттер: <a href=\"mailto:avilla@FreeBSD.or
 date = "2010-01-17"
 title = "Отчёт о состоянии работ за октябрь-декабрь 2009 года"
 description = "Отчёт о состоянии работ за октябрь-декабрь 2009 года <a href=\"https://www.freebsd.org/news/status/report-2009-10-2009-12.html\">теперь доступен</a> с 38 записями."
+
+#
+# The FreeBSD Russian Documentation Project
+#
+# Original EN revision (16.12.2025): 9add4de85378c4470ea1a6bdc2e28cef3933d258
+#
