@@ -237,7 +237,7 @@ admins mail aliases intentionally left incomplete
 Команда багмастера отвечает за обеспечение работоспособности программного обеспечения для отчетов о проблемах, правильную категоризацию записей и отсутствие недопустимых записей.
 
 * {linimon}
-* Сива Махадеван <mailto:me@svmhdvn.name[]>
+* {siva}
 * {ziaee}
 
 [[t-clusteradm]]
@@ -378,5 +378,5 @@ admins mail aliases intentionally left incomplete
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (27.01.2026): 4ae6a7555c48ccf43ca00b72dc69319e52739a38
+// Original EN revision (04.02.2026): b3074c682f920e17bcab6e968b11b1d5b993a274
 //
