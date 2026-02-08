@@ -134,13 +134,17 @@ https://www.freebsd.org/srcmgr/charter/[Устав команды srcmgr] под
 Основная команда команда выпуска релизов отвечает за установление и публикацию графиков выпуска официальных релизов проекта FreeBSD, объявление о заморозках кода и поддержку веток `releng/*`, среди прочего.
 https://www.freebsd.org/releng/charter/[Устав команды команда выпуска релизов] подробно описывает обязанности и ответственность Основной команды инженерии выпусков.
 
+* {carlavilla}
 * {dch}
 * {blackend}
+* {leres}
 * {delphij}
 * {emaste} (Заместитель руководителя)
 * {cperciva} (Руководитель)
 * {bofh}
+* {vladlen}
 * {ivy}
+* {ziaee}
 
 [[t-donations]]
 == Команда по работе с пожертвованиями <donations@FreeBSD.org>
@@ -374,5 +378,5 @@ admins mail aliases intentionally left incomplete
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (17.01.2026): fd86ed35b094e392c383ebb82af04e68e964cce1
+// Original EN revision (27.01.2026): 4ae6a7555c48ccf43ca00b72dc69319e52739a38
 //
