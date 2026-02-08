@@ -51,8 +51,6 @@ include::shared/authors.adoc[]
 ** <<t-webmaster,Веб-мастера>>
 ** <<t-wiki,Команда администрирования Вики>>
 
-'''
-
 [[t-core]]
 == Основная команда FreeBSD <core@FreeBSD.org>
 
@@ -91,8 +89,6 @@ https://www.freebsd.org/portmgr/charter/[Устав команды portmgr] по
 * {rene}
 * {dvl}
 
-'''
-
 [[t-ports-secteam]]
 == Команда безопасности портов FreeBSD <ports-secteam@FreeBSD.org>
 
@@ -105,8 +101,6 @@ https://www.freebsd.org/portmgr/charter/[Устав команды portmgr] по
 * {riggs}
 * {tz}
 
-'''
-
 [[t-pkgmgr]]
 == Команда управления пакетами FreeBSD <pkgmgr@FreeBSD.org>
 
@@ -114,8 +108,6 @@ https://www.freebsd.org/portmgr/charter/[Устав команды portmgr] по
 
 * {antoine}
 * {bdrewery}
-
-'''
 
 [[t-srcmgr]]
 == Команда управления исходным кодом FreeBSD <srcmgr@FreeBSD.org>
@@ -178,8 +170,6 @@ https://www.freebsd.org/releng/charter/[Устав команды команда
 Отдел по связям с поставщиками отвечает за обработку электронной почты от производителей аппаратного и программного обеспечения.
 Письма, отправленные в Отдел по связям с поставщиками, пересылаются в Основную команду FreeBSD, а также в Фонд FreeBSD.
 
-'''
-
 [[t-core-secretary]]
 == Секретарь Основной команды <core-secretary@FreeBSD.org>
 
@@ -207,8 +197,6 @@ https://www.freebsd.org/releng/charter/[Устав команды команда
 == Секретарь команды управления исходным кодом <srcmgr-secretary@FreeBSD.org>
 
 В настоящее время секретарь команды управления исходным кодом не назначен; письма пересылаются в команду управления исходным кодом.
-
-'''
 
 [[t-accounts]]
 == Команда управления учетными записями <accounts@>
@@ -378,5 +366,5 @@ admins mail aliases intentionally left incomplete
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (04.02.2026): b3074c682f920e17bcab6e968b11b1d5b993a274
+// Original EN revision (05.02.2026): b7a6a4a3b955bb43eeeb73485d7226245415d80d
 //
