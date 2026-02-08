@@ -1,14 +1,14 @@
 ---
-title: "FreeBSD Project Administration and Management"
+title: "Администрирование и управление проектом FreeBSD"
 sidenav: about
 ---
 
 include::shared/authors.adoc[]
 
 ////
-NOTE: If any alias listed on this page is modified in the
-/etc/aliases on the FreeBSD project's mail server,
-then this page must be updated.
+ПРИМЕЧАНИЕ: Если какой-либо алиас, указанный на этой странице, изменяется в
+файле /etc/aliases на почтовом сервере проекта FreeBSD,
+то эта страница обязательно должна быть актуализирована.
 ////
 
 = Администрирование и управление проектом FreeBSD
@@ -136,10 +136,8 @@ https://www.freebsd.org/releng/charter/[Устав команды команда
 
 * {dch}
 * {blackend}
-* {jfree}
 * {delphij}
 * {emaste} (Заместитель руководителя)
-* {mmokhi}
 * {cperciva} (Руководитель)
 * {bofh}
 * {ivy}
@@ -376,5 +374,5 @@ admins mail aliases intentionally left incomplete
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (04.12.2025): d5213e70dd8fd4771458cfa67b17b535ff4867c8
+// Original EN revision (17.01.2026): fd86ed35b094e392c383ebb82af04e68e964cce1
 //
