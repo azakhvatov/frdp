@@ -1,8 +1,3 @@
-//
-// The FreeBSD Russian Documentation Project
-//
-// Original EN revision (13.04.2023): e101a134a1f87374c68c52df928777ec9a3d25d2
-//
 ---
 title: "FreeBSD Project Administration and Management"
 sidenav: about
@@ -16,255 +11,268 @@ NOTE: If any alias listed on this page is modified in the
 then this page must be updated.
 ////
 
-= FreeBSD Project Administration and Management
+= Администрирование и управление проектом FreeBSD
 
-== Introduction
+== Введение
 
-This page lists teams, groups and individuals within the FreeBSD project with designated project roles and areas of responsibility, along with brief descriptions and contact information.
+На этой странице перечислены команды, группы и лица в проекте FreeBSD, имеющие определенные проектные роли и области ответственности, вместе с краткими описаниями и контактной информацией.
 
-* Project Management
-** <<t-core, Core Team>>
-** <<t-doceng, Documentation Engineering Team>>
-** <<t-portmgr, Ports Management Team>>
-** <<t-ports-secteam, Ports Security Team>>
-** <<t-pkgmgr, Packages Management Team>>
-* Release Engineering
-** <<t-re, Primary Release Engineering Team>>
-* Teams
-** <<t-donations, Donations Team>>
-** <<t-secteam, Security Team>>
-** <<t-vendor, Vendor Relations>>
-* Secretaries
-** <<t-core-secretary, Core Team Secretary>>
-** <<t-doceng-secretary, Documentation Engineering Team Secretary>>
-** <<t-portmgr-secretary, Ports Management Team Secretary>>
-* Internal Administration
-** <<t-accounts, Accounts Team>>
-** <<t-backups, Backup Administrators>>
-** <<t-bugmeister, Bugmeisters>>
-** <<t-clusteradm, Cluster Administrators>>
-** <<t-dnsadm, DNS Administrators>>
-** <<t-forum-admins, Forum Administrators>>
-** <<t-git, Git Administrators>>
-** <<t-github-automation, GitHub Repository Mirror>>
-** <<t-jenkins-admin, Jenkins Continuous Integration Testing Administrators>>
-** <<t-mirror-admin, FTP/WWW Mirror Site Coordinators>>
-** <<t-phabric-admin, Phabricator Code Review Administration>>
-** <<t-postmaster, Postmaster Team>>
-** <<t-subversion, Subversion Administrators>>
-** <<t-webmaster, Webmaster Team>>
-** <<t-wiki, Wiki Admin Team>>
+* Управление проектом
+** <<t-core,Основная команда (Core Team)>>
+** <<t-doceng,Команда управления документацией>>
+** <<t-portmgr,Команда управления портами>>
+** <<t-ports-secteam,Команда безопасности портов>>
+** <<t-pkgmgr,Команда управления пакетами>>
+** <<t-srcmgr,Команда управления исходным кодом>>
+* Инженерия выпусков
+** <<t-re,Основная команда выпуска релизов>>
+* Команды
+** <<t-donations,Команда по работе с пожертвованиями>>
+** <<t-secteam,Команда безопасности>>
+** <<t-vendor,Отношения с поставщиками>>
+* Секретари
+** <<t-core-secretary,Секретарь Основной команды>>
+** <<t-doceng-secretary,Секретарь команды инженерии документации>>
+** <<t-portmgr-secretary,Секретарь команды управления портами>>
+** <<t-srcmgr-secretary,Секретарь команды управления исходным кодом>>
+* Внутреннее администрирование
+** <<t-accounts,Команда управления учетными записями>>
+** <<t-backups,Администраторы резервного копирования>>
+** <<t-bugmeister,Багмастер (Bugmeister)>>
+** <<t-clusteradm,Администраторы кластера>>
+** <<t-dnsadm,Администраторы DNS>>
+** <<t-forum-admins,Администраторы форумов>>
+** <<t-git,Администраторы Git>>
+** <<t-github-automation,Зеркало репозиториев на GitHub>>
+** <<t-jenkins-admin,Администраторы непрерывного тестирования Jenkins>>
+** <<t-mirror-admin,Координаторы сайтов-зеркал FTP/WWW>>
+** <<t-phabric-admin,Администрирование ревью кода в Phabricator>>
+** <<t-postmaster,Почтовая команда (Postmaster)>>
+** <<t-webmaster,Веб-мастера>>
+** <<t-wiki,Команда администрирования Вики>>
 
 '''
 
 [[t-core]]
-== FreeBSD Core Team <core@FreeBSD.org>
+== Основная команда FreeBSD <core@FreeBSD.org>
 
-The FreeBSD Core Team constitutes the project's "Board of Directors", responsible for deciding the project's overall goals and direction as well as managing specific areas of the FreeBSD project landscape.
-The Core Team is elected by the active developers in the project.
+Основная команда FreeBSD представляет собой «Совет директоров» проекта, отвечающий за определение общих целей и направления проекта, а также за управление конкретными областями проекта FreeBSD.
+Основная команда избирается активными разработчиками проекта.
 
-* {bapt} (Security Team Liaison)
-* {bcr} (Foundation Liaison)
-* {emaste} (Release Engineering Team Liaison)
-* {grog}
-* {jhb} (CI Team Liaison)
-* {lwhsu} (Doceng Team Liaison)
-* {manu} (Portmgr Team Liaison)
-* {tcberner} (Clusteradm Liaison)
-* {0mp} (Bugmeister Team Liaison)
+* {allanjude} (Представитель команды безопасности)
+* {dch} (Представитель команды инженерии выпусков)
+* {glebius} (Представитель команды багмастера и команды управления исходным кодом)
+* {hrs} (Представитель Фонда)
+* {lwhsu} (Представитель команды инженерии документации)
+* {mat} (Представитель команды администраторов кластера)
+* {olivier} (Представитель команды непрерывной интеграции)
+* {tcberner} (Представитель команды управления портами)
 
 [[t-doceng]]
-== FreeBSD Documentation Engineering Team <doceng@FreeBSD.org>
+== Команда управления документацией FreeBSD <doceng@FreeBSD.org>
 
-The FreeBSD Documentation Engineering Team is responsible for defining and following up documentation goals for the committers in the Documentation project.
-The https://www.freebsd.org/internal/doceng/[doceng team charter] describes the duties and responsibilities of the Documentation Engineering Team in greater detail.
+Команда управления документацией FreeBSD отвечает за контроль и определение целей по документации для коммиттеров в проекте Документации.
+https://www.freebsd.org/internal/doceng/[Устав команды doceng] подробно описывает обязанности и ответственность команды управления документацией.
 
-* {gjb}
-* {carlavilla}
 * {blackend}
-* {dbaio}
-* {bcr}
 * {hrs}
-* {fernape} (Secretary)
+* {ebrandi}
 
 [[t-portmgr]]
-== FreeBSD Ports Management Team <portmgr@FreeBSD.org>
+== Команда управления портами FreeBSD <portmgr@FreeBSD.org>
 
-The primary responsibility of the FreeBSD Ports Management Team is to ensure that the FreeBSD Ports Developer community provides a ports collection that is functional, stable, up-to-date and full-featured.
-Its secondary responsibility is to coordinate among the committers and developers who work on it.
-The https://www.freebsd.org/portmgr/charter/[portmgr team charter] describes the duties and responsibilities of the Ports Management Team in greater detail.
+Основная обязанность команды управления портами FreeBSD — обеспечение того, чтобы сообщество разработчиков портов FreeBSD предоставляло коллекцию портов, которая является функциональной, стабильной, актуальной и полнофункциональной.
+Ее вторичная обязанность — координация между коммиттерами и разработчиками, которые над ней работают.
+https://www.freebsd.org/portmgr/charter/[Устав команды portmgr] подробно описывает обязанности и ответственность команды управления портами.
 
 * {bapt}
-* {bofh}
-* {mat} (Cluster Administration Team Liaison)
+* {mat} (Представитель команды администрирования кластера)
 * {pizzamig}
-* {rene} (Secretary)
-* {tcberner}
+* {rene}
+* {dvl}
 
 '''
 
 [[t-ports-secteam]]
-== FreeBSD Ports Security Team <ports-secteam@FreeBSD.org>
+== Команда безопасности портов FreeBSD <ports-secteam@FreeBSD.org>
 
-The primary responsibility of the FreeBSD Port Security Team is to provide rapid response to security incidents that affects the FreeBSD ports collection and protect the FreeBSD user community by keeping the community informed of bugs, exploits, popular attacks, and other risks.
-More details are available on the https://wiki.freebsd.org/PortsSecteam[Wiki page].
+Основная обязанность команды безопасности портов FreeBSD — обеспечение оперативного реагирования на инциденты безопасности, затрагивающие коллекцию портов FreeBSD, и защита сообщества пользователей FreeBSD путем информирования сообщества об ошибках, уязвимостях, популярных атаках и других рисках.
+Более подробная информация доступна на https://wiki.freebsd.org/PortsSecteam[странице Вики].
 
+* {fernape}
 * {fluffy}
 * {joneum}
 * {riggs}
+* {tz}
 
 '''
 
 [[t-pkgmgr]]
-== FreeBSD Packages Management Team <pkgmgr@FreeBSD.org>
+== Команда управления пакетами FreeBSD <pkgmgr@FreeBSD.org>
 
-The primary responsibility of the FreeBSD Packages Management Team is to assure the ports tree remains functional, this includes running test builds of proposed changes, reverting/fixing broken commits that break the builds, maintain the automated package building cluster, and make the resulting packages available for download by FreeBSD users.
+Основная обязанность команды управления пакетами FreeBSD — обеспечение функциональности дерева портов, включая выполнение тестовых сборок предлагаемых изменений, откат/исправление сломанных коммитов, которые нарушают сборки, обслуживание автоматизированного кластера сборки пакетов и обеспечение доступности результирующих пакетов для загрузки пользователями FreeBSD.
 
 * {antoine}
 * {bdrewery}
 
 '''
 
+[[t-srcmgr]]
+== Команда управления исходным кодом FreeBSD <srcmgr@FreeBSD.org>
+
+Команда управления исходным кодом FreeBSD (также известная как srcmgr по своему почтовому псевдониму) отвечает за вопросы, связанные с базовой системой.
+https://www.freebsd.org/srcmgr/charter/[Устав команды srcmgr] подробно описывает обязанности и ответственность команды управления исходным кодом.
+
+* {emaste}
+* {imp}
+* {jhb}
+* {markj}
+
 [[t-re]]
-== Primary Release Engineering Team <re@FreeBSD.org>
+== Основная команда команда выпуска релизов <re@FreeBSD.org>
 
-The Primary Release Engineering Team is responsible for setting and publishing release schedules for official project releases of FreeBSD, announcing code freezes and maintaining `releng/*` branches, among other things.
-The https://www.freebsd.org/releng/charter/[release engineering team charter] describes the duties and responsibilities of the Primary Release Engineering Team in greater detail.
+Основная команда команда выпуска релизов отвечает за установление и публикацию графиков выпуска официальных релизов проекта FreeBSD, объявление о заморозках кода и поддержку веток `releng/*`, среди прочего.
+https://www.freebsd.org/releng/charter/[Устав команды команда выпуска релизов] подробно описывает обязанности и ответственность Основной команды инженерии выпусков.
 
-* {gjb} (Lead)
-* {kib}
+* {dch}
 * {blackend}
-* {karels}
+* {jfree}
 * {delphij}
-* {cperciva} (Deputy Lead)
+* {emaste} (Заместитель руководителя)
+* {mmokhi}
+* {cperciva} (Руководитель)
+* {bofh}
+* {ivy}
 
 [[t-donations]]
-== Donations Team <donations@FreeBSD.org>
+== Команда по работе с пожертвованиями <donations@FreeBSD.org>
 
-The FreeBSD Donations Team is responsible for responding to donations offers, establishing donation guidelines and procedures, and coordinating donation offers with the FreeBSD developer community.
-A more detailed description of the duties of the Donations Team is available on the https://www.freebsd.org/donations/[FreeBSD Donations Liaison] page.
+Команда по работе с пожертвованиями отвечает за ответ на предложения о пожертвованиях, установление руководящих принципов и процедур для пожертвований и координацию предложений о пожертвованиях с сообществом разработчиков FreeBSD.
+Более подробное описание обязанностей Команды по работе с пожертвованиями доступно по ссылке: link:https://www.freebsd.org/donations/[Координатор по пожертвованиям FreeBSD].
 
 * {gahr}
 * {bhughes}
 * {adridg}
 
 [[t-secteam]]
-== Security Team <secteam@FreeBSD.org>
+== Команда безопасности <secteam@FreeBSD.org>
 
-The FreeBSD Security Team (headed by the Security Officer) is responsible for keeping the community aware of bugs, exploits and security risks affecting the FreeBSD src and ports trees, and to promote and distribute information needed to safely run FreeBSD systems.
-Furthermore, it is responsible for resolving software bugs affecting the security of FreeBSD and issuing security advisories.
-The FreeBSD Security Officer Charter describes the duties and responsibilities of the Security Officer in greater detail.
+Команда безопасности FreeBSD (во главе с офицером по информационной безопасности) отвечает за информирование сообщества об ошибках, уязвимостях и рисках безопасности, затрагивающих деревья src и ports FreeBSD, а также за распространение информации, необходимой для безопасной эксплуатации систем FreeBSD.
+Кроме того, она отвечает за устранение программных ошибок, влияющих на безопасность FreeBSD, и выпуск уведомлений о безопасности.
+Устав офицера по информационной безопасности FreeBSD подробно описывает обязанности и ответственность офицера по безопасности.
 
-* {gordon} (Officer)
-* {bapt} (Core Team Liaison)
-* {delphij} (Officer Emeritus, Release Engineering Team Liaison)
-* {des} (Officer Emeritus)
-* {gjb} (Cluster Administrators Team Liaison)
-* {emaste} (Officer Deputy)
+* {gordon} (Офицер)
+* {allanjude} (Представитель Основной команды)
+* {delphij} (Почетный офицер, представитель команды инженерии выпусков)
+* {des} (Почетный офицер)
+* {emaste} (Заместитель офицера)
 * {markj}
 * {oshogbo}
 * {philip}
 
 [[t-vendor]]
-== Vendor Relations <vendor-relations@FreeBSD.org>
+== Отношения с поставщиками <vendor-relations@FreeBSD.org>
 
-Vendor Relations is responsible for handling email from hardware and software vendors.
-Email sent to Vendor Relations is forwarded to the FreeBSD Core Team in addition to the FreeBSD Foundation.
+Отдел по связям с поставщиками отвечает за обработку электронной почты от производителей аппаратного и программного обеспечения.
+Письма, отправленные в Отдел по связям с поставщиками, пересылаются в Основную команду FreeBSD, а также в Фонд FreeBSD.
 
 '''
 
 [[t-core-secretary]]
-== Core Team Secretary <core-secretary@FreeBSD.org>
+== Секретарь Основной команды <core-secretary@FreeBSD.org>
 
-The FreeBSD Core Team Secretary is a non-voting member of the Core Team, responsible for documenting the work done by core, keeping track of the core agenda, contacting non-core members on behalf of core, sending mail to core, and interfacing with the admin team for committer/account approval.
-The Core Team Secretary is also responsible for writing and sending out monthly status reports to the FreeBSD Developer community, containing a summary of core's latest decisions and actions.
-
-* {carlavilla}
-
-[[t-doceng-secretary]]
-== Documentation Engineering Team Secretary <doceng-secretary@FreeBSD.org>
-
-The FreeBSD Documentation Engineering Team Secretary is a non-voting member of the Documentation Engineering Team, responsible for documenting the work done by doceng, keeping track of voting procedures, and to be an interface to the other teams, especially the admin and Core teams.
-
-* {fernape}
-
-[[t-portmgr-secretary]]
-== Ports Management Team Secretary <portmgr-secretary@FreeBSD.org>
-
-The FreeBSD Ports Management Team Secretary is a non-voting member of the Ports Management Team, responsible for documenting the work done by portmgr, keeping track of voting procedures, and to be an interface to the other teams, especially the admin and Core teams.
-ThePorts Management Team Secretary is also responsible for writing and sending out monthly status reports to the FreeBSD Developer community, containing a summary of portmgr's latest decisions and actions.
+Секретарь Основной команды FreeBSD является членом Основной команды без права голоса, ответственным за документирование работы, выполненной core, отслеживание повестки дня core, связь с членами, не входящими в core, от имени core, рассылку писем для core и взаимодействие с административной командой по утверждению коммиттеров/учетных записей.
+Секретарь Основной команды также отвечает за написание и рассылку ежемесячных отчетов о состоянии сообществу разработчиков FreeBSD, содержащих сводку последних решений и действий core.
 
 * {rene}
+
+[[t-doceng-secretary]]
+== Секретарь команды инженерии документации <doceng-secretary@FreeBSD.org>
+
+Секретарь команды инженерии документации FreeBSD является членом команды инженерии документации без права голоса, ответственным за документирование работы, выполненной doceng, отслеживание процедур голосования и взаимодействие с другими командами, особенно с административной и Основной командами.
+
+В настоящее время секретарь команды инженерии документации не назначен; письма пересылаются в команду инженерии документации.
+
+[[t-portmgr-secretary]]
+== Секретарь команды управления портами <portmgr-secretary@FreeBSD.org>
+
+Секретарь команды управления портами FreeBSD является членом команды управления портами без права голоса, ответственным за документирование работы, выполненной portmgr, отслеживание процедур голосования и взаимодействие с другими командами, особенно с административной и Основной командами.
+Секретарь команды управления портами также отвечает за написание и рассылку ежемесячных отчетов о состоянии сообществу разработчиков FreeBSD, содержащих сводку последних решений и действий portmgr.
+
+* (vacant)
+
+[[t-srctmgr-secretary]]
+== Секретарь команды управления исходным кодом <srcmgr-secretary@FreeBSD.org>
+
+В настоящее время секретарь команды управления исходным кодом не назначен; письма пересылаются в команду управления исходным кодом.
 
 '''
 
 [[t-accounts]]
-== Accounts Team <accounts@>
+== Команда управления учетными записями <accounts@>
 ////
 admins mail aliases intentionally left incomplete
 ////
 
-The Accounts Team is responsible for setting up accounts for new committers in the project.
-Requests for new accounts will not be acted upon without the proper approval from the appropriate entity.
+Команда управления учетными записями отвечает за настройку учетных записей для новых коммиттеров в проекте.
+Запросы на создание новых учетных записей не будут обработаны без соответствующего одобрения от уполномоченного органа.
 
-Email sent to the Accounts Team is handled by the Cluster Administrators.
+Письма, отправленные в Команду управления учетными записями, обрабатываются Администраторами кластера.
 
 [[t-backups]]
-== Backups Administrators <backups@>
+== Администраторы резервного копирования <backups@>
 ////
 admins mail aliases intentionally left incomplete
 ////
 
-The Backups Administrators handle all backups on the FreeBSD cluster.
+Администраторы резервного копирования обрабатывают все операции резервного копирования в кластере FreeBSD.
 
-Email sent to the Backups Team is handled by the Cluster Administrators.
+Письма, отправленные в Команду резервного копирования, обрабатываются Администраторами кластера.
 
 [[t-bugmeister]]
-== Bugmeisters <bugmeister@FreeBSD.org>
+== Багмастер (Bugmeister) <bugmeister@FreeBSD.org>
 
-The Bugmeisters are responsible for ensuring that the problem report software is in working order, that the entries are correctly categorised and that there are no invalid entries.
+Команда багмастера отвечает за обеспечение работоспособности программного обеспечения для отчетов о проблемах, правильную категоризацию записей и отсутствие недопустимых записей.
 
-* {eadler}
-* {mva}
-* {gavin}
-* {koobs}
+* {linimon}
+* Сива Махадеван <mailto:me@svmhdvn.name[]>
+* {ziaee}
 
 [[t-clusteradm]]
-== Cluster Administrators <clusteradm@>
+== Администраторы кластера <clusteradm@>
 ////
 admins mail aliases intentionally left incomplete
 ////
 
-The Cluster Administrators are responsible for maintaining the machines and services that the project relies on for its distributed work and communication.
-Issues concerning the project's infrastructure or setting up new machines or services should be directed to them.
-This team is led by the lead cluster administrator whose duties and responsbilities are described in the https://www.freebsd.org/internal/clusteradm/[cluster administration charter] in greater detail.
+Администраторы кластера отвечают за обслуживание машин и служб, от которых проект зависит для своей распределенной работы и коммуникации.
+Вопросы, касающиеся инфраструктуры проекта, или настройки новых машин или служб, следует направлять им.
+Этой командой руководит ведущий администратор кластера, чьи обязанности и ответственность подробно описаны в https://www.freebsd.org/internal/clusteradm/[уставе администрирования кластера].
 
-* {allanjude}
 * {bapt}
+* {bofh}
 * {dbaio}
 * {dhw}
-* {gjb}
 * {lwhsu}
 * {peter}
 * {philip}
-* {zi} (Lead)
+* {zi} (Руководитель)
 
-Please consider using one of the more specific aliases (e.g. accounts@, dnsadm@, mirror-admin@,...) or https://bugs.freebsd.org/submit/[opening a bug report] to report problems with the cluster infrastructure.  Select "Services" and then "Core Infrastructure".
+Пожалуйста, рассмотрите возможность использования одного из более конкретных псевдонимов (например, accounts@, dnsadm@, mirror-admin@,...) или https://bugs.freebsd.org/submit/[создания отчета об ошибке] для сообщения о проблемах с инфраструктурой кластера. Выберите "Services", а затем "Core Infrastructure".
 
 [[t-dnsadm]]
-== DNS Administrators <dnsadm@>
+== Администраторы DNS <dnsadm@>
 ////
 admins mail aliases intentionally left incomplete
 ////
 
-The DNS Administrators are responsible for managing DNS and related services.
+Администраторы DNS отвечают за управление службами DNS и связанными с ними службами.
 
-Email sent to the DNS Administrators handled by the Cluster Administrators.
+Письма, отправленные администраторам DNS, обрабатываются Администраторами кластера.
 
 [[t-forum-admins]]
-== FreeBSD Forum Administrators <forum-admins@FreeBSD.org>
+== Администраторы форумов FreeBSD <forum-admins@FreeBSD.org>
 
-The Forum Administrators maintain the FreeBSD Project's Internet forum, located at https://forums.freebsd.org/ and lead the group of moderators who work to ensure the relevance and quality of the forum's content.
+Администраторы форумов поддерживают форум проекта FreeBSD в Интернете, расположенный по адресу https://forums.freebsd.org/, и руководят группой модераторов, которые работают над обеспечением релевантности и качества контента форума.
 
 * {brd}
 * {danger}
@@ -272,21 +280,21 @@ The Forum Administrators maintain the FreeBSD Project's Internet forum, located 
 * {lme}
 
 [[t-git]]
-== Git Administrators <gitadm@>
+== Администраторы Git <gitadm@>
 ////
 admins mail aliases intentionally left incomplete
 ////
 
-The FreeBSD Git Administrators are responsible for maintaining the health of the Git repositories.
+Администраторы Git FreeBSD отвечают за поддержание работоспособности репозиториев Git.
 
-Email to the Git Administrators is handled by the Cluster Administrators.
+Письма администраторам Git обрабатываются Администраторами кластера.
 
-Please https://bugs.freebsd.org/submit/[open a bug report] to report problems with the Git repositories.  Select "Services" and then "Core Infrastructure".
+Пожалуйста, https://bugs.freebsd.org/submit/[создайте отчет об ошибке] для сообщения о проблемах с репозиториями Git. Выберите "Services", а затем "Core Infrastructure".
 
 [[t-github-automation]]
-== Repository Automated Mirroring to GitHub Coordinators <github-automation@FreeBSD.org>
+== Координаторы автоматического зеркалирования репозиториев на GitHub <github-automation@FreeBSD.org>
 
-The GitHub Automation team oversees the export of FreeBSD source code repository content to the read-only repository instances on GitHub
+Команда автоматизации GitHub курирует экспорт содержимого репозитория исходного кода FreeBSD в read-only репозитории на GitHub.
 
 * {koobs}
 * {mva}
@@ -295,10 +303,10 @@ The GitHub Automation team oversees the export of FreeBSD source code repository
 * {uqs}
 
 [[t-jenkins-admin]]
-== Jenkins Continuous Integration Testing Administrators <jenkins-admin@FreeBSD.org>
+== Администраторы непрерывного тестирования Jenkins <jenkins-admin@FreeBSD.org>
 
-The Jenkins Administrators maintain the Continuous Integration and testing infrastructure for The FreeBSD Project.
-This includes maintaining the Jenkins instance and the jobs that run builds and execute tests.
+Администраторы Jenkins поддерживают инфраструктуру непрерывной интеграции и тестирования для проекта FreeBSD.
+Это включает в себя обслуживание экземпляра Jenkins и заданий, которые выполняют сборки и запускают тесты.
 
 * {bapt}
 * {brd}
@@ -307,21 +315,21 @@ This includes maintaining the Jenkins instance and the jobs that run builds and 
 * {swills}
 
 [[t-mirror-admin]]
-== FTP/WWW Mirror Site Coordinators <mirror-admin@>
+== Координаторы сайтов-зеркал FTP/WWW <mirror-admin@>
 ////
 admins mail aliases intentionally left incomplete
 ////
 
-The FTP/WWW Mirror Site Coordinators coordinate all the FTP/WWW mirror site administrators to ensure that they are distributing current versions of the software, that they have the capacity to update themselves when major updates are in progress, and making it easy for the general public to find their closest FTP/WWW mirror.
+Координаторы сайтов-зеркал FTP/WWW координируют всех администраторов сайтов-зеркал FTP/WWW, чтобы обеспечить распространение текущих версий программного обеспечения, наличие у них возможности обновляться при выполнении крупных обновлений и упростить для широкой публики поиск ближайшего FTP/WWW зеркала.
 
-Email to the Mirror Site Coordinators is handled by the Cluster Administrators.
+Письма координаторам сайтов-зеркал обрабатываются Администраторами кластера.
 
-Please https://bugs.freebsd.org/submit/[open a bug report] to report problems with the mirror infrastructure.  Select "Services" and then "FTP/WWW Sites & Mirrors".
+Пожалуйста, https://bugs.freebsd.org/submit/[создайте отчет об ошибке] для сообщения о проблемах с инфраструктурой зеркал. Выберите "Services", а затем "FTP/WWW Sites & Mirrors".
 
 [[t-phabric-admin]]
-== Phabricator Code Review Application Administrators <phabric-admin@FreeBSD.org>
+== Администраторы приложения для ревью кода Phabricator <phabric-admin@FreeBSD.org>
 
-The Phabricator Administrators are responsible for maintaining the FreeBSD's instance of the Phabricator on-line code review tool located at https://reviews.freebsd.org/
+Администраторы Phabricator отвечают за поддержку экземпляра онлайнового инструмента ревью кода Phabricator для FreeBSD, расположенного по адресу https://reviews.freebsd.org/
 
 * {allanjude}
 * {bofh}
@@ -332,47 +340,41 @@ The Phabricator Administrators are responsible for maintaining the FreeBSD's ins
 * {mat}
 * {pi}
 
-For any problems regarding Phabricator, please https://bugs.freebsd.org/submit/[open a bug report] and select "Services" and then "Code Review".
+По любым проблемам, связанным с Phabricator, пожалуйста, https://bugs.freebsd.org/submit/[создайте отчет об ошибке] и выберите "Services", а затем "Code Review".
 
 [[t-postmaster]]
-== Postmaster Team <postmaster@FreeBSD.org>
+== Почтовые администраторы (Postmaster Team) <postmaster@FreeBSD.org>
 
-The Postmaster Team is responsible for mail being correctly delivered to the committers' email address, ensuring that the mailing lists work, and should take measures against possible disruptions of project mail services, such as having troll-, spam- and virus-filters.
+Почтовая команда отвечает за корректную доставку почты на адреса электронной почты коммиттеров, обеспечение работы списков рассылки и должна принимать меры против возможных сбоев в работе почтовых служб проекта, таких как настройка фильтров против троллинга, спама и вирусов.
 
 * {bapt}
 * {krion}
 * {ler}
 * {philip}
 * {pi}
-* {rea}
+* {vsevolod}
 * {zi}
 
-[[t-subversion]]
-== Subversion Administrators <svnadm@>
-////
-admins mail aliases intentionally left incomplete
-////
-
-The FreeBSD Subversion Administrators are responsible for maintaining the health of the Subversion repositories.
-
-Email to the Subversion Administrators is handled by the Cluster Administrators.
-
-Please https://bugs.freebsd.org/submit/[open a bug report] to report problems with the Subversion repositories.  Select "Services" and then "Core Infrastructure".
-
 [[t-webmaster]]
-== Webmaster Team <webmaster@FreeBSD.org>
+== Команда веб-мастеров <webmaster@FreeBSD.org>
 
-The FreeBSD Webmaster Team is appointed by FreeBSD Documentation Engineering Team, and responsible for keeping the main FreeBSD web sites up and running.
-This means web server configuration, CGI scripts, fulltext and mailing list search. Anything web related, technical stuff belongs to the scope of the Webmaster Team, excluding bugs in the documentation.
+Команда веб-мастеров FreeBSD назначается Командой инженерии документации FreeBSD и отвечает за поддержание работы основных веб-сайтов FreeBSD.
+Это означает конфигурацию веб-сервера, CGI-скрипты, полнотекстовый поиск и поиск по спискам рассылки. Все, что связано с веб-технологиями, входит в сферу ответственности команды веб-мастеров, за исключением ошибок в документации.
 
-Email to the Webmaster Team is currently forwarded to the Documentation Engineering team with the addition of:
+Письма в команду веб-мастеров в настоящее время пересылаются в команду инженерии документации с добавлением:
 
 * {wosch}
 
 [[t-wiki]]
-== Wiki Admin Team <wiki-admin@FreeBSD.org>
+== Команда администрирования Вики <wiki-admin@FreeBSD.org>
 
-The FreeBSD Wiki Team is responsible for keeping the FreeBSD https://wiki.FreeBSD.org/[Wiki] site up and running. They also shape the overall design and content structure.
+Команда Вики FreeBSD отвечает за поддержание работоспособности сайта https://wiki.FreeBSD.org/[Вики] FreeBSD. Они также определяют общий дизайн и структуру контента.
 
 * {linimon}
 * {koobs}
+
+//
+// The FreeBSD Russian Documentation Project
+//
+// Original EN revision (04.12.2025): d5213e70dd8fd4771458cfa67b17b535ff4867c8
+//
