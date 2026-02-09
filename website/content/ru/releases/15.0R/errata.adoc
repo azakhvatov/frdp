@@ -53,11 +53,12 @@ sidenav: download
 
 [width="100%",cols="40%,30%,30%",options="header",]
 |===
-|Исправление |Дата |Тема
-
+|Ошибка |Дата |Тема
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-25:19.zfs.asc[FreeBSD-EN-25:19.zfs] |16 декабря 2025 |Обращение к нулевому указателю в ядре от непривилегированного пользователя
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-25:20.vmm.asc[FreeBSD-EN-25:20.vmm] |16 декабря 2025 |Регрессия PCI passthru в bhyve(8)
-
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:01.devinfo.asc[FreeBSD-EN-26:01.devinfo] |27 января 2026 |Некорректный формат выдачи devinfo
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:02.arm64.asc[FreeBSD-EN-26:02.arm64] |27 января 2026 |Некорректное сохранение регистров arm64 SVE при обработке сигналов
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:03.vm.asc[FreeBSD-EN-26:03.vm] |27 января 2026 |Некорректное обнуление памяти в обработчике отсутствующих страниц памяти
 |===
 
 [[open-issues]]
@@ -91,5 +92,5 @@ sidenav: download
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (28.01.2026): 9e774043a5977d52fe08a1bbaf7b4e346014a1e9
+// Original EN revision (28.01.2026): 5f658610b4bfc5361c89e774a60d41c3d1ab572e
 //
