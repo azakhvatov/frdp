@@ -70,7 +70,7 @@ sidenav: download
 
 2. **man:devinfo[8]**: Формат выдаваемого результата случайно изменился +
 **Обходное решение**: пользователи, обрабатывающие результат работы утилиты man:devinfo[8], должны скомпилировать её из обновлённого исходного кода +
-**Статус**: изменение отменено в ветке main - https://bugs.freebsd.org/291511 +
+**Статус**: изменение отменено во FreeBSD 15.0-RELEASE-p2 - https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:01.devinfo.asc +
 
 3. **man:pkgbase[7]**: Модернизация системы с версии 14.3 на 15.0 не поддерживается +
 **Обходное решение**: системы, установленные при помощи man:pkgbase[7], должны быть переустановлены с использованием резервных копий +
@@ -92,5 +92,5 @@ sidenav: download
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (28.01.2026): 5f658610b4bfc5361c89e774a60d41c3d1ab572e
+// Original EN revision (29.01.2026): cc6854009d75e97baa24f212d46765a3679d0713
 //
