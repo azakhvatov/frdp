@@ -1,5 +1,5 @@
 ---
-title: "FreeBSD 15.0-RELEASE Информация о релизе"
+title: "Информация о релизе FreeBSD 15.0-RELEASE"
 sidenav: download
 ---
 
@@ -1715,5 +1715,5 @@ gitref:8c6df7ead19c[repository=src] (Спонсировано The FreeBSD Founda
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (21.12.2025): dce95ff77e20458eddae4233e3247c39e4548362
+// Original EN revision (11.02.2026): ef9b4411920f217b302e272712accce1fca94751
 //
