@@ -1468,7 +1468,7 @@ gitref:ef2a572bf6[repository=src]
 Новый флаг man:ngctl[8], `-j`, позволяет ему присоединяться и работать внутри клетки, что дает возможность управлять узлами netgraph в клетке, даже если man:ngctl[8] не установлен внутри него.
 gitref:72d01e62b082[repository=src]
 
-man:sockstat[4] теперь по умолчанию будет отображать конечные точки UDP-Lite.
+man:sockstat[1] теперь по умолчанию будет отображать конечные точки UDP-Lite.
 gitref:978615d7bf7c[repository=src]
 
 Код совместимости ядра, поддерживающий бинарники man:ipfw[8] из FreeBSD 7 и 8, был удален.
@@ -1521,7 +1521,7 @@ gitref:a2d1e07f6451[repository=src] {{< sponsored "The FreeBSD Foundation" >}}
 [[hardware-virtualization]]
 === Поддержка виртуализации
 
-man:bhyve[8] и man:vmm[4] теперь поддерживают платформы arm64 и riscv.
+man:bhyve[4] и man:vmm[4] теперь поддерживают платформы arm64 и riscv.
 Порты `sysutils/u-boot-bhyve-arm64` и `sysutils/u-boot-bhyve-riscv` предоставляют загрузчики для использования на этих платформах.
 gitref:47e073941f4e[repository=src]
 gitref:d3916eace506[repository=src]
@@ -1530,12 +1530,12 @@ gitref:d3916eace506[repository=src]
 {{< sponsored "The FreeBSD Foundation" >}}
 {{< sponsored "University Politehnica of Bucharest" >}}
 
-man:bhyve[4] теперь поддерживает сетевой бэкенд «slirp», который обеспечивает непривилегированную пользовательскую сеть.
+man:bhyve[8] теперь поддерживает сетевой бэкенд «slirp», который обеспечивает непривилегированную пользовательскую сеть.
 В настоящее время поддерживаются только входящие подключения к гостевой системе, исходящие подключения от гостевой системы — нет.
 Для этой функции требуется порт `net/libslirp`.
 gitref:c5359e2af5ab[repository=src] {{< sponsored "Innovate UK" >}}
 
-man:bhyve[4] теперь может настраивать топологию NUMA для памяти гостевой системы.
+man:bhyve[8] теперь может настраивать топологию NUMA для памяти гостевой системы.
 Кроме того, можно определить политику man:domainset[9] для каждого гостевого домена NUMA, в которой можно указать память хоста, используемую для поддержки физической памяти каждого гостевого домена NUMA, аналогично опции `-n` в man:cpuset[1].
 Пока это поддерживается только для гостевых систем amd64.
 gitref:f1d705d4f431[repository=src]
@@ -1543,7 +1543,7 @@ gitref:f1d705d4f431[repository=src]
 Сервер VNC в man:bhyve[8] теперь будет показывать правильные цвета при использовании клиента package:www/novnc[].
 gitref:f9e09dc5b1d5[repository=src]
 
-При запуске гостевых систем man:bhyve[8] с загрузочным ПЗУ (т.е. когда bhyveload(8) не используется), bhyve теперь предполагает, что загрузочное ПЗУ включит декодирование PCI BAR.
+При работе гостевых систем man:bhyve[8] с загрузочным ПЗУ, то есть когда man:bhyveload[8] не используется, bhyve теперь будет исходить из того, что загрузочное ПЗУ активирует декодирование PCI BAR.
 Это несовместимо с некоторыми загрузочными ПЗУ, особенно устаревшими сборками `edk2-bhyve`.
 Чтобы восстановить старое поведение, добавьте `pci.enable_bars='true'` в вашу конфигурацию bhyve.
 Примечание: пакет `uefi-edk2-bhyve` был переименован в `edk2-bhyve`.
@@ -1715,5 +1715,5 @@ gitref:8c6df7ead19c[repository=src] (Спонсировано The FreeBSD Founda
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (11.02.2026): ef9b4411920f217b302e272712accce1fca94751
+// Original EN revision (11.02.2026): d97c57ee413e8fef7bd3d36eb7c1e0827e97cba4
 //
