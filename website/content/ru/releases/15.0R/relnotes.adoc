@@ -676,7 +676,7 @@ gitref:6255c67c3d1a[repository=src]
 gitref:475082194ac8[repository=src]
 
 OpenSSH обновлен до версии 10.0p2.
-gitref:8e28d84935f2[repository=src] {{< спонсировал "Фонд FreeBSD" >}}
+gitref:8e28d84935f2[repository=src] {{< sponsored "Фонд FreeBSD" >}}
 
 OpenSSL обновлен до версии 3.5.4.
 gitref:c0366f908ff4[repository=src]
@@ -877,7 +877,7 @@ gitref:28b881840df7[repository=src] {{< sponsored "Amazon" >}}
 gitref:ce9a34b1614e[repository=src],
 gitref:55c3348ed78f[repository=src],
 gitref:d70bac252d30[repository=src]
-{{< спонсировал "Amazon" >}}
+{{< sponsored "Amazon" >}}
 
 Пользователям, обновляющим экземпляры EC2 с более ранних выпусков FreeBSD, следует установить `hw.pci.intx_reroute=0` и `debug.acpi.quirks="56"` в `/boot/loader.conf`.
 
@@ -920,14 +920,14 @@ gitref:aa32d7cbc92c[repository=src]
 FreeBSD теперь нативно реализует интерфейс man:inotify[2] из Linux.
 Сами системные вызовы не являются API-совместимыми, но libc предоставляет API-совместимый интерфейс, поэтому программное обеспечение, зависящее от inotify, может работать без изменений.
 gitref:f1f230439fa4[repository=src]
-{{< спонсировала "Klara, Inc." >}}
+{{< sponsored "Klara, Inc." >}}
 
 Реализованы процедуры `fpu_kern_enter` и `fpu_kern_leave` для powerpc, позволяющие использовать криптографические функции man:ossl[4] в ядре, которые используют регистры с плавающей запятой и векторные регистры.
 gitref:91e53779b4fc[repository=src]
 
 Добавлена поддержка устаревшего горячего подключения PCI на arm64.
 gitref:355f02cddbf0[repository=src]
-{{< спонсировала "Arm Ltd" >}}
+{{< sponsored "Arm Ltd" >}}
 
 Теперь к клетке можно обращаться через дескрипторы клеток в man:jail_set[2] и man:jail_get[2], а также с помощью новых системных вызовов `jail_attach_jd(2)` и `jail_remove_jd(2)`. Они позволяют манипулировать клетками через интерфейс файловых дескрипторов без состояний гонки, присущих идентификаторам клетки, а также могут дополнительно контролировать время жизни клетки.
 gitref:851dc7f859c2[repository=src]
@@ -997,7 +997,7 @@ man:sound[4]: Выделение vchans по требованию.
 `hw.snd.vchans_enable` (ранее `hw.snd.maxautovchans`) и `dev.pcm.X.{play|rec}.vchans` теперь работают как tunables только для включения/отключения `vchans`, в отличие от установки их количества и/или (де-)выделения vchans.
 Поскольку эти sysctl больше не запускают никаких (де-)выделений, их эффект мгновенен, тогда как раньше это могло привести к зависанию машины (при попытке выделить новые vchans) при установке `dev.pcm.X.{play|rec}.vchans` в очень большое значение.
 gitref:960ee8094913[repository=src]
-{{< спонсировал "Фонд FreeBSD" >}}
+{{< sponsored "Фонд FreeBSD" >}}
 
 Удален параметр man:sysctl[8] `hw.snd.version`.
 gitref:7398d1ece5cf[repository=src]
@@ -1096,7 +1096,7 @@ gitref:1db6ffb2a482[repository=src] {{< sponsored "Amazon" >}}
 man:nvme[4] и man:nvmecontrol[8] включены для всех архитектур.
 gitref:24687a65dd7f[repository=src],
 gitref:aba2d7f89dcf[repository=src]
-{{< спонсировали "Chelsio Communications и Netflix" >}}
+{{< sponsored "Chelsio Communications and Netflix" >}}
 
 Версия драйвера man:mpi3mr[4] обновлена до 8.14.0.2.0.
 gitref:e6d4b221ba7c[repository=src]
