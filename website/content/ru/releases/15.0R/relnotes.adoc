@@ -1199,7 +1199,7 @@ gitref:138e36514fe8[repository=src]
 [[drivers-removals]]
 === Устаревшие и удаленные драйверы
 
-Драйвер шины man:agp[4] устарел и планируется к удалению в FreeBSD 16.0.
+Драйвер шины man:agp[4] устарел и планируется к удалению во FreeBSD 16.0.
 gitref:92af7c97e197[repository=src],
 gitref:cadadd1a0398[repository=src]
 
