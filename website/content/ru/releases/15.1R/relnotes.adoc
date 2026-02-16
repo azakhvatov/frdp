@@ -7,7 +7,7 @@ sidenav: download
 :releaseCurrent: 15.1-RELEASE
 :releaseBranch: 15-STABLE
 :releasePrev: X.Y-RELEASE
-:releaseNext: X.y-RELEASE
+:releaseNext: X.Y-RELEASE
 :releaseType: "release"
 
 include::shared/ru/urls.adoc[]
@@ -18,7 +18,7 @@ include::shared/ru/urls.adoc[]
 :toclevels: 1
 :icons: font
 
-== Аннотация
+== Краткое описание
 
 [.abstract-title]
 Информация о релизе FreeBSD {releaseCurrent} содержит сводку изменений, внесённых в базовую систему FreeBSD на линии разработки {releaseBranch}.
@@ -40,7 +40,7 @@ include::shared/ru/urls.adoc[]
 
 Этот дистрибутив FreeBSD {releaseCurrent} является дистрибутивом {releaseType}.
 Его можно найти по адресу https://www.FreeBSD.org/releases/[] или на любом из зеркалирующих серверов.
-Дополнительную информацию о получении этого (или другого) дистрибутива {releaseType} FreeBSD можно найти в link:{handbook}mirrors[приложении по получению FreeBSD] к link:{handbook}[руководству FreeBSD].
+Дополнительную информацию о получении этого (или другого) дистрибутива {releaseType} FreeBSD можно найти в link:{handbook}mirrors[приложении по получению FreeBSD] к link:{handbook}[Руководству FreeBSD].
 
 Всем пользователям рекомендуется ознакомиться с исправлениями и дополнениями релиза перед установкой FreeBSD.
 Документ с исправлениями и дополнениями обновляется «последней информацией», обнаруженной в конце цикла выпуска или после выпуска.
@@ -103,6 +103,7 @@ include::shared/ru/urls.adoc[]
 |Уведомления отсутствуют.
 |
 |
+
 
 |===
 
@@ -201,5 +202,5 @@ include::shared/ru/urls.adoc[]
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (13.02.2026): c43ac4d9e7cf2c74d418af923df3e457fd5bcd85
+// Original EN revision (11.02.2026): ef9b4411920f217b302e272712accce1fca94751
 //
