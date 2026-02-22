@@ -76,6 +76,10 @@ Cavium:
 
 * ThunderX
 
+Microsoft:
+
+* Windows Dev Kit 2023
+
 NXP Semiconductors:
 
 * LS1028A SoC
@@ -5064,5 +5068,5 @@ man:moused[8] содержит дополнительную информацию
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (20.02.2026): c9157026d4e1b4d8d6d8155a9c4d35024395e42c
+// Original EN revision (20.02.2026): b82435c31412e84948e7c6abdbb1c31146dcf700
 //
