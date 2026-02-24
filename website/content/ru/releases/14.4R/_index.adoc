@@ -21,7 +21,7 @@ sidenav: download
 // и информация об аппаратной совместимости
 может быть найдена на следующих страницах:
 
-//link:announce/[Анонс FreeBSD {localRel}-RELEASE] +
+//link:announce/[Объявление о выходе FreeBSD {localRel}-RELEASE] +
 //link:signatures/[Подписанные контрольные суммы FreeBSD {localRel}-RELEASE] +
 //link:installation/[Информация по установке FreeBSD {localRel}-RELEASE] +
 //link:hardware/[Информация об аппаратной совместимости FreeBSD {localRel}-RELEASE] +
