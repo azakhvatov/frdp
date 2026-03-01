@@ -229,7 +229,7 @@ admins mail aliases intentionally left incomplete
 [[t-clusteradm]]
 == Администраторы кластера <clusteradm@>
 ////
-admins mail aliases intentionally left incomplete
+Почтовые алиасы администраторов намеренно оставлены неполными
 ////
 
 Администраторы кластера отвечают за обслуживание машин и служб, от которых проект зависит для своей распределенной работы и коммуникации.
@@ -250,7 +250,7 @@ admins mail aliases intentionally left incomplete
 [[t-dnsadm]]
 == Администраторы DNS <dnsadm@>
 ////
-admins mail aliases intentionally left incomplete
+Почтовые алиасы администраторов намеренно оставлены неполными
 ////
 
 Администраторы DNS отвечают за управление службами DNS и связанными с ними службами.
@@ -270,7 +270,7 @@ admins mail aliases intentionally left incomplete
 [[t-git]]
 == Администраторы Git <gitadm@>
 ////
-admins mail aliases intentionally left incomplete
+Почтовые алиасы администраторов намеренно оставлены неполными
 ////
 
 Администраторы Git FreeBSD отвечают за поддержание работоспособности репозиториев Git.
@@ -300,7 +300,7 @@ admins mail aliases intentionally left incomplete
 * {brd}
 * {brooks}
 * {lwhsu}
-* {swills}
+* {siva}
 
 [[t-mirror-admin]]
 == Координаторы сайтов-зеркал FTP/WWW <mirror-admin@>
@@ -364,5 +364,5 @@ admins mail aliases intentionally left incomplete
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (20.02.2026): 777680e4ad63ee8a2dcc9a074414f2b4952feaeb
+// Original EN revision (01.03.2026): 22313159f103d297235c222c53b0ad06c069650e
 //
