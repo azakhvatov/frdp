@@ -10,7 +10,6 @@ date = "2026-02-24"
 title = "Устранена возможность выхода из jail (CVE-2025-15576)"
 description = "<a href=\"/security/advisories/FreeBSD-SA-26:04.jail.asc\">Бюллетень безопасности</a>. Устранена уязвимость (CVE-2025-15576) в механизме клеток (jail). Проблема позволяет процессам в двух разных клетках, имеющих общее nullfs-монтирование и возможность обмена файловыми дескрипторами через UNIX-сокеты, получить доступ к файловой системе хоста за пределами своего окружения. Это приводит к полному \"побегу\" из клетки. Уязвимость затрагивает FreeBSD 14.3 и 13.5. Исправления уже включены в стабильные ветки и релизы обновлений. Администраторам рекомендуется незамедлительно обновить системы."
 
-
 [[news]]
 date= "2026-02-22"
 title = "Отчёт о состоянии работ за октябрь-декабрь 2025 года (на русском языке)"
@@ -20,6 +19,10 @@ description = "Опубликован <a href=\"https://www.freebsd.org/ru/statu
 date = "2026-02-22"
 title = "Доступна версия FreeBSD 14.4-BETA3"
 description = "Опубликована третья BETA-сборка для цикла выпуска FreeBSD 14.4. Образы ISO для архитектур amd64, i386, powerpc, powerpc64, powerpc64le, powerpcspe, armv7, aarch64 и riscv64 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2026-February/003866.html\">доступны</a> на большинстве наших <a href=\"https://docs.freebsd.org/ru/books/handbook/mirrors/#mirrors-ftp\">зеркал FreeBSD</a>."
+
+[[news]]
+date = "2026-02-18"
+description = "Новый коммиттер: <a href=\"mailto:nxjoseph@FreeBSD.org\">Yusuf Yaman</a> (ports)"
 
 [[news]]
 date = "2026-02-15"
