@@ -59,6 +59,10 @@ date = "2026-02-18"
 description = "Новый коммиттер: <a href=\"mailto:nxjoseph@FreeBSD.org\">Yusuf Yaman</a> (ports)"
 
 [[news]]
+date = "2026-02-18"
+description = "Новый коммиттер: <a href=\"mailto:mce@FreeBSD.org\">Kousuke Kannagi</a> (ports)"
+
+[[news]]
 date = "2026-02-15"
 title = "Доступна версия FreeBSD 14.4-BETA2"
 description = "Опубликована вторая BETA-сборка для цикла выпуска FreeBSD 14.4. Образы ISO для архитектур amd64, i386, powerpc, powerpc64, powerpc64le, powerpcspe, armv7, aarch64 и riscv64 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2026-February/003848.html\">доступны</a> на большинстве наших <a href=\"https://docs.freebsd.org/ru/books/handbook/mirrors/#mirrors-ftp\">зеркал FreeBSD</a>."
@@ -3509,5 +3513,5 @@ description = "Отчёт о состоянии работ за октябрь-�
 #
 # The FreeBSD Russian Documentation Project
 #
-# Original EN revision (14.03.2026): 661a0f511de1e4cf50b2485075e1ae13c9197ac2
+# Original EN revision (15.03.2026): 4583ba2db819edc79696f2231a9876761ecc8cf1
 #
