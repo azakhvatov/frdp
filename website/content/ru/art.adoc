@@ -71,7 +71,7 @@ image:../gifs/freebsd-advert.gif[Рекламный баннер 1,width=455,hei
 [[trademark]]
 == Торговые знаки
 
-https://www.freebsdfoundation.org[Фонд FreeBSD] является правами на несколько торговых знаков, связанных с FreeBSD (в том числе и на сам термин "FreeBSD").
+https://www.freebsdfoundation.org[Фонд FreeBSD] обладает правами на несколько торговых знаков, связанных с FreeBSD (в том числе и на сам термин "FreeBSD").
 Для получения дополнительной информации об этих торговых знаках ознакомьтесь с соответствующими https://www.freebsdfoundation.org/legal/trademark-usage-terms-and-conditions/[Правилами и условиями использования торговых знаков FreeBSD].
 
 //
