@@ -27,42 +27,42 @@ image:../../gifs/daemon-phk.png[Даемон BSD,width=191,height=208]
 Источник: http://cgit.freebsd.org/src/share/examples/BSD_daemon/[/usr/share/examples/BSD_daemon/] в системах FreeBSD.
 
 [.center]
-link:../../gifs/daemon_hammer.jpg[image:../../gifs/daemon_hammer-tn25.jpg[Даемон BSD, орудующий молотом,width=150,height=178]] image:../../gifs/power.jpg[Даемон BSD, ожидающий подачи блюд,width=160,height=246]
+link:../../gifs/daemon_hammer.jpg[image:../../gifs/daemon_hammer-tn25.jpg[Даемон BSD, орудующий молотом,width=150,height=178]] image:../../gifs/power.jpg[Даемон BSD, обслуживающий столики,width=160,height=246]
 
 [.center]
-image:../gifs/news.jpg[Даемон BSD, редактирующий новости,width=193,height=144] image:../gifs/doc.jpg[Даемон BSD, читающий документацию,width=274,height=163] image:../gifs/releases.jpg[Даемон BSD, доставляющий последний релиз,width=259,height=178]
+image:../../gifs/news.jpg[Даемон BSD, редактирующий новости,width=193,height=144] image:../../gifs/doc.jpg[Даемон BSD, читающий документацию,width=274,height=163] image:../../gifs/releases.jpg[Даемон BSD, доставляющий последний релиз,width=259,height=178]
 
 [[powered-by]]
 == Логотипы "Powered by FreeBSD"
 
 [.center]
-image:../gifs/powerlogo.gif[Логотип Powered by FreeBSD] image:../gifs/power-button.gif[Логотип Powered by FreeBSD]
+image:../../gifs/powerlogo.gif[Логотип Powered by FreeBSD] image:../../gifs/power-button.gif[Логотип Powered by FreeBSD]
 
 [.center]
-image:../gifs/pbfbsd2.gif[Лототип Powered by FreeBSD,width=171,height=64] image:../gifs/powerani.gif[Логотип Powered by FreeBSD,width=171,height=64] image:../gifs/fhp_mini.jpg[Логотип FreeBSD Hardware Partner,width=145,height=50]
+image:../../gifs/pbfbsd2.gif[Лототип Powered by FreeBSD,width=171,height=64] image:../../gifs/powerani.gif[Логотип Powered by FreeBSD,width=171,height=64] image:../../gifs/fhp_mini.jpg[Логотип FreeBSD Hardware Partner,width=145,height=50]
 
 [.center]
-image:../gifs/banner1.gif[Логотип FreeBSD The Power To Serve,width=446,height=63]
+image:../../gifs/banner1.gif[Логотип FreeBSD The Power To Serve,width=446,height=63]
 
 [.center]
-image:../gifs/banner2.gif[Логотип FreeBSD The Power To Serve,width=310,height=63]
+image:../../gifs/banner2.gif[Логотип FreeBSD The Power To Serve,width=310,height=63]
 
 [.center]
-image:../gifs/banner3.gif[Логотип FreeBSD The Power To Serve,width=250,height=35]
+image:../../gifs/banner3.gif[Логотип FreeBSD The Power To Serve,width=250,height=35]
 
 [.center]
-image:../gifs/banner4.gif[Логотип FreeBSD The Power To Serve,width=225,height=46]
+image:../../gifs/banner4.gif[Логотип FreeBSD The Power To Serve,width=225,height=46]
 
 [[adv]]
 == Старые рекламные баннеры
 
 [.center]
-image:../gifs/freebsd-advert.gif[Рекламный баннер 1,width=455,height=60] image:../gifs/freebsd_3.gif[Рекламный баннер 2,width=306,height=94]
+image:../../gifs/freebsd-advert.gif[Рекламный баннер 1,width=455,height=60] image:../../gifs/freebsd_3.gif[Рекламный баннер 2,width=306,height=94]
 
 [[use]]
 == Правила использования изображений
 
-Логотипы "Powered by FreeBSD" выше можно link:../gifs/powerlogo.gif[сгружать] и публиковать на персональных или коммерческих веб-сайтах, обслуживаемых машинами под управлением FreeBSD.
+Логотипы "Powered by FreeBSD" выше можно link:../../gifs/powerlogo.gif[сгружать] и публиковать на персональных или коммерческих веб-сайтах, обслуживаемых машинами под управлением FreeBSD.
 Использование этого логотипа или изображений, подобных link:../copyright/daemon/[даемонам BSD], для получения прибыли требует разрешений от mailto:taob@risc.org[Brian Tao] (создателя логотипа "Powered by FreeBSD") и mailto:mckusick@mckusick.com[Marshall Kirk McKusick] (владельца авторских прав на образ даемона BSD).
 
 Изображение даемона BSD, подготовленное {phk-name}, опубликовано на условиях лицензии "THE BEER-WARE LICENSE".
