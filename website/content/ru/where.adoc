@@ -46,7 +46,7 @@ include::shared/ru/urls.adoc[]
 [.tblDownload]
 [width="100%",cols="25%,25%,25%,25%",options="header",]
 |===
-|Установщик |Виртуальная машина |SD-карта |Документация
+|Программа установки |Виртуальная машина |Карта памяти SD |Документация
 a|
 * link:{url-rel}/amd64/amd64/ISO-IMAGES/{rel150-current}/[amd64]
 * link:{url-rel}/arm64/aarch64/ISO-IMAGES/{rel150-current}/[aarch64]
@@ -80,12 +80,12 @@ a|
 
 a|
 * {blank}
-* link:../releases/#current[Дата релиза]: 2 декабря 2025
+* link:../releases/#current[Дата релиза]: {rel150-current-date}
 * link:../releases/15.0R/relnotes[Описание релиза]
 * link:../releases/15.0R/readme[Вводная информация]
 * link:../releases/15.0R/hardware[Информация об аппаратной совместимости]
 * link:../releases/15.0R/installation[Инструкции по установке]
-* link:../releases/15.0R/errata[Выявленные ошибки]
+* link:../releases/15.0R/errata[Исправления и дополнения]
 * link:../releases/15.0R/signatures[Заверенные контрольные суммы]
 
 |===
@@ -97,7 +97,7 @@ a|
 [.tblDownload]
 [width="100%",cols="25%,25%,25%,25%",options="header",]
 |===
-Программа установки |VM |Карта памяти SD |Документация
+|Программа установки |Виртуальная машина |Карта памяти SD |Документация
 a|
 * link:{url-rel}/amd64/amd64/ISO-IMAGES/{rel144-current}/[amd64]
 * link:{url-rel}/i386/i386/ISO-IMAGES/{rel144-current}/[i386]
@@ -136,12 +136,12 @@ a|
 a|
 * {blank}
 * link:../releases/#current[Дата релиза]: {rel144-current-date}
-* link:{u-rel144-notes}[Описание релиза]
-* link:{u-rel144-readme}[Вводная информация]
-* link:{u-rel144-hardware}[Информация об аппаратной совместимости]
-* link:{u-rel144-installation}[Инструкции по установке]
-* link:{u-rel144-errata}[Выявленные ошибки]
-* link:{u-rel144-signatures}[Заверенные контрольные суммы]
+* link:../releases/14.4R/relnotes[Описание релиза]
+* link:../releases/14.4R/readme[Вводная информация]
+* link:../releases/14.4R/hardware[Информация об аппаратной совместимости]
+* link:../releases/14.4R/installation[Инструкции по установке]
+* link:../releases/14.4R/errata[Исправления и дополнения]
+* link:../releases/14.4R/signatures[Заверенные контрольные суммы]
 
 |===
 
@@ -152,7 +152,7 @@ a|
 [.tblDownload]
 [width="100%",cols="25%,25%,25%,25%",options="header",]
 |===
-|Программа установки |VM |Карта памяти SD |Документация
+|Программа установки |Виртуальная машина |Карта памяти SD |Документация
 a|
 * link:{url-rel}/amd64/amd64/ISO-IMAGES/{rel143-current}/[amd64]
 * link:{url-rel}/i386/i386/ISO-IMAGES/{rel143-current}/[i386]
@@ -195,12 +195,12 @@ a|
 * link:{u-rel143-readme}[Вводная информация]
 * link:{u-rel143-hardware}[Информация об аппаратной совместимости]
 * link:{u-rel143-installation}[Инструкции по установке]
-* link:{u-rel143-errata}[Выявленные ошибки]
+* link:{u-rel143-errata}[Исправления и дополнения]
 * link:{u-rel143-signatures}[Заверенные контрольные суммы]
 
 |===
 
-== Качество промышленной эксплуатации (исторические)
+== Качество промышленной эксплуатации (исторические релизы)
 
 Некоторые релизы FreeBSD, хотя и поддерживаются, являются либо более старыми, либо строятся из более старых веток `STABLE`; они рассматриваются как "исторические" и, скорее всего, представляют интерес только для тех, кто занимается обслуживанием существующих систем FreeBSD.
 
@@ -210,7 +210,7 @@ a|
 [.tblDownload]
 [width="100%",cols="25%,25%,25%,25%",options="header",]
 |===
-|Программа установки |VM |Карта памяти SD |Документация
+|Программа установки |Виртуальная машина |Карта памяти SD |Документация
 a|
 * link:{url-rel}/amd64/amd64/ISO-IMAGES/{rel135-current}/[amd64]
 * link:{url-rel}/i386/i386/ISO-IMAGES/{rel135-current}/[i386]
@@ -253,7 +253,7 @@ a|
 * link:{u-rel135-readme}[Вводная информация]
 * link:{u-rel135-hardware}[Информация об аппаратной совместимости]
 * link:{u-rel135-installation}[Инструкции по установке]
-* link:{u-rel135-errata}[Выявленные ошибки]
+* link:{u-rel135-errata}[Исправления и дополнения]
 * link:{u-rel135-signatures}[Заверенные контрольные суммы]
 |===
 
