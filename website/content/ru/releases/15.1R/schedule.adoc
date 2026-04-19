@@ -51,7 +51,7 @@ include::shared/ru/urls.adoc[]
 
 ////
 == Статус / TODO
-link:todo/[Страница TODO Команды подготовке релизов FreeBSD]
+link:todo/[Страница TODO Команды подготовки релизов FreeBSD]
 ////
 
 == Дополнительная информация
