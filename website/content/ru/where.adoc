@@ -9,9 +9,13 @@ sidenav: download
 include::shared/releases.adoc[]
 include::shared/ru/urls.adoc[]
 
+[[install]]
 = Получение FreeBSD
 
-Для получения общей информации о прошлых, текущих и будущих релизах обратитесь к link:../releases/[Информации о релизах].
+Операционную систему FreeBSD можно установить, используя образы, опубликованные на этой странице, или запросив напрямую поставщиков облачных решений.
+Перед тем, как скачивать тот или иной образ, пожалуйста, прочтите link:{handbook}bsdinstall/[**руководство по установке**].
+
+Для получения общей информации о прошлых, актуальных и будущих релизах обратитесь к link:../releases/[Информации о релизах].
 
 [[choose-version]]
 [[choose-arch]]
@@ -244,18 +248,6 @@ a|
 
 Имеются образы виртуальных машин для link:{url-snapshot}/VM-IMAGES/{rel144-current}-STABLE/amd64/Latest/[amd64], link:{url-snapshot}/VM-IMAGES/{rel144-current}-STABLE/i386/Latest/[i386], link:{url-snapshot}/VM-IMAGES/{rel144-current}-STABLE/aarch64/Latest/[aarch64] и link:{url-snapshot}/VM-IMAGES/{rel144-current}-STABLE/riscv64/Latest/[riscv64].
 
-[[install]]
-== Установка
-
-Имеющиеся варианты:
-
-* образы
-* прямое скачивание (общедоступный FTP и HTTPS).
-
-До того, как скачивать полный дистрибутив, пожалуйста, прочтите link:{handbook}bsdinstall/[руководство по установке].
-
-Если вы планируете сгрузить FreeBSD средствами FTP или HTTPS, обратитесь к Руководству по FreeBSD на предмет наличия link:{handbook}mirrors/#mirrors[подходящих зеркалирующих серверов] для вашего региона.
-
 [[apps]]
 == Приложения и утилиты
 
@@ -287,5 +279,5 @@ image::../../gifs/fastlyLogo-red-SVG.svg[Fastly Logo,120]
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (12.05.2026): 148e26d571cb7584a18c37979683f5e8ddf324d3
+// Original EN revision (13.05.2026): f583d7d0fe2c4e993cb3f0a1f4ccd36485d2d9cd
 //
