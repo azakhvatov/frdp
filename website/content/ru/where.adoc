@@ -232,11 +232,11 @@ a|
 
 Образы виртуальных машин доступны для link:{url-snapshot}/VM-IMAGES/{rel-head}-CURRENT/amd64/Latest/[amd64], link:{url-snapshot}/VM-IMAGES/{rel-head}-CURRENT/aarch64/Latest/[aarch64] и link:{url-snapshot}/VM-IMAGES/{rel-head}-CURRENT/riscv64/Latest/[riscv64].
 
-=== FreeBSD {rel150-current}-STABLE
+=== FreeBSD {rel151-current}-STABLE
 
-Установочные образы и образы карт памяти SD доступны для link:{url-snapshot}/amd64/amd64/ISO-IMAGES/{rel150-current}/[amd64], link:{url-snapshot}/powerpc/powerpc64/ISO-IMAGES/{rel150-current}/[powerpc64], link:{url-snapshot}/powerpc/powerpc64le/ISO-IMAGES/{rel150-current}/[powerpc64le], link:{url-snapshot}/arm/armv7/ISO-IMAGES/{rel150-current}/[armv7], link:{url-snapshot}/arm64/aarch64/ISO-IMAGES/{rel150-current}/[aarch64] и link:{url-snapshot}/riscv/riscv64/ISO-IMAGES/{rel150-current}/[riscv64].
+Установочные образы и образы карт памяти SD доступны для link:{url-snapshot}/amd64/amd64/ISO-IMAGES/{rel151-current}/[amd64], link:{url-snapshot}/powerpc/powerpc64/ISO-IMAGES/{rel151-current}/[powerpc64], link:{url-snapshot}/powerpc/powerpc64le/ISO-IMAGES/{rel151-current}/[powerpc64le], link:{url-snapshot}/arm/armv7/ISO-IMAGES/{rel151-current}/[armv7], link:{url-snapshot}/arm64/aarch64/ISO-IMAGES/{rel151-current}/[aarch64] и link:{url-snapshot}/riscv/riscv64/ISO-IMAGES/{rel151-current}/[riscv64].
 
-Образы виртуальных машин доступны для link:{url-snapshot}/VM-IMAGES/{rel150-current}-STABLE/amd64/Latest/[amd64], link:{url-snapshot}/VM-IMAGES/{rel150-current}-STABLE/aarch64/Latest/[aarch64] и link:{url-snapshot}/VM-IMAGES/{rel150-current}-STABLE/riscv64/Latest/[riscv64].
+Образы виртуальных машин доступны для link:{url-snapshot}/VM-IMAGES/{rel151-current}-STABLE/amd64/Latest/[amd64], link:{url-snapshot}/VM-IMAGES/{rel151-current}-STABLE/aarch64/Latest/[aarch64] и link:{url-snapshot}/VM-IMAGES/{rel151-current}-STABLE/riscv64/Latest/[riscv64].
 
 === FreeBSD {rel144-current}-STABLE
 
@@ -302,5 +302,5 @@ image::../../gifs/fastlyLogo-red-SVG.svg[Fastly Logo,120]
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (08.05.2026): d910f1b1de0f6fd8b637eb86f9f7bf385a8dc1aa
+// Original EN revision (07.05.2026): 198dacc09461549858e9caccfe6132d37b953956
 //
