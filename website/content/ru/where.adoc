@@ -256,11 +256,6 @@ a|
 
 Если вы планируете сгрузить FreeBSD средствами FTP или HTTPS, обратитесь к Руководству по FreeBSD на предмет наличия link:{handbook}mirrors/#mirrors[подходящих зеркалирующих серверов] для вашего региона.
 
-[[distribution]]
-== Покупка носителей с FreeBSD
-
-FreeBSD можно приобрести на DVD у link:{handbook}mirrors/#mirrors-disc[издателей DVD].
-
 [[apps]]
 == Приложения и утилиты
 
@@ -292,5 +287,5 @@ image::../../gifs/fastlyLogo-red-SVG.svg[Fastly Logo,120]
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (11.05.2026): 8721381d53fb2834545cf9403b6bc5f4afbe4c13
+// Original EN revision (12.05.2026): 148e26d571cb7584a18c37979683f5e8ddf324d3
 //
