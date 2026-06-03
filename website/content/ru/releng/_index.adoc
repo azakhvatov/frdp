@@ -59,8 +59,8 @@ include::shared/ru/urls.adoc[]
 |`releng/14.2` |Заморожена |security-officer@FreeBSD.org |Ветка для исправления ошибок FreeBSD 14.2 (официально не поддерживается).
 |`releng/14.1` |Заморожена |security-officer@FreeBSD.org |Ветка для исправления ошибок FreeBSD 14.1 (официально не поддерживается).
 |`releng/14.0` |Заморожена |security-officer@FreeBSD.org |Ветка для исправления ошибок FreeBSD 14.0 (официально не поддерживается).
-|`stable/13` |Открыта |коммиттеры |Ветка разработки для FreeBSD 13-STABLE.
-|`releng/13.5` |Заморожена |security-officer@FreeBSD.org |Поддерживаемая ветка для исправления ошибок FreeBSD 13.5.
+|`stable/13` |Открыта |коммиттеры |Ветка сопровождения для FreeBSD 13-STABLE (официально не поддерживается).
+|`releng/13.5` |Заморожена |security-officer@FreeBSD.org |Ветка FreeBSD 13.5 для исправления ошибок (официально не поддерживается).
 |`releng/13.4` |Заморожена |security-officer@FreeBSD.org |Ветка для исправления ошибок FreeBSD 13.4 (официально не поддерживается).
 |`releng/13.3` |Заморожена |security-officer@FreeBSD.org |Ветка для исправления ошибок FreeBSD 13.3 (официально не поддерживается).
 |`releng/13.2` |Заморожена |security-officer@FreeBSD.org |Ветка для исправления ошибок FreeBSD 13.2 (официально не поддерживается).
@@ -112,5 +112,5 @@ include::shared/ru/urls.adoc[]
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (30.04.2026): 921c946c6c0b0ba2d38c5043cdf83287d29bb5dd
+// Original EN revision (01.05.2026): aa570f12f85107e9de1051b8a342924a766d2600
 //
