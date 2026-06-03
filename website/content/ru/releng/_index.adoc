@@ -32,7 +32,7 @@ include::shared/ru/urls.adoc[]
 [cols=",,",options="header",]
 |===
 |Дата |Событие |Информация
-|Июнь 2026 |FreeBSD 15.1 |link:../../releases/15.1R/schedule/[Плановый график]
+|Июнь 2026 |FreeBSD 15.1 |link:../releases/15.1R/schedule/[Плановый график]
 |Сентябрь 2026 |FreeBSD 14.5 |link:../../releases/14.5R/schedule/[Плановый график]
 |Декабрь 2026 |FreeBSD 15.2 |
 |Март 2027 |FreeBSD 14.6 |
