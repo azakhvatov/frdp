@@ -33,7 +33,7 @@ include::shared/ru/urls.adoc[]
 |===
 |Дата |Событие |Информация
 |Июнь 2026 |FreeBSD 15.1 |link:../../releases/15.1R/schedule/[Плановый график]
-|Сентябрь 2026 |FreeBSD 14.5 |
+|Сентябрь 2026 |FreeBSD 14.5 |link:../../releases/14.5R/schedule/[Плановый график]
 |Декабрь 2026 |FreeBSD 15.2 |
 |Март 2027 |FreeBSD 14.6 |
 |Июнь 2027 |FreeBSD 15.3 |
@@ -111,5 +111,5 @@ include::shared/ru/urls.adoc[]
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (17.03.2026): ed075dc9dc76f524163f86c89fc561030ba5791a
+// Original EN revision (15.04.2026): d398c13735407c63c66880a1662021a9bfc6fd2f
 //
