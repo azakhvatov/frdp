@@ -51,7 +51,8 @@ include::shared/ru/urls.adoc[]
 |Ветка |Статус |Контакт |Примечания
 |`main` |Открыта |коммиттеры |Ветка активной разработки для 16.0-CURRENT.
 |`stable/15` |Открыта |коммиттеры |Ветка разработки для FreeBSD 15-STABLE.
-|`releng/15.0` |Заморожена |security-officer@FreeBSD.org |Поддерживаемая ветка для исправления ошибок FreeBSD 15.0.
+|`releng/15.1` |Заморожена |re@FreeBSD.org |Поддерживаемая ветка FreeBSD 15.1 для исправления ошибок.
+|`releng/15.0` |Заморожена |security-officer@FreeBSD.org |Поддерживаемая ветка FreeBSD 15.0 для исправления ошибок.
 |`stable/14` |Открыта |коммиттеры |Ветка разработки для FreeBSD 14-STABLE.
 |`releng/14.4` |Заморожена |security-officer@FreeBSD.org |Поддерживаемая ветка FreeBSD 14.4 для исправления ошибок.
 |`releng/14.3` |Заморожена |security-officer@FreeBSD.org |Поддерживаемая ветка для исправления ошибок FreeBSD 14.3.
@@ -111,5 +112,5 @@ include::shared/ru/urls.adoc[]
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (15.04.2026): d398c13735407c63c66880a1662021a9bfc6fd2f
+// Original EN revision (30.04.2026): 921c946c6c0b0ba2d38c5043cdf83287d29bb5dd
 //
