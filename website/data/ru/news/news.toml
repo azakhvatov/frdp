@@ -3,12 +3,12 @@
 [[news]]
 date = "2026-06-06"
 title = "Опубликована версия FreeBSD 15.1-RC3"
-description = "В рамках цикла подготовки релиза FreeBSD 15.1 опубликована третья предрелизная сборка. Образы ISO для архитектур amd64, armv7, aarch64, powerpc64, powerpc64le и riscv64 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2026-June/004124.html\">доступны</a> на большинстве наших <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">зеркалирующих сайтов FreeBSD</a>."
+description = "В рамках цикла подготовки релиза FreeBSD 15.1 опубликована третья предрелизная сборка. Образы ISO для архитектур amd64, armv7, aarch64, powerpc64, powerpc64le и riscv64 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2026-June/004124.html\">доступны</a> на большинстве наших <a href=\"https://docs.freebsd.org/ru/books/handbook/mirrors/#mirrors-ftp\">зеркалирующих сайтов FreeBSD</a>."
 
 [[news]]
 date = "2026-05-31"
 title = "Опубликована версия FreeBSD 15.1-RC2"
-description = "В рамках цикла подготовки релиза FreeBSD 15.1 опубликована вторая предрелизная сборка. Образы ISO для архитектур amd64, armv7, aarch64, powerpc64, powerpc64le и riscv64 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2026-May/004119.html\">доступны</a> на большинстве наших <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">зеркалирующих сайтов FreeBSD</a>."
+description = "В рамках цикла подготовки релиза FreeBSD 15.1 опубликована вторая предрелизная сборка. Образы ISO для архитектур amd64, armv7, aarch64, powerpc64, powerpc64le и riscv64 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2026-May/004119.html\">доступны</a> на большинстве наших <a href=\"https://docs.freebsd.org/ru/books/handbook/mirrors/#mirrors-ftp\">зеркалирующих сайтов FreeBSD</a>."
 
 [[news]]
 date = "2026-05-23"
