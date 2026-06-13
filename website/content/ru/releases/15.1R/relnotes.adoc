@@ -510,6 +510,7 @@ gitref:ec8d0b5f5dfb[repository=src].
 === Драйверы устройств
 
 Драйвер man:ena[4] обновлён до версии v2.8.3.
+В неё включено исправление ошибки приёма маршрута для гигантских сетевых пакетов, что может дать более чем десятикратный рост производительности сети.
 gitref:b949f8292de5[repository=src].
 {{< sponsored "Amazon, Inc." >}}
 
@@ -800,5 +801,5 @@ gitref:b0fbed20ceb9[repository=src].
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (06.05.2026): 8c95180d56c299afa9ed6a46a8e5a6fd489c5130
+// Original EN revision (06.05.2026): 722f176b277e3644af5c19d38b62cd2279b5322e
 //
