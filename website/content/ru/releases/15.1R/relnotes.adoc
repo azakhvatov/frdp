@@ -296,6 +296,13 @@ gitref:00412df3265e[repository=src].
 В диагностических сообщениях ядра, относящихся к DTrace, теперь используется более интуитивно понятный префикс `dtrace`, что улучшает единообразие поиска в журнале событий.
 gitref:7781f5e09ffc[repository=src].
 
+Скрипт bsdinstall теперь по умолчанию выполняет установку pkgbase с компонентами, заданными в переменной COMPONENTS, при этом старый метод установки дистрибутивных наборов остаётся доступным, если определена переменная DISTRIBUTIONS.
+gitref:cb7880bb0900[repository=src].
+{{< sponsored "ConnectWise" >}}
+
+В man:cron[8] теперь реализован полный цикл сеанса PAM для пользовательских заданий, что даёт возможность модулям PAM получать учётные данные и устанавливать сеансы до выполнения заданий. Переменные окружения PAM экспортируются процессам задания, при этом пользовательские переменные crontab имеют более высокий приоритет. В /etc/pam.d/cron добавлено используемое по умолчанию правило pam_permit.so для сеанса, что позволяет активировать поддержку сеансов без изменения стандартного поведения.
+gitref:770479c4cea0[repository=src].
+
 [[userland-contrib]]
 === Системное программное обеспечение сторонних разработчиков
 
@@ -340,8 +347,8 @@ gitref:e0ae00f43186[repository=src].
 Библиотека man:zlib[3] обновлена до версии 1.3.2.
 gitref:74f357256769[repository=src].
 
-Программное обеспечение OpenZFS обновлено до версии 2.4.1.
-gitref:a8dbd836b785[repository=src].
+Программное обеспечение OpenZFS обновлено до версии 2.4.2.
+gitref:409247a6cbd1[repository=src].
 
 База данных вендоров USB обновлена до версии 2025.12.13.
 gitref:9b2cba4a8a69[repository=src].
@@ -391,6 +398,12 @@ gitref:109324d5e7ab[repository=src].
 
 Утилита zstd обновлена до версии 1.5.7.
 gitref:1aa2b46a0707[repository=src].
+
+Библиотека MIT krb5 обновлена до версии 1.22.2.
+gitref:3de8ca652d93[repository=src].
+
+Библиотека Heimdal (Kerberos) обновлена до версии 1.22.2.
+gitref:3ee9a0f8924d[repository=src].
 
 [[userland-deprecated-programs]]
 === Выводимые из эксплуатации приложения
@@ -462,6 +475,13 @@ gitref:0005bb76e2e7[repository=src].
 Прерывания ввода/вывода от устройства man:ena[4] в системах Graviton (arm64) теперь распределяются между процессорами, а не направляются все на CPU 0; это даёт существенно более высокую производительность работы сети на таких типах инсталляций в EC2.
 gitref:b2ba4131b9b0[repository=src].
 {{< sponsored "Amazon" >}}
+
+В конфигурациях образов, предназначенных для облачных платформ, в cloud-init и ec2-small для обновления пакетов теперь используется firstboot_pkg_upgrade.
+gitref:73ec43ab702f[repository=src].
+
+В конфигурациях образов, предназначенных для облачных платформ, появилось автоматическое обновление пакетов при первой загрузке. При первом запуске пакеты базовой системы автоматически актуализируются для обновления системы.
+gitref:10c4498f93d2[repository=src].
+{{< sponsored "Google Cloud" >}}
 
 [[kernel]]
 == Ядро
@@ -631,6 +651,10 @@ gitref:3a64c667f16f[repository=src].
 
 Добавлена поддержка монтирования бездисковой корневой файловой системы через NFSv4. Она требует специфичной настройки сервера и клиента в man:loader.conf[5] и man:sysctl.conf[5].
 gitref:2a97b49bc472[repository=src].
+
+Проверка соответствия iSCSI TargetName при регистрации теперь снова является нечувствительной к регистру, что возвращает соответствие RFC 3722.
+gitref:379805b29732[repository=src].
+{{< sponsored "ConnectWise" >}}
 
 [[boot]]
 == Изменения в загрузчике
@@ -874,11 +898,14 @@ gitref:ef82bdc864c5[repository=src].
 gitref:b0fbed20ceb9[repository=src].
 {{< sponsored "https://www.patreon.com/cperciva" >}}
 
+Пакеты ext2 и ntfs добавлены на носители с релизом, что помогает пользователям при переносе пакетов с систем Linux или Windows.
+gitref:8c8ec2cdc9a9[repository=src].
+
 [[future-releases]]
 == Общие комментарии относительно будущих выпусков FreeBSD
 
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (09.05.2026): 7232e5bbe47257b9ab64821e4f9a6d8b3428a463
+// Original EN revision (19.05.2026): 7b10f2d4e029a3b8f171db6e5cd4be09cb1e0a5a
 //
