@@ -476,12 +476,13 @@ gitref:0005bb76e2e7[repository=src].
 gitref:b2ba4131b9b0[repository=src].
 {{< sponsored "Amazon" >}}
 
-В конфигурациях образов, предназначенных для облачных платформ, в cloud-init и ec2-small для обновления пакетов теперь используется firstboot_pkg_upgrade.
-gitref:73ec43ab702f[repository=src].
-
 В конфигурациях образов, предназначенных для облачных платформ, появилось автоматическое обновление пакетов при первой загрузке. При первом запуске пакеты базовой системы автоматически актуализируются для обновления системы.
 gitref:10c4498f93d2[repository=src].
 {{< sponsored "Google Cloud" >}}
+
+В варианте "small" образов виртуальных машин для EC2 по умолчанию firstboot_pkgs больше не запускается; пользователи, указывающие список пакетов для установки через настройку `firstboot_pkgs_list` в пользовательских данных EC2, должны теперь также указывать `firstboot_pkgs_enable="YES"`.
+gitref:b9ee42d7712b[repository=src].
+{{< sponsored "Amazon" >}}
 
 [[kernel]]
 == Ядро
@@ -907,5 +908,5 @@ gitref:8c8ec2cdc9a9[repository=src].
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (19.05.2026): 7b10f2d4e029a3b8f171db6e5cd4be09cb1e0a5a
+// Original EN revision (23.05.2026): c59a383dbe35a3de39fd62b6214c5e66d0b373b3
 //
