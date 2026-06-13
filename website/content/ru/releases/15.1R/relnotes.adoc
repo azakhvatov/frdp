@@ -88,7 +88,7 @@ toc::[]
 
 | link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-25:09.netinet.asc[FreeBSD-SA-25:09.netinet]
 | 22 октября 2025 г.
-| SO_REUSEPORT_LB нарушает работу man:connect[2] для UDP-сокетов
+| SO_REUSEPORT_LB нарушает работу man:connect[2] для сокетов UDP
 
 | link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-25:10.unbound.asc[FreeBSD-SA-25:10.unbound]
 | 26 ноября 2025 г.
