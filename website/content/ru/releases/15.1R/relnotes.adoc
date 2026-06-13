@@ -733,8 +733,9 @@ gitref:d29dd64b3f88[repository=src].
 Архитектура amd64 теперь поддерживает LASS (Linear Address Space Separation), функцию безопасности, которая помогает изолировать адресные пространства ядра и пользователей. Это изменение может влиять на отладку и низкоуровневое системное программирование.
 gitref:532c8d3f90b9[repository=src].
 
-В код для идентификации процессоров x86 был добавлен параметр поддержки Extended Destination ID, что обеспечивает поддержку вплоть до 32768 идентификаторов APIC и MSI без переназначения прерываний.
+Архитектура amd64 теперь поддерживает стандарт Extended Destination ID, что даёт возможность поддерживать вплоть до 32768 идентификаторов APIC и MSI без переназначения прерываний; в частности, это обеспечивает поддержку для систем "r8i.96xlarge" в EC2.
 gitref:b54646e37a2b[repository=src].
+{{< sponsored "Amazon" >}}
 
 [[documentation]]
 == Документация
@@ -795,5 +796,5 @@ gitref:b0fbed20ceb9[repository=src].
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (06.05.2026): c61854542cdac69c93a0f2adbf03986c65fb3ad7
+// Original EN revision (06.05.2026): 05d4f530194765887b5545c820628ba40c12e2b4
 //
