@@ -460,20 +460,21 @@ gitref:6197518ee905[repository=src].
 Добавлены функции man:strdupa[3] и man:strndupa[3], которые выделяют память для копии строки в стеке при помощи man:alloca[3]. Это даёт удобную альтернативу man:strdup[3] и man:strndup[3] для временных копий строк, которые автоматически удаляются при возвращении из функции.
 gitref:b2e649a0b98d[repository=src].
 
-Добавлен заголовочный файл C23 `<stdbit.h>` с функциями для работы с битами, подобными `stdc_bit_ceil()`, `stdc_bit_width()` и `stdc_count_ones()`. Они реализуют стандартные операции с битами для программ на языке C.
-gitref:275c11b7ccff[repository=src].
-
-В <math.h> объявлены тригонометрические функции C23 семейства `*pi` (acospi, acospif и так далее). Они реализуют API, соответствующий стандарту, для приложений, использующих данные функции.
-gitref:104488641aca[repository=src].
-
-В библиотеку libc добавлена функция C23 `memalignment()`, которая позволяет программам вычислять выравнивание указателя. Добавлена также и страница Справочника.
-gitref:24ea81047de7[repository=src].
-
 SONAME для библиотек libzfs и libzpool были изменены на libzfs7 и libzpool7 ввиду изменений, меняющих ABI и требующих перекомпиляцию зависимых приложений.
 gitref:5b2489caf266[repository=src].
 
 Добавлена библиотека libuvmem, представляющая собой перенос функций распределения памяти ядра man:vmem[9] на уровень пользовательского окружения и обеспечивающая аналогичный интерфейс для пользовательских приложений.
 gitref:3ae14e8f332f[repository=src].
+
+Теперь доступна частичная поддержка версии C23 языка программирования C. Она будет продолжать расширяться, при этом полная поддержка этой версии ожидается во FreeBSD 16. К новым функциям относится появление заголовочного файла `<stdbit.h>` и функции man:memalignment[3], обновления в заголовочных файлах `<limits.h>` и `<stdint.h>`, включая макросы `_WIDTH` и `char8_t`, а также различные другие расширения.
+gitref:275c11b7ccff[repository=src],
+gitref:104488641aca[repository=src],
+gitref:24ea81047de7[repository=src],
+gitref:5656d0f7453e[repository=src],
+gitref:72609bb2bb25[repository=src],
+gitref:ff50ace5fe0e[repository=src],
+gitref:cbad54ba46e6[repository=src],
+gitref:6fc280810ead[repository=src].
 
 [[cloud]]
 == Поддержка облачных решений
@@ -915,5 +916,5 @@ gitref:8c8ec2cdc9a9[repository=src].
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (26.05.2026): ea576feb9b27d4055ef91f57e43dc43ee3570466
+// Original EN revision (27.05.2026): 6ae5bfd638154fba058b1902e3843e983205f3ca
 //
