@@ -158,6 +158,34 @@ toc::[]
 | 29 апреля 2026
 | Переполнение распределённой памяти в libnv
 
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:18.setcred.asc[FreeBSD-SA-26:18.setcred]
+| 20 мая 2026
+| Переполнение буфера стека через man:setcred[2]
+
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:19.file.asc[FreeBSD-SA-26:19.file]
+| 20 мая 2026
+| Обращение к памяти в ядре после её высвобождения через системные вызовы, работающие с файловыми дескрипторами
+
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:20.fusefs.asc[FreeBSD-SA-26:20.fusefs]
+| 20 мая 2026
+| Переполнение распределённой памяти в FUSE_LISTXATTR
+
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:21.ptrace.asc[FreeBSD-SA-26:21.ptrace]
+| 20 мая 2026
+| Отсутствующая проверка достоверности в ptrace(PT_SC_REMOTE)
+
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:22.libcasper.asc[FreeBSD-SA-26:22.libcasper]
+| 20 мая 2026
+| Превышение количества файловых дескрипторов в man:select[2] вызывает переполнение стека
+
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:23.bsdinstall.asc[FreeBSD-SA-26:23.bsdinstall]
+| 20 мая 2026
+| Дистанционное выполнение кода при помощи сканирования точек доступа Wi-Fi в программе установки
+
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:24.cap_net.asc[FreeBSD-SA-26:24.cap_net]
+| 20 мая 2026
+| Некорректная обработка списка ограничений в man:libcap_net[3]
+
 |===
 
 [[errata]]
@@ -221,6 +249,10 @@ toc::[]
 | link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:11.dhclient.asc[FreeBSD-EN-26:11.dhclient]
 | 1 мая 2026
 | Чрезмерно строгая проверка запросов в man:dhclient[8]
+
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:13.freebsd-update.asc[FreeBSD-EN-26:13.freebsd-update]
+| 20 мая 2026
+| man:freebsd-update[8] пытается выполнить слияние со сгенерированным файлом
 
 |===
 
@@ -916,5 +948,5 @@ gitref:8c8ec2cdc9a9[repository=src].
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (27.05.2026): 6ae5bfd638154fba058b1902e3843e983205f3ca
+// Original EN revision (27.05.2026): b412a1d626b9bfebffddc6db53ec594448aa0fdf
 //
