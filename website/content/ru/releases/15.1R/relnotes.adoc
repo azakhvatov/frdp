@@ -430,8 +430,8 @@ gitref:11aa32794394[repository=src].
 Библиотека man:sqlite3[1] обновлена до версии 3.50.4.
 gitref:e37206a66db0[repository=src].
 
-Утилита man:unbound[8] обновлена до версии 1.24.1.
-gitref:fc3c317b055c[repository=src].
+Программное обеспечение man:unbound[8] обновлено до версии 1.25.1.
+gitref:1b6c85cfac36[repository=src].
 
 Подсистема blacklist переименована в blocklist (man:blocklistd[8]) во всей операционной системе. Старые имена в скриптах rc, правилах межсетевых экранов и конфигурационных параметрах продолжают функционировать, однако выдают предупреждающие сообщения. Это изменение соответствует обновлению терминологии в оригинальном коде.
 gitref:7f6f2139eef9[repository=src].
@@ -636,8 +636,11 @@ gitref:16004d2a9eee[repository=src].
 gitref:88c0ce38bc18[repository=src].
 {{< sponsored "Intel Corporation" >}}
 
+Драйвер padlock_rng driver теперь компилируется в архитектуре amd64, что обеспечивает аппаратную генерацию случайных чисел на 64-разрядных процессорах Via Nano, Nano X2 и некоторых процессорах Zhaoxin.
+gitref:191573ce0bfd[repository=src].
+
 [[drivers-removals]]
-=== Удалённые и выводимые из эксплуатации драйверы
+=== Удалённые и выводимые из поддержки драйверы
 
 Драйвер man:hifn[4] помечен как запланированный к удалению во FreeBSD 16.0, что предупреждает пользователей о подготовке к будущим изменениям в совместимости.
 gitref:ba6c676ef3ac[repository=src].
@@ -878,6 +881,9 @@ gitref:c988f316d6c6[repository=src].
 В man:d[7] добавлена документация для нескольких функций работы со строками: `strchr`, `strjoin`, `strrchr`, `strstr`, `strtok`, `strlen` и `substr`.
 gitref:d086bf34b56f[repository=src].
 
+Добавлена новая страница Справочника man:groups[7], описывающая стандартные названия групп.
+gitref:0ac3db880552[repository=src].
+
 Страница Справочника man:ports[7] была существенно улучшена. Раздел `FILES` расширен и для большей ясности преобразован в три таблицы с кратким описанием отдельных файлов порта. Кроме того, теперь задокументирована переменная `DEFAULT_VERSIONS`, что даёт пользователям информацию об установке используемых по умолчанию версий для параметров портов.
 gitref:1b5b7867b67f[repository=src],
 gitref:782ea981ea72[repository=src],
@@ -932,5 +938,5 @@ gitref:8c8ec2cdc9a9[repository=src].
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (26.05.2026): 507599591a96d3bc95c8d6ccd6b7861f20313fe4
+// Original EN revision (03.06.2026): 350993b276341514e90b911be912494a3b8d057d
 //
