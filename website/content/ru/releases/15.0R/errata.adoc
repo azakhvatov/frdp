@@ -51,8 +51,14 @@ sidenav: download
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:05.route.asc[FreeBSD-SA-26:05.route] |24 февраля 2026 |Локальный отказ в обслуживании (DoS) и возможность повышения полномочий через сокеты маршрутизации
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:06.tcp.asc[FreeBSD-SA-26:06.tcp] |26 марта 2026 |TCP: Дистанционная уязвимость, доступная в качестве направления атаки DoS (утечка mbuf)
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:07.nvmf.asc[FreeBSD-SA-26:07.nvmf] |26 марта 2026 |Дистанционный отказ в обслуживании через обращение к нулевому указателю
-|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:08.rpcsec_gss.asc[FreeBSD-SA-26:08.rpcsec_gss] |26 марта 2026 |Дистанционное выполнение кода через функцию RPCSEC_GSS проверки пакетов
-|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:09.pf.asc[FreeBSD-SA-26:09.pf] |26 марта 2026 |pf игнорирует определённые правила, не оповещая об этом
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:08.rpcsec_gss.asc[FreeBSD-SA-26:08.rpcsec_gss] |26 марта 2026 |Дистанционное выполнение кода через проверку корректности пакета в RPCSEC_GSS
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:09.pf.asc[FreeBSD-SA-26:09.pf] |26 марта 2026 |pf игнорирует определённые правила, не сообщая об этом
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:10.tty.asc[FreeBSD-SA-26:10.tty]
+| 21 апреля 2026
+| Ошибка использования памяти после её высвобождения в коде обработчика TIOCNOTTY в ядре
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:11.amd64.asc[FreeBSD-SA-26:11.amd64]
+| 21 апреля 2026
+| Отсутствие обработки больших страниц памяти в pmap_pkru_update_range()
 |===
 
 [[errata]]
@@ -99,5 +105,5 @@ sidenav: download
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (26.03.2026): 9ab94ece171524958a016bf547e9b67ccaf529ed
+// Original EN revision (22.04.2026): 2eaf739eec9b5525be88a6b33e59a8468e500bfb
 //
