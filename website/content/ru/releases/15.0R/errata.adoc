@@ -1,5 +1,5 @@
 ---
-title: "Исправления и дополнения FreeBSD 15.0-RELEASE"
+title: "Исправления и дополнения для FreeBSD 15.0-RELEASE"
 sidenav: download
 ---
 
@@ -39,16 +39,20 @@ sidenav: download
 Список всех рекомендаций по безопасности FreeBSD CERT доступен по адресу https://www.FreeBSD.org/ru/security/.
 
 [[security]]
-== Бюллетени безопасности
+== Уведомления о безопасности
 
 [width="100%",cols="40%,30%,30%",options="header",]
 |===
-|Бюллетень |Дата |Тема
+|Уведомление |Дата |Тема
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-25:12.rtsold.asc[FreeBSD-SA-25:12.rtsold] |16 декабря 2025 |Удалённое выполнение кода через ND6 Router Advertisements
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:01.openssl.asc[FreeBSD-SA-26:01.openssl] |27 января 2026 |Несколько уязвимостей в OpenSSL
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:03.blocklistd.asc[FreeBSD-SA-26:03.blocklistd] |10 февраля 2026 |Утечка сетевых соединений в blocklistd(8)
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:04.arm64.asc[FreeBSD-EN-26:04.arm64] |10 февраля 2026 |Аварийное завершение работы ядра при сохранении образа процесса на платформе arm64
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:05.route.asc[FreeBSD-SA-26:05.route] |24 февраля 2026 |Локальный отказ в обслуживании (DoS) и возможность повышения полномочий через сокеты маршрутизации
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:06.tcp.asc[FreeBSD-SA-26:06.tcp] |26 марта 2026 |TCP: Дистанционная уязвимость, доступная в качестве направления атаки DoS (утечка mbuf)
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:07.nvmf.asc[FreeBSD-SA-26:07.nvmf] |26 марта 2026 |Дистанционный отказ в обслуживании через обращение к нулевому указателю
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:08.rpcsec_gss.asc[FreeBSD-SA-26:08.rpcsec_gss] |26 марта 2026 |Дистанционное выполнение кода через функцию RPCSEC_GSS проверки пакетов
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:09.pf.asc[FreeBSD-SA-26:09.pf] |26 марта 2026 |pf игнорирует определённые правила, не оповещая об этом
 |===
 
 [[errata]]
@@ -95,5 +99,5 @@ sidenav: download
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (25.02.2026): 005bf1c59c120936048675bffc89c5f649cc7c99
+// Original EN revision (26.03.2026): 9ab94ece171524958a016bf547e9b67ccaf529ed
 //
