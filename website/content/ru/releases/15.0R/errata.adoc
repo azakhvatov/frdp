@@ -59,6 +59,24 @@ sidenav: download
 | link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:11.amd64.asc[FreeBSD-SA-26:11.amd64]
 | 21 апреля 2026
 | Отсутствие обработки больших страниц памяти в pmap_pkru_update_range()
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:12.dhclient.asc[FreeBSD-SA-26:12.dhclient]
+| 29 апреля 2026
+| Дистанционный запуск кода через злонамеренную настройку параметров DHCP
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:13.exec.asc[FreeBSD-SA-26:13.exec]
+| 29 апреля 2026
+| Локальное повышение полномочий через execve()
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:14.pf.asc[FreeBSD-SA-26:14.pf]
+| 29 апреля 2026
+| Обработка особым образом сформированных пакетов SCTP в pf может привести к переполнению стека
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:15.dhclient.asc[FreeBSD-SA-26:15.dhclient]
+| 29 апреля 2026
+| Дистанционно вызываемая запись в область вне границы выделенной памяти в dhclient
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:16.libnv.asc[FreeBSD-SA-26:16.libnv]
+| 29 апреля 2026
+| Переполнение стека через превышение количества файловых дескрипторов в select()
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:17.libnv.asc[FreeBSD-SA-26:17.libnv]
+| 29 апреля 2026
+| Переполнение распределённой памяти в libnv
 |===
 
 [[errata]]
@@ -117,5 +135,5 @@ sidenav: download
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (22.04.2026): 0e1130f56b5d51bd004c6f26faf71c02be53ef84
+// Original EN revision (30.04.2026): f6ce52f50591bdb84c5b866bf75501b12048c55f
 //
