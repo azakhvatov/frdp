@@ -7,7 +7,7 @@ sidenav: download
 :releaseNext: 15.1-RELEASE
 :releaseBranch: 15-STABLE
 
-= Исправления и дополнения FreeBSD {release}
+= Исправления и дополнения для FreeBSD {release}
 
 == Аннотация
 
@@ -20,7 +20,7 @@ sidenav: download
 == Содержание
 
 * <<intro,Введение>>
-* <<security,Бюллетени безопасности>>
+* <<security,Уведомления о безопасности>>
 * <<errata,Уведомления об исправлениях>>
 * <<open-issues,Открытые проблемы>>
 * <<late-news,Последние новости>>
@@ -131,9 +131,9 @@ sidenav: download
 **Статус**: исправлено в ветке main - https://bugs.freebsd.org/291461 +
 
 [[late-news]]
-== Последние новости
+== Актуальные новости
 
-Последних новостей нет.
+Актуальных новостей нет.
 
 //
 // The FreeBSD Russian Documentation Project
