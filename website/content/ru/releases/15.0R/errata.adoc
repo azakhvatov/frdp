@@ -90,27 +90,15 @@ sidenav: download
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:01.devinfo.asc[FreeBSD-EN-26:01.devinfo] |27 января 2026 |Некорректный формат выдачи devinfo
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:02.arm64.asc[FreeBSD-EN-26:02.arm64] |27 января 2026 |Некорректное сохранение регистров arm64 SVE при обработке сигналов
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:03.vm.asc[FreeBSD-EN-26:03.vm] |27 января 2026 |Некорректное обнуление памяти в обработчике отсутствующих страниц памяти
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:04.arm64.asc[FreeBSD-EN-26:04.arm64]
-| 10 февраля 2026
-| Аварийное завершение работы ядра при сохранении образа памяти процесса на системах arm64
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:05.vm.asc[FreeBSD-EN-26:05.vm]
-| 21 апреля 2026
-| Обработчик событий отсутствия страниц памяти обнуляет её некорректно
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:06.timerfd.asc[FreeBSD-EN-26:06.timerfd]
-| 21 апреля 2026
-| Повторяющиеся таймеры man:timerfd[2] могут выдавать некорректные результаты
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:07.pkgbase.asc[FreeBSD-EN-26:07.pkgbase]
-| 21 апреля 2026
-| Ошибка компиляции пакетов из базового установочного набора с обновлёнными версиями libucl
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:08.pf.asc[FreeBSD-EN-26:08.pf]
-| 29 апреля 2026
-| Некорректное распознавание повторяющихся правил для автоматических таблиц
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:09.tzdata.asc[FreeBSD-EN-26:09.tzdata]
-| 29 апреля 2026
-| Обновление информации в базе данных часовых поясов
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:10.amd64.asc[FreeBSD-EN-26:10.amd64]
-| 29 апреля 2026
-| Программная ошибка при устаревании TLB в системах AMD с поддержкой INVLPGB
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:04.arm64.asc[FreeBSD-EN-26:04.arm64] |10 февраля 2026 |Аварийное завершение работы ядра при сохранении образа памяти процесса на системах arm64
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:05.vm.asc[FreeBSD-EN-26:05.vm] |21 апреля 2026 |Обработчик событий отсутствия страниц памяти обнуляет её некорректно
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:06.timerfd.asc[FreeBSD-EN-26:06.timerfd] |21 апреля 2026 |Повторяющиеся таймеры man:timerfd[2] могут выдавать некорректные результаты
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:07.pkgbase.asc[FreeBSD-EN-26:07.pkgbase] |21 апреля 2026 |Ошибка компиляции пакетов из базового установочного набора с обновлёнными версиями libucl
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:08.pf.asc[FreeBSD-EN-26:08.pf] |29 апреля 2026 |Некорректное распознавание повторяющихся правил для автоматических таблиц
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:09.tzdata.asc[FreeBSD-EN-26:09.tzdata] |29 апреля 2026 |Обновление информации в базе данных часовых поясов
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:10.amd64.asc[FreeBSD-EN-26:10.amd64] |29 апреля 2026 |Программная ошибка при устаревании TLB в системах AMD с поддержкой INVLPGB
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:11.dhclient.asc[FreeBSD-EN-26:11.dhclient] |1 мая 2026 |Чрезмерно строгая проверка запросов в man:dhclient[8]
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:12.freebsd-update.asc[FreeBSD-EN-26:12.freebsd-update] |1 мая 2026 |Рассинхронизация исходного кода между freebsd-update, уведомлениями EN/SA и git
 |===
 
 [[open-issues]]
@@ -144,5 +132,5 @@ sidenav: download
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (30.04.2026): 6f9601c0553be3ee0bb86afd987c0fa99d5ce1cc
+// Original EN revision (02.05.2026): a8cb7746be6ac1a835621945e5b94478ee90bfa4
 //
