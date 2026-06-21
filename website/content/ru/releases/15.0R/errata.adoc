@@ -133,7 +133,7 @@ sidenav: download
 [[late-news]]
 == Актуальные новости
 
-Актуальных новостей нет.
+Актуальные новости отсутствуют.
 
 //
 // The FreeBSD Russian Documentation Project
