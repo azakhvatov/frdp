@@ -1,5 +1,5 @@
 ---
-title: "Запуск FreeBSD"
+title: "Установка FreeBSD"
 sidenav: download
 ---
 
@@ -13,7 +13,7 @@ include::shared/ru/urls.adoc[]
 [[choose-arch]]
 [[install]]
 [[past]]
-= Запуск FreeBSD
+= Установка FreeBSD
 
 Операционная система FreeBSD доступна в виде образов, опубликованных на этой странице, а также напрямую у поставщиков облачных решений.
 Перед тем, как скачивать тот или иной образ, пожалуйста, прочтите link:{handbook}bsdinstall/[**руководство по установке**].
@@ -109,7 +109,7 @@ a|
 * link:{url-rel}/riscv/riscv64/ISO-IMAGES/{rel150-current}/[riscv64]
 
 a|
-* link:{url-rel}/VM-IMAGES/README.txt[Readme]
+* link:{url-rel}/VM-IMAGES/README.txt[README]
 * link:{url-rel}/VM-IMAGES/{rel150-current}-RELEASE/amd64/Latest/[amd64]
 * link:{url-rel}/VM-IMAGES/{rel150-current}-RELEASE/aarch64/Latest/[aarch64]
 * link:{url-rel}/VM-IMAGES/{rel150-current}-RELEASE/riscv64/Latest/[riscv64]
