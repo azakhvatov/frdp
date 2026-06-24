@@ -1,7 +1,7 @@
 ---
 title: "Инструкции по обновлению до FreeBSD 15.1-RELEASE"
 sidenav: download
-aliases: installing
+aliases: installation
 ---
 
 :releaseCurrent: 15.1-RELEASE
@@ -305,5 +305,5 @@ shutdown -r now
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (23.06.2026): d357e2acefe52f4a767b5da0761b12892850b5ed
+// Original EN revision (23.06.2026): 4df494ffc469a8e3b8e4f760dc76e8223529143b
 //
