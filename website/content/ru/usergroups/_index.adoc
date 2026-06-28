@@ -79,16 +79,11 @@ link:http://berklix.org/bim/[Berkeley in Munich (BIM)]::
 Berkeley in Munich (BIM) обслуживает пользователей систем на базе BSD в Верхней Баварии.
 Расположена в Германии, Мюнхен.
 
-link:http://www.u-bus.de[Ulmer BSD User Stammtisch]::
-U-BUS встречается каждый последний четверг месяца.
-Для получения дополнительной информации о встречах и связанных вопросах, пожалуйста, проверьте веб-страницу (link:http://www.u-bus.de[u-bus]).
-Расположена в Германии, Ульм.
-
 link:http://www.bluefrogs.de/[Bluefrogs e.V.]::
-Группа пользователей Unix и Linux в Бергиш-Гладбахе (близ Кёльна), Германия.
+Сообщество пользователей Unix и Linux в Бергиш-Гладбахе (близ Кёльна), Германия.
 Встречи проводятся два раза в месяц.
 Мы работаем со всеми производными Open Source Unix: FreeBSD, NetBSD, OpenBSD, Linux и другими.
-Мы проводим workshops, лекции, доклады и установочные вечеринки.
+Мы читаем лекции, проводим рабочие семинары и встречи по установке системы, а также просто разговариваем.
 Для получения дополнительной информации напишите нам по адресу: link:mailto:info@bluefrogs.de[info@bluefrogs.de].
 
 link:http://bse.42.org/[BSE München]::
@@ -165,16 +160,6 @@ link:https://lists.stacken.kth.se/mailman/listinfo/bus[BSD Users Sweden (BUS)]::
 Чтобы присоединиться, отправьте электронное письмо на link:mailto:majordomo@stacken.kth.se[majordomo@stacken.kth.se] с текстом `subscribe bus` в теле письма.
 Расположена в Швеции.
 
-link:http://www.bsdgroups.org.uk/manchester[Manchester BSD Users Group]::
-Манчестерская группа пользователей BSD встречается достаточно часто в пабе Lass O'Gowrie на Чарльз-стрит, Манчестер.
-Свяжитесь с link:mailto:sams@bsdgroups.org.uk[Сэмом Смитом] для получения дополнительной информации.
-Расположена в Великобритании, Манчестер.
-
-link:http://mailman.uk.freebsd.org/mailman/listinfo/ukfreebsd[FreeBSD UK Users group (FreeBSD UKUG)]::
-Группа пользователей FreeBSD Великобритании (FreeBSD UKUG) существует для пользы пользователей FreeBSD в Соединенном Королевстве.
-Пожалуйста, перейдите по ссылке для получения дополнительной информации.
-Расположена в Великобритании.
-
 link:https://twitter.com/bsdbelfast[The BSD in Belfast Group]::
 Встречайтесь с группой BSD Белфаста в третью пятницу месяца.
 Мы — группа академических и промышленных пользователей и поклонников BSD.
@@ -249,19 +234,16 @@ link:http://www.wplug.org[Western Pennsylvania Linux Users Group (WPLUG)]::
 Смотрите нашу домашнюю страницу (link:http://www.wplug.org[http://www.wplug.org]) для получения информации о регулярных встречах и присоединяйтесь к спискам рассылки.
 Расположена в Пенсильвании.
 
-link:mailto:pdx-freebsd@toybox.placo.com[Portland (Oregon) FreeBSD Users Group]::
-Группа пользователей FreeBSD Портленда (Орегон) встречается в третий четверг каждого месяца.
-Пишите на link:mailto:pdx-freebsd@toybox.placo.com[адрес группы пользователей FreeBSD Портленда].
-Расположена в Портленде, Орегон.
+link:https://bsd.pizza[Сообщество пользователей FreeBSD Портленда (Орегон)]::
+Сообщество пользователей FreeBSD Портленда (Орегон) встречается в третий четверг каждого месяца.
+Если вы находитесь в этом месте и хотите присоединиться, поищите link:https://calagator.org/events/search?query=BSD+Pizza+Night[BSD Pizza Night on Calagator] на веб-сайте технологичеких событий Портленда.
+Посетите link:https://bsd.pizza[https://bsd.pizza] для уточнения контактной информации.
+Находится в Портленде, штат Орегон.
 
 link:http://www.rlug.org[Reno Linux Users Group (RLUG)]::
 Группа пользователей Linux Рено (RLUG) собирается ежемесячно в Рено, Невада, и обсуждает использование BSD и Linux.
 Посетите link:http://www.rlug.org[наш веб-сайт] для получения дополнительной информации, где вы также можете присоединиться к нашему списку рассылки.
 Расположена в Рено, Невада.
-
-link:http://www.seabug.org[Seattle BSD Users Group (SeaBUG)]::
-Группа пользователей BSD Сиэтла (SeaBUG) встречается время от времени. Посетите наш веб-сайт для получения более подробной информации и сведений о том, как присоединиться к нашему списку рассылки.
-Расположена в Сиэтле, Вашингтон.
 
 link:https://sdbug.org/[San Diego BSD Users Group (SDBUG)]::
 Группа пользователей BSD Сан-Диего (SDBUG) встречается в первый четверг каждого месяца, обычно в пивоварне AleSmith на Мирамар-Роуд.
@@ -328,10 +310,6 @@ link:https://www.ebug.jp/[The Echigo BSD Users Group (EBUG)]::
 Группа пользователей BSD Этиго (EBUG) — это группа пользователей для пользователей BSD в районе Этиго (также известном как Ниигата).
 Для получения дополнительной информации о наших мероприятиях и списках рассылки, пожалуйста, проверьте веб-сайт EBUG.
 
-link:mailto:22961476@students.ukdw.ac.id[The Jogja FreeBSD Users Group]::
-Группа пользователей FreeBSD Джокьякарты базируется в городе Джокьякарта, Индонезия.
-Отправьте электронное письмо на 22961476@students.ukdw.ac.id для получения дополнительной информации.
-
 link:http://www.meetbsd.ir[meetBSD Iran]::
 meetbsd.ir — это иранская группа пользователей BSD, которая предоставляет конференции, iso, электронные книги и PKG для местных пользователей BSD.
 
@@ -386,5 +364,5 @@ link:https://metabug.org/[The Global BSD User Groups]::
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (01.03.2026): 40089f5954afafe1193166a53c9933ba1e7948f9
+// Original EN revision (26.04.2026): f4f5495520ee82e7c6d01631480bdd9ca62bc2c4
 //
