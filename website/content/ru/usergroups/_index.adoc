@@ -54,9 +54,9 @@ link:http://www.augusta.de/[Augusta]::
 У нас представлены все виды BSD, но в основном FreeBSD и Mac OS X. Расположена в Германии, Аугсбург.
 
 link:http://www.bsdhh.org/bsdhh-de-index.html[BSD User Group Hamburg (BSDHH)]::
-Группа пользователей BSD Гамбурга (BSDHH) встречается в первую среду месяца в 19:00 в ресторане _Léon_ (Koppel 1, 20099 Hamburg).
-Большинство участников — пользователи FreeBSD, хотя пользователи всех вариантов BSD приветствуются.
-Расположена в Германии, Гамбург.
+Сообщество пользователей BSD Гамбурга (BSDHH) link:https://www.bsdhh.org/bsdhh-de-treffen.html[проводит встречи в первую среду каждого месяца в 19:00] в ресторане Shanghai House (по адресу Borsteler Chaussee 110, 22453 Hamburg).
+Большинство участников являются пользователями FreeBSD, но мы рады пользователям всех вариантов BSD.
+Находится в Германии, Гамбург.
 
 link:https://bsd.nrw/[BSD User Group Düsseldorf/NRW (BSD.NRW)]::
 BSD.NRW находится в Дюссельдорфе, Северный Рейн-Вестфалия, Германия.
@@ -236,8 +236,8 @@ link:http://www.wplug.org[Western Pennsylvania Linux Users Group (WPLUG)]::
 
 link:https://bsd.pizza[Сообщество пользователей FreeBSD Портленда (Орегон)]::
 Сообщество пользователей FreeBSD Портленда (Орегон) встречается в третий четверг каждого месяца.
-Если вы находитесь в этом месте и хотите присоединиться, поищите link:https://calagator.org/events/search?query=BSD+Pizza+Night[BSD Pizza Night on Calagator] на веб-сайте технологичеких событий Портленда.
-Посетите link:https://bsd.pizza[https://bsd.pizza] для уточнения контактной информации.
+Если вы находитесь в этом месте и хотите присоединиться, поищите link:https://calagator.org/events/search?query=%22bsd+pizza+night%22["BSD Pizza Night" на сайте Calagator], посвящённом технологическим событиям Портленда.
+Посетите link:https://bsd.pizza[https://bsd.pizza] для получения контактной информации.
 Находится в Портленде, штат Орегон.
 
 link:http://www.rlug.org[Reno Linux Users Group (RLUG)]::
@@ -364,5 +364,5 @@ link:https://metabug.org/[The Global BSD User Groups]::
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (26.04.2026): f4f5495520ee82e7c6d01631480bdd9ca62bc2c4
+// Original EN revision (28.04.2026): e1f0ac50e8abf2fb87326218a4ed435150144c8d
 //
