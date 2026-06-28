@@ -172,7 +172,7 @@ link:https://freebsd.web.tr/[FreeBSD Türkiye]::
 link:https://ossmalta.eu/[Open Source Society Malta]::
 Общество открытого исходного кода Мальты — это локальное сообщество для инициативы открытого исходного кода на Мальте, поддерживающее энтузиастов и профессионалов открытого исходного кода.
 
-link:https://unix-freunde.mro.name/[UNIX-Freunde Süd-Ost-Oberbayern::
+link:https://unix-freunde.mro.name/[UNIX-Freunde Süd-Ost-Oberbayern]::
 Ежемесячная встреча (вместо чтения документации) в пабе между Розенхаймом и Зальцбургом.
 
 [[north-america]]
@@ -367,5 +367,5 @@ link:https://metabug.org/[The Global BSD User Groups]::
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (16.05.2026): 809d95a21c22f768bdfe51c7d2cc5c1fb281c3d1
+// Original EN revision (17.05.2026): ec6b8ed8016fcd451b95a1fa280c13b51424d16e
 //
