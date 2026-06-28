@@ -172,6 +172,9 @@ link:https://freebsd.web.tr/[FreeBSD Türkiye]::
 link:https://ossmalta.eu/[Open Source Society Malta]::
 Общество открытого исходного кода Мальты — это локальное сообщество для инициативы открытого исходного кода на Мальте, поддерживающее энтузиастов и профессионалов открытого исходного кода.
 
+link:https://unix-freunde.mro.name/[UNIX-Freunde Süd-Ost-Oberbayern::
+Ежемесячная встреча (вместо чтения документации) в пабе между Розенхаймом и Зальцбургом.
+
 [[north-america]]
 === Северная Америка
 
@@ -234,7 +237,7 @@ link:http://www.wplug.org[Western Pennsylvania Linux Users Group (WPLUG)]::
 Смотрите нашу домашнюю страницу (link:http://www.wplug.org[http://www.wplug.org]) для получения информации о регулярных встречах и присоединяйтесь к спискам рассылки.
 Расположена в Пенсильвании.
 
-link:https://bsd.pizza[Сообщество пользователей FreeBSD Портленда (Орегон)]::
+link:https://bsd.pizza[Portland (Oregon) FreeBSD Users Group]::
 Сообщество пользователей FreeBSD Портленда (Орегон) встречается в третий четверг каждого месяца.
 Если вы находитесь в этом месте и хотите присоединиться, поищите link:https://calagator.org/events/search?query=%22bsd+pizza+night%22["BSD Pizza Night" на сайте Calagator], посвящённом технологическим событиям Портленда.
 Посетите link:https://bsd.pizza[https://bsd.pizza] для получения контактной информации.
@@ -364,5 +367,5 @@ link:https://metabug.org/[The Global BSD User Groups]::
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (28.04.2026): e1f0ac50e8abf2fb87326218a4ed435150144c8d
+// Original EN revision (16.05.2026): 809d95a21c22f768bdfe51c7d2cc5c1fb281c3d1
 //
