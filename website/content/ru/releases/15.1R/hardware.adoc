@@ -4323,3 +4323,8 @@ The man:udl[4] driver supports USB display devices based on the DisplayLink DL-1
 *	VideoHome NBdock1920
 *	i-tec USB 2.0 Docking Station (USBDVIDOCK)
 
+//
+// The FreeBSD Russian Documentation Project
+//
+// Original EN revision (19.05.2026): 4c396c5b7fd73f807c03681f9e6ee30eacd7c5c0
+//
