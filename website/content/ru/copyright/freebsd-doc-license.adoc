@@ -23,7 +23,7 @@ The Institute of Electrical and Electronics Engineers и The Open Group пред
 
 В следующей декларации фраза "этот текст" относится к частям соответствующей системной документации.
 
-Части этого текста, перепечатанные и воспроизведённые в электронной форме на страницах Справочника FreeBSD, взяты из IEEE Std 1003.1, 2004 Edition, Standard for Information Technology -- Portable Operating System Interface (POSIX), The Open Group Base Specifications Issue 6, Copyright(C) 2001-2004 by the Institute of Electrical and Electronics Engineers, Inc and The Open Group. В случае любых разночтений между этими версиями и оригинальным Стандартом IEEE и The Open Group, эталонным является оригинальный Стандарт IEEE и The Open Group. Оригинальный Стандарт можно найти в Интернете по адресу https://www.opengroup.org/membership/forums/platform/unix.
+Части этого текста, перепечатанные и воспроизведённые в электронной форме на страницах Справочника FreeBSD, взяты из IEEE Std 1003.1, 2004 Edition, Standard for Information Technology -- Portable Operating System Interface (POSIX), The Open Group Base Specifications Issue 6, Copyright(C) 2001-2004 by the Institute of Electrical and Electronics Engineers, Inc and The Open Group. В случае любых разночтений между этими версиями и оригинальным Стандартом IEEE и The Open Group эталонным является оригинальный Стандарт IEEE и The Open Group. Оригинальный Стандарт можно найти в Интернете по адресу https://www.opengroup.org/membership/forums/platform/unix.
 
 Это уведомление должно быть размещено в любом продукте, содержащем данный материал.
 ____
