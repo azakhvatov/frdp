@@ -44,39 +44,24 @@ sidenav: download
 [width="100%",cols="40%,30%,30%",options="header",]
 |===
 |Бюллетень |Дата |Тема
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:06.tcp.asc[FreeBSD-SA-26:06.tcp]
-| 26 марта 2026
-| TCP: возможность дистанционной DoS-атаки (утечка mbuf)
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:08.rpcsec_gss.asc[FreeBSD-SA-26:08.rpcsec_gss]
-| 26 марта 2026
-| Дистанционное выполнение кода через проверку корректности пакета в RPCSEC_GSS
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:09.pf.asc[FreeBSD-SA-26:09.pf]
-| 26 марта 2026
-| pf игнорирует определённые правила, не сообщая об этом
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:10.tty.asc[FreeBSD-SA-26:10.tty]
-| 21 апреля 2026
-| Ошибка использования памяти после её высвобождения в коде обработчика TIOCNOTTY в ядре
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:11.amd64.asc[FreeBSD-SA-26:11.amd64]
-| 21 апреля 2026
-| Отсутствие обработки больших страниц памяти в pmap_pkru_update_range()
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:12.dhclient.asc[FreeBSD-SA-26:12.dhclient]
-| 29 апреля 2026
-| Дистанционный запуск кода через злонамеренную настройку параметров DHCP
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:13.exec.asc[FreeBSD-SA-26:13.exec]
-| 29 апреля 2026
-| Локальное повышение полномочий через execve()
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:14.pf.asc[FreeBSD-SA-26:14.pf]
-| 29 апреля 2026
-| Обработка особым образом сформированных пакетов SCTP в pf может привести к переполнению стека
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:15.dhclient.asc[FreeBSD-SA-26:15.dhclient]
-| 29 апреля 2026
-| Дистанционно вызываемая запись в область вне границы выделенной памяти в dhclient
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:16.libnv.asc[FreeBSD-SA-26:16.libnv]
-| 29 апреля 2026
-| Переполнение стека через превышение количества файловых дескрипторов в select()
-| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:17.libnv.asc[FreeBSD-SA-26:17.libnv]
-| 29 апреля 2026
-| Переполнение распределённой памяти в libnv
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:06.tcp.asc[FreeBSD-SA-26:06.tcp] |26 марта 2026 |TCP: возможность дистанционной DoS-атаки (утечка mbuf)
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:08.rpcsec_gss.asc[FreeBSD-SA-26:08.rpcsec_gss] |26 марта 2026 |Дистанционное выполнение кода через проверку корректности пакета в RPCSEC_GSS
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:09.pf.asc[FreeBSD-SA-26:09.pf] |26 марта 2026 |pf игнорирует определённые правила, не сообщая об этом
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:10.tty.asc[FreeBSD-SA-26:10.tty] |21 апреля 2026 |Ошибка использования памяти после её высвобождения в коде обработчика TIOCNOTTY в ядре
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:11.amd64.asc[FreeBSD-SA-26:11.amd64] |21 апреля 2026 |Отсутствие обработки больших страниц памяти в pmap_pkru_update_range()
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:12.dhclient.asc[FreeBSD-SA-26:12.dhclient] |29 апреля 2026 |Дистанционный запуск кода через злонамеренную настройку параметров DHCP
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:13.exec.asc[FreeBSD-SA-26:13.exec] |29 апреля 2026 |Локальное повышение полномочий через execve()
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:14.pf.asc[FreeBSD-SA-26:14.pf] |29 апреля 2026 |Обработка особым образом сформированных пакетов SCTP в pf может привести к переполнению стека
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:15.dhclient.asc[FreeBSD-SA-26:15.dhclient] |29 апреля 2026 |Дистанционно вызываемая запись в область вне границы выделенной памяти в dhclient
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:16.libnv.asc[FreeBSD-SA-26:16.libnv] |29 апреля 2026 |Переполнение стека через превышение количества файловых дескрипторов в select()
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:17.libnv.asc[FreeBSD-SA-26:17.libnv] |29 апреля 2026 |Переполнение распределённой памяти в libnv
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:18.setcred.asc[FreeBSD-SA-26:18.setcred] |20 мая 2026 |Переполнение буфера стека через man:setcred[2]
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:19.file.asc[FreeBSD-SA-26:19.file] |20 мая 2026 |Обращение к памяти в ядре после её высвобождения через системные вызовы, работающие с файловыми дескрипторами
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:20.fusefs.asc[FreeBSD-SA-26:20.fusefs] |20 мая 2026 |Переполнение распределённой памяти в FUSE_LISTXATTR
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:21.ptrace.asc[FreeBSD-SA-26:21.ptrace] |20 мая 2026 |Отсутствующая проверка достоверности в ptrace(PT_SC_REMOTE)
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:22.libcasper.asc[FreeBSD-SA-26:22.libcasper] |20 мая 2026 |Превышение количества файловых дескрипторов в man:select[2] вызывает переполнение стека
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:23.bsdinstall.asc[FreeBSD-SA-26:23.bsdinstall] |20 мая 2026 |Дистанционное выполнение кода при помощи сканирования точек доступа Wi-Fi в программе установки
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:24.cap_net.asc[FreeBSD-SA-26:24.cap_net] |20 мая 2026 |Некорректная обработка списка ограничений в man:libcap_net[3]
 |===
 
 [[errata]]
@@ -112,5 +97,5 @@ sidenav: download
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (02.05.2026): a8cb7746be6ac1a835621945e5b94478ee90bfa4
+// Original EN revision (21.05.2026): fadd7a59e78e7a2a775abd3bc30e055ddbde7e15
 //
