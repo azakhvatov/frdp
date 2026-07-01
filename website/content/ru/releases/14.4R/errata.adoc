@@ -62,6 +62,18 @@ sidenav: download
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:22.libcasper.asc[FreeBSD-SA-26:22.libcasper] |20 мая 2026 |Превышение количества файловых дескрипторов в man:select[2] вызывает переполнение стека
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:23.bsdinstall.asc[FreeBSD-SA-26:23.bsdinstall] |20 мая 2026 |Дистанционное выполнение кода при помощи сканирования точек доступа Wi-Fi в программе установки
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:24.cap_net.asc[FreeBSD-SA-26:24.cap_net] |20 мая 2026 |Некорректная обработка списка ограничений в man:libcap_net[3]
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:25.thr.asc[FreeBSD-SA-26:25.thr] |9 июня 2026 |Отсутствие проверки полномочий в man:thr_kill2[2]
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:26.ktls.asc[FreeBSD-SA-26:26.ktls] |9 июня 2026 |Перезапись любого файла через путь приёма KTLS
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:27.sound.asc[FreeBSD-SA-26:27.sound] |9 июня 2026 |Различные уязвимости при обработке отображения в память устройства man:sound[4]
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:28.capsicum.asc[FreeBSD-SA-26:28.capsicum] |9 июня 2026 |Отсутствие ограничений для man:sigqueue[2] при работе в режиме ограничения возможностей
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:29.ip6_multicast.asc[FreeBSD-SA-26:29.ip6_multicast] |9 июня 2026 |Ошибка использования памяти после её высвобождения в обработчике параметра сокета IPV6_MSFILTER
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:30.linux.asc[FreeBSD-SA-26:30.linux]| 9 июня 2026 |Уязвимость в Linuxulator при запуске бинарных файлов с установленным setugid
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:31.arm64.asc[FreeBSD-SA-26:31.arm64] |9 июня 2026 |Ошибка в процессорах Arm, помогающая обойти изменения полномочий в таблице страниц памяти
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:32.elf.asc[FreeBSD-SA-26:32.elf] |9 июня 2026 |Обход ASLR для исполняемых файлов с установленным setuid через man:procctl[2]
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:33.unbound.asc[FreeBSD-SA-26:33.unbound] |9 июня 2026 |Различные уязвимости в unbound
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:34.vt.asc[FreeBSD-SA-26:34.vt] |9 июня 2026 |Целочисленное переполнение при обработке ioctl-запроса CONS_HISTORY в драйвере man:vt[4]
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:35.openssl.asc[FreeBSD-SA-26:35.openssl] |9 июня 2026 |Различные уязвимости в OpenSSL
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:36.ldns.asc[FreeBSD-SA-26:36.ldns] |9 июня 2026 |Недостаточная проверка ответов в библиотеке ldns при работе в режиме программной заглушки
 |===
 
 [[errata]]
@@ -98,5 +110,5 @@ sidenav: download
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (21.05.2026): d3dd5e6afd7b25ea8679f39f886cd4ed1d022084
+// Original EN revision (10.06.2026): 57e752f69ac97b06c90ec856abaf7bf45b99596f
 //
