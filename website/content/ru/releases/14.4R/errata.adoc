@@ -76,6 +76,7 @@ sidenav: download
 | link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:10.amd64.asc[FreeBSD-EN-26:10.amd64] |29 апреля 2026 |Программная ошибка при устаревании TLB в системах AMD с поддержкой INVLPGB
 | link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:11.dhclient.asc[FreeBSD-EN-26:11.dhclient] |1 мая 2026 |Чрезмерно строгая проверка запросов в man:dhclient[8]
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:12.freebsd-update.asc[FreeBSD-EN-26:12.freebsd-update] |1 мая 2026 |Рассинхронизация исходного кода между freebsd-update, уведомлениями EN/SA и git
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:13.freebsd-update.asc[FreeBSD-EN-26:13.freebsd-update] |20 мая 2026 |man:freebsd-update[8] пытается выполнить слияние со сгенерированным файлом
 |===
 
 [[open-issues]]
@@ -97,5 +98,5 @@ sidenav: download
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (21.05.2026): fadd7a59e78e7a2a775abd3bc30e055ddbde7e15
+// Original EN revision (21.05.2026): d3dd5e6afd7b25ea8679f39f886cd4ed1d022084
 //
