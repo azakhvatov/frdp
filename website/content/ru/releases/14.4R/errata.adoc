@@ -91,6 +91,12 @@ sidenav: download
 | link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:06.timerfd.asc[FreeBSD-EN-26:06.timerfd]
 | 21 апреля 2026
 | Повторяющиеся таймеры man:timerfd[2] могут выдавать некорректные результаты
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:09.tzdata.asc[FreeBSD-EN-26:09.tzdata]
+| 29 апреля 2026
+| Обновление информации в базе данных часовых поясов
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:10.amd64.asc[FreeBSD-EN-26:10.amd64]
+| 29 апреля 2026
+| Программная ошибка при устаревании TLB в системах AMD с поддержкой INVLPGB
 |===
 
 [[open-issues]]
@@ -112,5 +118,5 @@ sidenav: download
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (30.04.2026): f6ce52f50591bdb84c5b866bf75501b12048c55f
+// Original EN revision (30.04.2026): 6f9601c0553be3ee0bb86afd987c0fa99d5ce1cc
 //
