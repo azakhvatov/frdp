@@ -39,14 +39,20 @@ sidenav: download
 Список всех рекомендаций по безопасности FreeBSD CERT доступен по адресу https://www.FreeBSD.org/ru/security/.
 
 [[security]]
-== Бюллетени безопасности
+== Уведомления безопасности
 
 [width="100%",cols="40%,30%,30%",options="header",]
 |===
 |Бюллетень |Дата |Тема
-
-|Нет бюллетеней.||
-
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:06.tcp.asc[FreeBSD-SA-26:06.tcp]
+| 26 марта 2026
+| TCP: возможность дистанционной DoS-атаки (утечка mbuf)
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:08.rpcsec_gss.asc[FreeBSD-SA-26:08.rpcsec_gss]
+| 26 марта 2026
+| Дистанционное выполнение кода через проверку корректности пакета в RPCSEC_GSS
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-26:09.pf.asc[FreeBSD-SA-26:09.pf]
+| 26 марта 2026
+| pf игнорирует определённые правила, не сообщая об этом
 |===
 
 [[errata]]
@@ -72,12 +78,12 @@ sidenav: download
 **Статус**: исправлено в ветке main - https://bugs.freebsd.org/293654 +
 
 [[late-news]]
-== Последние новости
+== Актуальные новости
 
-Последних новостей нет.
+Актуальных новостей нет.
 
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (10.03.2026): 5af0ae1ab088a0ad86f7ac2fcf36547cb5662406
+// Original EN revision (26.03.2026): 9ab94ece171524958a016bf547e9b67ccaf529ed
 //
