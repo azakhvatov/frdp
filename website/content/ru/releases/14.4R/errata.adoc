@@ -67,9 +67,12 @@ sidenav: download
 [width="100%",cols="40%,30%,30%",options="header",]
 |===
 |Исправление |Дата |Тема
-
-|Нет исправлений.||
-
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:05.vm.asc[FreeBSD-EN-26:05.vm]
+| 21 апреля 2026
+| Обработчик событий отсутствия страниц памяти обнуляет её некорректно
+| link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-26:06.timerfd.asc[FreeBSD-EN-26:06.timerfd]
+| 21 апреля 2026
+| Повторяющиеся таймеры man:timerfd[2] могут выдавать некорректные результаты
 |===
 
 [[open-issues]]
@@ -91,5 +94,5 @@ sidenav: download
 //
 // The FreeBSD Russian Documentation Project
 //
-// Original EN revision (22.04.2026): 2eaf739eec9b5525be88a6b33e59a8468e500bfb
+// Original EN revision (22.04.2026): 0e1130f56b5d51bd004c6f26faf71c02be53ef84
 //
